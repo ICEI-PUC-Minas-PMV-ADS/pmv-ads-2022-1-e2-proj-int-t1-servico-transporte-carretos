@@ -1,23 +1,24 @@
 # TÍTULO DO PROJETO
 
-`CURSO`
+`CURSO:` Análise e Desenvolvimento de Sistemas
 
-`DISCIPLINA`
+`DISCIPLINA` Projeto: Desenvolvimento de aplicação Web Front-End
 
-`SEMESTRE`
+`SEMESTRE` Eixo 2
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+O objetivo do projeto é a criação de um software, que proporcione uma melhor experiência e facilidade em encontrar pessoas que prestam os serviços de carreto e mudanças. 
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Kenia Maria Da Cunha
+* Sabrina Goncalves De Andrade
+* Thamara Machado Rocha
+* Werlon Elem Bicalho De Oliveira
+* William Fernando Da Silva
 
 ## Orientador
 
-* Nome completo do professor 1
+* Rosilane Mota
 
 ## Instruções de utilização
 
