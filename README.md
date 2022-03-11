@@ -2,15 +2,15 @@
 
 `CURSO:` Análise e Desenvolvimento de Sistemas
 
-`DISCIPLINA` Projeto: Desenvolvimento de aplicação Web Front-End
+`DISCIPLINA` Projeto: Desenvolvimento de uma Aplicação Interativa 
 
-`SEMESTRE` Eixo 2
+`SEMESTRE` Eixo 2 Turma 01 - 2022/1
 
 O objetivo do projeto é a criação de um software, que proporcione uma melhor experiência e facilidade em encontrar pessoas que prestam os serviços de carreto e mudanças. 
 
 ## Integrantes
 
-* Kenia Maria Da Cunha
+* Kênia Maria Da Cunha
 * Sabrina Goncalves De Andrade
 * Thamara Machado Rocha
 * Werlon Elem Bicalho De Oliveira
