@@ -1,10 +1,6 @@
 # Especificações do Projeto
 
-<span style="color:red">Pré-requisitos: <a href="1-Documentação de Contexto.md"> Documentação de Contexto</a></span>
-
-Definição do problema e ideia de solução a partir da perspectiva do usuário. É composta pela definição do  diagrama de personas, histórias de usuários, requisitos funcionais e não funcionais além das restrições do projeto.
-
-Apresente uma visão geral do que será abordado nesta parte do documento, enumerando as técnicas e/ou ferramentas utilizadas para realizar a especificações do projeto
+Por meio da vivência e dificuldades expostas pelos usuários foi definido pelo grupo o problema a ser solucionado e seus relevantes pontos a serem considerados. Os detalhes apresentados nesse processo foram consolidados no modo de personas e histórias de usuários. 
 
 ## Personas
 
@@ -42,52 +38,54 @@ Apresente aqui as histórias de usuário que são relevantes para o projeto de s
 
 ## Requisitos
 
-As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto.
+Ao começar um projeto todos os requisitos devem ser levantados, entendidos e documentado. O escopo deste projeto é definido por meio de requisitos funcionais, que são as características que definem os critérios de aceitação do produto e a necessidade do cliente, e requisitos não funcionais que é voltado pelas características de qualidade que o sistema todo ou uma funcionalidade em específico deve ter. A seguir estes requisitos são apresentados. 
 
 ### Requisitos Funcionais
 
-|ID    | Descrição do Requisito  | Prioridade |
-|------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
+A tabela a seguir apresenta os requisitos do projeto, identificando a prioridade em que os mesmos devem ser entregues. 
+
+
+|ID    | Descrição do Requisito                                                                       | Prioridade |
+|------|----------------------------------------------------------------------------------------------|------------|
+|RF-01| O site deve permitir ao usuário fazer login | ALTA       | 
+|RF-02| O site deve permitir cadastrar usuário cliente                        | ALTA      |
+|RF-03| O site deve permitir cadastrar usuário prestador de serviços                                    |  ALTA      |
+|RF-04| O site deve permitir o usuário cliente solicitar um serviço                                  | ALTA       |
+|RF-05| O site deve permitir o usuário cliente selecionar se será um serviço de carreto ou de mudança                          |  ALTA      |
+|RF-06| O site deve permitir o usuário cliente descrever a mercadoria a ser transportada.                                |  ALTA     |
+|RF-07| O site deve permitir o usuário prestador fornecer orçamento do serviço.                                |  ALTA      |
+|RF-08| O site deve permitir ao usuário cliente finalizar o pedido.                                           |  ALTA      |
+|RF-09| O site deve permitir ao usuário cliente visualizar os pedidos em andamento.                                          | MÉDIA      |
+|RF-010| O site deve permitir o usuário prestador visualizar solicitações de usuários cliente.                                               | MÉDIA      |
+|RF-011| O site deve permitir ao usuário cliente visualizar o histórico de pedidos.                                           | BAIXA      |
+|RF-012| O site deve mostrar ao usuário cliente um resumo do pedido.                                      | BAIXA      |
 
 ### Requisitos não Funcionais
 
 |ID     | Descrição do Requisito  |Prioridade |
-|-------|-------------------------|----|
-|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
+|---------|-------------------------|----|
+|RNF-01   | O sistema deve ser compatível com os principais navegadores como (Google Chrome, Mozilla Firefox, Microsoft Edge, Internet Explorer   | ALTA | 
+|RNF-02  | O site deve ser publicado em um ambiente acessível publicamente na Internet (Repl.it, GitHub Pages, Heroku)  |  ALTA | 
+|RNF-03  | Os dados do sistema podem ser migrados para qualquer sistema de gerenciamento de banco de dados SQL   |  MEDIA |
+|RNF-04  | O site deverá ser responsivo permitindo a visualização em um celular de forma adequada |  MEDIA |
+|RNF-05  | As informações cadastrais do cliente devem estar disponíveis apenas para o próprio cliente  |  BAIXA |
+|RNF-06  | O site deve aparecer no resultado de pesquisas relacionadas a mudança e carreto  |  BAIXA |
 
-Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
 
-- [Requisitos Funcionais
- (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
- correspondem a uma funcionalidade que deve estar presente na
-  plataforma (ex: cadastro de usuário).
-- [Requisitos Não Funcionais
-  (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
-  correspondem a uma característica técnica, seja de usabilidade,
-  desempenho, confiabilidade, segurança ou outro (ex: suporte a
-  dispositivos iOS e Android).
-Lembre-se que cada requisito deve corresponder à uma e somente uma
-característica alvo da sua solução. Além disso, certifique-se de que
-todos os aspectos capturados nas Histórias de Usuário foram cobertos.
+
 
 ## Restrições
 
-O projeto está restrito pelos itens apresentados na tabela a seguir.
-
 |ID| Restrição                                             |
 |--|-------------------------------------------------------|
-|01| O projeto deverá ser entregue até o final do semestre |
-|02| Não pode ser desenvolvido um módulo de backend        |
+|RE-01| O projeto deverá ser entregue no final do semestre letivo, não podendo extrapolar a data de 26/06/2022.|
+|RE-02| O aplicativo deve se restringir às tecnologias #C no Backend e as básicas da Web no Frontend.       |
+|RE-03| A equipe não pode subcontratar o desenvolvimento do trabalho.      |
 
 
-Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
 
-> **Links Úteis**:
-> - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
+
+
 
 ## Diagrama de Casos de Uso
 
