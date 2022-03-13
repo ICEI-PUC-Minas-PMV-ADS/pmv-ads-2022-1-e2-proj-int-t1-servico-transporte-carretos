@@ -6,7 +6,7 @@
 
 `SEMESTRE` Eixo 2 Turma 01 - 2022/1
 
-O objetivo do projeto é a criação de um software, que proporcione uma melhor experiência e facilidade em encontrar pessoas que prestam os serviços de carreto e mudanças. 
+O objetivo do projeto é a criação de uma aplicação, que proporcione uma melhor experiência e facilidade em encontrar pessoas que prestam os serviços de carreto e mudanças. 
 
 ## Integrantes
 
