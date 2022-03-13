@@ -11,16 +11,16 @@ Por meio da vivência e dificuldades expostas pelos usuários foi definido pelo 
 | Estado Civil: Casado | Youtube | Já utilizou serviço de mudança para mudar de uma casa para outra |
 | Naturalidade: Belo Horizonte, MG | Google | Utiliza constantemente este tipo de serviço |
 | Tipo de moradia atual: casa alugada | Facebook|Gostaria que um site para solicitação de serviços de carreto ou mudança tivesse busca e filtro de prestadores de serviço por preço, região e disponibilidade, serviço de carregamento e montagem de mobília e garantia de pagamento após o serviço realizado |
-| Cidade em que reside atualmente: Belo Horizonte, MG | Instagram | vazio |
-| Formação: Graduação Licenciatura Física | WhatsApp | vazio |
-| Ocupação: Product Owner | vazio | vazio |
+| Cidade em que reside atualmente: Belo Horizonte, MG | Instagram | - |
+| Formação: Graduação Licenciatura Física | WhatsApp | - |
+| Ocupação: Product Owner | - | - |
 
-| **Frustações:**| **Hobbies, História:** | vazio |
-| --- | --- | --- |
-| Dificuldade em encontrar uma pessoa que faça este tipo de serviço quando preciso | Viajar, andar de bicicleta, jogar vídeo game, ler mangás, brincar com os gatos, fazer trilha e cachoeira | vazio |
-| Valor do serviço muito alto | vazio | vazio |
-| Os móveis estragaram durante a mudança | vazio | vazio |
-| Falta de disponibilidade do prestador de serviço para auxiliar no descarregamento | vazio | vazio |
+| **Frustações:**| **Hobbies, História:** |
+| --- | --- |
+| Dificuldade em encontrar uma pessoa que faça este tipo de serviço quando preciso | Viajar, andar de bicicleta, jogar vídeo game, ler mangás, brincar com os gatos, fazer trilha e cachoeira |
+| Valor do serviço muito alto | - |
+| Os móveis estragaram durante a mudança | - |
+| Falta de disponibilidade do prestador de serviço para auxiliar no descarregamento | - |
 
 
 ## Maria Marta
@@ -29,14 +29,14 @@ Por meio da vivência e dificuldades expostas pelos usuários foi definido pelo 
 | Idade: 68 anos | Globo Play | Já utilizou várias vezes o serviço de carreto para transportar materiais de construção |
 | Estado Civil: separada judicialmente | WhatsApp | Já utilizou duas vezes o serviço de mudança, pois morava de aluguel e teve que mudar de casa |
 | Naturalidade: Belo Horizonte, MG | Uber | Gostaria que um site para solicitação de serviços de carreto ou mudança tivesse o nome do motorista que fosse fazer o carreto com a foto dele, nota de avaliação do serviço, um sistema simples e fácil de mexer que mostre a rota do motorista enquanto ele se dirige até a casa e mostrando o horário que ele ia chegar |
-| Cidade em que reside atualmente: Belo Horizonte, MG | Facebook | vazio |
-| Formação: Grau técnico | Youtube | vazio |
-| Ocupação: aposentada | vazio | vazio |
+| Cidade em que reside atualmente: Belo Horizonte, MG | Facebook | - |
+| Formação: Grau técnico | Youtube | - |
+| Ocupação: aposentada | - | - |
 
-| **Frustações:**| **Hobbies, História:** | vazio |
-| --- | --- | --- |
-| Preço. Uns cobram um preço muito alto em relação a outros | Colecionar suculentas, cuidar de plantas, fazer caminhada e viajar | vazio |
-| Os móveis estragaram durante a mudança | vazio | vazio |
+| **Frustações:**| **Hobbies, História:** |
+| --- | --- |
+| Preço. Uns cobram um preço muito alto em relação a outros | Colecionar suculentas, cuidar de plantas, fazer caminhada e viajar |
+| Os móveis estragaram durante a mudança | - |
 
 
 ## Milena Santos
@@ -44,15 +44,15 @@ Por meio da vivência e dificuldades expostas pelos usuários foi definido pelo 
 | --- | --- | --- |
 | Idade: 39 anos | WhatsApp | Já utilizou duas vezes o serviço de mudança |
 | Estado Civil: Casada | Instagram | Gostaria de ter maior facilidade em encontrar para encontrar uma pessoa ou empresa que realize o serviço de mudança |
-| Naturalidade:Brumado, BA | Google | vazio |
-| Tipo de moradia atual: casa | vazio | vazio |
-| Cidade em que reside atualmente: Belo Horizonte, MG | vazio | vazio |
-| Formação: 8° Série | vazio | vazio |
-| Ocupação: Serviços Gerais | vazio | vazio |
+| Naturalidade:Brumado, BA | Google | - |
+| Tipo de moradia atual: casa | - | - |
+| Cidade em que reside atualmente: Belo Horizonte, MG | - | - |
+| Formação: 8° Série | - | - |
+| Ocupação: Serviços Gerais | - | - |
 
-| **Frustações:**| **Hobbies, História:** | vazio |
-| --- | --- | --- |
-| Carregar os móveis | Viajar, dançar, cuidar da horta, sair para comer e beber, além de curtir a família (tenho 2 filhos, uma neta, três cachorros e uma calopsita)| vazio |
+| **Frustações:**| **Hobbies, História:** |
+| --- | --- |
+| Carregar os móveis | Viajar, dançar, cuidar da horta, sair para comer e beber, além de curtir a família (tenho 2 filhos, uma neta, três cachorros e uma calopsita)|
 
 
 ## Rafaela Souza
@@ -60,17 +60,17 @@ Por meio da vivência e dificuldades expostas pelos usuários foi definido pelo 
 | --- | --- | --- |
 | Idade: 27 anos | Netflix | Já utilizou serviço de carreto 5 vezes para levar móveis de uma casa para outra |
 | Estado Civil: solteira | WhatsApp | Gostaria que um site para solicitação de serviços de carreto ou mudança tivesse a possibilidade de agendamento prévio de serviço ou contratação num modelo fast (mesmo cm um preço mais alto) para casos de emergência; avaliação de outros clientes sobre o serviço prestado; possibilidade de realizar filtro cm base no tamanho do veículo, bairro, preço e avaliações |
-| Naturalidade: Belo Horizonte, MG | Amazon Prime | vazio |
-| Tipo de moradia atual: apartamento próprio | Deezer | vazio |
-| Cidade em que reside atualmente: Belo Horizonte, MG | Instagram | vazio |
-| Formação: Superior Completo | Linkedin | vazio |
-| Ocupação: QA Analyst| Telegram | vazio |
+| Naturalidade: Belo Horizonte, MG | Amazon Prime | - |
+| Tipo de moradia atual: apartamento próprio | Deezer | - |
+| Cidade em que reside atualmente: Belo Horizonte, MG | Instagram | - |
+| Formação: Superior Completo | Linkedin | - |
+| Ocupação: QA Analyst| Telegram | - |
 
-| **Frustações:**| **Hobbies, História:** | vazio |
-| --- | --- | --- |
-| Dificuldade em contratar o serviço de forma rápida | Viajar, ler e assistir séries | vazio |
-| Dificuldade em encontrar a oferta dos serviços (poucas informações disponibilizadas na internet e redes sociais), impossibilitando assim uma comparação mais assertiva de preços e avaliações de outros clientes | vazio | vazio |
-| Móveis acondicionados de maneira incorreta durante a mudança veículo com espaço insuficiente para o transporte de todos os móveis e objetos | vazio | vazio |
+| **Frustações:**| **Hobbies, História:** |
+| --- | --- |
+| Dificuldade em contratar o serviço de forma rápida | Viajar, ler e assistir séries |
+| Dificuldade em encontrar a oferta dos serviços (poucas informações disponibilizadas na internet e redes sociais), impossibilitando assim uma comparação mais assertiva de preços e avaliações de outros clientes | - |
+| Móveis acondicionados de maneira incorreta durante a mudança veículo com espaço insuficiente para o transporte de todos os móveis e objetos | - |
 
 
 ## Thamara Machado
@@ -78,16 +78,16 @@ Por meio da vivência e dificuldades expostas pelos usuários foi definido pelo 
 | --- | --- | --- |
 | Idade: 29 anos | Youtube | Já utilizou serviço de carreto para mudança de casa |
 | Estado Civil: Casada | WhatsApp | Gostaria que um site para solicitação de serviços de carreto ou mudança tivesse valor do serviço, dados do prestador do serviço, acompanhamento do trajeto e previsão do horário de chegada, possibilidade de auxílio para retirada dos móveis e de informar que será necessário subir escadas para entrega dos móveis |
-| Naturalidade: Belo Horizonte, MG | Amazon Prime | vazio |
-| Cidade em que reside atualmente: Belo Horizonte, MG | Instagram | vazio |
-| Formação: Superior em andamento | Linkedin | vazio |
-| Ocupação: Analista de Projetos | Uber| vazio |
+| Naturalidade: Belo Horizonte, MG | Amazon Prime | - |
+| Cidade em que reside atualmente: Belo Horizonte, MG | Instagram | - |
+| Formação: Superior em andamento | Linkedin | - |
+| Ocupação: Analista de Projetos | Uber| - |
 
-| **Frustações:**| **Hobbies, História:** | vazio |
-| --- | --- | --- |
-| Dificuldade para encontrar um prestador de forma rápida e segura | Viajar, andar de bicicleta, andar de patins fazer trilha, cachoeira, cinema, sair para comer, curtir a família e os animais de estimação (3 gatos), cuidar de plantas e mexer com artesanato e marcenaria | vazio |
-| Falta de cuidado com os móveis, alguns chegaram a estragar | vazio | vazio |
-| Falta de auxílio no momento de descarregar o carreto | vazio | vazio |
+| **Frustações:**| **Hobbies, História:** |
+| --- | --- |
+| Dificuldade para encontrar um prestador de forma rápida e segura | Viajar, andar de bicicleta, andar de patins fazer trilha, cachoeira, cinema, sair para comer, curtir a família e os animais de estimação (3 gatos), cuidar de plantas e mexer com artesanato e marcenaria |
+| Falta de cuidado com os móveis, alguns chegaram a estragar | - |
+| Falta de auxílio no momento de descarregar o carreto | - |
 	
 ## Histórias de Usuários
 
