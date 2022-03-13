@@ -162,7 +162,7 @@ A tabela a seguir apresenta os requisitos do projeto, identificando a prioridade
 
 ## Diagrama de Casos de Uso
 
-Os casos de uso que serão implementados neste projeto são: Cadastrar usuário, Cadastrar um pedido, Gerenciar pedido e Responder pedidos. Esses casos de uso foram ilustrados no software ASTAH UML, sugerido no microfundamentos de Engenharia de requisitos e pode ser visto na figura abaixo.
+Os casos de uso que serão implementados neste projeto são: Cadastrar usuário, Cadastrar um pedido, Gerenciar pedido e Responder pedidos. Esses casos de uso foram ilustrados no software ASTAH UML, sugerido no microfundamentos de Engenharia de requisitos e podem ser visto na figura abaixo.
 
 <img src="img/DiagramadeCasodeUso_ClickExpress.jpg" alt="Figura diagrama de caso de uso ClickExpress">
 
