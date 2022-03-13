@@ -5,7 +5,7 @@ Por meio da vivência e dificuldades expostas pelos usuários foi definido pelo 
 ## Personas
 
 ## Alisson Guedes
-# | Informações Pessoais | Sites e Aplicativos | Motivações |
+| **Informações Pessoais** | **Sites e Aplicativos** | **Motivações** |
 | --- | --- | --- |
 | Idade: 27 anos | Twitter | Já utilizou serviço de carreto para transportar itens grandes que não caberiam em um carro comum |
 | Estado Civil: Casado | Youtube | Já utilizou serviço de mudança para mudar de uma casa para outra |
@@ -14,7 +14,7 @@ Por meio da vivência e dificuldades expostas pelos usuários foi definido pelo 
 | Cidade em que reside atualmente: Belo Horizonte, MG | Instagram | vazio |
 | Formação: Graduação Licenciatura Física | WhatsApp | vazio |
 | Ocupação: Product Owner | vazio | vazio |
-# | Frustações:| Hobbies, História: | vazio |
+| **Frustações:**| **Hobbies, História:** | vazio |
 | Dificuldade em encontrar uma pessoa que faça este tipo de serviço quando preciso | Viajar, andar de bicicleta, jogar vídeo game, ler mangás, brincar com os gatos, fazer trilha e cachoeira | vazio |
 | Valor do serviço muito alto | vazio | vazio |
 | Os móveis estragaram durante a mudança | vazio | vazio |
@@ -22,7 +22,7 @@ Por meio da vivência e dificuldades expostas pelos usuários foi definido pelo 
 
 
 ## Maria Marta
-# | Informações Pessoais | Sites e Aplicativos | Motivações |
+| **Informações Pessoais** | **Sites e Aplicativos** | **Motivações** |
 | --- | --- | --- |
 | Idade: 68 anos | Globo Play | Já utilizou várias vezes o serviço de carreto para transportar materiais de construção |
 | Estado Civil: separada judicialmente | WhatsApp | Já utilizou duas vezes o serviço de mudança, pois morava de aluguel e teve que mudar de casa |
@@ -30,13 +30,13 @@ Por meio da vivência e dificuldades expostas pelos usuários foi definido pelo 
 | Cidade em que reside atualmente: Belo Horizonte, MG | Facebook | vazio |
 | Formação: Grau técnico | Youtube | vazio |
 | Ocupação: aposentada | vazio | vazio |
-# | Frustações:|Hobbies, História: | vazio |
+| **Frustações:**| **Hobbies, História:** | vazio |
 | Preço. Uns cobram um preço muito alto em relação a outros | Colecionar suculentas, cuidar de plantas, fazer caminhada e viajar | vazio |
 | Os móveis estragaram durante a mudança | vazio | vazio |
 
 
 ## Milena Santos
-# | Informações Pessoais | Sites e Aplicativos | Motivações |
+| **Informações Pessoais** | **Sites e Aplicativos** | **Motivações** |
 | --- | --- | --- |
 | Idade: 39 anos | WhatsApp | Já utilizou duas vezes o serviço de mudança |
 | Estado Civil: Casada | Instagram | Gostaria de ter maior facilidade em encontrar para encontrar uma pessoa ou empresa que realize o serviço de mudança |
@@ -45,12 +45,12 @@ Por meio da vivência e dificuldades expostas pelos usuários foi definido pelo 
 | Cidade em que reside atualmente: Belo Horizonte, MG | vazio | vazio |
 | Formação: 8° Série | vazio | vazio |
 | Ocupação: Serviços Gerais | vazio | vazio |
-# | Frustações: | Hobbies, História: | vazio |
+| **Frustações:**| **Hobbies, História:** | vazio |
 | Carregar os móveis | Viajar, dançar, cuidar da horta, sair para comer e beber, além de curtir a família (tenho 2 filhos, uma neta, três cachorros e uma calopsita)| vazio |
 
 
 ## Rafaela Souza
-# | Informações Pessoais | Sites e Aplicativos | Motivações |
+| **Informações Pessoais** | **Sites e Aplicativos** | **Motivações** |
 | --- | --- | --- |
 | Idade: 27 anos | Netflix | Já utilizou serviço de carreto 5 vezes para levar móveis de uma casa para outra |
 | Estado Civil: solteira | WhatsApp | Gostaria que um site para solicitação de serviços de carreto ou mudança tivesse a possibilidade de agendamento prévio de serviço ou contratação num modelo fast (mesmo cm um preço mais alto) para casos de emergência; avaliação de outros clientes sobre o serviço prestado; possibilidade de realizar filtro cm base no tamanho do veículo, bairro, preço e avaliações |
@@ -59,14 +59,14 @@ Por meio da vivência e dificuldades expostas pelos usuários foi definido pelo 
 | Cidade em que reside atualmente: Belo Horizonte, MG | Instagram | vazio |
 | Formação: Superior Completo | Linkedin | vazio |
 | Ocupação: QA Analyst| Telegram | vazio |
-# | Frustações: | Hobbies, História: | vazio |
+| **Frustações:**| **Hobbies, História:** | vazio |
 | Dificuldade em contratar o serviço de forma rápida | Viajar, ler e assistir séries | vazio |
 | Dificuldade em encontrar a oferta dos serviços (poucas informações disponibilizadas na internet e redes sociais), impossibilitando assim uma comparação mais assertiva de preços e avaliações de outros clientes | vazio | vazio |
 | Móveis acondicionados de maneira incorreta durante a mudança veículo com espaço insuficiente para o transporte de todos os móveis e objetos | vazio | vazio |
 
 
 ## Thamara Machado
-# |Informações Pessoais | Sites e Aplicativos | Motivações |
+| **Informações Pessoais** | **Sites e Aplicativos** | **Motivações** |
 | --- | --- | --- |
 | Idade: 29 anos | Youtube | Já utilizou serviço de carreto para mudança de casa |
 | Estado Civil: Casada | WhatsApp | Gostaria que um site para solicitação de serviços de carreto ou mudança tivesse valor do serviço, dados do prestador do serviço, acompanhamento do trajeto e previsão do horário de chegada, possibilidade de auxílio para retirada dos móveis e de informar que será necessário subir escadas para entrega dos móveis |
@@ -74,7 +74,7 @@ Por meio da vivência e dificuldades expostas pelos usuários foi definido pelo 
 | Cidade em que reside atualmente: Belo Horizonte, MG | Instagram | vazio |
 | Formação: Superior em andamento | Linkedin | vazio |
 | Ocupação: Analista de Projetos | Uber| vazio |
-# | Frustações:| Hobbies, História: | vazio |
+| **Frustações:**| **Hobbies, História:** | vazio |
 | Dificuldade para encontrar um prestador de forma rápida e segura | Viajar, andar de bicicleta, andar de patins fazer trilha, cachoeira, cinema, sair para comer, curtir a família e os animais de estimação (3 gatos), cuidar de plantas e mexer com artesanato e marcenaria | vazio |
 | Falta de cuidado com os móveis, alguns chegaram a estragar | vazio | vazio |
 | Falta de auxílio no momento de descarregar o carreto | vazio | vazio |
