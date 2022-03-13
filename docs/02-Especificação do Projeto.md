@@ -4,37 +4,110 @@ Por meio da vivência e dificuldades expostas pelos usuários foi definido pelo 
 
 ## Personas
 
-Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se desenvolver profissionalmente através de um mestrado fora do país, pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está buscando uma agência que o ajude a encontrar universidades na Europa que aceitem alunos estrangeiros.
+| Alisson Guedes |
+|----|
+|Informações Pessoais |Sites e Aplicativos |Motivações|
+|----|----|----|
+|Idade: 27 anos |Twitter |Já utilizou serviço de carreto para transportar itens grandes que não caberiam em um carro comum. |
+|Estado Civil: Casado |Youtube |Já utilizou serviço de mudança para mudar de uma casa para outra. |
+|Naturalidade: Belo Horizonte, MG|Google |Utiliza constantemente este tipo de serviço. |
+|Tipo de moradia atual: casa alugada |Facebook |Gostaria que um site para solicitação de serviços de carreto ou mudança tivesse busca e filtro de prestadores de serviço por preço, região e disponibilidade, serviço de carregamento e montagem de mobília e garantia de pagamento após o serviço realizado. |
+|Cidade em que reside atualmente: Belo Horizonte, MG |Instagram |----|
+|Formação: Graduação Licenciatura Física |WhatsApp |----|
+|Ocupação: Product Owner |----|----|
+|Frustações:|Hobbies, História:|----|
+|----|----|----|
+|Dificuldade em encontrar uma pessoa que faça este tipo de serviço quando preciso |Viajar, andar de bicicleta, jogar vídeo game, ler mangás, brincar com os gatos, fazer trilha e cachoeira |----|
+|Valor do serviço muito alto. |----|----|
+|Os móveis estragaram durante a mudança |----|----|
+|Falta de disponibilidade do prestador de serviço para auxiliar no descarregamento |----|----|
 
-Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
 
-> **Links Úteis**:
-> - [Rock Content](https://rockcontent.com/blog/personas/)
-> - [Hotmart](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [Mapa de Empatia](https://resultadosdigitais.com.br/blog/mapa-da-empatia/)
-> - [Mapa de Stalkeholders](https://www.racecomunicacao.com.br/blog/como-fazer-o-mapeamento-de-stakeholders/)
->
-Lembre-se que você deve ser enumerar e descrever precisamente e personalizada todos os clientes ideais que sua solução almeja.
+| Maria Marta |
+|----|
+|Informações Pessoais |Sites e Aplicativos |Motivações|
+|----|----|----|
+|Idade: 68 anos |Globo Play |Já utilizou várias vezes o serviço de carreto para transportar materiais de construção |
+|Estado Civil: separada judicialmente |WhatsApp |Já utilizou duas vezes o serviço de mudança, pois morava de aluguel e teve que mudar de casa.|
+|Naturalidade: Belo Horizonte, MG|Uber |Gostaria que um site para solicitação de serviços de carreto ou mudança tivesse o nome do motorista que fosse fazer o carreto com a foto dele, nota de avaliação do serviço, um sistema simples e fácil de mexer que mostre a rota do motorista enquanto ele se dirige até a casa e mostrando o horário que ele ia chegar |
+|Cidade em que reside atualmente: Belo Horizonte, MG |Facebook |----|
+|Formação: Grau técnico |Youtube |----|
+|Ocupação: aposentada |----|----|
+|Frustações:|Hobbies, História:|----|
+|----|----|----|
+|Preço. Uns cobram um preço muito alto em relação a outros. |Colecionar suculentas, cuidar de plantas, fazer caminhada e viajar. |----|
+|Os móveis estragaram durante a mudança |----|----|
 
+
+| Milena Santos |
+|----|
+|Informações Pessoais |Sites e Aplicativos |Motivações|
+|----|----|----|
+|Idade: 39 anos |WhatsApp |Já utilizou duas vezes o serviço de mudança |
+|Estado Civil: Casada |Instagram |Gostaria de ter maior facilidade em encontrar para encontrar uma pessoa ou empresa que realize o serviço de mudança |
+|Naturalidade:Brumado, BA|Google |----|
+|Tipo de moradia atual: casa |----|----|
+|Cidade em que reside atualmente: Belo Horizonte, MG |----|----|
+|Formação: 8° Série  |----|----|
+|Ocupação: Serviços Gerais |----|----|
+|Frustações:|Hobbies, História:|----|
+|----|----|----|
+|Carregar os móveis |Viajar, dançar, cuidar da horta, sair para comer e beber, além de curtir a família (tenho 2 filhos, uma neta, três cachorros e uma calopsita) |----|
+
+
+| Rafaela Souza |
+|----|
+|Informações Pessoais |Sites e Aplicativos |Motivações|
+|----|----|----|
+|Idade: 27 anos |Netflix |Já utilizou serviço de carreto 5 vezes para levar móveis de uma casa para outra |
+|Estado Civil: solteira |WhatsApp |Gostaria que um site para solicitação de serviços de carreto ou mudança tivesse a possibilidade de agendamento prévio de serviço ou contratação num modelo fast (mesmo cm um preço mais alto) para casos de emergência; avaliação de outros clientes sobre o serviço prestado; possibilidade de realizar filtro cm base no tamanho do veículo, bairro, preço e avaliações. |
+|Naturalidade: Belo Horizonte, MG|Amazon Prime |----|
+|Tipo de moradia atual: apartamento próprio |Deezer |----|
+|Cidade em que reside atualmente: Belo Horizonte, MG |Instagram |----|
+|Formação: Superior Completo |Linkedin |----|
+|Ocupação: QA Analyst |Telegram|----|
+|Frustações:|Hobbies, História:|----|
+|----|----|----|
+|Dificuldade em contratar o serviço de forma rápida.  |Viajar, ler e assistir séries. |----|
+|Dificuldade em encontrar a oferta dos serviços (poucas informações disponibilizadas na internet e redes sociais), impossibilitando assim uma comparação mais assertiva de preços e avaliações de outros clientes. |----|----|
+|Móveis acondicionados de maneira incorreta durante a mudança veículo com espaço insuficiente para o transporte de todos os móveis e objetos. |----|----|
+
+
+| Thamara Machado |
+|----|
+|Informações Pessoais |Sites e Aplicativos |Motivações|
+|----|----|----|
+|Idade: 29 anos |Youtube |Já utilizou serviço de carreto para mudança de casa |
+|Estado Civil: Casada |WhatsApp |Gostaria que um site para solicitação de serviços de carreto ou mudança tivesse valor do serviço, dados do prestador do serviço, acompanhamento do trajeto e previsão do horário de chegada, possibilidade de auxílio para retirada dos móveis e de informar que será necessário subir escadas para entrega dos móveis. |
+|Naturalidade: Belo Horizonte, MG|Amazon Prime |----|
+|Cidade em que reside atualmente: Belo Horizonte, MG |Instagram |----|
+|Formação: Superior em andamento |Linkedin |----|
+|Ocupação: Analista de Projetos |Uber|----|
+|Frustações:|Hobbies, História:|----|
+|----|----|----|
+|Dificuldade para encontrar um prestador de forma rápida e segura |•	Viajar, andar de bicicleta, andar de patins fazer trilha, cachoeira, cinema, sair para comer, curtir a família e os animais de estimação (3 gatos), cuidar de plantas e mexer com artesanato e marcenaria |----|
+|Falta de cuidado com os móveis, alguns chegaram a estragar |----|----|
+|Falta de auxílio no momento de descarregar o carreto.  |----|----|
+	
 ## Histórias de Usuários
 
 Com base na análise das personas forma identificadas as seguintes histórias de usuários:
 
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
-
-Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
-
-> **Links Úteis**:
-> - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-> - [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
-> - [User Stories: requisitos que humanos entendem](https://www.luiztools.com.br/post/user-stories-descricao-de-requisitos-que-humanos-entendem/)
-> - [Histórias de Usuários: mais exemplos](https://www.reqview.com/doc/user-stories-example.html)
-> - [9 Common User Story Mistakes](https://airfocus.com/blog/user-story-mistakes/)
+|Thamara             | ter a opção de informar se preciso de ajuda para descarregar os itens que serão entregues| que quando a entrega for feita, o prestador de serviço já esteja ciente de que será necessário fazer o descarregamento|
+|Alisson| ter a opção de solicitar serviço de montagem| que quando a entrega for feita, o prestador de serviço já realize a montagem do móvel|
+|Thamara| ter a opção de informar se será necessário subir escadas para realizar a entrega| que quando a entrega seja feita, o prestador de serviço já esteja ciente de que será necessário subir escadas|
+|Rafaela| ter a opção de agendar um serviço de carreto/mudança| que na data e horário desejados o prestador de serviços esteja disponível para realização do serviço|
+|Rafaela| ter a opção de visualizar o valor do frete que será cobrado para realização do carreto/mudança| que no momento da contratação do serviço eu já esteja ciente do valor que será cobrado|
+|Maria Marta| ter a opção de visualizar os dados do prestador de serviço| antes de realizar a contratação, eu possa realizar a avaliação do prestador|
+|Maria Marta| ter a opção de visualizar a classificação e comentários do prestador de serviço| que antes da contratação, eu possa avaliar o prestador de serviços|
+|Alisson| ter a opção de conversar com o prestador de serviços através do próprio site| que possa obter mais informações do prestador quando for necessário|
+|Rafaela| ter a opção de buscar o prestador de serviços através de filtros: valor, tipo de veículo, ajuda no descarregamento, realiza montagem| que possa escolher o prestador de serviço que melhor se adeque a minha necessidade|
+|Maria Marta| ter a opção de acompanhar o andamento do meu pedido| que eu possa acompanhar o status do serviço|
+|Thamara| ter a opção de visualizar todos os serviços já contratados pelo site| que quando necessário eu possa consultar as informações desses serviços|
+|Alisson| ter a opção de informar o local de retirada e entrega do (s) item (s) que serão transportados| que o item (s) sejam retirados e entregados no local correto|
+|Alisson| ter a opção de informar quais itens serão transportados| antes de realizar a contratação o prestador já esteja ciente do que será transportado|
 
 ## Requisitos
 
