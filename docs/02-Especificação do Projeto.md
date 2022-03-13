@@ -14,7 +14,9 @@ Por meio da vivência e dificuldades expostas pelos usuários foi definido pelo 
 | Cidade em que reside atualmente: Belo Horizonte, MG | Instagram | vazio |
 | Formação: Graduação Licenciatura Física | WhatsApp | vazio |
 | Ocupação: Product Owner | vazio | vazio |
+
 | **Frustações:**| **Hobbies, História:** | vazio |
+| --- | --- | --- |
 | Dificuldade em encontrar uma pessoa que faça este tipo de serviço quando preciso | Viajar, andar de bicicleta, jogar vídeo game, ler mangás, brincar com os gatos, fazer trilha e cachoeira | vazio |
 | Valor do serviço muito alto | vazio | vazio |
 | Os móveis estragaram durante a mudança | vazio | vazio |
@@ -30,7 +32,9 @@ Por meio da vivência e dificuldades expostas pelos usuários foi definido pelo 
 | Cidade em que reside atualmente: Belo Horizonte, MG | Facebook | vazio |
 | Formação: Grau técnico | Youtube | vazio |
 | Ocupação: aposentada | vazio | vazio |
+
 | **Frustações:**| **Hobbies, História:** | vazio |
+| --- | --- | --- |
 | Preço. Uns cobram um preço muito alto em relação a outros | Colecionar suculentas, cuidar de plantas, fazer caminhada e viajar | vazio |
 | Os móveis estragaram durante a mudança | vazio | vazio |
 
@@ -45,7 +49,9 @@ Por meio da vivência e dificuldades expostas pelos usuários foi definido pelo 
 | Cidade em que reside atualmente: Belo Horizonte, MG | vazio | vazio |
 | Formação: 8° Série | vazio | vazio |
 | Ocupação: Serviços Gerais | vazio | vazio |
+
 | **Frustações:**| **Hobbies, História:** | vazio |
+| --- | --- | --- |
 | Carregar os móveis | Viajar, dançar, cuidar da horta, sair para comer e beber, além de curtir a família (tenho 2 filhos, uma neta, três cachorros e uma calopsita)| vazio |
 
 
@@ -59,7 +65,9 @@ Por meio da vivência e dificuldades expostas pelos usuários foi definido pelo 
 | Cidade em que reside atualmente: Belo Horizonte, MG | Instagram | vazio |
 | Formação: Superior Completo | Linkedin | vazio |
 | Ocupação: QA Analyst| Telegram | vazio |
+
 | **Frustações:**| **Hobbies, História:** | vazio |
+| --- | --- | --- |
 | Dificuldade em contratar o serviço de forma rápida | Viajar, ler e assistir séries | vazio |
 | Dificuldade em encontrar a oferta dos serviços (poucas informações disponibilizadas na internet e redes sociais), impossibilitando assim uma comparação mais assertiva de preços e avaliações de outros clientes | vazio | vazio |
 | Móveis acondicionados de maneira incorreta durante a mudança veículo com espaço insuficiente para o transporte de todos os móveis e objetos | vazio | vazio |
@@ -74,7 +82,9 @@ Por meio da vivência e dificuldades expostas pelos usuários foi definido pelo 
 | Cidade em que reside atualmente: Belo Horizonte, MG | Instagram | vazio |
 | Formação: Superior em andamento | Linkedin | vazio |
 | Ocupação: Analista de Projetos | Uber| vazio |
+
 | **Frustações:**| **Hobbies, História:** | vazio |
+| --- | --- | --- |
 | Dificuldade para encontrar um prestador de forma rápida e segura | Viajar, andar de bicicleta, andar de patins fazer trilha, cachoeira, cinema, sair para comer, curtir a família e os animais de estimação (3 gatos), cuidar de plantas e mexer com artesanato e marcenaria | vazio |
 | Falta de cuidado com os móveis, alguns chegaram a estragar | vazio | vazio |
 | Falta de auxílio no momento de descarregar o carreto | vazio | vazio |
