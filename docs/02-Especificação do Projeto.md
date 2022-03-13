@@ -162,8 +162,7 @@ A tabela a seguir apresenta os requisitos do projeto, identificando a prioridade
 
 ## Diagrama de Casos de Uso
 
-O diagrama de caso de uso não oferece muitos detalhes, ele não mostra por exemplo a ordem em que os passos são executados. Ele dá uma visão geral do relacionamento entre casos de uso, atores e sistemas. O diagrama aborda as principais ligações entre casos de usos e usuário(ator) e detalham os Requisitos Funcionais identificados na etapa de elicitação , sendo assim o diagrama de caso de uso não é utilizado para requisitos não-funcionais. 
+Os casos de uso que serão implementados neste projeto são: Cadastrar usuário, Cadastrar um pedido, Gerenciar pedido e Responder pedidos. Esses casos de uso foram ilustrados no software ASTAH UML, sugerido no microfundamentos de Engenharia de requisitos e pode ser visto na figura abaixo.
 
-Bonecos palito representam os atores no processo(ex- Cliente, Administrador), e a participação do ator no sistema é modelada com uma linha entre o ator e o caso de uso. Para representar o limite do sistema, desenhe uma caixa em torno do próprio caso de uso. O próprio sistema não pode ser ator do diagrama que o modela. 
+<img src="img/DiagramadeCasodeUso_ClickExpress.jpg" alt="Figura diagrama de caso de uso ClickExpress">
 
-Quanto aos casos de uso, eles devem representar as interações dos atores com o sistema, cada tipo é representado por uma forma oval rotulada e as relações são indicadas por linhas que podem ter setas nos casos em que se indica a origem da interação. Os nomes dos casos de uso devem representar verbos no infinitivo de acordo com os objetos que se relacionam os verbos (ex- Efetuar login, Visualizar perfil). Os tipos de relacionamentos maus comuns são associações entre atores e casos de uso, generalização entre atores e entre casos de uso, inclusões e extensões entre casos de uso. 
