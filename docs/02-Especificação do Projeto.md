@@ -132,6 +132,7 @@ A tabela a seguir apresenta os requisitos do projeto, identificando a prioridade
 |RF-010| O site deve permitir o usuário prestador visualizar solicitações de usuários cliente.                                               | MÉDIA      |
 |RF-011| O site deve permitir ao usuário cliente visualizar o histórico de pedidos.                                           | BAIXA      |
 |RF-012| O site deve mostrar ao usuário cliente um resumo do pedido.                                      | BAIXA      |
+|RF-013| O site deve permitir ao usuário alterar dados cadastrais.                                      | BAIXA      |
 
 ### Requisitos não Funcionais
 
