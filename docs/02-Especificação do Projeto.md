@@ -170,5 +170,5 @@ Quanto aos casos de uso, eles devem representar as interações dos atores com o
 
 Os casos de uso que serão implementados neste projeto são: Cadastrar usuário, Cadastrar um pedido, Gerenciar pedido e Responder pedidos. Esses casos de uso foram ilustrados no software ASTAH UML, sugerido no microfundamentos de Engenharia de requisitos e podem ser visto na figura abaixo.
 
-<img src="img/DiagramadeCasodeUso_ClickExpress.jpg" alt="Figura diagrama de caso de uso ClickExpress">
+<img src="img/DiagramadeCasodeUso_ClickExpress_v2.jpg" alt="Figura diagrama de caso de uso ClickExpress">
 
