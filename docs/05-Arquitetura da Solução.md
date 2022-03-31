@@ -21,6 +21,10 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Modelo ER�
 
 > - [Como fazer um diagrama entidade relacionamento | Lucidchart](https://www.lucidchart.com/pages/pt/como-fazer-um-diagrama-entidade-relacionamento)
 
+Na figura abaixo é mostrado o Modelo Relacional(MR) desenvolvido na plataforma "draw.io" para o projeto.
+
+<img src="img/MR_ClickExpress.jpg" alt="Figura Modelo Relacional(MR) ClickExpress">
+
 ## Esquema Relacional
 
 O Esquema Relacional corresponde à representação dos dados em tabelas juntamente com as restrições de integridade e chave primária.
@@ -28,6 +32,10 @@ O Esquema Relacional corresponde à representação dos dados em tabelas juntame
 As referências abaixo irão auxiliá-lo na geração do artefato “Esquema Relacional”.
 
 > - [Criando um modelo relacional - Documentação da IBM](https://www.ibm.com/docs/pt-br/cognos-analytics/10.2.2?topic=designer-creating-relational-model)
+
+Na figura abaixo é mostrado o Esquema Relacional(ER) desenvolvido na plataforma "draw.io" para o projeto.
+
+<img src="img/ER_ClickExpress.jpg" alt="Figura Modelo Relacional(MR) ClickExpress">
 
 ## Tecnologias Utilizadas
 
