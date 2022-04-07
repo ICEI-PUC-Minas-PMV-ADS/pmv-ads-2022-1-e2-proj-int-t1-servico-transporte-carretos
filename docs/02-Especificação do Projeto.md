@@ -134,6 +134,7 @@ A tabela a seguir apresenta os requisitos do projeto, identificando a prioridade
 |RF-012| O site deve mostrar ao usuário cliente um resumo do pedido.                                      | BAIXA      |
 |RF-013| O site deve permitir ao usuário alterar dados cadastrais.                                      | BAIXA      |
 |RF-014|  O site deve permitir o usuário prestador cancelar um pedido.                                 | BAIXA      |
+|RF-015|  O site deve permitir o usuário cliente cancelar um pedido.                                 | BAIXA      |
 
 ### Requisitos não Funcionais
 
