@@ -3,22 +3,25 @@
 
 <span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a></span>
 
-Visão geral da interação do usuário pelas telas do sistema e protótipo interativo das telas com as funcionalidades que fazem parte do sistema (wireframes).
+Um projeto de interface envolve o desenvolvimento de protótipos de interfaces. Alguns elementos, tais como usabilidade, consistência, navegabilidade, interatividade, clareza, flexibilidade, funcionalidade e legibilidade, devem ser considerados no processo de produção dessas interfaces.	 
 
- Apresente as principais interfaces da plataforma. Discuta como ela foi elaborada de forma a atender os requisitos funcionais, não funcionais e histórias de usuário abordados nas <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a>.
+**Diagrama de Fluxo:**  
 
-## Diagrama de Fluxo
+Conforme pode ser visto, a figura  mostra o diagrama de fluxo de interação do usuário pelas telas do sistema. Cada uma das telas deste fluxo é detalhada na seção de Wireframes que será desenvolvido. 
 
-O diagrama apresenta o estudo do fluxo de interação do usuário com o sistema interativo e  muitas vezes sem a necessidade do desenho do design das telas da interface. Isso permite que o design das interações seja bem planejado e gere impacto na qualidade no design do wireframe interativo que será desenvolvido logo em seguida.
+|FLUXO DO USUÁRIO| DESCRIÇÃO  |REFERÊNCIA                |
+|--------------------|--------------------------------------------|----------------------------------------|
+|HomePage           | A página inicial da aplicação será responsável por apresentar as funcionalidades principais        |  |
+|Cadastro Solicitante e Prestador de Serviços | Permitir ao usuário realizar o cadastro na aplicação como: cadastro de usuário cliente ou cadastro de prestador de serviço (PF/Autônomo)   | RF02 e RF03           |
+| Login                   | Permitir ao usuário efetuar o login incluindo o email e senha.     |  RF01                                      |
+|Solicitação de pedidos do solicitante              | Permitir realizar a solicitação, usuário informa o endereço de origem e destino; data e hora que deseja o serviço; informa o tipo: se é carreto ou mudança; informa a listagem e quantidade de itens; escolhe o tipo de veículo de transporte; insere algumas informações tais como: local é de difícil acesso, casa ou apartamento, precisa de ajudante, possui elevador, qual andar, tem escada; informa se quer adicionar o serviço de montagem e desmontagem. Mostra o prestador de serviço que atendem ao filtro já informando seu valor de frete. Apresenta as informações do prestador escolhido, o resumo do pedido; caso houver deixar uma mensagem ou observação para o prestador; se necessário é possível modificar o pedido e  finalizar a contratação do pedido. | RF04, RF05, RF06, RF07, RF08, RF12 |
+| Histórico do Solicitante | Permitir ao usuário alterar dados cadastrais e alteração da senha.     |  RF01                                      |
+| Minha área                     | Permitir ao usuário alterar dados cadastrais e alteração da senha.      |  RF13                                      |
+| Histórico do Prestador de Serviços                    | Permitir ao usuário cliente visualizar os pedidos em andamento, pedidos finalizados e em aprovação. Permitir cancelar e aceitar um pedido.     |  RF10 e RF11                                       |
 
-O diagrama de fluxo pode ser desenvolvido com “boxes” que possuem internamente a indicação dos principais elementos de interface - tais como menus e acessos - e funcionalidades, tais como editar, pesquisar, filtrar, configurar - e a conexão entre esses boxes a partir do processo de interação. Você pode ver mais explicações e exemplos https://www.lucidchart.com/blog/how-to-make-a-user-flow-diagram.
+Figura X - Diagrama de Fluxo de Usuário
+![Exemplo de Diagrama de Fluxo](img/Fluxograma_ClickExpress.jpg)
 
-![Exemplo de Diagrama de Fluxo](img/diagramafluxo2.jpg)
-
-As referências abaixo irão auxiliá-lo na geração do artefato “Diagramas de Fluxo”.
-
-> **Links Úteis**:
-> - [Fluxograma online: seis sites para fazer gráfico sem instalar nada | Produtividade | TechTudo](https://www.techtudo.com.br/listas/2019/03/fluxograma-online-seis-sites-para-fazer-grafico-sem-instalar-nada.ghtml)
 
 ## Wireframes
 
