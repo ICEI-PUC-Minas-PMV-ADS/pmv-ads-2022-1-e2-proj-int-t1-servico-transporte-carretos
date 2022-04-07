@@ -128,11 +128,12 @@ A tabela a seguir apresenta os requisitos do projeto, identificando a prioridade
 |RF-06| O site deve permitir o usuário cliente descrever a mercadoria a ser transportada.                                |  ALTA     |
 |RF-07| O site deve permitir o usuário prestador fornecer orçamento do serviço.                                |  ALTA      |
 |RF-08| O site deve permitir ao usuário cliente finalizar o pedido.                                           |  ALTA      |
-|RF-09| O site deve permitir ao usuário cliente visualizar os pedidos em andamento.                                          | MÉDIA      |
+|RF-09| O site deve permitir aos usuários visualizar os pedidos em andamento.                                          | MÉDIA      |
 |RF-010| O site deve permitir o usuário prestador visualizar solicitações de usuários cliente.                                               | MÉDIA      |
-|RF-011| O site deve permitir ao usuário cliente visualizar o histórico de pedidos.                                           | BAIXA      |
+|RF-011| O site deve permitir aos usuários visualizar o histórico de pedidos finalizados.                                           | BAIXA      |
 |RF-012| O site deve mostrar ao usuário cliente um resumo do pedido.                                      | BAIXA      |
 |RF-013| O site deve permitir ao usuário alterar dados cadastrais.                                      | BAIXA      |
+|RF-014|  O site deve permitir o usuário prestador cancelar um pedido.                                 | BAIXA      |
 
 ### Requisitos não Funcionais
 
