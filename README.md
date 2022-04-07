@@ -14,7 +14,7 @@ O objetivo do projeto é a criação de uma aplicação, que proporcione uma mel
 * Sabrina Goncalves De Andrade
 * Thamara Machado Rocha
 * Werlon Elem Bicalho De Oliveira
-* William Fernando Da Silva
+* Gabriel Henrique Rolim Rocha
 
 ## Orientador
 
