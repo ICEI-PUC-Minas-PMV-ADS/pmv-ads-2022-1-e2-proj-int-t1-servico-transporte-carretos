@@ -36,8 +36,16 @@
 
 |Caso de Teste |CT-05 – Usuário Prestador enviar orçamento de serviço para usuário Cliente  |
 |--------------------|----------------------------------------------------------------------|
-|**Requisitos Associados** | RF-007 - O site deve permitir o usuário prestador fornecer orçamento do serviço. |
+|**Requisitos Associados** | RF-007 - O site deve permitir o usuário prestador fornecer orçamento do serviço. RF-010 - O site deve permitir o usuário prestador visualizar solicitações de usuários cliente. |
 |**Entrada** | Após efetuar o login, o usuário acessa o menu de pedidos. |
 |**Objetivo do Teste** | Verificar se o usuário Prestador consegue enviar orçamento para pedido criado pelo usuário Cliente  |
-|**Passos** | 1) Acessar o Navegador  2) Informar o endereço do Site  3) Clicar no botão no canto superior de login  4) Preencher os campos com informações validas 5) Clicar no botão Logar. 6) Acessar o menu de pedidos. 7) Selecionar um pedido com status "Novo". 8)Preencher formulário de orçamento. 8) Enviar orçamento após clicar no botão Enviar.|
+|**Passos** | 1) Acessar o Navegador  2) Informar o endereço do Site  3) Clicar no botão no canto superior de login  4) Preencher os campos com informações validas 5) Clicar no botão Logar. 6) Acessar o menu de pedidos. 8) Visualizar o status dos pedidos ("Novo", "Aguardando resposta", "Finalizado", "Cancelado") 9) Selecionar um pedido com status "Novo". 10)Preencher formulário de orçamento. 11) Enviar orçamento após clicar no botão Enviar.|
 |**Critérios de Êxito** | "Orçamento enviado com sucesso." |
+
+|Caso de Teste |CT-06 – Usuário Prestador enviar orçamento de serviço para usuário Cliente  |
+|--------------------|----------------------------------------------------------------------|
+|**Requisitos Associados** | RF-009 - O site deve permitir aos usuários visualizar os pedidos em andamento. RF-010 - O site deve permitir o usuário prestador visualizar solicitações de usuários cliente. RF-011 - O site deve permitir aos usuários visualizar o histórico de pedidos finalizados. RF-012 - O site deve mostrar ao usuário cliente um resumo do pedido.  |
+|**Entrada** | Após efetuar o login, o usuário acessa o menu gerenciamento de pedidos/contratos. |
+|**Objetivo do Teste** | Usuário Prestador: Verificar se ele consegue acessar menu de gerenciamento de pedidos e visualizar o status dos pedidos criados.  Usuário Cliente: Verificar se ele consegue acessar menu de gerenciamento de pedidos e visualizar o status dos pedidos que ele criou.  |
+|**Passos** | 1) Acessar o Navegador  2) Informar o endereço do Site  3) Clicar no botão no canto superior de login  4) Preencher os campos com informações validas 5) Clicar no botão Logar. 6) Acessar o menu gerenciamento de pedidos/contratos. 7) Visualizar lista de pedidos.|
+|**Critérios de Êxito** | Visualização de pedidos no menu gerenciamento de pedidos. |
