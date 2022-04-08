@@ -49,3 +49,11 @@
 |**Objetivo do Teste** | Usuário Prestador: Verificar se ele consegue acessar menu de gerenciamento de pedidos e visualizar o status dos pedidos criados.  Usuário Cliente: Verificar se ele consegue acessar menu de gerenciamento de pedidos e visualizar o status dos pedidos que ele criou.  |
 |**Passos** | 1) Acessar o Navegador  2) Informar o endereço do Site  3) Clicar no botão no canto superior de login  4) Preencher os campos com informações validas 5) Clicar no botão Logar. 6) Acessar o menu gerenciamento de pedidos/contratos. 7) Visualizar lista de pedidos.|
 |**Critérios de Êxito** | Visualização de pedidos no menu gerenciamento de pedidos. |
+
+|Caso de Teste |CT-07 – Cancelar Pedido  |
+|--------------------|----------------------------------------------------------------------|
+|**Requisitos Associados** | RF-014 - O site deve permitir o usuário prestador cancelar um pedido. RF-015 -O site deve permitir o usuário cliente cancelar um pedido.  |
+|**Entrada** | Após efetuar o login, o usuário acessa o menu gerenciamento de pedidos/contratos e cancela um pedido. |
+|**Objetivo do Teste** | Usuário Prestador: Verificar se ele consegue acessar menu de gerenciamento de pedidos e cancelar um pedido que ele tenha enviado orçamento. Usuário Cliente: Verificar se ele consegue acessar menu de gerenciamento de pedidos e cancelar algum pedido que foi criado por ele.  |
+|**Passos** | 1) Acessar o Navegador  2) Informar o endereço do Site  3) Clicar no botão no canto superior de login  4) Preencher os campos com informações validas 5) Clicar no botão Logar. 6) Acessar o menu gerenciamento de pedidos/contratos. 7) Clicar no botão Cancelar (Obs: Para usuário prestador o botão de cancelamento estará habilitado apenas para pedidos que ele tenha enviado orçamento).|
+|**Critérios de Êxito** | "Pedido cancelado com sucesso."  |
