@@ -32,9 +32,9 @@ Em cada tarefa realizada por cada participante, é possível medir:
 |--------------------|----------------------------------------------------------------------|
 |**Objetivo do Teste** | Verificar a existência de caixas de confirmação de ação. |
 |**Passos** | Ao clicar em "Cancelar pedido” apresentar ao usuário uma mensagem para validar o cancelamento.  |
-|**Critérios de Êxito** | "Pedido cancelado com sucesso ". |
+|**Critérios de Êxito** | "Deseja cancelar este pedido? ". |
 
-|Caso de Teste |CT-02 – Fornecer feedbacks informativos ao usuário e marcar o final dos diálogos   |
+|Caso de Teste |CT-02 – Fornecer feedbacks informativos e marcar o final dos diálogos   |
 |--------------------|----------------------------------------------------------------------|
 |**Objetivo do Teste** | Verificar a existência de caixas de mensagens informativas e de fim  |
 |**Passos** | Na ação do usuário a aplicação deve prover uma resposta informativa e deixar claro quando uma ação foi concluída com êxito.  |
@@ -42,7 +42,7 @@ Em cada tarefa realizada por cada participante, é possível medir:
 
 |Caso de Teste |CT-03 – Usuário reconhecer, diagnosticar e recuperar seus erros   |
 |--------------------|----------------------------------------------------------------------|
-|**Objetivo do Teste** | Ajudar os usuários a reparar um erro. |
+|**Objetivo do Teste** | Ajudar o usuário a reparar um erro. |
 |**Passos** | Informar ao usuário os campos obrigatórios, apresentar aviso de formulários.   |
 |**Critérios de Êxito** | (*) Campo de preenchimento obrigatório; Mensagem de informação do tipo do campo, por exemplo no campo E-mail mostrar o texto “Insira seu e-mail”  |
 
@@ -54,8 +54,8 @@ Em cada tarefa realizada por cada participante, é possível medir:
 
 |Caso de Teste |CT-05 – Reconhecer, em vez de recordar   |
 |--------------------|----------------------------------------------------------------------|
-|**Objetivo do Teste** | Verificar se a aplicação possui ícones que apenas olhando o componente já reconhece o que significa.  |
-|**Passos** |Prover interação por meio da imagem parecida com o que o ícone pretende representar. |
+|**Objetivo do Teste** | Verificar se a aplicação possui ícones que apenas olhando o símbolo já reconhece o que significa.  |
+|**Passos** |Prover interação por meio da imagem que significa o item que pretende representar. |
 |**Critérios de Êxito** |"Salvar Alterações" com o ícone de um disquete |
 
 |Caso de Teste |CT-06 – Consistência e Padronização   |
