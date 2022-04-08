@@ -4,23 +4,23 @@
 
 |Caso de Teste |CT-01 – Cadastro do usuário |
 |--------------------|----------------------------------------------------------------------|
-|**Requisitos Associados** | RF-001 - A página inicial da aplicação deve possibilitar ao usuário fazer login, se cadastrar ou alterar sua senha. RF-002 - O site deve conter um formulário de cadastro para novos usuários contendo a intenção de cadastro desejada (Cliente / Prestador) e os dados conforme tipo de usuário. |
-|**Entrada** | Cadastro: Após preencher o email, senha, telefone. Login: Após preencher o email e senha. |
+|**Requisitos Associados** | RF-001 - O site deve permitir ao usuário fazer login. RF-002 - O site deve permitir cadastrar usuário cliente. RF-003 - O site deve permitir cadastrar usuário prestador de serviços. |
+|**Entrada** | Cadastro: Após preencher o email, senha e informações pessoais (telefone, endereço, etc). Login: Após preencher o email e senha. |
 |**Objetivo do Teste** | Permitir que o usuário acesse a plataforma através do login e cadastro. Permitir o cadastro do usuário que quer solitar carreto/mudança e o que deseja transportar o material/mercadoria.  |
 |**Passos** | 1) Acessar o Navegador  2) Informar o endereço do Site  3) Clicar no botão Cadastre-se  4) Preencher os campos com informações validas 5) Clicar no botão Cadastrar. |
 |**Critérios de Êxito** | "Cadastro concluido :) seja muito bem vindo". |
 
 |Caso de Teste |CT-02 – Login do usuário |
 |--------------------|----------------------------------------------------------------------|
-|**Requisitos Associados** | RF-001 - A página inicial da aplicação deve possibilitar ao usuário fazer login, se cadastrar ou alterar sua senha. |
+|**Requisitos Associados** | RF-001 - O site deve permitir ao usuário fazer login. |
 |**Entrada** | Login: Após preencher o email e senha. |
 |**Objetivo do Teste** | Permitir que o usuário acesse a plataforma através do login. |
 |**Passos** | 1) Acessar o Navegador  2) Informar o endereço do Site  3) Clicar no botão no canto superior de login  4) Preencher os campos com informações validas 5) Clicar no botão Logar. |
-|**Critérios de Êxito** | O usuário sera direcionado a homepage e tera acesso ao seu menu. |
+|**Critérios de Êxito** | O usuário será direcionado a homepage e terá acesso ao seu menu. |
 
-|Caso de Teste |CT-03 – Alterar Senha  |
+|Caso de Teste |CT-03 – Alterar dados cadastrais (por exemplo senha)  |
 |--------------------|----------------------------------------------------------------------|
-|**Requisitos Associados** |RF-02 - O site deve conter um formulário que permita o usuário criar uma nova senha em caso de esquecimento. |
+|**Requisitos Associados** |RF-02 - O site deve permitir ao usuário alterar dados cadastrais. |
 |**Entrada** | Após clicar no botão esqueci senha, o usuário deverá informar o email cadastrado. |
 |**Objetivo do Teste** | Verificar se os campos do formulário estão sendo exibidos corretamente.  |
 |**Passos** |1) Acessar o Navegador  2) Informar o endereço do Site  3) Visualizar a página de login  4)Esqueci senha 5) Informar o email, onde será enviado um link para a nova senha 11) Insira uma nova senha no campo [senha] e no campo [confirme sua senha] redigite a senha e clique no botão próximo que levará para a próxima tela |
