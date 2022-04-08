@@ -33,3 +33,11 @@
 |**Objetivo do Teste** | Verificar se o usuário cliente consegue criar um pedido preenchendo todos os campos obrigatórios, alternando o tipo (carreto ou mudança)  |
 |**Passos** | 1) Acessar o Navegador  2) Informar o endereço do Site  3) Clicar no botão no canto superior de login  4) Preencher os campos com informações validas 5) Clicar no botão Logar. 6) Acessar o menu de criação de pedidos. 7) Preencher formulário com dados do pedido. 8) Criar pedido após clicar no botão Finalizar.|
 |**Critérios de Êxito** | "Pedido criado com sucesso." |
+
+|Caso de Teste |CT-05 – Usuário Prestador enviar orçamento de serviço para usuário Cliente  |
+|--------------------|----------------------------------------------------------------------|
+|**Requisitos Associados** | RF-007 - O site deve permitir o usuário prestador fornecer orçamento do serviço. |
+|**Entrada** | Após efetuar o login, o usuário acessa o menu de pedidos. |
+|**Objetivo do Teste** | Verificar se o usuário Prestador consegue enviar orçamento para pedido criado pelo usuário Cliente  |
+|**Passos** | 1) Acessar o Navegador  2) Informar o endereço do Site  3) Clicar no botão no canto superior de login  4) Preencher os campos com informações validas 5) Clicar no botão Logar. 6) Acessar o menu de pedidos. 7) Selecionar um pedido com status "Novo". 8)Preencher formulário de orçamento. 8) Enviar orçamento após clicar no botão Enviar.|
+|**Critérios de Êxito** | "Orçamento enviado com sucesso." |
