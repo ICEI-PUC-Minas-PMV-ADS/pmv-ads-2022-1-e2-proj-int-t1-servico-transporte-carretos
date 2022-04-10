@@ -30,38 +30,44 @@ Em cada tarefa realizada por cada participante, é possível medir:
 
 |Caso de Teste |CT-01 – Prevenir erros  |
 |--------------------|----------------------------------------------------------------------|
+|**Requisito Associado** | RNF-06 A aplicação deve ser intuitiva, de fácil utilização, entendimento e deve ser organizado de tal maneira que os erros dos usuários sejam minimizados.  |
 |**Objetivo do Teste** | Verificar a existência de caixas de confirmação de ação. |
 |**Passos** | Ao clicar em "Cancelar pedido” apresentar ao usuário uma mensagem para validar o cancelamento.  |
 |**Critérios de Êxito** | "Deseja cancelar este pedido? ". |
 
 |Caso de Teste |CT-02 – Fornecer feedbacks informativos e marcar o final dos diálogos   |
 |--------------------|----------------------------------------------------------------------|
-|**Objetivo do Teste** | Verificar a existência de caixas de mensagens informativas e de fim  |
+|**Requisito Associado** | RNF-05 A aplicação deverá retornar ao usuário mensagem com informação de ajuda e ao término de uma tarefa (criação de pedidos, cancelamento, etc).  |
+|**Objetivo do Teste** | Verificar a existência de caixas de mensagens informativas e de fim.  |
 |**Passos** | Na ação do usuário a aplicação deve prover uma resposta informativa e deixar claro quando uma ação foi concluída com êxito.  |
 |**Critérios de Êxito** | "Cadastro realizado com sucesso"; "Solicitação enviada". |
 
 |Caso de Teste |CT-03 – Usuário reconhecer, diagnosticar e recuperar seus erros   |
 |--------------------|----------------------------------------------------------------------|
+|**Requisito Associado** | RNF-03 Os formulários devem informar ao usuário quais são os campos de preenchimento obrigatório.  |
 |**Objetivo do Teste** | Ajudar o usuário a reparar um erro. |
 |**Passos** | Informar ao usuário os campos obrigatórios, apresentar aviso de formulários.   |
-|**Critérios de Êxito** | (*) Campo de preenchimento obrigatório; Mensagem de informação do tipo do campo, por exemplo no campo E-mail mostrar o texto “Insira seu e-mail”  |
+|**Critérios de Êxito** | (*) Campo de preenchimento obrigatório; Mensagem de informação do tipo do campo, por exemplo no campo E-mail mostrar o texto “Insira seu e-mail”.  |
 
 |Caso de Teste |CT-04 – Acessibilidade   |
 |--------------------|----------------------------------------------------------------------|
+|**Requisito Associado** | RNF-08 A aplicação ou parte dela deve ser acessível por pessoas com certo tipo de deficiência ou outra necessidade específica.  |
 |**Objetivo do Teste** | Verificar se todas as imagens apresenta informação de descrição.  |
 |**Passos** | Conferir se em todas as imagens, foi atribuído um texto alternativo, para que se por algum motivo a imagem não for carregada ou o usuário esteja utilizando leitor de tela ele consiga entender do que se trata.  |
 |**Critérios de Êxito** | O atributo alt do HTML deve apresentar texto referente a exibição. |
 
 |Caso de Teste |CT-05 – Reconhecer, em vez de recordar   |
 |--------------------|----------------------------------------------------------------------|
+|**Requisito Associado** | RNF-04 Utilizar símbolo e ícone para ajudar no entendimento e conseguir uma associação imediata sobre aplicações de reconhecimento.  |
 |**Objetivo do Teste** | Verificar se a aplicação possui ícones que apenas olhando o símbolo já reconhece o que significa.  |
 |**Passos** |Prover interação por meio da imagem que significa o item que pretende representar. |
-|**Critérios de Êxito** |"Salvar Alterações" com o ícone de um disquete |
+|**Critérios de Êxito** |"Salvar Alterações" com o ícone de um disquete. |
 
 |Caso de Teste |CT-06 – Consistência e Padronização   |
 |--------------------|----------------------------------------------------------------------|
+|**Requisito Associado** | RNF-07 A aplicação deve possuir uma interface limpa, com visualização voltada apenas para as necessidades do usuário no momento, também como forma de melhorar a performance e o desempenho.  |
 |**Objetivo do Teste** | Verificar a existência de padrões de uma mesma ação em diferentes momentos. |
 |**Passos** | Seguir sempre o mesmo padrão de interface e interação.  |
-|**Critérios de Êxito** | Verbos padronizados  |
+|**Critérios de Êxito** | Verbos padronizados.  |
 
 **Perfil dos participantes:** Usuários que se encaixam na persona definida na metodologia do trabalho, afim de obter detalhes mais precisos. 
