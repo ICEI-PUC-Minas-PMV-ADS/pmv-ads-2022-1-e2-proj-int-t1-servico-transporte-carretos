@@ -140,8 +140,8 @@ A tabela a seguir apresenta os requisitos do projeto, identificando a prioridade
 
 |ID     | Descrição do Requisito  |Prioridade |
 |---------|-------------------------|----|
-|RNF-01   | O sistema deve ser compatível com os principais navegadores como (Google Chrome, Mozilla Firefox, Microsoft Edge, Internet Explorer.   | ALTA | 
-|RNF-02  | O site deve ser publicado em um ambiente acessível publicamente na Internet (Repl.it, GitHub Pages, Heroku).  |  ALTA | 
+|RNF-01   | A aplicação deve ser compatível com os principais navegadores como (Google Chrome, Mozilla Firefox, Microsoft Edge, Internet Explorer.   | ALTA | 
+|RNF-02  | A aplicação deve ser publicado em um ambiente acessível publicamente na Internet (Repl.it, GitHub Pages, Heroku).  |  ALTA | 
 |RNF-03  | Os formulários devem informar ao usuário quais são os campos de preenchimento obrigatório.   |  ALTA |
 |RNF-04  | Utilizar símbolo e ícone para ajudar no entendimento e conseguir uma associação imediata sobre aplicações de reconhecimento.     |  MÉDIA |
 |RNF-05  | A aplicação deverá retornar ao usuário mensagem com informação de ajuda e ao término de uma tarefa (criação de pedidos, cancelamento, etc).   |  MÉDIA |
