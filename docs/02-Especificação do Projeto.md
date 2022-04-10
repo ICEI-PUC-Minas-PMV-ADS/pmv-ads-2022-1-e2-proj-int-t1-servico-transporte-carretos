@@ -140,13 +140,15 @@ A tabela a seguir apresenta os requisitos do projeto, identificando a prioridade
 
 |ID     | Descrição do Requisito  |Prioridade |
 |---------|-------------------------|----|
-|RNF-01   | O sistema deve ser compatível com os principais navegadores como (Google Chrome, Mozilla Firefox, Microsoft Edge, Internet Explorer   | ALTA | 
-|RNF-02  | O site deve ser publicado em um ambiente acessível publicamente na Internet (Repl.it, GitHub Pages, Heroku)  |  ALTA | 
-|RNF-03  | Os dados do sistema podem ser migrados para qualquer sistema de gerenciamento de banco de dados SQL   |  MEDIA |
-|RNF-04  | O site deverá ser responsivo permitindo a visualização em um celular de forma adequada |  MEDIA |
-|RNF-05  | As informações cadastrais do cliente devem estar disponíveis apenas para o próprio cliente  |  BAIXA |
-|RNF-06  | O site deve aparecer no resultado de pesquisas relacionadas a mudança e carreto  |  BAIXA |
-
+|RNF-01   | O sistema deve ser compatível com os principais navegadores como (Google Chrome, Mozilla Firefox, Microsoft Edge, Internet Explorer.   | ALTA | 
+|RNF-02  | O site deve ser publicado em um ambiente acessível publicamente na Internet (Repl.it, GitHub Pages, Heroku).  |  ALTA | 
+|RNF-03  | Os formulários devem informar ao usuário quais são os campos de preenchimento obrigatório.   |  ALTA |
+|RNF-04  | Utilizar símbolo e ícone para ajudar no entendimento e conseguir uma associação imediata sobre aplicações de reconhecimento.     |  MÉDIA |
+|RNF-05  | A aplicação deverá retornar ao usuário mensagem com informação de ajuda e ao término de uma tarefa (criação de pedidos, cancelamento, etc).   |  MÉDIA |
+|RNF-06  | A aplicação deve ser intuitiva, de fácil utilização, entendimento e deve ser organizado de tal maneira que os erros dos usuários sejam minimizados.   |  MÉDIA |
+|RNF-07  | A aplicação deve possuir uma interface limpa, com visualização voltada apenas para as necessidades do usuário no momento, também como forma de melhorar a performance e o desempenho. |  MÉDIA |
+|RNF-08  | A aplicação ou parte dela deve ser acessível por pessoas com certo tipo de deficiência ou outra necessidade específica.   |  MÉDIA |
+|RNF-09  | O site deverá ser responsivo permitindo a visualização em um celular de forma adequada. |  BAIXA |
 
 
 
