@@ -21,7 +21,7 @@ Conforme pode ser visto, a figura  mostra o diagrama de fluxo de interação do 
 
 
 ![Exemplo de Diagrama de Fluxo](img/Fluxograma_ClickExpress.jpg)
-Figura X - Diagrama de Fluxo de Usuário
+
 
 ## Wireframes
 
