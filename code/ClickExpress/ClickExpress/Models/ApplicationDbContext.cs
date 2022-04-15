@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClickExpress.Models
 {
-    public class ApplicationDbContext : DbContext
+    public class ApplicationDbContext : DbContext // classe criada
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options):base(options)
         {
