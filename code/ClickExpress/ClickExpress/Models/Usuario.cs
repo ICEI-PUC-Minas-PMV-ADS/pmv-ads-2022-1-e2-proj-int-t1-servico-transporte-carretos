@@ -11,6 +11,7 @@ namespace ClickExpress.Models // classe criada
     public class Usuario
     {
         [Key]
+        [Required(ErrorMessage = "Obrigatório informar o Id!")]
         public int Id { get; set; }
         
         [Required(ErrorMessage = "Obrigatório informar o nome!") ]

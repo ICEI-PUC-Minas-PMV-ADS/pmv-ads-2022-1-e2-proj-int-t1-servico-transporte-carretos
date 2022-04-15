@@ -33,14 +33,22 @@
                         @if (User.Identity.IsAuthenticated)
                         {
                             <li class="nav-item">
-                                Olá, @User.Identity.Name
-                            </li> }
+                                Olá, @User.Identity.Name <a class="nav-link text-dark" asp-area="" asp-controller="Usuarios" asp-action="Logout">Sair</a>
+                            </li>
+
+                        }
                         else
                         {
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Usuarios" asp-action="Login">Login</a>
                             </li>
                         }
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <!--Item adicionado-->
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Usuarios" asp-action="Create">Cadastrar</a>
+                        </li>
                     </ul>
                 </div>
             </div>
