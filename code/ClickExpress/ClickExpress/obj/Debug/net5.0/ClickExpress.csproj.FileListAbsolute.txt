@@ -435,3 +435,5 @@ D:\werlon\projeto_clickexpress\code\ClickExpress\ClickExpress\obj\Debug\net5.0\R
 D:\werlon\projeto_clickexpress\code\ClickExpress\ClickExpress\obj\Debug\net5.0\Razor\Views\Usuarios\Edit.cshtml.g.cs
 D:\werlon\projeto_clickexpress\code\ClickExpress\ClickExpress\obj\Debug\net5.0\Razor\Views\Usuarios\Index.cshtml.g.cs
 D:\werlon\projeto_clickexpress\code\ClickExpress\ClickExpress\bin\Debug\net5.0\BCrypt.Net-Next.dll
+D:\werlon\projeto_clickexpress\code\ClickExpress\ClickExpress\obj\Debug\net5.0\Razor\Views\Usuarios\Login.cshtml.g.cs
+D:\werlon\projeto_clickexpress\code\ClickExpress\ClickExpress\obj\Debug\net5.0\Razor\Views\Usuarios\AccessDenied.cshtml.g.cs

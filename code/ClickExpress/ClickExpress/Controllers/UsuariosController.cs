@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ClickExpress.Models;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Authentication;
 
 namespace ClickExpress.Controllers
 {
@@ -17,6 +19,67 @@ namespace ClickExpress.Controllers
         {
             _context = context;
         }
+
+        // Login: Usuarios - item adicionado
+        public IActionResult Login()
+        {
+            return View();
+        }
+
+        // Login: Usuarios - item adicionado
+        [HttpPost]
+        public async Task<IActionResult> Login([Bind("Id,Senha")] Usuario usuario)
+        {
+            //faz consulta no banco de dados dos dados inseridos
+            var user = await _context.Usuarios
+                .FirstOrDefaultAsync(m => m.Id == usuario.Id);
+
+            //condição usuário inxistente
+            if (user == null)
+            {
+                ViewBag.Message = "Usuário e/ou Senha inválidos!";
+                return View();
+            }
+
+            //comparação da senha preenchida com a armazenada no banco de dados
+            bool isSenhaOk = BCrypt.Net.BCrypt.Verify(usuario.Senha, user.Senha);
+
+            //condição usuário existente
+            if (isSenhaOk)
+            {
+                var claims = new List<Claim>
+                {
+                    new Claim(ClaimTypes.Name, user.Nome),
+                    new Claim(ClaimTypes.NameIdentifier, user.Nome),
+                    new Claim(ClaimTypes.Role, user.Perfil.ToString())
+                };
+
+                var userIdentity = new ClaimsIdentity(claims, "login");
+
+                ClaimsPrincipal principal = new ClaimsPrincipal(userIdentity);
+
+                var props = new AuthenticationProperties
+                {
+                    AllowRefresh = true,
+                    ExpiresUtc = DateTime.Now.ToLocalTime().AddDays(7), //mantém login por 7 dias
+                    IsPersistent = true
+                };
+
+                await HttpContext.SignInAsync(principal, props);
+
+                return Redirect("/"); //redicionamento do usuário, após auteticação, para página Home
+
+            }
+
+            ViewBag.Message = "Usuário e/ou Senha inválidos!";
+            return View();
+        }
+
+        public IActionResult AccessDenied()
+        {
+            return View();
+        }
+
 
         // GET: Usuarios
         public async Task<IActionResult> Index()
@@ -101,6 +164,7 @@ namespace ClickExpress.Controllers
                 {
                     // Item inserido 
                     usuario.Senha = BCrypt.Net.BCrypt.HashPassword(usuario.Senha);
+
                     _context.Update(usuario);
                     await _context.SaveChangesAsync();
                 }
