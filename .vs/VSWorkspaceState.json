@@ -1,7 +1,12 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\code",
+    "\\code\\ClickExpress",
+    "\\code\\ClickExpress\\ClickExpress",
+    "\\code\\ClickExpress\\ClickExpress\\Views",
+    "\\code\\ClickExpress\\ClickExpress\\Views\\Home"
   ],
-  "SelectedNode": "\\ClickExpress.sln",
+  "SelectedNode": "\\code\\ClickExpress\\ClickExpress\\Views\\Home\\Index.cshtml",
   "PreviewInSolutionExplorer": false
 }
