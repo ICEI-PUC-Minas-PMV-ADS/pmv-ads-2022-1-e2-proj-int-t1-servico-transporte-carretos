@@ -7290,19 +7290,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\kenia\\.nuget\\packages\\": {}
+    "C:\\Users\\josia\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kenia\\OneDrive\\Documentos\\PUC Minas\\Eixo 2\\pmv-ads-2022-1-e2-proj-int-t1-servico-transporte-carretos\\code\\ClickExpress\\ClickExpress\\ClickExpress.csproj",
+      "projectUniqueName": "D:\\werlon\\projeto_clickexpress\\code\\ClickExpress\\ClickExpress\\ClickExpress.csproj",
       "projectName": "ClickExpress",
-      "projectPath": "C:\\Users\\kenia\\OneDrive\\Documentos\\PUC Minas\\Eixo 2\\pmv-ads-2022-1-e2-proj-int-t1-servico-transporte-carretos\\code\\ClickExpress\\ClickExpress\\ClickExpress.csproj",
-      "packagesPath": "C:\\Users\\kenia\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kenia\\OneDrive\\Documentos\\PUC Minas\\Eixo 2\\pmv-ads-2022-1-e2-proj-int-t1-servico-transporte-carretos\\code\\ClickExpress\\ClickExpress\\obj\\",
+      "projectPath": "D:\\werlon\\projeto_clickexpress\\code\\ClickExpress\\ClickExpress\\ClickExpress.csproj",
+      "packagesPath": "C:\\Users\\josia\\.nuget\\packages\\",
+      "outputPath": "D:\\werlon\\projeto_clickexpress\\code\\ClickExpress\\ClickExpress\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\kenia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\josia\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7373,7 +7373,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
       }
     }
   }
