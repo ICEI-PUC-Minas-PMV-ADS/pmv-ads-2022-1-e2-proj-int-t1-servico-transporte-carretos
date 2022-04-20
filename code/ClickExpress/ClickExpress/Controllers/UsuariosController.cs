@@ -28,11 +28,11 @@ namespace ClickExpress.Controllers
 
         // Login: Usuarios - item adicionado
         [HttpPost]
-        public async Task<IActionResult> Login([Bind("Id,Senha")] Usuario usuario)
+        public async Task<IActionResult> Login([Bind("Id_usuario,Senha")] Usuario usuario)
         {
             //faz consulta no banco de dados dos dados inseridos
             var user = await _context.Usuarios
-                .FirstOrDefaultAsync(m => m.Id == usuario.Id);
+                .FirstOrDefaultAsync(m => m.Id_usuario == usuario.Id_usuario);
 
             //condição usuário inxistente
             if (user == null)
@@ -102,7 +102,7 @@ namespace ClickExpress.Controllers
             }
 
             var usuario = await _context.Usuarios
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .FirstOrDefaultAsync(m => m.Id_usuario == id);
             if (usuario == null)
             {
                 return NotFound();
@@ -122,7 +122,7 @@ namespace ClickExpress.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nome,Senha,Perfil")] Usuario usuario)
+        public async Task<IActionResult> Create([Bind("Id_usuario,Nome,Senha,Perfil")] Usuario usuario)
         {
             if (ModelState.IsValid)
             {
@@ -157,9 +157,9 @@ namespace ClickExpress.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,Senha,Perfil")] Usuario usuario)
+        public async Task<IActionResult> Edit(int id, [Bind("Id_usuario,Nome,Senha,Perfil")] Usuario usuario)
         {
-            if (id != usuario.Id)
+            if (id != usuario.Id_usuario)
             {
                 return NotFound();
             }
@@ -176,7 +176,7 @@ namespace ClickExpress.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!UsuarioExists(usuario.Id))
+                    if (!UsuarioExists(usuario.Id_usuario))
                     {
                         return NotFound();
                     }
@@ -199,7 +199,7 @@ namespace ClickExpress.Controllers
             }
 
             var usuario = await _context.Usuarios
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .FirstOrDefaultAsync(m => m.Id_usuario == id);
             if (usuario == null)
             {
                 return NotFound();
@@ -221,7 +221,7 @@ namespace ClickExpress.Controllers
 
         private bool UsuarioExists(int id)
         {
-            return _context.Usuarios.Any(e => e.Id == id);
+            return _context.Usuarios.Any(e => e.Id_usuario == id);
         }
     }
 }
