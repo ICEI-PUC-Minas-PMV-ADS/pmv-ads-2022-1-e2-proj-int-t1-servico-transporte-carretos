@@ -36,7 +36,7 @@
           "BCrypt.Net-Next": "4.0.3",
           "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": "5.0.16",
           "Microsoft.EntityFrameworkCore": "5.0.16",
-          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.15",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.16",
           "Microsoft.EntityFrameworkCore.Tools": "5.0.16",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "5.0.2",
           "Microsoft.AspNetCore.Antiforgery": "5.0.0.0",
@@ -807,15 +807,15 @@
           "lib/netstandard2.1/Microsoft.EntityFrameworkCore.Relational.dll": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.SqlServer/5.0.15": {
+      "Microsoft.EntityFrameworkCore.SqlServer/5.0.16": {
         "dependencies": {
           "Microsoft.Data.SqlClient": "2.0.1",
           "Microsoft.EntityFrameworkCore.Relational": "5.0.16"
         },
         "runtime": {
           "lib/netstandard2.1/Microsoft.EntityFrameworkCore.SqlServer.dll": {
-            "assemblyVersion": "5.0.15.0",
-            "fileVersion": "5.0.1522.10812"
+            "assemblyVersion": "5.0.16.0",
+            "fileVersion": "5.0.1622.16102"
           }
         },
         "compile": {
@@ -3723,12 +3723,12 @@
       "path": "microsoft.entityframeworkcore.relational/5.0.16",
       "hashPath": "microsoft.entityframeworkcore.relational.5.0.16.nupkg.sha512"
     },
-    "Microsoft.EntityFrameworkCore.SqlServer/5.0.15": {
+    "Microsoft.EntityFrameworkCore.SqlServer/5.0.16": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-lFnEMvLufq3xIuhk3efmMUJvRNxOLlAKl8NNYqvbbtDZtzVdgZR/dZJAGcwZT6AxSGNM29LMDXYY+ydADWcggg==",
-      "path": "microsoft.entityframeworkcore.sqlserver/5.0.15",
-      "hashPath": "microsoft.entityframeworkcore.sqlserver.5.0.15.nupkg.sha512"
+      "sha512": "sha512-CMfZHL4vdQD5JUYdmcA90LkuV9XkNF97hhSBUzcZPZ7VFgQR7etvn9NVsDvoi+Gn08p1lU4KsCJw7B3Ye5GlVQ==",
+      "path": "microsoft.entityframeworkcore.sqlserver/5.0.16",
+      "hashPath": "microsoft.entityframeworkcore.sqlserver.5.0.16.nupkg.sha512"
     },
     "Microsoft.EntityFrameworkCore.Tools/5.0.16": {
       "type": "package",

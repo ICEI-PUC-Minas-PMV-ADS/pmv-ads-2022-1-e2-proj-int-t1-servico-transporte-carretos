@@ -495,11 +495,11 @@
           "lib/netstandard2.1/Microsoft.EntityFrameworkCore.Relational.dll": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.SqlServer/5.0.15": {
+      "Microsoft.EntityFrameworkCore.SqlServer/5.0.16": {
         "type": "package",
         "dependencies": {
           "Microsoft.Data.SqlClient": "2.0.1",
-          "Microsoft.EntityFrameworkCore.Relational": "5.0.15"
+          "Microsoft.EntityFrameworkCore.Relational": "5.0.16"
         },
         "compile": {
           "lib/netstandard2.1/Microsoft.EntityFrameworkCore.SqlServer.dll": {}
@@ -2737,17 +2737,17 @@
         "microsoft.entityframeworkcore.relational.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.SqlServer/5.0.15": {
-      "sha512": "lFnEMvLufq3xIuhk3efmMUJvRNxOLlAKl8NNYqvbbtDZtzVdgZR/dZJAGcwZT6AxSGNM29LMDXYY+ydADWcggg==",
+    "Microsoft.EntityFrameworkCore.SqlServer/5.0.16": {
+      "sha512": "CMfZHL4vdQD5JUYdmcA90LkuV9XkNF97hhSBUzcZPZ7VFgQR7etvn9NVsDvoi+Gn08p1lU4KsCJw7B3Ye5GlVQ==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore.sqlserver/5.0.15",
+      "path": "microsoft.entityframeworkcore.sqlserver/5.0.16",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "lib/netstandard2.1/Microsoft.EntityFrameworkCore.SqlServer.dll",
         "lib/netstandard2.1/Microsoft.EntityFrameworkCore.SqlServer.xml",
-        "microsoft.entityframeworkcore.sqlserver.5.0.15.nupkg.sha512",
+        "microsoft.entityframeworkcore.sqlserver.5.0.16.nupkg.sha512",
         "microsoft.entityframeworkcore.sqlserver.nuspec"
       ]
     },
@@ -7284,25 +7284,25 @@
       "BCrypt.Net-Next >= 4.0.3",
       "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation >= 5.0.16",
       "Microsoft.EntityFrameworkCore >= 5.0.16",
-      "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.15",
+      "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.16",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.16",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 5.0.2"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\josia\\.nuget\\packages\\": {}
+    "C:\\Users\\kenia\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\werlon\\ClickExpress_clonado\\code\\ClickExpress\\ClickExpress\\ClickExpress.csproj",
+      "projectUniqueName": "C:\\Users\\kenia\\OneDrive\\Documentos\\PUC Minas\\pmv-ads-2022-1-e2-proj-int-t1-servico-transporte-carretos\\code\\ClickExpress\\ClickExpress\\ClickExpress.csproj",
       "projectName": "ClickExpress",
-      "projectPath": "D:\\werlon\\ClickExpress_clonado\\code\\ClickExpress\\ClickExpress\\ClickExpress.csproj",
-      "packagesPath": "C:\\Users\\josia\\.nuget\\packages\\",
-      "outputPath": "D:\\werlon\\ClickExpress_clonado\\code\\ClickExpress\\ClickExpress\\obj\\",
+      "projectPath": "C:\\Users\\kenia\\OneDrive\\Documentos\\PUC Minas\\pmv-ads-2022-1-e2-proj-int-t1-servico-transporte-carretos\\code\\ClickExpress\\ClickExpress\\ClickExpress.csproj",
+      "packagesPath": "C:\\Users\\kenia\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\kenia\\OneDrive\\Documentos\\PUC Minas\\pmv-ads-2022-1-e2-proj-int-t1-servico-transporte-carretos\\code\\ClickExpress\\ClickExpress\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\josia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\kenia\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7342,7 +7342,7 @@
           },
           "Microsoft.EntityFrameworkCore.SqlServer": {
             "target": "Package",
-            "version": "[5.0.15, )"
+            "version": "[5.0.16, )"
           },
           "Microsoft.EntityFrameworkCore.Tools": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -7373,7 +7373,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
       }
     }
   }

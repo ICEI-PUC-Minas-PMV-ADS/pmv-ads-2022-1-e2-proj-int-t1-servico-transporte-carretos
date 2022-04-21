@@ -1,0 +1,64 @@
+﻿@model ClickExpress.Models.Pedido
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Pedido</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id_contrato" />
+            <div class="form-group">
+                <label asp-for="Dt_contrato" class="control-label"></label>
+                <input asp-for="Dt_contrato" class="form-control" />
+                <span asp-validation-for="Dt_contrato" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tipo" class="control-label"></label>
+                <select asp-for="Tipo" class="form-control"></select>
+                <span asp-validation-for="Tipo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="End_Destino" class="control-label"></label>
+                <input asp-for="End_Destino" class="form-control" />
+                <span asp-validation-for="End_Destino" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="End_Partida" class="control-label"></label>
+                <input asp-for="End_Partida" class="form-control" />
+                <span asp-validation-for="End_Partida" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Horario" class="control-label"></label>
+                <select asp-for="Horario" class="form-control"></select>
+                <span asp-validation-for="Horario" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Preco" class="control-label"></label>
+                <input asp-for="Preco" class="form-control" />
+                <span asp-validation-for="Preco" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Usuario_Id" class="control-label"></label>
+                <select asp-for="Usuario_Id" class="form-control" asp-items="ViewBag.Usuario_Id"></select>
+                <span asp-validation-for="Usuario_Id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

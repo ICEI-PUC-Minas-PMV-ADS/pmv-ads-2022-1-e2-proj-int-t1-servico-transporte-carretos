@@ -44,6 +44,8 @@ namespace ClickExpress.Models // classe criada
         [Required(ErrorMessage = "Obrigatório informar perfil!")]
         public Perfil Perfil { get; set; }
 
+        public ICollection<Pedido> Pedidos { get; set; }
+
     }
 
     public enum Perfil

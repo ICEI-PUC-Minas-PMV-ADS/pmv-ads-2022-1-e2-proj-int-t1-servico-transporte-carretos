@@ -19,6 +19,43 @@ namespace ClickExpress.Migrations
                 .HasAnnotation("ProductVersion", "5.0.16")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("ClickExpress.Models.Pedido", b =>
+                {
+                    b.Property<int>("Id_contrato")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("Dt_contrato")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("End_Destino")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("End_Partida")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Horario")
+                        .HasColumnType("int");
+
+                    b.Property<double>("Preco")
+                        .HasColumnType("float");
+
+                    b.Property<int>("Tipo")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Usuario_Id")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id_contrato");
+
+                    b.HasIndex("Usuario_Id");
+
+                    b.ToTable("Pedidos");
+                });
+
             modelBuilder.Entity("ClickExpress.Models.Usuario", b =>
                 {
                     b.Property<int>("Id_usuario")
@@ -109,6 +146,17 @@ namespace ClickExpress.Migrations
                     b.ToTable("Prestadores");
                 });
 
+            modelBuilder.Entity("ClickExpress.Models.Pedido", b =>
+                {
+                    b.HasOne("ClickExpress.Models.Usuario", "Usuario")
+                        .WithMany("Pedidos")
+                        .HasForeignKey("Usuario_Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Usuario");
+                });
+
             modelBuilder.Entity("ClickExpress.Models.Cliente", b =>
                 {
                     b.HasOne("ClickExpress.Models.Usuario", null)
@@ -125,6 +173,11 @@ namespace ClickExpress.Migrations
                         .HasForeignKey("ClickExpress.Models.Prestador", "Id_usuario")
                         .OnDelete(DeleteBehavior.ClientCascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("ClickExpress.Models.Usuario", b =>
+                {
+                    b.Navigation("Pedidos");
                 });
 #pragma warning restore 612, 618
         }

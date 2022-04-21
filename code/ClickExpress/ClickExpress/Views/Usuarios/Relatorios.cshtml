@@ -1,0 +1,48 @@
+﻿@model ClickExpress.Models.Usuario
+
+@{
+    ViewData["Title"] = "Relatorios";
+}
+
+<h2>Usuario: @Model.Nome</h2>
+
+<div>
+    <h4>Pedidos</h4>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        Id_contrato
+                    </th>
+                    <th>
+                        Dt_contrato
+                    </th>
+                    <th>
+                        Usuario_Id
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Pedidos)
+                {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Id_contrato)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Dt_contrato)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Usuario_Id)
+                    </td>
+
+                </tr>
+                }
+            </tbody>
+        </table>
+</div>
+<div>
+    <a asp-action="Index" class="btn btn-info">Voltar</a>
+</div>

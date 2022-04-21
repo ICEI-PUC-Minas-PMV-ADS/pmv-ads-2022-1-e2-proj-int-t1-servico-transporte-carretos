@@ -111,6 +111,25 @@ namespace ClickExpress.Controllers
             return View(usuario);
         }
 
+        // GET: Usuarios/Details/5
+        public async Task<IActionResult> Relatorios(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var usuario = await _context.Usuarios
+                .Include(t=>t.Pedidos)
+                .FirstOrDefaultAsync(m => m.Id_usuario == id);
+            if (usuario == null)
+            {
+                return NotFound();
+            }
+
+            return View(usuario);
+        }
+
         // GET: Usuarios/Create
         public IActionResult Create()
         {

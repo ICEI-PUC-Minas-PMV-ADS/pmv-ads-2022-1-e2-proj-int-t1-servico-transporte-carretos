@@ -4,9 +4,12 @@
     "\\code",
     "\\code\\ClickExpress",
     "\\code\\ClickExpress\\ClickExpress",
+    "\\code\\ClickExpress\\ClickExpress\\Controllers",
+    "\\code\\ClickExpress\\ClickExpress\\Migrations",
+    "\\code\\ClickExpress\\ClickExpress\\Models",
     "\\code\\ClickExpress\\ClickExpress\\Views",
     "\\code\\ClickExpress\\ClickExpress\\Views\\Home"
   ],
-  "SelectedNode": "\\code\\ClickExpress\\ClickExpress\\Views\\Home\\Index.cshtml",
+  "SelectedNode": "\\code\\ClickExpress\\ClickExpress\\Controllers\\PedidosController.cs",
   "PreviewInSolutionExplorer": false
 }
