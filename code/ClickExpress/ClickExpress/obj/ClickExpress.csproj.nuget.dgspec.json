@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\werlon\\projeto_clickexpress\\code\\ClickExpress\\ClickExpress\\ClickExpress.csproj": {}
+    "D:\\werlon\\ClickExpress_clonado\\code\\ClickExpress\\ClickExpress\\ClickExpress.csproj": {}
   },
   "projects": {
-    "D:\\werlon\\projeto_clickexpress\\code\\ClickExpress\\ClickExpress\\ClickExpress.csproj": {
+    "D:\\werlon\\ClickExpress_clonado\\code\\ClickExpress\\ClickExpress\\ClickExpress.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\werlon\\projeto_clickexpress\\code\\ClickExpress\\ClickExpress\\ClickExpress.csproj",
+        "projectUniqueName": "D:\\werlon\\ClickExpress_clonado\\code\\ClickExpress\\ClickExpress\\ClickExpress.csproj",
         "projectName": "ClickExpress",
-        "projectPath": "D:\\werlon\\projeto_clickexpress\\code\\ClickExpress\\ClickExpress\\ClickExpress.csproj",
+        "projectPath": "D:\\werlon\\ClickExpress_clonado\\code\\ClickExpress\\ClickExpress\\ClickExpress.csproj",
         "packagesPath": "C:\\Users\\josia\\.nuget\\packages\\",
-        "outputPath": "D:\\werlon\\projeto_clickexpress\\code\\ClickExpress\\ClickExpress\\obj\\",
+        "outputPath": "D:\\werlon\\ClickExpress_clonado\\code\\ClickExpress\\ClickExpress\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\josia\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -26,11 +26,14 @@ namespace ClickExpress.Models // classe criada
         [DataType(DataType.Password)] //inserir criptografia na caixa de senha (****)
         public string Senha { get; set; }
 
+        [Required(ErrorMessage = "Obrigatório informar o cep!")]
+        public string Cep { get; set; }
+
         [Required(ErrorMessage = "Obrigatório informar a rua!")]
         public string Rua { get; set; }
 
         [Required(ErrorMessage = "Obrigatório informar o estado!")]
-        public string Estado { get; set; }
+        public Estado Estado { get; set; }
 
         [Required(ErrorMessage = "Obrigatório informar o número de endereço!")]
         public string Num_endereco { get; set; }
@@ -44,10 +47,40 @@ namespace ClickExpress.Models // classe criada
     }
 
     public enum Perfil
-
     {
         Cliente,
         Prestador
+    }
+
+    public enum Estado
+    {
+        AC,
+        AL,
+        AP,
+        AM,
+        BA,
+        CE,
+        DF,
+        ES,
+        GO,
+        MA,
+        MT,
+        MS,
+        MG,
+        PA,
+        PB,
+        PR,
+        PE,
+        PI,
+        RJ,
+        RN,
+        RS,
+        RO,
+        RR,
+        SC,
+        SP,
+        SE,
+        TO
     }
 
 }

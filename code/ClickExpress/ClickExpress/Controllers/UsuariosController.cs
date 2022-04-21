@@ -28,12 +28,12 @@ namespace ClickExpress.Controllers
 
         // Login: Usuarios - item adicionado
         [HttpPost]
-        public async Task<IActionResult> Login([Bind("Id_usuario,Senha")] Usuario usuario)
+        public async Task<IActionResult> Login([Bind("Email,Senha")] Usuario usuario)
         {
             //faz consulta no banco de dados dos dados inseridos
             var user = await _context.Usuarios
-                .FirstOrDefaultAsync(m => m.Id_usuario == usuario.Id_usuario);
-
+                .FirstOrDefaultAsync(m => m.Email == usuario.Email);
+               
             //condição usuário inxistente
             if (user == null)
             {
@@ -122,7 +122,7 @@ namespace ClickExpress.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id_usuario,Nome,Senha,Perfil")] Usuario usuario)
+        public async Task<IActionResult> Create([Bind("Id_usuario,Nome,Email,Tel,Senha,Cep,Rua,Estado,Num_endereco,cpf_cnpj,Perfil")] Usuario usuario)
         {
             if (ModelState.IsValid)
             {
@@ -157,7 +157,7 @@ namespace ClickExpress.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id_usuario,Nome,Senha,Perfil")] Usuario usuario)
+        public async Task<IActionResult> Edit(int id, [Bind("Id_usuario,Nome,Email,Tel,Senha,Cep,Rua,Estado,Num_endereco,cpf_cnpj,Perfil")] Usuario usuario)
         {
             if (id != usuario.Id_usuario)
             {
