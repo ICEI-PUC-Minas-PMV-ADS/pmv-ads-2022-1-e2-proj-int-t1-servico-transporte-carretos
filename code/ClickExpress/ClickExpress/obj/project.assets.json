@@ -7290,19 +7290,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\kenia\\.nuget\\packages\\": {}
+    "C:\\Users\\Thamara\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kenia\\OneDrive\\Documentos\\PUC Minas\\pmv-ads-2022-1-e2-proj-int-t1-servico-transporte-carretos\\code\\ClickExpress\\ClickExpress\\ClickExpress.csproj",
+      "projectUniqueName": "C:\\Users\\Thamara\\Desktop\\ADS\\pmv-ads-2022-1-e2-proj-int-t1-servico-transporte-carretos\\code\\ClickExpress\\ClickExpress\\ClickExpress.csproj",
       "projectName": "ClickExpress",
-      "projectPath": "C:\\Users\\kenia\\OneDrive\\Documentos\\PUC Minas\\pmv-ads-2022-1-e2-proj-int-t1-servico-transporte-carretos\\code\\ClickExpress\\ClickExpress\\ClickExpress.csproj",
-      "packagesPath": "C:\\Users\\kenia\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kenia\\OneDrive\\Documentos\\PUC Minas\\pmv-ads-2022-1-e2-proj-int-t1-servico-transporte-carretos\\code\\ClickExpress\\ClickExpress\\obj\\",
+      "projectPath": "C:\\Users\\Thamara\\Desktop\\ADS\\pmv-ads-2022-1-e2-proj-int-t1-servico-transporte-carretos\\code\\ClickExpress\\ClickExpress\\ClickExpress.csproj",
+      "packagesPath": "C:\\Users\\Thamara\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Thamara\\Desktop\\ADS\\pmv-ads-2022-1-e2-proj-int-t1-servico-transporte-carretos\\code\\ClickExpress\\ClickExpress\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\kenia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Thamara\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7373,7 +7373,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
