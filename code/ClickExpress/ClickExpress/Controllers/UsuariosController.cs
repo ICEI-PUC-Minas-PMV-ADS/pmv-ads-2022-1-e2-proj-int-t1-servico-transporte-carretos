@@ -86,7 +86,6 @@ namespace ClickExpress.Controllers
             return View();
         }
 
-
         // GET: Usuarios
         public async Task<IActionResult> Index()
         {
@@ -141,14 +140,15 @@ namespace ClickExpress.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id_usuario,Perfil,Nome,Email,Tel,Senha,Cep,Logradouro,Bairro,Estado,Num_endereco,Cpf_Cnpj,Veiculo")] Usuario usuario)
+        public async Task<IActionResult> Create([Bind("Id_usuario,Perfil,Nome,Email,Tel,Senha,Cep,Cidade,Logradouro,Bairro,UF,Num_endereco,Cpf_Cnpj,Veiculo")] Usuario usuario)
         {
             if (ModelState.IsValid)
-            {
+            {  
                 // Item inserido 
                 usuario.Senha = BCrypt.Net.BCrypt.HashPassword(usuario.Senha);
 
                 _context.Add(usuario);
+                ViewBag.Message = "Cadastro concluido :) seja muito bem vindo!";
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
@@ -176,7 +176,7 @@ namespace ClickExpress.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id_usuario,Nome,Email,Tel,Senha,Cep,Logradouro,Bairro,Estado,Num_endereco,Cpf_Cnpj,Perfil")] Usuario usuario)
+        public async Task<IActionResult> Edit(int id, [Bind("Id_usuario,Nome,Email,Tel,Senha,Cep,Cidade,Logradouro,Bairro,UF,Num_endereco,Cpf_Cnpj,Perfil")] Usuario usuario)
         {
             if (id != usuario.Id_usuario)
             {
@@ -191,6 +191,8 @@ namespace ClickExpress.Controllers
                     usuario.Senha = BCrypt.Net.BCrypt.HashPassword(usuario.Senha);
 
                     _context.Update(usuario);
+
+                    ViewBag.Message = "Alterações excutadas com sucesso!";
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
@@ -234,6 +236,8 @@ namespace ClickExpress.Controllers
         {
             var usuario = await _context.Usuarios.FindAsync(id);
             _context.Usuarios.Remove(usuario);
+
+            ViewBag.Message = "Usuário removido com sucesso!";
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }

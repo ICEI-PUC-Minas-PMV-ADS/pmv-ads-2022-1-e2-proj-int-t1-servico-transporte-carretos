@@ -29,11 +29,14 @@ namespace ClickExpress.Models // classe criada
         [Required(ErrorMessage = "Obrigatório informar o cep!")]
         public string Cep { get; set; }
 
+        [Required(ErrorMessage = "Obrigatório informar a cidade!")]
+        public string Cidade { get; set; }
+
         [Required(ErrorMessage = "Obrigatório informar o logradouro!")]
         public string Logradouro { get; set; }
 
         [Required(ErrorMessage = "Obrigatório informar o estado!")]
-        public string Estado { get; set; }
+        public string UF{ get; set; }
 
         [Required(ErrorMessage = "Obrigatório informar o bairro!")]
         public string Bairro { get; set; }

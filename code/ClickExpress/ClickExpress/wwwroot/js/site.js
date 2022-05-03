@@ -3,22 +3,22 @@
 
 // Write your JavaScript code.
 
-
 document.body.addEventListener('change', function (e) {
     let target = e.target;
-    switch (target.id) {
-        case 'cliente':
+    switch (target.value) {
+        case "Cliente":
             //document.getElementById("teste").disabled = true;
             document.getElementById("formVeiculo").style.display = "none";
             document.getElementById("inputVeiculo").value = "N/A";
             break;
-        case 'prestador':
+        case "Prestador":
             //document.getElementById("teste").disabled = false;
             document.getElementById("formVeiculo").style.display = "block";
             document.getElementById("inputVeiculo").value = "";
             break;
-    }    
+    }
 });
+
 
 const cep = document.querySelector("#cep")
 

@@ -4,9 +4,11 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Cadastro de usuários</h1>
+<div class="text-white">
+    <h1>Cadastro de usuários</h1>
+</div>
 
-<table class="table">
+<table class="table text-white">
     <thead>
         <tr>
             <th>
@@ -25,13 +27,16 @@
                 @Html.DisplayNameFor(model => model.Cep)
             </th>
             <th>
+                @Html.DisplayNameFor(model => model.Cidade)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.Logradouro)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Bairro)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Estado)
+                @Html.DisplayNameFor(model => model.UF)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Num_endereco)
@@ -66,13 +71,16 @@
                 @Html.DisplayFor(modelItem => item.Cep)
             </td>
             <td>
+                @Html.DisplayFor(modelItem => item.Cidade)
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.Logradouro)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Bairro)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Estado)
+                @Html.DisplayFor(modelItem => item.UF)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Num_endereco)
