@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ClickExpress.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220502133013_alteradoAtributosEstadoeRua")]
-    partial class alteradoAtributosEstadoeRua
+    [Migration("20220503035642_inserindo-tabelas")]
+    partial class inserindotabelas
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -28,32 +28,70 @@ namespace ClickExpress.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("Bairro_destino")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Bairro_origem")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Cep_destino")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Cep_origem")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Complemento_destino")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Complemento_origem")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("Dt_agendamento")
+                        .HasColumnType("datetime2");
+
                     b.Property<DateTime>("Dt_contrato")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("End_Destino")
+                    b.Property<string>("Estado_destino")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("End_Partida")
+                    b.Property<string>("Estado_origem")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Horario")
+                    b.Property<int>("Id_usuario")
                         .HasColumnType("int");
+
+                    b.Property<string>("Logradouro_destino")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Logradouro_origem")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<double>("Preco")
                         .HasColumnType("float");
 
-                    b.Property<int>("Tipo")
-                        .HasColumnType("int");
+                    b.Property<bool>("Serv_descarrega")
+                        .HasColumnType("bit");
 
-                    b.Property<int>("Usuario_Id")
+                    b.Property<bool>("Serv_montagem")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("Tipo")
                         .HasColumnType("int");
 
                     b.HasKey("Id_contrato");
 
-                    b.HasIndex("Usuario_Id");
+                    b.HasIndex("Id_usuario");
 
                     b.ToTable("Pedidos");
                 });
@@ -65,7 +103,15 @@ namespace ClickExpress.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("Bairro")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Cep")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Cpf_Cnpj")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -101,10 +147,6 @@ namespace ClickExpress.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Veiculo")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("cpf_cnpj")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -153,7 +195,7 @@ namespace ClickExpress.Migrations
                 {
                     b.HasOne("ClickExpress.Models.Usuario", "Usuario")
                         .WithMany("Pedidos")
-                        .HasForeignKey("Usuario_Id")
+                        .HasForeignKey("Id_usuario")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
