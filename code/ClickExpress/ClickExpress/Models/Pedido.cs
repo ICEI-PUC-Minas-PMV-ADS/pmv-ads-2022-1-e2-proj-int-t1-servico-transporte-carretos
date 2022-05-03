@@ -16,47 +16,65 @@ namespace ClickExpress.Models
         public int Id_contrato { get; set; }
 
         [Display(Name = "Data do pedido")]
-        [DataType(DataType.Date, ErrorMessage = "Data em formato inválido")]
         public DateTime Dt_contrato { get; set; }
 
         [Display(Name = "Tipo do Serviço")]
         [Required(ErrorMessage = "Obrigatório informar o tipo!")]
         public TipoServico Tipo { get; set; }
 
-        [Display(Name = "Endereço de Origem")]
-        [Required(ErrorMessage = "Obrigatório informar o endereço de partida!")]
-        public string End_Destino { get; set; }
+        [Required(ErrorMessage = "Obrigatório informar o cep!")]
+        public string Cep_origem { get; set; }
 
-        [Display(Name = "Endereço de Destino")]
-        [Required(ErrorMessage = "Obrigatório informar o endereço de destino!")]
-        public string End_Partida { get; set; }
+        [Required(ErrorMessage = "Obrigatório informar o logradouro!")]
+        public string Logradouro_origem { get; set; }
 
-        [Display(Name = "Disponibilidade de horário")]
-        [Required(ErrorMessage = "Obrigatório informar o horario!")]
-        public Horario Horario { get; set; }
+        [Required(ErrorMessage = "Obrigatório informar o complemento!")]
+        public string Complemento_origem { get; set; }
+        
+        [Required(ErrorMessage = "Obrigatório informar o bairro!")]
+        public string Bairro_origem { get; set; }
+
+        [Required(ErrorMessage = "Obrigatório informar o estado!")]
+        public string Estado_origem { get; set; }
+
+        [Required(ErrorMessage = "Obrigatório informar o cep!")]
+        public string Cep_destino { get; set; }
+
+        [Required(ErrorMessage = "Obrigatório informar o logradouro!")]
+        public string Logradouro_destino { get; set; }
+
+        [Required(ErrorMessage = "Obrigatório informar o complemento!")]
+        public string Complemento_destino { get; set; }
+
+        [Required(ErrorMessage = "Obrigatório informar a bairro!")]
+        public string Bairro_destino { get; set; }
+
+        [Required(ErrorMessage = "Obrigatório informar o estado!")]
+        public string Estado_destino { get; set; }
+       
+        [Display(Name = "Data da agendamento")]
+        public DateTime Dt_agendamento { get; set; }
 
         [Display(Name = "Valor do pedido")]
         public double Preco { get; set; }
 
+        [Display(Name = "Serviço de descarregamento")]
+        public Boolean Serv_descarrega { get; set; }
+
+
+        [Display(Name = "Serviço de montagem")]
+        public Boolean Serv_montagem { get; set; }
 
         [Display(Name = "Usuario")]
-        [Required(ErrorMessage = "Obrigatório informar o usuario!")] 
-        public int Usuario_Id { get; set; }
-        [ForeignKey("Usuario_Id")]
+        public int Id_usuario { get; set; }
+        [ForeignKey("Id_usuario")]
         public Usuario Usuario { get; set; }
+
     }
     public enum TipoServico
     {
         Mudança,
         Carreto
     }
-    public enum Horario
-    {
-        Definir_Horario,
-        Dia_Inteiro,
-        Matutino,
-        Vespertino,
-        Noturno,
 
-    }
 }

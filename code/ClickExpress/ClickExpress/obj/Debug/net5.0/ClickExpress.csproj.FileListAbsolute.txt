@@ -1760,3 +1760,5 @@ C:\Users\kenia\OneDrive\Documentos\PUC Minas\pmv-ads-2022-1-e2-proj-int-t1-servi
 C:\Users\kenia\OneDrive\Documentos\PUC Minas\pmv-ads-2022-1-e2-proj-int-t1-servico-transporte-carretos\code\ClickExpress\ClickExpress\obj\Debug\net5.0\Razor\Views\Pedidos\Edit.cshtml.g.cs
 C:\Users\kenia\OneDrive\Documentos\PUC Minas\pmv-ads-2022-1-e2-proj-int-t1-servico-transporte-carretos\code\ClickExpress\ClickExpress\obj\Debug\net5.0\Razor\Views\Pedidos\Index.cshtml.g.cs
 C:\Users\kenia\OneDrive\Documentos\PUC Minas\pmv-ads-2022-1-e2-proj-int-t1-servico-transporte-carretos\code\ClickExpress\ClickExpress\obj\Debug\net5.0\Razor\Views\Usuarios\Relatorios.cshtml.g.cs
+C:\Users\kenia\OneDrive\Documentos\PUC Minas\pmv-ads-2022-1-e2-proj-int-t1-servico-transporte-carretos\code\ClickExpress\ClickExpress\bin\Debug\net5.0\Nancy.dll
+C:\Users\kenia\OneDrive\Documentos\PUC Minas\pmv-ads-2022-1-e2-proj-int-t1-servico-transporte-carretos\code\ClickExpress\ClickExpress\bin\Debug\net5.0\Nancy.Serialization.JsonNet.dll

@@ -894,6 +894,28 @@
           }
         }
       },
+      "Nancy/1.4.1": {
+        "type": "package",
+        "compile": {
+          "lib/net40/Nancy.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Nancy.dll": {}
+        }
+      },
+      "Nancy.Serialization.JsonNet/1.4.1": {
+        "type": "package",
+        "dependencies": {
+          "Nancy": "1.4.1",
+          "Newtonsoft.Json": "(, )"
+        },
+        "compile": {
+          "lib/net40/Nancy.Serialization.JsonNet.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Nancy.Serialization.JsonNet.dll": {}
+        }
+      },
       "Newtonsoft.Json/11.0.2": {
         "type": "package",
         "compile": {
@@ -3650,6 +3672,31 @@
         "runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.xml",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "Nancy/1.4.1": {
+      "sha512": "HVdZaY2upy0V38hECjSex/QKHLLCg1rBrLXE+zm4+582urlH+yskLj9yi119dqtTRYrFHOJi8cJNM9UW0/QFRw==",
+      "type": "package",
+      "path": "nancy/1.4.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/Nancy.dll",
+        "lib/net40/Nancy.xml",
+        "nancy.1.4.1.nupkg.sha512",
+        "nancy.nuspec"
+      ]
+    },
+    "Nancy.Serialization.JsonNet/1.4.1": {
+      "sha512": "iXQAygbHcExUemhXlV+hDLRn/rJ53kFhvkO+4hppnZ1iAbDVQf+v+/s3wiU47DI2s8GwBakeIDSNRLqQEN9OyA==",
+      "type": "package",
+      "path": "nancy.serialization.jsonnet/1.4.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/Nancy.Serialization.JsonNet.dll",
+        "nancy.serialization.jsonnet.1.4.1.nupkg.sha512",
+        "nancy.serialization.jsonnet.nuspec"
       ]
     },
     "Newtonsoft.Json/11.0.2": {
@@ -7286,7 +7333,8 @@
       "Microsoft.EntityFrameworkCore >= 5.0.16",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.16",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.16",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 5.0.2"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 5.0.2",
+      "Nancy.Serialization.JsonNet >= 1.4.1"
     ]
   },
   "packageFolders": {
@@ -7353,6 +7401,10 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
             "version": "[5.0.2, )"
+          },
+          "Nancy.Serialization.JsonNet": {
+            "target": "Package",
+            "version": "[1.4.1, )"
           }
         },
         "imports": [
@@ -7376,5 +7428,37 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1602",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Nancy.Serialization.JsonNet 1.4.1 não fornece nenhum limite inferior inclusivo para a dependência Newtonsoft.Json. A melhor correspondência aproximada Newtonsoft.Json 3.5.8 foi resolvida.",
+      "libraryId": "Newtonsoft.Json",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "O pacote 'Nancy 1.4.1' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' em vez da estrutura de destino do projeto 'net5.0'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
+      "libraryId": "Nancy",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "O pacote 'Nancy.Serialization.JsonNet 1.4.1' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' em vez da estrutura de destino do projeto 'net5.0'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
+      "libraryId": "Nancy.Serialization.JsonNet",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    }
+  ]
 }
