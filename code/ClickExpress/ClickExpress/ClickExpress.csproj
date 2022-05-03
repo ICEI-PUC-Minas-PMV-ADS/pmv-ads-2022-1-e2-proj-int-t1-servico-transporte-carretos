@@ -6,6 +6,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="img\**" />
+    <Content Remove="img\**" />
+    <EmbeddedResource Remove="img\**" />
+    <None Remove="img\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Remove="Models\JsonCepObject.cs" />
   </ItemGroup>
 
@@ -20,6 +27,11 @@
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
     <PackageReference Include="Nancy.Serialization.JsonNet" Version="1.4.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Views\NovaPasta\" />
+    <Folder Include="wwwroot\Imagens\" />
   </ItemGroup>
 
 </Project>
