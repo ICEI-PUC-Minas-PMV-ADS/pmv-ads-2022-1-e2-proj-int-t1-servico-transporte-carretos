@@ -12,26 +12,52 @@
 <table class="table">
     <thead>
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Id_contrato)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Dt_contrato)
-            </th>
+
             <th>
                 @Html.DisplayNameFor(model => model.Tipo)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.End_Destino)
+                @Html.DisplayNameFor(model => model.Cep_origem)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.End_Partida)
+                @Html.DisplayNameFor(model => model.Logradouro_origem)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Horario)
+                @Html.DisplayNameFor(model => model.Complemento_origem)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Bairro_origem)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Estado_origem)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cep_destino)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Logradouro_destino)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Complemento_destino)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Bairro_destino)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Estado_destino)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dt_agendamento)
+            </th>
+
             <th>
                 @Html.DisplayNameFor(model => model.Preco)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Serv_descarrega)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Serv_montagem)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Usuario)
@@ -43,26 +69,51 @@
         @foreach (var item in Model)
         {
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Id_contrato)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Dt_contrato)
-            </td>
+
             <td>
                 @Html.DisplayFor(modelItem => item.Tipo)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.End_Destino)
+                @Html.DisplayFor(modelItem => item.Cep_origem)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.End_Partida)
+                @Html.DisplayFor(modelItem => item.Logradouro_origem)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Horario)
+                @Html.DisplayFor(modelItem => item.Complemento_origem)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Bairro_origem)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Estado_origem)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cep_destino)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Logradouro_destino)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Complemento_destino)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Bairro_destino)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Estado_destino)
+            </td>
+            <td>
+                @Html.DisplayNameFor(model => model.Dt_agendamento)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Preco)
+            </td>
+            <td>
+                @Html.DisplayNameFor(model => model.Serv_descarrega)
+            </td>
+            <td>
+                @Html.DisplayNameFor(model => model.Serv_montagem)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Usuario.Cep)

@@ -51,11 +51,16 @@ button.accept-policy {
   line-height: inherit;
 }
 
+.responsiveboxman {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
   position: relative;
-  min-height: 100%;
 }
 
 body {

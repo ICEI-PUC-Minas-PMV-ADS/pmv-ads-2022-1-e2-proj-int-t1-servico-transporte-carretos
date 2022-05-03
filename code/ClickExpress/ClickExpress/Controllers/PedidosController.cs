@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ClickExpress.Models;
+using System.Data;
 
 namespace ClickExpress.Controllers
 {
@@ -46,9 +47,11 @@ namespace ClickExpress.Controllers
 
      
         // GET: Pedidos/Create
+
+
         public IActionResult Create()
         {
-            ViewData["Usuario_Id"] = new SelectList(_context.Usuarios, "Id_usuario", "Nome");
+            ViewData["Id_usuario"] = new SelectList(_context.Usuarios, "Id_usuario", "Nome");
             return View();
         }
 
@@ -57,7 +60,9 @@ namespace ClickExpress.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id_contrato,Dt_contrato,Tipo,End_Destino,End_Partida,Horario,Preco,Usuario_Id")] Pedido pedido)
+
+
+        public async Task<IActionResult> Create([Bind("Tipo,End_Destino,End_Partida,Horario,Preco")] Pedido pedido)
         {
             if (ModelState.IsValid)
             {
@@ -65,7 +70,7 @@ namespace ClickExpress.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["Usuario_Id"] = new SelectList(_context.Usuarios, "Id_usuario", "Nome", pedido.Usuario_Id);
+            ViewData["Usuario_Id"] = new SelectList(_context.Usuarios, "Id_usuario", "Nome", pedido.Id_usuario);
             return View(pedido);
         }
 
@@ -82,7 +87,7 @@ namespace ClickExpress.Controllers
             {
                 return NotFound();
             }
-            ViewData["Usuario_Id"] = new SelectList(_context.Usuarios, "Id_usuario", "Nome", pedido.Usuario_Id);
+            ViewData["Id_usuario"] = new SelectList(_context.Usuarios, "Id_usuario", "Nome", pedido.Id_usuario);
             return View(pedido);
         }
 
@@ -91,7 +96,7 @@ namespace ClickExpress.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id_contrato,Dt_contrato,Tipo,End_Destino,End_Partida,Horario,Preco,Usuario_Id")] Pedido pedido)
+        public async Task<IActionResult> Edit(int id, [Bind("Id_contrato,Dt_contrato,Tipo,End_Destino,End_Partida,Horario,Preco,Id_usuario")] Pedido pedido)
         {
             if (id != pedido.Id_contrato)
             {
@@ -118,7 +123,7 @@ namespace ClickExpress.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["Usuario_Id"] = new SelectList(_context.Usuarios, "Id_usuario", "Nome", pedido.Usuario_Id);
+            ViewData["Id_usuario"] = new SelectList(_context.Usuarios, "Id_usuario", "Nome", pedido.Id_usuario);
             return View(pedido);
         }
 
