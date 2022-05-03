@@ -20,20 +20,20 @@
             </div>
             <div class="form-group">
                 <label asp-for="Cep_origem" class="control-label"></label>
-                <input asp-for="Cep_origem" class="form-control" />
-                <input asp-for="Logradouro_origem" class="form-control" />
+                <input asp-for="Cep_origem" class="form-control" id="cep" />
+                <input asp-for="Logradouro_origem" class="form-control" id="logradouro"/>
                 <input asp-for="Complemento_origem" class="form-control" />
-                <input asp-for="Bairro_origem" class="form-control" />
-                <input asp-for="Estado_origem" class="form-control" />
+                <input asp-for="Bairro_origem" class="form-control" id="bairro" />
+                <input asp-for="Estado_origem" class="form-control" id="uf" />
                 <span asp-validation-for="Cep_origem" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Cep_destino" class="control-label"></label>
-                <input asp-for="Cep_destino" class="form-control" />
-                <input asp-for="Logradouro_destino" class="form-control" />
+                <input asp-for="Cep_destino" class="form-control" id="cep"/>
+                <input asp-for="Logradouro_destino" class="form-control" id="logradouro" />
                 <input asp-for="Complemento_destino" class="form-control" />
-                <input asp-for="Bairro_destino" class="form-control" />
-                <input asp-for="Estado_destino" class="form-control" />
+                <input asp-for="Bairro_destino" class="form-control" id="bairro"/>
+                <input asp-for="Estado_destino" class="form-control" id="uf"/>
                 <span asp-validation-for="Cep_destino" class="text-danger"></span>
             </div>
             <div class="form-group">
