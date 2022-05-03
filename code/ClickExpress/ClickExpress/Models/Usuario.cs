@@ -29,20 +29,26 @@ namespace ClickExpress.Models // classe criada
         [Required(ErrorMessage = "Obrigatório informar o cep!")]
         public string Cep { get; set; }
 
-        [Required(ErrorMessage = "Obrigatório informar a rua!")]
-        public string Rua { get; set; }
+        [Required(ErrorMessage = "Obrigatório informar o logradouro!")]
+        public string Logradouro { get; set; }
 
         [Required(ErrorMessage = "Obrigatório informar o estado!")]
-        public Estado Estado { get; set; }
+        public string Estado { get; set; }
+
+        [Required(ErrorMessage = "Obrigatório informar o bairro!")]
+        public string Bairro { get; set; }
 
         [Required(ErrorMessage = "Obrigatório informar o número de endereço!")]
         public string Num_endereco { get; set; }
 
         [Required(ErrorMessage = "Obrigatório informar o cpf ou cnpj!")]
-        public string cpf_cnpj { get; set; }
+        public string Cpf_Cnpj { get; set; }
 
         [Required(ErrorMessage = "Obrigatório informar perfil!")]
         public Perfil Perfil { get; set; }
+
+        [Required(ErrorMessage = "Obrigatório informar o veículo!")]
+        public string Veiculo { get; set; }
 
         public ICollection<Pedido> Pedidos { get; set; }
 
@@ -52,37 +58,6 @@ namespace ClickExpress.Models // classe criada
     {
         Cliente,
         Prestador
-    }
-
-    public enum Estado
-    {
-        AC,
-        AL,
-        AP,
-        AM,
-        BA,
-        CE,
-        DF,
-        ES,
-        GO,
-        MA,
-        MT,
-        MS,
-        MG,
-        PA,
-        PB,
-        PR,
-        PE,
-        PI,
-        RJ,
-        RN,
-        RS,
-        RO,
-        RR,
-        SC,
-        SP,
-        SE,
-        TO
     }
 
 }

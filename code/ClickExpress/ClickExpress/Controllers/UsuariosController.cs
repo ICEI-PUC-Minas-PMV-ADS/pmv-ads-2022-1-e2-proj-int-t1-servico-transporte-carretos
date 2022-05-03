@@ -141,7 +141,7 @@ namespace ClickExpress.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id_usuario,Nome,Email,Tel,Senha,Cep,Rua,Estado,Num_endereco,cpf_cnpj,Perfil")] Usuario usuario)
+        public async Task<IActionResult> Create([Bind("Id_usuario,Perfil,Nome,Email,Tel,Senha,Cep,Logradouro,Bairro,Estado,Num_endereco,Cpf_Cnpj,Veiculo")] Usuario usuario)
         {
             if (ModelState.IsValid)
             {
@@ -176,7 +176,7 @@ namespace ClickExpress.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id_usuario,Nome,Email,Tel,Senha,Cep,Rua,Estado,Num_endereco,cpf_cnpj,Perfil")] Usuario usuario)
+        public async Task<IActionResult> Edit(int id, [Bind("Id_usuario,Nome,Email,Tel,Senha,Cep,Logradouro,Bairro,Estado,Num_endereco,Cpf_Cnpj,Perfil")] Usuario usuario)
         {
             if (id != usuario.Id_usuario)
             {

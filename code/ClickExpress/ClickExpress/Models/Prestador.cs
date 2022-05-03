@@ -10,8 +10,6 @@ namespace ClickExpress.Models
     [Table("Prestadores")]
     public class Prestador : Usuario
     {
-        [Required(ErrorMessage = "Obrigatório informar o veículo!")]
-        public string Veiculo { get; set; }
 
         [Required(ErrorMessage = "Obrigatório informar a data!")]
         public DateTime Dt_entrega { get; set; }

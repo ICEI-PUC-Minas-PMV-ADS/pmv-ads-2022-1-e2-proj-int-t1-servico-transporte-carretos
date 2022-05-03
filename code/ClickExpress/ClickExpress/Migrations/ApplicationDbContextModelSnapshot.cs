@@ -63,7 +63,15 @@ namespace ClickExpress.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("Bairro")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Cep")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Cpf_Cnpj")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -71,8 +79,13 @@ namespace ClickExpress.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Estado")
-                        .HasColumnType("int");
+                    b.Property<string>("Estado")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Logradouro")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Nome")
                         .IsRequired()
@@ -85,10 +98,6 @@ namespace ClickExpress.Migrations
                     b.Property<int>("Perfil")
                         .HasColumnType("int");
 
-                    b.Property<string>("Rua")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Senha")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -97,7 +106,7 @@ namespace ClickExpress.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("cpf_cnpj")
+                    b.Property<string>("Veiculo")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -138,10 +147,6 @@ namespace ClickExpress.Migrations
 
                     b.Property<int>("Qtde_entregas")
                         .HasColumnType("int");
-
-                    b.Property<string>("Veiculo")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.ToTable("Prestadores");
                 });

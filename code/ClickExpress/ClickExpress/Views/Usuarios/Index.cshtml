@@ -25,7 +25,10 @@
                 @Html.DisplayNameFor(model => model.Cep)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Rua)
+                @Html.DisplayNameFor(model => model.Logradouro)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Bairro)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Estado)
@@ -34,12 +37,14 @@
                 @Html.DisplayNameFor(model => model.Num_endereco)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.cpf_cnpj)
+                @Html.DisplayNameFor(model => model.Cpf_Cnpj)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Perfil)
             </th>
-            <th></th>
+            <th>
+                @Html.DisplayNameFor(model => model.Veiculo)
+            </th>
         </tr>
     </thead>
     <tbody>
@@ -61,7 +66,10 @@
                 @Html.DisplayFor(modelItem => item.Cep)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Rua)
+                @Html.DisplayFor(modelItem => item.Logradouro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Bairro)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Estado)
@@ -70,11 +78,14 @@
                 @Html.DisplayFor(modelItem => item.Num_endereco)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.cpf_cnpj)
+                @Html.DisplayFor(modelItem => item.Cpf_Cnpj)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Perfil)
             </td>
+            <th>
+                @Html.DisplayFor(modelItem => item.Veiculo)
+            </th>
             <td>
                 <a asp-action="Relatorios" asp-route-id="@item.Id_usuario">Relatório</a>
                 <a asp-action="Edit" asp-route-id="@item.Id_usuario">Editar</a> |

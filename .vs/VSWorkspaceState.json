@@ -8,8 +8,9 @@
     "\\code\\ClickExpress\\ClickExpress\\Migrations",
     "\\code\\ClickExpress\\ClickExpress\\Models",
     "\\code\\ClickExpress\\ClickExpress\\Views",
-    "\\code\\ClickExpress\\ClickExpress\\Views\\Home"
+    "\\code\\ClickExpress\\ClickExpress\\Views\\Home",
+    "\\code\\ClickExpress\\ClickExpress\\Views\\Usuarios"
   ],
-  "SelectedNode": "\\code\\ClickExpress\\ClickExpress\\Controllers\\PedidosController.cs",
+  "SelectedNode": "\\code\\ClickExpress\\ClickExpress\\Models\\Pedido.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -1071,7 +1071,6 @@ D:\werlon\ClickExpress_clonado\code\ClickExpress\ClickExpress\bin\Debug\net5.0\r
 D:\werlon\ClickExpress_clonado\code\ClickExpress\ClickExpress\bin\Debug\net5.0\refs\System.Memory.dll
 D:\werlon\ClickExpress_clonado\code\ClickExpress\ClickExpress\bin\Debug\net5.0\refs\System.Net.dll
 D:\werlon\ClickExpress_clonado\code\ClickExpress\ClickExpress\bin\Debug\net5.0\refs\System.Net.Http.dll
-D:\werlon\ClickExpress_clonado\code\ClickExpress\ClickExpress\bin\Debug\net5.0\refs\System.Net.Http.Json.dll
 D:\werlon\ClickExpress_clonado\code\ClickExpress\ClickExpress\bin\Debug\net5.0\refs\System.Net.HttpListener.dll
 D:\werlon\ClickExpress_clonado\code\ClickExpress\ClickExpress\bin\Debug\net5.0\refs\System.Net.Mail.dll
 D:\werlon\ClickExpress_clonado\code\ClickExpress\ClickExpress\bin\Debug\net5.0\refs\System.Net.NameResolution.dll
@@ -1102,7 +1101,6 @@ D:\werlon\ClickExpress_clonado\code\ClickExpress\ClickExpress\bin\Debug\net5.0\r
 D:\werlon\ClickExpress_clonado\code\ClickExpress\ClickExpress\bin\Debug\net5.0\refs\System.Resources.Reader.dll
 D:\werlon\ClickExpress_clonado\code\ClickExpress\ClickExpress\bin\Debug\net5.0\refs\System.Resources.ResourceManager.dll
 D:\werlon\ClickExpress_clonado\code\ClickExpress\ClickExpress\bin\Debug\net5.0\refs\System.Resources.Writer.dll
-D:\werlon\ClickExpress_clonado\code\ClickExpress\ClickExpress\bin\Debug\net5.0\refs\System.Runtime.CompilerServices.Unsafe.dll
 D:\werlon\ClickExpress_clonado\code\ClickExpress\ClickExpress\bin\Debug\net5.0\refs\System.Runtime.CompilerServices.VisualC.dll
 D:\werlon\ClickExpress_clonado\code\ClickExpress\ClickExpress\bin\Debug\net5.0\refs\System.Runtime.dll
 D:\werlon\ClickExpress_clonado\code\ClickExpress\ClickExpress\bin\Debug\net5.0\refs\System.Runtime.Extensions.dll
@@ -1136,8 +1134,6 @@ D:\werlon\ClickExpress_clonado\code\ClickExpress\ClickExpress\bin\Debug\net5.0\r
 D:\werlon\ClickExpress_clonado\code\ClickExpress\ClickExpress\bin\Debug\net5.0\refs\System.Text.Encoding.CodePages.dll
 D:\werlon\ClickExpress_clonado\code\ClickExpress\ClickExpress\bin\Debug\net5.0\refs\System.Text.Encoding.dll
 D:\werlon\ClickExpress_clonado\code\ClickExpress\ClickExpress\bin\Debug\net5.0\refs\System.Text.Encoding.Extensions.dll
-D:\werlon\ClickExpress_clonado\code\ClickExpress\ClickExpress\bin\Debug\net5.0\refs\System.Text.Encodings.Web.dll
-D:\werlon\ClickExpress_clonado\code\ClickExpress\ClickExpress\bin\Debug\net5.0\refs\System.Text.Json.dll
 D:\werlon\ClickExpress_clonado\code\ClickExpress\ClickExpress\bin\Debug\net5.0\refs\System.Text.RegularExpressions.dll
 D:\werlon\ClickExpress_clonado\code\ClickExpress\ClickExpress\bin\Debug\net5.0\refs\System.Threading.Channels.dll
 D:\werlon\ClickExpress_clonado\code\ClickExpress\ClickExpress\bin\Debug\net5.0\refs\System.Threading.dll
@@ -1760,3 +1756,21 @@ C:\Users\kenia\OneDrive\Documentos\PUC Minas\pmv-ads-2022-1-e2-proj-int-t1-servi
 C:\Users\kenia\OneDrive\Documentos\PUC Minas\pmv-ads-2022-1-e2-proj-int-t1-servico-transporte-carretos\code\ClickExpress\ClickExpress\obj\Debug\net5.0\Razor\Views\Pedidos\Edit.cshtml.g.cs
 C:\Users\kenia\OneDrive\Documentos\PUC Minas\pmv-ads-2022-1-e2-proj-int-t1-servico-transporte-carretos\code\ClickExpress\ClickExpress\obj\Debug\net5.0\Razor\Views\Pedidos\Index.cshtml.g.cs
 C:\Users\kenia\OneDrive\Documentos\PUC Minas\pmv-ads-2022-1-e2-proj-int-t1-servico-transporte-carretos\code\ClickExpress\ClickExpress\obj\Debug\net5.0\Razor\Views\Usuarios\Relatorios.cshtml.g.cs
+D:\werlon\ClickExpress_clonado\code\ClickExpress\ClickExpress\obj\Debug\net5.0\Razor\Views\Pedidos\Create.cshtml.g.cs
+D:\werlon\ClickExpress_clonado\code\ClickExpress\ClickExpress\obj\Debug\net5.0\Razor\Views\Pedidos\Delete.cshtml.g.cs
+D:\werlon\ClickExpress_clonado\code\ClickExpress\ClickExpress\obj\Debug\net5.0\Razor\Views\Pedidos\Details.cshtml.g.cs
+D:\werlon\ClickExpress_clonado\code\ClickExpress\ClickExpress\obj\Debug\net5.0\Razor\Views\Pedidos\Edit.cshtml.g.cs
+D:\werlon\ClickExpress_clonado\code\ClickExpress\ClickExpress\obj\Debug\net5.0\Razor\Views\Pedidos\Index.cshtml.g.cs
+D:\werlon\ClickExpress_clonado\code\ClickExpress\ClickExpress\obj\Debug\net5.0\Razor\Views\Usuarios\Relatorios.cshtml.g.cs
+D:\werlon\ClickExpress_clonado\code\ClickExpress\ClickExpress\bin\Debug\net5.0\Refit.dll
+D:\werlon\ClickExpress_clonado\code\ClickExpress\ClickExpress\bin\Debug\net5.0\System.Net.Http.Json.dll
+D:\werlon\ClickExpress_clonado\code\ClickExpress\ClickExpress\bin\Debug\net5.0\System.Private.ServiceModel.dll
+D:\werlon\ClickExpress_clonado\code\ClickExpress\ClickExpress\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
+D:\werlon\ClickExpress_clonado\code\ClickExpress\ClickExpress\bin\Debug\net5.0\System.ServiceModel.Duplex.dll
+D:\werlon\ClickExpress_clonado\code\ClickExpress\ClickExpress\bin\Debug\net5.0\System.ServiceModel.Http.dll
+D:\werlon\ClickExpress_clonado\code\ClickExpress\ClickExpress\bin\Debug\net5.0\System.ServiceModel.NetTcp.dll
+D:\werlon\ClickExpress_clonado\code\ClickExpress\ClickExpress\bin\Debug\net5.0\System.ServiceModel.Primitives.dll
+D:\werlon\ClickExpress_clonado\code\ClickExpress\ClickExpress\bin\Debug\net5.0\System.ServiceModel.dll
+D:\werlon\ClickExpress_clonado\code\ClickExpress\ClickExpress\bin\Debug\net5.0\System.ServiceModel.Security.dll
+D:\werlon\ClickExpress_clonado\code\ClickExpress\ClickExpress\bin\Debug\net5.0\System.Text.Encodings.Web.dll
+D:\werlon\ClickExpress_clonado\code\ClickExpress\ClickExpress\bin\Debug\net5.0\System.Text.Json.dll
