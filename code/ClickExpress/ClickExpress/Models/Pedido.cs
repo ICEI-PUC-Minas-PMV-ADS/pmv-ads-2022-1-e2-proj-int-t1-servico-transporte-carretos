@@ -22,37 +22,55 @@ namespace ClickExpress.Models
         [Required(ErrorMessage = "Obrigatório informar o tipo!")]
         public TipoServico Tipo { get; set; }
 
+        [Display(Name = "CEP:")]
         [Required(ErrorMessage = "Obrigatório informar o cep!")]
         public string Cep_origem { get; set; }
 
+        [Display(Name = "Logradouro:")]
         [Required(ErrorMessage = "Obrigatório informar o logradouro!")]
         public string Logradouro_origem { get; set; }
 
+        [Display(Name = "Complemento:")]
         [Required(ErrorMessage = "Obrigatório informar o complemento!")]
         public string Complemento_origem { get; set; }
-        
+
+        [Display(Name = "Cidade:")]
+        [Required(ErrorMessage = "Obrigatório informar a cidade!")]
+        public string Cidade_origem { get; set; }
+
+        [Display(Name = "Bairro:")]
         [Required(ErrorMessage = "Obrigatório informar o bairro!")]
         public string Bairro_origem { get; set; }
 
+        [Display(Name = "UF:")]
         [Required(ErrorMessage = "Obrigatório informar o estado!")]
-        public string Estado_origem { get; set; }
+        public string UF_origem { get; set; }
 
+        [Display(Name = "Cep:")]
         [Required(ErrorMessage = "Obrigatório informar o cep!")]
         public string Cep_destino { get; set; }
 
+        [Display(Name = "Logradouro:")]
         [Required(ErrorMessage = "Obrigatório informar o logradouro!")]
         public string Logradouro_destino { get; set; }
 
+        [Display(Name = "Complemento:")]
         [Required(ErrorMessage = "Obrigatório informar o complemento!")]
         public string Complemento_destino { get; set; }
 
-        [Required(ErrorMessage = "Obrigatório informar a bairro!")]
+        [Display(Name = "Cidade:")]
+        [Required(ErrorMessage = "Obrigatório informar a cidade!")]
+        public string Cidade_destino { get; set; }
+
+        [Display(Name = "Bairro:")]
+        [Required(ErrorMessage = "Obrigatório informar o bairro!")]
         public string Bairro_destino { get; set; }
 
+        [Display(Name = "UF:")]
         [Required(ErrorMessage = "Obrigatório informar o estado!")]
-        public string Estado_destino { get; set; }
+        public string UF_destino { get; set; }
        
-        [Display(Name = "Data da agendamento")]
+        [Display(Name = "Data do agendamento")]
         public DateTime Dt_agendamento { get; set; }
 
         [Display(Name = "Valor do pedido")]
@@ -60,7 +78,6 @@ namespace ClickExpress.Models
 
         [Display(Name = "Serviço de descarregamento")]
         public Boolean Serv_descarrega { get; set; }
-
 
         [Display(Name = "Serviço de montagem")]
         public Boolean Serv_montagem { get; set; }

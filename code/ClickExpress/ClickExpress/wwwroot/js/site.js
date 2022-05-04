@@ -19,57 +19,81 @@ document.body.addEventListener('change', function (e) {
     }
 });
 
+const elementoCep = document.querySelector("#cep");
+const elementoRua = document.querySelector("#logradouro");
+const elementoCidade = document.querySelector("#localidade");
+const elementoBairro = document.querySelector("#bairro");
+const elementoUF = document.querySelector("#uf");
 
-const cep = document.querySelector("#cep")
+const elementoCepOrigem = document.querySelector("#cep_origem");
+const elementoRuaOrigem = document.querySelector("#logradouro_origem");
+const elementoCidadeOrigem = document.querySelector("#localidade_origem");
+const elementoBairroOrigem = document.querySelector("#bairro_origem");
+const elementoUFOrigem = document.querySelector("#uf_origem");
 
-const showData = (result) => {
-    for (const campo in result) {
-        if (document.querySelector("#" + campo)) {        
-            document.querySelector("#"+campo).value = result[campo]
-        }
-    }
+const elementoCepDestino = document.querySelector("#cep_destino");
+const elementoRuaDestino = document.querySelector("#logradouro_destino");
+const elementoCidadeDestino = document.querySelector("#localidade_destino");
+const elementoBairroDestino = document.querySelector("#bairro_destino");
+const elementoUFDestino = document.querySelector("#uf_destino");
+
+async function buscarCep(cep) {
+    const response = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
+    return response.json();
 }
 
-cep.addEventListener("blur", (e) => {
-    let search = cep.value.replace("-", "")
+async function preencherEnderecoCadastro() {
+    const cep = elementoCep.value;
+    const objetoEndereco = await buscarCep(cep);
 
-    const options = {
-        method: 'GET',
-        mode: 'cors',
-        cache: 'default'
-    }
+    elementoRua.value = objetoEndereco.logradouro;
+    elementoCidade.value = objetoEndereco.localidade;
+    elementoBairro.value = objetoEndereco.bairro;
+    elementoUF.value = objetoEndereco.uf;
 
-    fetch(`https://viacep.com.br/ws/${search}/json/`, options)
-        .then(response => { response.json()
-            .then(data => showData(data))
-        })
-    .catch(e=>console.log('Deu Erro: '+ e,message))
-})
-
-
-const cep2 = document.querySelector("#cep")
-
-const showData2 = (result) => {
-    for (const campo in result) {
-        if (document.querySelector("#" + campo)) {
-            document.querySelector("#" + campo).value = result[campo]
-        }
-    }
 }
 
-cep2.addEventListener("blur", (e) => {
-    let search = cep2.value.replace("-", "")
+async function preencherEnderecoOrigem() {
+    const cep = elementoCepOrigem.value;
+    const objetoEndereco = await buscarCep(cep);
 
-    const options = {
-        method: 'GET',
-        mode: 'cors',
-        cache: 'default'
-    }
+    elementoRuaOrigem.value = objetoEndereco.logradouro;
+    elementoCidadeOrigem.value = objetoEndereco.localidade;
+    elementoBairroOrigem.value = objetoEndereco.bairro;
+    elementoUFOrigem.value = objetoEndereco.uf;
 
-    fetch(`https://viacep.com.br/ws/${search}/json/`, options)
-        .then(response => {
-            response.json()
-            .then(data => showData2(data))
-        })
-        .catch(e => console.log('Deu Erro: ' + e, message))
-})
+}
+
+async function preencherEnderecoDestino() {
+    const cep = elementoCepDestino.value;
+    const objetoEndereco = await buscarCep(cep);
+
+    elementoRuaDestino.value = objetoEndereco.logradouro;
+    elementoCidadeDestino.value = objetoEndereco.localidade;
+    elementoBairroDestino.value = objetoEndereco.bairro;
+    elementoUFDestino.value = objetoEndereco.uf;
+
+}
+
+elementoCep.addEventListener("blur", preencherEnderecoCadastro);
+elementoRua.addEventListener("blur", preencherEnderecoCadastro);
+elementoCidade.addEventListener("blur", preencherEnderecoCadastro);
+elementoBairro.addEventListener("blur", preencherEnderecoCadastro);
+elementoUF.addEventListener("blur", preencherEnderecoCadastro);
+
+elementoCepOrigem.addEventListener("blur", preencherEnderecoOrigem);
+elementoRuaOrigem.addEventListener("blur", preencherEnderecoOrigem);
+elementoCidadeOrigem.addEventListener("blur", preencherEnderecoOrigem);
+elementoBairroOrigem.addEventListener("blur", preencherEnderecoOrigem);
+elementoUFOrigem.addEventListener("blur", preencherEnderecoOrigem);
+
+elementoCepDestino.addEventListener("blur", preencherEnderecoDestino);
+elementoRuaDestino.addEventListener("blur", preencherEnderecoDestino);
+elementoCidadeDestino.addEventListener("blur", preencherEnderecoDestino);
+elementoBairroDestino.addEventListener("blur", preencherEnderecoDestino);
+elementoUFDestino.addEventListener("blur", preencherEnderecoDestino);
+
+
+
+
+

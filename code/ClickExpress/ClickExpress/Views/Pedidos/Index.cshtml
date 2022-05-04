@@ -26,10 +26,13 @@
                 @Html.DisplayNameFor(model => model.Complemento_origem)
             </th>
             <th>
+                @Html.DisplayNameFor(model => model.Cidade_origem)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.Bairro_origem)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Estado_origem)
+                @Html.DisplayNameFor(model => model.UF_origem)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Cep_destino)
@@ -41,15 +44,17 @@
                 @Html.DisplayNameFor(model => model.Complemento_destino)
             </th>
             <th>
+                @Html.DisplayNameFor(model => model.Cidade_destino)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.Bairro_destino)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Estado_destino)
+                @Html.DisplayNameFor(model => model.UF_destino)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Dt_agendamento)
             </th>
-
             <th>
                 @Html.DisplayNameFor(model => model.Preco)
             </th>
@@ -86,7 +91,7 @@
                 @Html.DisplayFor(modelItem => item.Bairro_origem)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Estado_origem)
+                @Html.DisplayFor(modelItem => item.UF_origem)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Cep_destino)
@@ -101,7 +106,7 @@
                 @Html.DisplayFor(modelItem => item.Bairro_destino)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Estado_destino)
+                @Html.DisplayFor(modelItem => item.UF_destino)
             </td>
             <td>
                 @Html.DisplayNameFor(model => model.Dt_agendamento)
