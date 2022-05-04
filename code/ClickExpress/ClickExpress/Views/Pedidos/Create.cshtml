@@ -1,23 +1,28 @@
 ﻿@model ClickExpress.Models.Pedido
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Nova solicitação";
 }
 
-<h4>Solicitação</h4>
+<h1>Vamos começar?</h1>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
+
             <div class="form-group">
+                <h3>Escolha o tipo de serviço:</h3>
                 <label asp-for="Tipo" class="control-label"></label>
                 <select asp-for="Tipo" class="form-control" asp-items="Html.GetEnumSelectList<TipoServico>()"></select>
                 <span asp-validation-for="Tipo" class="text-danger"></span>
             </div>
+            <h4>
+                Informe os endereços:
+            </h4>
             <div class="form-group">
-                <h4>Origem:</h4>
+                <h4>Partida:</h4>
                 <label asp-for="Cep_origem" class="control-label"></label>
                 <input asp-for="Cep_origem" class="form-control" id="cep_origem" />
                 <label asp-for="Logradouro_origem" class="control-label"></label>
@@ -28,8 +33,8 @@
                 <input asp-for="Cidade_origem" class="form-control" id="localidade_origem" />
                 <label asp-for="Bairro_origem" class="control-label"></label>
                 <input asp-for="Bairro_origem" class="form-control" id="bairro_origem" />
-                <label asp-for="Bairro_origem" class="control-label"></label>
-                <input asp-for="Bairro_origem" class="form-control" id="uf_origem" />
+                <label asp-for="UF_origem" class="control-label"></label>
+                <input asp-for="UF_origem" class="form-control" id="uf_origem" />
                 <span asp-validation-for="Cep_origem" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -41,14 +46,16 @@
                 <label asp-for="Cidade_destino" class="control-label"></label>
                 <input asp-for="Cidade_destino" class="form-control" id="localidade_destino" />
                 <label asp-for="Complemento_destino" class="control-label"></label>
-                <input asp-for="Complemento_destino" class="form-control"  />
+                <input asp-for="Complemento_destino" class="form-control" />
                 <label asp-for="Bairro_destino" class="control-label"></label>
                 <input asp-for="Bairro_destino" class="form-control" id="bairro_destino" />
                 <label asp-for="UF_destino " class="control-label"></label>
                 <input asp-for="UF_destino" class="form-control" id="uf_destino" />
                 <span asp-validation-for="Cep_destino" class="text-danger"></span>
             </div>
+
             <div class="form-group">
+                <h4>Defina dia e horário:</h4>
                 <label asp-for="Dt_agendamento" class="control-label"></label>
                 <input asp-for="Dt_agendamento" class="form-control" />
                 <span asp-validation-for="Dt_agendamento" class="text-danger"></span>
@@ -57,8 +64,6 @@
                 <label asp-for="Serv_descarrega" class="control-label"></label>
                 <input asp-for="Serv_descarrega" class="form-control" />
                 <span asp-validation-for="Serv_descarrega" class="text-danger"></span>
-            </div>
-            <div class="form-group">
                 <label asp-for="Serv_montagem" class="control-label"></label>
                 <input asp-for="Serv_montagem" class="form-control" />
                 <span asp-validation-for="Serv_montagem" class="text-danger"></span>
@@ -72,7 +77,7 @@
 </div>
 
 <div>
-    
+    <a asp-action="Index">Voltar</a>
 </div>
 
 @section Scripts {

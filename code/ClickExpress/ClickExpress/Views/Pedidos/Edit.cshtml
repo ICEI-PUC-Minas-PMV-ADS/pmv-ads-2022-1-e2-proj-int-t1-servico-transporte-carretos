@@ -39,8 +39,6 @@
                 <input asp-for="UF_destino" class="form-control" />
                 <span asp-validation-for="Cep_destino" class="text-danger"></span>
             </div>
-
-
             <div class="form-group">
                 <label asp-for="Dt_agendamento" class="control-label"></label>
                 <select asp-for="Dt_agendamento" class="form-control"></select>
@@ -57,17 +55,12 @@
                 <span asp-validation-for="Serv_montagem" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Preco" class="control-label"></label>
-                <select asp-for="Preco" class="form-control"></select>
-                <span asp-validation-for="Preco" class="text-danger"></span>
-            </div>
-            <div class="form-group">
                 <label asp-for="Id_usuario" class="control-label"></label>
                 <select asp-for="Id_usuario" class="form-control" asp-items="ViewBag.Id_usuario"></select>
                 <span asp-validation-for="Id_usuario" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <input type="submit" value="Salvar" class="btn btn-primary" />
             </div>
         </form>
     </div>

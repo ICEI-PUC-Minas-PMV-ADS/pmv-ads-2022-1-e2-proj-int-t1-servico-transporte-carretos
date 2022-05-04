@@ -70,7 +70,7 @@ namespace ClickExpress.Models
         [Required(ErrorMessage = "Obrigatório informar o estado!")]
         public string UF_destino { get; set; }
        
-        [Display(Name = "Data do agendamento")]
+        [Display(Name = "Data/Horário do agendamento: ")]
         public DateTime Dt_agendamento { get; set; }
 
         [Display(Name = "Valor do pedido")]

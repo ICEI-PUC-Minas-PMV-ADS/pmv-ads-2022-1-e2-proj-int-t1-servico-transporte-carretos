@@ -50,7 +50,6 @@ async function preencherEnderecoCadastro() {
     elementoCidade.value = objetoEndereco.localidade;
     elementoBairro.value = objetoEndereco.bairro;
     elementoUF.value = objetoEndereco.uf;
-
 }
 
 async function preencherEnderecoOrigem() {
@@ -61,7 +60,6 @@ async function preencherEnderecoOrigem() {
     elementoCidadeOrigem.value = objetoEndereco.localidade;
     elementoBairroOrigem.value = objetoEndereco.bairro;
     elementoUFOrigem.value = objetoEndereco.uf;
-
 }
 
 async function preencherEnderecoDestino() {
@@ -72,26 +70,22 @@ async function preencherEnderecoDestino() {
     elementoCidadeDestino.value = objetoEndereco.localidade;
     elementoBairroDestino.value = objetoEndereco.bairro;
     elementoUFDestino.value = objetoEndereco.uf;
-
+}
+if (elementoCep) {
+    elementoCep.addEventListener("blur", preencherEnderecoCadastro);
 }
 
-elementoCep.addEventListener("blur", preencherEnderecoCadastro);
-elementoRua.addEventListener("blur", preencherEnderecoCadastro);
-elementoCidade.addEventListener("blur", preencherEnderecoCadastro);
-elementoBairro.addEventListener("blur", preencherEnderecoCadastro);
-elementoUF.addEventListener("blur", preencherEnderecoCadastro);
 
-elementoCepOrigem.addEventListener("blur", preencherEnderecoOrigem);
-elementoRuaOrigem.addEventListener("blur", preencherEnderecoOrigem);
-elementoCidadeOrigem.addEventListener("blur", preencherEnderecoOrigem);
-elementoBairroOrigem.addEventListener("blur", preencherEnderecoOrigem);
-elementoUFOrigem.addEventListener("blur", preencherEnderecoOrigem);
+if (elementoCepOrigem) {
+    elementoCepOrigem.addEventListener("blur", preencherEnderecoOrigem);
+}
 
-elementoCepDestino.addEventListener("blur", preencherEnderecoDestino);
-elementoRuaDestino.addEventListener("blur", preencherEnderecoDestino);
-elementoCidadeDestino.addEventListener("blur", preencherEnderecoDestino);
-elementoBairroDestino.addEventListener("blur", preencherEnderecoDestino);
-elementoUFDestino.addEventListener("blur", preencherEnderecoDestino);
+
+if (elementoCepDestino) {
+    elementoCepDestino.addEventListener("blur", preencherEnderecoDestino);
+}
+
+
 
 
 
