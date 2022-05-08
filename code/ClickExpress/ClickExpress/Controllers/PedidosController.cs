@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ClickExpress.Models;
 using System.Data;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ClickExpress.Controllers
 {
@@ -45,10 +46,8 @@ namespace ClickExpress.Controllers
             return View(pedido);
         }
 
-     
-        // GET: Pedidos/Create
 
-
+        // GET: Pedidos/Create   
         public IActionResult Create()
         {
             ViewData["Id_usuario"] = new SelectList(_context.Usuarios, "Id_usuario", "Nome");
@@ -60,12 +59,11 @@ namespace ClickExpress.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-
-
-        public async Task<IActionResult> Create([Bind("Tipo,End_Destino,End_Partida,Horario,Preco")] Pedido pedido)
+        public async Task<IActionResult> Create([Bind("Id_contrato,Tipo,Preco,Dt_contrato,Cep_origem,Logradouro_origem,Complemento_origem,Cidade_origem,Bairro_origem,UF_origem,Cep_destino,Logradouro_destino,Complemento_destino,Cidade_destino,Bairro_destino,UF_destino,Dt_agendamento,Serv_descarrega,Serv_montagem,Id_usuario")] Pedido pedido)
         {
             if (ModelState.IsValid)
             {
+                pedido.Dt_contrato = DateTime.Now;
                 _context.Add(pedido);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));

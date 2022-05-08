@@ -4,12 +4,14 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Solicitação</h1>
+<div class="text-white">
+    <h1>Solicitação</h1>
+</div>
 
 <p>
     <a asp-action="Create">Vamos começar ?</a>
 </p>
-<table class="table">
+<table class="table text-white">
     <thead>
         <tr>
 
@@ -26,10 +28,10 @@
                 @Html.DisplayNameFor(model => model.Complemento_origem)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Cidade_origem)
+                @Html.DisplayNameFor(model => model.Bairro_origem)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Bairro_origem)
+                @Html.DisplayNameFor(model => model.Cidade_origem)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.UF_origem)
@@ -65,7 +67,7 @@
                 @Html.DisplayNameFor(model => model.Serv_montagem)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Usuario)
+                @Html.DisplayNameFor(model => model.Usuario.Cep)
             </th>
             <th></th>
         </tr>
@@ -73,62 +75,68 @@
     <tbody>
         @foreach (var item in Model)
         {
-        <tr>
+            <tr>
 
-            <td>
-                @Html.DisplayFor(modelItem => item.Tipo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Cep_origem)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Logradouro_origem)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Complemento_origem)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Bairro_origem)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.UF_origem)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Cep_destino)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Logradouro_destino)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Complemento_destino)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Bairro_destino)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.UF_destino)
-            </td>
-            <td>
-                @Html.DisplayNameFor(model => model.Dt_agendamento)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Preco)
-            </td>
-            <td>
-                @Html.DisplayNameFor(model => model.Serv_descarrega)
-            </td>
-            <td>
-                @Html.DisplayNameFor(model => model.Serv_montagem)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Usuario.Cep)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id_contrato">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id_contrato">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id_contrato">Delete</a>
-            </td>
-        </tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Tipo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cep_origem)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Logradouro_origem)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Complemento_origem)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Bairro_origem)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cidade_origem)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UF_origem)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cep_destino)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Logradouro_destino)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Complemento_destino)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Bairro_destino)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cidade_destino)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UF_destino)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Dt_agendamento)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Preco)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Serv_descarrega)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Serv_montagem)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Usuario.Cep)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id_contrato">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id_contrato">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id_contrato">Delete</a>
+                </td>
+            </tr>
         }
     </tbody>
 </table>
