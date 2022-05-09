@@ -6,6 +6,7 @@
     <title>@ViewData["Title"] - ClickExpress</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 </head>
 <body>
     <header>
@@ -26,13 +27,20 @@
                     <ul class="navbar-nav">
                         @if (User.Identity.IsAuthenticated)
                         {
+<<<<<<< Updated upstream
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Pedidos" asp-action="Create">Solicitar Serviço</a>
                             </li>
+=======
+            <li class="nav-item">
+                <a class="nav-link text-dark" asp-area="" asp-controller="Pedidos" asp-action="Create">Solicitar Serviço</a>
+            </li>
+>>>>>>> Stashed changes
                             <li class="nav-item">
                                 <!--Item adicionado-->
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Histórico</a>
                             </li>
+<<<<<<< Updated upstream
                             <li class="nav-item">
                                 <!--Item adicionado-->
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Minha Área</a>
@@ -50,6 +58,25 @@
                                 <!--Item adicionado-->
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Usuarios" asp-action="Create">Cadastrar</a>
                             </li>
+=======
+                                            <li class="nav-item">
+                                                <!--Item adicionado-->
+                                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Minha Área</a>
+                                            </li>
+                                                            <li class="nav-item">
+                                                                Olá, @User.Identity.Name <a class="nav-link text-dark" asp-area="" asp-controller="Usuarios" asp-action="Logout">Sair</a>
+                                                            </li>
+ }
+                                                        else
+                                                        {
+                                            <li class="nav-item">
+                                                <a class="nav-link text-dark" asp-area="" asp-controller="Usuarios" asp-action="Login">Login</a>
+                                            </li>
+                                                            <li class="nav-item">
+                                                                <!--Item adicionado-->
+                                                                <a class="nav-link text-dark" asp-area="" asp-controller="Usuarios" asp-action="Create">Cadastrar</a>
+                                                            </li>
+>>>>>>> Stashed changes
 }
                     </ul>
                 </div>
@@ -63,13 +90,33 @@
 
 
     <footer class="footer text-muted" style="background-color: #8D99AE">
-        <div class="container">
-            &copy; 2022 - ClickExpress - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
+       
+            <div class="row" style="width: 100%;">
+                <div class="coluna" style="background-color: #8D99AE">
+
+                    <h6><a href ="#" style="color: white">Saiba mais sobre a Click Express</a></h6>
+                    <div style="color: white; font-size: 5; padding: 0px; font-weight: bold; margin-top: 13px"> Telefone </div>
+                    <div style="color: white; font-size: 5"> (31) 0000-0000 </div><br />
+
+                 </div>
+                <div class="coluna" style="background-color: #8D99AE">
+                    <div style="color: white; font-size: 5; padding: 0px; font-weight: bold"> Localização </div>
+                    <div style="color: white; font-size: 5; margin-top: 7px"> Rua Um, 2, Horto - Belo Horizonte - MG </div>
+                    <div style="color: white; font-size: 5"> Cep: 30000-000 </div><br />
+
+                </div>
+                <div class="coluna" style="background-color:#8D99AE; text-align:center">
+                    <div style="color: white; font-size: 5; padding: 0px; font-weight: bold; margin-bottom: 7px"> Nos siga nas redes sociais </div>
+                    <i class="bi bi-facebook" style="color: #3b5998; font-size: 30px"></i>
+                    <i class="bi bi-instagram" style="color: #ff1981; font-size: 30px; padding: 10px"></i>
+                    <i class="bi bi-twitter" style="color: #00acee; font-size: 30px"></i>
+                </div>
+            </div>
+
     </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+@await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
