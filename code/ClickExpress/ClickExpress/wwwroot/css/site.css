@@ -83,9 +83,9 @@ body {
 }
 
 .coluna {
-    float: left;
+    float:left;
     width: 33.33%;
-    padding: 10px 0px 0px 30px;
+    padding: 0px 25px 0px 25px;
 }
 
 @media screen and (max-width: 600px) {
@@ -93,13 +93,8 @@ body {
         width: 100%;
     }
 
-    .bi:hover{
+    .bi:hover {
         opacity: 80%;
         color: #84DCC6;
     }
-
-   
-     
-    #teste_footer {
-        background-color: red;
-    }
+}

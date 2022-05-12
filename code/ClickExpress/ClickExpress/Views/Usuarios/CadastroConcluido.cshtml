@@ -1,0 +1,13 @@
+﻿@model ClickExpress.Models.Usuario
+
+@{
+    ViewData["Title"] = "CadastroConcluido";
+}
+
+<div class="text-white">
+    <h3> @ViewBag.Message </h3>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
@@ -6,13 +5,4 @@
       "C:\\Users\\josia\\.nuget\\packages"
     ]
   }
-=======
-{
-  "runtimeOptions": {
-    "additionalProbingPaths": [
-      "C:\\Users\\Thamara\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Thamara\\.nuget\\packages"
-    ]
-  }
->>>>>>> Stashed changes
 }

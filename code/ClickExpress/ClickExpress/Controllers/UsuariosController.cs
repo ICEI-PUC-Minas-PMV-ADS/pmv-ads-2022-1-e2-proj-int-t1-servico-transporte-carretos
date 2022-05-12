@@ -142,6 +142,12 @@ namespace ClickExpress.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id_usuario,Perfil,Nome,Email,Tel,Senha,Cep,Cidade,Logradouro,Bairro,UF,Num_endereco,Cpf_Cnpj,Veiculo")] Usuario usuario)
         {
+            if (_context.Usuarios.Any(c => c.Email == usuario.Email))
+            {
+                ModelState.AddModelError("Email", $"Esse Email já está registrado.");
+            }
+
+
             if (ModelState.IsValid)
             {
                 // Item inserido 
