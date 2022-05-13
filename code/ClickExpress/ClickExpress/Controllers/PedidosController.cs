@@ -64,9 +64,6 @@ namespace ClickExpress.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-
-
-
         public IActionResult Create(Pedido pedido)
         {
             if (ModelState.IsValid)
