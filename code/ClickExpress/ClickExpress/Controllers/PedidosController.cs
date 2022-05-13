@@ -9,6 +9,8 @@ using ClickExpress.Models;
 using Microsoft.AspNetCore.Identity;
 using System.Data;
 using System.Security.Claims;
+using Microsoft.AspNetCore.Authorization;
+
 
 namespace ClickExpress.Controllers
 {
@@ -47,10 +49,8 @@ namespace ClickExpress.Controllers
             return View(pedido);
         }
 
-     
-        // GET: Pedidos/Create
 
-
+        // GET: Pedidos/Create   
         public IActionResult Create()
 
         {
@@ -64,6 +64,7 @@ namespace ClickExpress.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+
 
 
         public IActionResult Create(Pedido pedido)

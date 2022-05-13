@@ -72,10 +72,29 @@ body {
   bottom: 0;
   width: 100%;
   white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there */
+  line-height: 20px; /* Vertically center the text there */
 
 }
 
-#teste_footer{
-    background-color:red;
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.coluna {
+    float:left;
+    width: 33.33%;
+    padding: 0px 25px 0px 25px;
+}
+
+@media screen and (max-width: 600px) {
+    .coluna {
+        width: 100%;
+    }
+
+    .bi:hover {
+        opacity: 80%;
+        color: #84DCC6;
+    }
 }

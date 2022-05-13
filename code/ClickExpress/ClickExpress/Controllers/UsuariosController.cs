@@ -33,7 +33,7 @@ namespace ClickExpress.Controllers
             //faz consulta no banco de dados dos dados inseridos
             var user = await _context.Usuarios
                 .FirstOrDefaultAsync(m => m.Email == usuario.Email);
-               
+
             //condição usuário inxistente
             if (user == null)
             {
@@ -119,7 +119,7 @@ namespace ClickExpress.Controllers
             }
 
             var usuario = await _context.Usuarios
-                .Include(t=>t.Pedidos)
+                .Include(t => t.Pedidos)
                 .FirstOrDefaultAsync(m => m.Id_usuario == id);
             if (usuario == null)
             {
@@ -142,17 +142,30 @@ namespace ClickExpress.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id_usuario,Perfil,Nome,Email,Tel,Senha,Cep,Cidade,Logradouro,Bairro,UF,Num_endereco,Cpf_Cnpj,Veiculo")] Usuario usuario)
         {
+            if (_context.Usuarios.Any(c => c.Email == usuario.Email))
+            {
+                ModelState.AddModelError("Email", $"Esse Email já está registrado.");
+            }
+
+
             if (ModelState.IsValid)
-            {  
+            {
                 // Item inserido 
                 usuario.Senha = BCrypt.Net.BCrypt.HashPassword(usuario.Senha);
 
                 _context.Add(usuario);
-                ViewBag.Message = "Cadastro concluido :) seja muito bem vindo!";
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(CadastroConcluido));
+
             }
             return View(usuario);
+        }
+
+        // GET: Usuarios/Create
+        public IActionResult CadastroConcluido()
+        {
+            ViewBag.Message = "Cadastro concluido :), seja muito bem vindo! Efetue Login para iniciar a navegação.";
+            return View();
         }
 
         // GET: Usuarios/Edit/5
