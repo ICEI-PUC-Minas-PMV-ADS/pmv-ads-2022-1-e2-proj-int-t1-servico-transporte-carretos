@@ -1,0 +1,55 @@
+﻿@model IEnumerable<ClickExpress.Models.Item>
+
+<div class="formulario">
+    <h4>Itens</h4>
+    <hr />
+    <div class="form-group">
+        <label class="control-label col-md-2">Quantidade</label>
+        <div class="col-md-10">
+            <input type="text" id="Quantidade" name="Quantidade" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-md-2">Descricao</label>
+        <div class="col-md-10">
+            <input type="text" id="Descricao" name="Descrição" />
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <a href="#" onclick="SalvarItens();">Gravar Itens</a>
+        </div>
+    </div>
+</div>
+<input type="hidden" id="Id_contrato" value="@ViewBag.Pedido" />
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Quantidade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descricao)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Quantidade)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Descricao)
+                </td>
+                <td>
+                    <a asp-action="Editar" asp-route-id="@item.Id_item">Edit</a> |
+                    <a asp-action="Detalhes" asp-route-id="@item.Id_item">Details</a> |
+                    <a asp-action="Deletar" asp-route-id="@item.Id_item">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

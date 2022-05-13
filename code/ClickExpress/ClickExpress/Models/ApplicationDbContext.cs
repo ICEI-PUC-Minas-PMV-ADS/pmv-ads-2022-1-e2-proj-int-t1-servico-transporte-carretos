@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using ClickExpress.Models;
 
+
 namespace ClickExpress.Models
 {
     public class ApplicationDbContext : DbContext // classe criada
@@ -18,6 +19,7 @@ namespace ClickExpress.Models
         public DbSet<Cliente> Clientes { get; set; }
         public DbSet<Prestador> Prestadores { get; set; }
         public DbSet<Pedido> Pedidos { get; set; }
+        public DbSet<Item> Itens { get; set; }
 
     }
 }

@@ -34,13 +34,13 @@ namespace ClickExpress.Models
         [Required(ErrorMessage = "Obrigatório informar o complemento!")]
         public string Complemento_origem { get; set; }
 
-        [Display(Name = "Cidade:")]
-        [Required(ErrorMessage = "Obrigatório informar a cidade!")]
-        public string Cidade_origem { get; set; }
-
         [Display(Name = "Bairro:")]
         [Required(ErrorMessage = "Obrigatório informar o bairro!")]
         public string Bairro_origem { get; set; }
+
+        [Display(Name = "Cidade:")]
+        [Required(ErrorMessage = "Obrigatório informar a cidade!")]
+        public string Cidade_origem { get; set; }        
 
         [Display(Name = "UF:")]
         [Required(ErrorMessage = "Obrigatório informar o estado!")]
@@ -58,13 +58,14 @@ namespace ClickExpress.Models
         [Required(ErrorMessage = "Obrigatório informar o complemento!")]
         public string Complemento_destino { get; set; }
 
-        [Display(Name = "Cidade:")]
-        [Required(ErrorMessage = "Obrigatório informar a cidade!")]
-        public string Cidade_destino { get; set; }
 
         [Display(Name = "Bairro:")]
         [Required(ErrorMessage = "Obrigatório informar o bairro!")]
         public string Bairro_destino { get; set; }
+
+        [Display(Name = "Cidade:")]
+        [Required(ErrorMessage = "Obrigatório informar a cidade!")]
+        public string Cidade_destino { get; set; }
 
         [Display(Name = "UF:")]
         [Required(ErrorMessage = "Obrigatório informar o estado!")]
