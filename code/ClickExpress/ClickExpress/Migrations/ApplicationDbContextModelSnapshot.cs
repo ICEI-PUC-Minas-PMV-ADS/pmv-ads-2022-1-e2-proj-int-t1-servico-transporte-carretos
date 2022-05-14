@@ -189,42 +189,6 @@ namespace ClickExpress.Migrations
                     b.ToTable("Usuarios");
                 });
 
-            modelBuilder.Entity("ClickExpress.Models.Cliente", b =>
-                {
-                    b.HasBaseType("ClickExpress.Models.Usuario");
-
-                    b.Property<string>("Desc_pedido")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("Dt_pedido")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("Id_pedido")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Qtde_pedidos")
-                        .HasColumnType("int");
-
-                    b.ToTable("Clientes");
-                });
-
-            modelBuilder.Entity("ClickExpress.Models.Prestador", b =>
-                {
-                    b.HasBaseType("ClickExpress.Models.Usuario");
-
-                    b.Property<DateTime>("Dt_entrega")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("Id_entrega")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Qtde_entregas")
-                        .HasColumnType("int");
-
-                    b.ToTable("Prestadores");
-                });
-
             modelBuilder.Entity("ClickExpress.Models.Item", b =>
                 {
                     b.HasOne("ClickExpress.Models.Pedido", "Pedido")
@@ -243,24 +207,6 @@ namespace ClickExpress.Migrations
                         .IsRequired();
 
                     b.Navigation("Usuario");
-                });
-
-            modelBuilder.Entity("ClickExpress.Models.Cliente", b =>
-                {
-                    b.HasOne("ClickExpress.Models.Usuario", null)
-                        .WithOne()
-                        .HasForeignKey("ClickExpress.Models.Cliente", "Id_usuario")
-                        .OnDelete(DeleteBehavior.ClientCascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("ClickExpress.Models.Prestador", b =>
-                {
-                    b.HasOne("ClickExpress.Models.Usuario", null)
-                        .WithOne()
-                        .HasForeignKey("ClickExpress.Models.Prestador", "Id_usuario")
-                        .OnDelete(DeleteBehavior.ClientCascade)
-                        .IsRequired();
                 });
 
             modelBuilder.Entity("ClickExpress.Models.Pedido", b =>

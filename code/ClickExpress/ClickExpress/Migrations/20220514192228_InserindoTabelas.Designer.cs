@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ClickExpress.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220503035642_inserindo-tabelas")]
-    partial class inserindotabelas
+    [Migration("20220514192228_InserindoTabelas")]
+    partial class InserindoTabelas
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -20,6 +20,30 @@ namespace ClickExpress.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.16")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+            modelBuilder.Entity("ClickExpress.Models.Item", b =>
+                {
+                    b.Property<int>("Id_item")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Descricao")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("PedidoId_contrato")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Quantidade")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id_item");
+
+                    b.HasIndex("PedidoId_contrato");
+
+                    b.ToTable("Itens");
+                });
 
             modelBuilder.Entity("ClickExpress.Models.Pedido", b =>
                 {
@@ -44,6 +68,14 @@ namespace ClickExpress.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Cidade_destino")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Cidade_origem")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Complemento_destino")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -57,14 +89,6 @@ namespace ClickExpress.Migrations
 
                     b.Property<DateTime>("Dt_contrato")
                         .HasColumnType("datetime2");
-
-                    b.Property<string>("Estado_destino")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Estado_origem")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Id_usuario")
                         .HasColumnType("int");
@@ -89,6 +113,14 @@ namespace ClickExpress.Migrations
                     b.Property<int>("Tipo")
                         .HasColumnType("int");
 
+                    b.Property<string>("UF_destino")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UF_origem")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id_contrato");
 
                     b.HasIndex("Id_usuario");
@@ -111,15 +143,15 @@ namespace ClickExpress.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Cidade")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Cpf_Cnpj")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Estado")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -146,6 +178,10 @@ namespace ClickExpress.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("UF")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Veiculo")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -155,40 +191,13 @@ namespace ClickExpress.Migrations
                     b.ToTable("Usuarios");
                 });
 
-            modelBuilder.Entity("ClickExpress.Models.Cliente", b =>
+            modelBuilder.Entity("ClickExpress.Models.Item", b =>
                 {
-                    b.HasBaseType("ClickExpress.Models.Usuario");
+                    b.HasOne("ClickExpress.Models.Pedido", "Pedido")
+                        .WithMany("Itens")
+                        .HasForeignKey("PedidoId_contrato");
 
-                    b.Property<string>("Desc_pedido")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("Dt_pedido")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("Id_pedido")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Qtde_pedidos")
-                        .HasColumnType("int");
-
-                    b.ToTable("Clientes");
-                });
-
-            modelBuilder.Entity("ClickExpress.Models.Prestador", b =>
-                {
-                    b.HasBaseType("ClickExpress.Models.Usuario");
-
-                    b.Property<DateTime>("Dt_entrega")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("Id_entrega")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Qtde_entregas")
-                        .HasColumnType("int");
-
-                    b.ToTable("Prestadores");
+                    b.Navigation("Pedido");
                 });
 
             modelBuilder.Entity("ClickExpress.Models.Pedido", b =>
@@ -202,22 +211,9 @@ namespace ClickExpress.Migrations
                     b.Navigation("Usuario");
                 });
 
-            modelBuilder.Entity("ClickExpress.Models.Cliente", b =>
+            modelBuilder.Entity("ClickExpress.Models.Pedido", b =>
                 {
-                    b.HasOne("ClickExpress.Models.Usuario", null)
-                        .WithOne()
-                        .HasForeignKey("ClickExpress.Models.Cliente", "Id_usuario")
-                        .OnDelete(DeleteBehavior.ClientCascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("ClickExpress.Models.Prestador", b =>
-                {
-                    b.HasOne("ClickExpress.Models.Usuario", null)
-                        .WithOne()
-                        .HasForeignKey("ClickExpress.Models.Prestador", "Id_usuario")
-                        .OnDelete(DeleteBehavior.ClientCascade)
-                        .IsRequired();
+                    b.Navigation("Itens");
                 });
 
             modelBuilder.Entity("ClickExpress.Models.Usuario", b =>

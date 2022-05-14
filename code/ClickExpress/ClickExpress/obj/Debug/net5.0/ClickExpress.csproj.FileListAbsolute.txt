@@ -2245,7 +2245,6 @@ D:\werlon\pmv-ads-2022-1-e2-proj-int-t1-servico-transporte-carretos\code\ClickEx
 D:\werlon\pmv-ads-2022-1-e2-proj-int-t1-servico-transporte-carretos\code\ClickExpress\ClickExpress\obj\Debug\net5.0\ref\ClickExpress.dll
 D:\werlon\pmv-ads-2022-1-e2-proj-int-t1-servico-transporte-carretos\code\ClickExpress\ClickExpress\obj\Debug\net5.0\ClickExpress.pdb
 D:\werlon\pmv-ads-2022-1-e2-proj-int-t1-servico-transporte-carretos\code\ClickExpress\ClickExpress\obj\Debug\net5.0\ClickExpress.genruntimeconfig.cache
-D:\werlon\pmv-ads-2022-1-e2-proj-int-t1-servico-transporte-carretos\code\ClickExpress\ClickExpress\obj\Debug\net5.0\Razor\Views\Usuarios\CadastroConcluido.cshtml.g.cs
 C:\Users\Lucia\Source\Repos\pmv-ads-2022-1-e2-proj-int-t1-servico-transporte-carretos\code\ClickExpress\ClickExpress\bin\Debug\net5.0\appsettings.Development.json
 C:\Users\Lucia\Source\Repos\pmv-ads-2022-1-e2-proj-int-t1-servico-transporte-carretos\code\ClickExpress\ClickExpress\bin\Debug\net5.0\appsettings.json
 C:\Users\Lucia\Source\Repos\pmv-ads-2022-1-e2-proj-int-t1-servico-transporte-carretos\code\ClickExpress\ClickExpress\bin\Debug\net5.0\ClickExpress.StaticWebAssets.xml

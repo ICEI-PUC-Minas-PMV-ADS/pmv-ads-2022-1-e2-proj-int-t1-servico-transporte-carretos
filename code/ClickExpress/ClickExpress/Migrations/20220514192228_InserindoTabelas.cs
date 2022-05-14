@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace ClickExpress.Migrations
 {
-    public partial class inserindotabelas : Migration
+    public partial class InserindoTabelas : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -18,8 +18,9 @@ namespace ClickExpress.Migrations
                     Tel = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Senha = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Cep = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Cidade = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Logradouro = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Estado = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    UF = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Bairro = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Num_endereco = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Cpf_Cnpj = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -29,27 +30,6 @@ namespace ClickExpress.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Usuarios", x => x.Id_usuario);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Clientes",
-                columns: table => new
-                {
-                    Id_usuario = table.Column<int>(type: "int", nullable: false),
-                    Desc_pedido = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Dt_pedido = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Id_pedido = table.Column<int>(type: "int", nullable: false),
-                    Qtde_pedidos = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Clientes", x => x.Id_usuario);
-                    table.ForeignKey(
-                        name: "FK_Clientes_Usuarios_Id_usuario",
-                        column: x => x.Id_usuario,
-                        principalTable: "Usuarios",
-                        principalColumn: "Id_usuario",
-                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -64,12 +44,14 @@ namespace ClickExpress.Migrations
                     Logradouro_origem = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Complemento_origem = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Bairro_origem = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Estado_origem = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Cidade_origem = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    UF_origem = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Cep_destino = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Logradouro_destino = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Complemento_destino = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Bairro_destino = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Estado_destino = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Cidade_destino = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    UF_destino = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Dt_agendamento = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Preco = table.Column<double>(type: "float", nullable: false),
                     Serv_descarrega = table.Column<bool>(type: "bit", nullable: false),
@@ -88,24 +70,30 @@ namespace ClickExpress.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Prestadores",
+                name: "Itens",
                 columns: table => new
                 {
-                    Id_usuario = table.Column<int>(type: "int", nullable: false),
-                    Dt_entrega = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Id_entrega = table.Column<int>(type: "int", nullable: false),
-                    Qtde_entregas = table.Column<int>(type: "int", nullable: false)
+                    Id_item = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Quantidade = table.Column<int>(type: "int", nullable: false),
+                    Descricao = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    PedidoId_contrato = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Prestadores", x => x.Id_usuario);
+                    table.PrimaryKey("PK_Itens", x => x.Id_item);
                     table.ForeignKey(
-                        name: "FK_Prestadores_Usuarios_Id_usuario",
-                        column: x => x.Id_usuario,
-                        principalTable: "Usuarios",
-                        principalColumn: "Id_usuario",
+                        name: "FK_Itens_Pedidos_PedidoId_contrato",
+                        column: x => x.PedidoId_contrato,
+                        principalTable: "Pedidos",
+                        principalColumn: "Id_contrato",
                         onDelete: ReferentialAction.Restrict);
                 });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Itens_PedidoId_contrato",
+                table: "Itens",
+                column: "PedidoId_contrato");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Pedidos_Id_usuario",
@@ -116,13 +104,10 @@ namespace ClickExpress.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Clientes");
+                name: "Itens");
 
             migrationBuilder.DropTable(
                 name: "Pedidos");
-
-            migrationBuilder.DropTable(
-                name: "Prestadores");
 
             migrationBuilder.DropTable(
                 name: "Usuarios");

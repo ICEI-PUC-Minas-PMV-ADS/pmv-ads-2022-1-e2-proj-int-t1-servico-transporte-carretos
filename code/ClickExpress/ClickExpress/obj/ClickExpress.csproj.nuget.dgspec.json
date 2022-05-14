@@ -1,33 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lucia\\Source\\Repos\\pmv-ads-2022-1-e2-proj-int-t1-servico-transporte-carretos\\code\\ClickExpress\\ClickExpress\\ClickExpress.csproj": {}
+    "C:\\Users\\kenia\\OneDrive\\Documentos\\PUC Minas\\Eixo 2\\pmv-ads-2022-1-e2-proj-int-t1-servico-transporte-carretos\\code\\ClickExpress\\ClickExpress\\ClickExpress.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lucia\\Source\\Repos\\pmv-ads-2022-1-e2-proj-int-t1-servico-transporte-carretos\\code\\ClickExpress\\ClickExpress\\ClickExpress.csproj": {
+    "C:\\Users\\kenia\\OneDrive\\Documentos\\PUC Minas\\Eixo 2\\pmv-ads-2022-1-e2-proj-int-t1-servico-transporte-carretos\\code\\ClickExpress\\ClickExpress\\ClickExpress.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lucia\\Source\\Repos\\pmv-ads-2022-1-e2-proj-int-t1-servico-transporte-carretos\\code\\ClickExpress\\ClickExpress\\ClickExpress.csproj",
+        "projectUniqueName": "C:\\Users\\kenia\\OneDrive\\Documentos\\PUC Minas\\Eixo 2\\pmv-ads-2022-1-e2-proj-int-t1-servico-transporte-carretos\\code\\ClickExpress\\ClickExpress\\ClickExpress.csproj",
         "projectName": "ClickExpress",
-        "projectPath": "C:\\Users\\Lucia\\Source\\Repos\\pmv-ads-2022-1-e2-proj-int-t1-servico-transporte-carretos\\code\\ClickExpress\\ClickExpress\\ClickExpress.csproj",
-        "packagesPath": "C:\\Users\\Lucia\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lucia\\Source\\Repos\\pmv-ads-2022-1-e2-proj-int-t1-servico-transporte-carretos\\code\\ClickExpress\\ClickExpress\\obj\\",
+        "projectPath": "C:\\Users\\kenia\\OneDrive\\Documentos\\PUC Minas\\Eixo 2\\pmv-ads-2022-1-e2-proj-int-t1-servico-transporte-carretos\\code\\ClickExpress\\ClickExpress\\ClickExpress.csproj",
+        "packagesPath": "C:\\Users\\kenia\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kenia\\OneDrive\\Documentos\\PUC Minas\\Eixo 2\\pmv-ads-2022-1-e2-proj-int-t1-servico-transporte-carretos\\code\\ClickExpress\\ClickExpress\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Lucia\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\kenia\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
-          "https://api.nuget.org/v3/index.json": {},
-          "https://desenv.benner.com.br/packages/nuget": {},
-          "https://www.nuget.org/api/v2/curated-feeds/microsoftdotnet/": {}
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
@@ -102,12 +97,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[5.0.16, 5.0.16]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -116,7 +105,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
         }
       }
     }
