@@ -1,4 +1,6 @@
-﻿function SolicitarServico() {
+﻿const { data } = require("jquery");
+
+function SolicitarServico() {
 
     var tipoServico = $("#Tipo").val();
 
@@ -85,7 +87,8 @@
 
 function ListarItens(idPedido) {
     var url = "/Itens/ListarItens";
-
+    data: { id: idPedido };
+    console.log(data);
     $.ajax({
         url: url
         , type: "GET"
@@ -93,9 +96,9 @@ function ListarItens(idPedido) {
         , datatype: "html"
         , success: function (data) {
             var divItens = $("#divItens");
-            divItens.empty();
-            divItens.show();
-            divItens.html(data);
+            divItens.empty(); //apaga 
+            divItens.show(); //fica visivel
+            divItens.html(data); // insere os dados
 
         }
     

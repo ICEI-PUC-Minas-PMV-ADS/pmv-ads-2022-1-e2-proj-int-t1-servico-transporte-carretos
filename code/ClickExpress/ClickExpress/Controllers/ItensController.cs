@@ -1,16 +1,14 @@
 ﻿using ClickExpress.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
+
 
 namespace ClickExpress.Controllers
 {
     public class ItensController : Controller
     {
         private readonly ApplicationDbContext _context;
+
         public ActionResult ListarItens(int id)
         {
             var lista = _context.Itens.Where(m => m.Pedido.Id_contrato == id);
