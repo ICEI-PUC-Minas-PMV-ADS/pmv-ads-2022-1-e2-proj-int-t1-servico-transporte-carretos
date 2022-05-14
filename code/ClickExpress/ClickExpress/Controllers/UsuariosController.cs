@@ -37,7 +37,7 @@ namespace ClickExpress.Controllers
             //condição usuário inxistente
             if (user == null)
             {
-                ViewBag.Message = "Usuário e/ou Senha inválidos!";
+                ViewBag.Message  = "Usuário e/ou Senha inválidos!";
                 return View();
             }
              
