@@ -3,40 +3,41 @@
 @{
     ViewData["Title"] = "Login";
 }
-
+<img class="responsiveboxman" src="~/Imagens/boxman.png" />
 <div class="text-white">
-    <h1>Login</h1>
+    
 </div>
 
 <hr />
-<div class="row text-white">
+<div class="row text-login">
+<h1>Login</h1>
     <div class="col-md-4">
         <form asp-action="Login">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Email" class="control-label"></label>
-                <input asp-for="Email" class="form-control" />
+            <div class="form-login">
+                <label asp-for="Email" class="control-label" style="color:#8d99ae"></label>
+                <input asp-for="Email" class="form-control" placeholder="Insira seu e-mail"/>
                 <span asp-validation-for="Email" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Senha" class="control-label"></label>
-                <input asp-for="Senha" class="form-control" />
+            <div class="form-login">
+                <label asp-for="Senha" class="control-label" style="color:#8d99ae"></label>
+                <input asp-for="Senha" class="form-control" placeholder="Insira sua senha"/>
                 <span asp-validation-for="Senha" class="text-danger"></span>
             </div>
             <!--Item adicionado-->
-            <div class="form-group">
-                <input type="submit" value="Entrar" class="btn btn-primary" />
-                <a class="btn btn-info" asp-controller="Home" asp-action="Index">Voltar</a>
+            <div class="form-button-login">
+
+                <input type="submit" value="Entrar" class="btn btn-primary" style="color:white; background-color: #84dcc6; width:100px; height:40px; border:none;"  />
+ 
             </div>
         </form>
 
         <h3> @ViewBag.Message </h3>
+        <div class="clear"></div>
     </div>
 </div>
 
-<div>
 
-</div>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

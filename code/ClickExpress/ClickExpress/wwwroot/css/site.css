@@ -1,27 +1,44 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
+
+
 a.navbar-brand {
   white-space: normal;
   text-align: center;
   word-break: break-all;
+ 
+}
+
+
+
+a.nav-link.text-white{
+   background-color:red;
+   float:left;
+   margin:5px;
+   border-radius:5px;
+   font-size:18px;
+   font-style:inherit;
+  
+   
 }
 
 /* Provide sufficient contrast against white background */
 a {
-  color: #0366d6;
+    color: #0366d6;
 }
 
 .btn-primary {
   color: #fff;
   background-color: #1b6ec2;
-  border-color: #1861ac;
+  
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
   color: #fff;
   background-color: #1b6ec2;
-  border-color: #1861ac;
+  
+ 
 }
 
 /* Sticky footer styles
@@ -53,8 +70,11 @@ button.accept-policy {
 
 .responsiveboxman {
     width: 100%;
-    max-width: 300px;
+    max-width:300px;
     height: auto;
+    margin-left:5%;
+    display:inline-block;
+    
 }
 
 /* Sticky footer styles
@@ -64,9 +84,12 @@ html {
 }
 
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
+    /* Margin bottom by footer height */
+
+    background-repeat: no-repeat;
+
 }
+
 .footer {
   position: absolute;
   bottom: 0;
@@ -97,4 +120,69 @@ body {
         opacity: 80%;
         color: #84DCC6;
     }
+
+  
+}
+
+
+
+div.row.text-login {
+    margin-right: 10%;
+    background-color: #8d99ae;
+    width: 30%;
+    height: 18%;
+    border-radius: 2%;
+    float: right;
+    margin-top: -30%;
+    display: inline-block;
+ 
+}
+
+
+
+div.form-login {
+    width: 26vw;
+    text-align:center;
+    display: flex;
+    flex-wrap:wrap;
+    flex:1 1 100px; 
+}
+
+
+
+div.form-button-login{
+ 
+margin-top:50%;
+text-align:center;
+margin-left:140%;
+
+
+   
+}
+
+   
+
+    h1 {
+        font-size: 23px;
+        color: white;
+        margin-left: 7%;
+        margin-top: 8%;
+        position: relative;
+    }
+
+    div h1::before {
+        content: '';
+        position: absolute;
+        height: 4px;
+        width: 25px;
+        bottom: 0px;
+        left: 0;
+        border-radius: 8px;
+        background: #84dcc6;
+    }
+
+    
+
+clear {
+    clear: both;
 }

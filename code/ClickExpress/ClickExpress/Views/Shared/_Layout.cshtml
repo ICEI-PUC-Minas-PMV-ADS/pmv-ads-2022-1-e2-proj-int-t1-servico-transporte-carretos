@@ -22,35 +22,35 @@
                         <ul class="navbar-nav flex-grow-1">
 
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Quem Somos</a>
+                                <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Quem Somos</a>
                             </li>
                         </ul>
                         <ul class="navbar-nav">
                             @if (User.Identity.IsAuthenticated)
                             {
                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="Pedidos" asp-action="Create">Solicitar Serviço</a>
+                                    <a class="nav-link text-white" asp-area="" asp-controller="Pedidos" asp-action="Create">Solicitar Serviço</a>
                                 </li>
                                 <li class="nav-item">
                                     <!--Item adicionado-->
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Histórico</a>
+                                    <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Histórico</a>
                                 </li>
                                 <li class="nav-item">
                                     <!--Item adicionado-->
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Minha Área</a>
+                                    <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Privacy">Minha Área</a>
                                 </li>
                                 <li class="nav-item">
-                                    Olá, @User.Identity.Name <a class="nav-link text-dark" asp-area="" asp-controller="Usuarios" asp-action="Logout">Sair</a>
+                                    Olá, @User.Identity.Name <a class="nav-link text-white" asp-area="" asp-controller="Usuarios" asp-action="Logout">Sair</a>
                                 </li>
                             }
                             else
                             {
                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="Usuarios" asp-action="Login">Login</a>
+                                    <a class="nav-link text-white" asp-area="" asp-controller="Usuarios" asp-action="Login">Login</a>
                                 </li>
                                 <li class="nav-item">
                                     <!--Item adicionado-->
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="Usuarios" asp-action="Create">Cadastrar</a>
+                                    <a class="nav-link text-white" asp-area="" asp-controller="Usuarios" asp-action="Create">Cadastrar</a>
                                 </li>
                              }
                         </ul>
