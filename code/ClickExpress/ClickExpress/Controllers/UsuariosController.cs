@@ -40,7 +40,7 @@ namespace ClickExpress.Controllers
                 ViewBag.Message  = "Usuário e/ou Senha inválidos!";
                 return View();
             }
-
+             
             //comparação da senha preenchida com a armazenada no banco de dados
             bool isSenhaOk = BCrypt.Net.BCrypt.Verify(usuario.Senha, user.Senha);
 
@@ -50,7 +50,7 @@ namespace ClickExpress.Controllers
                 var claims = new List<Claim>
                 {
                     new Claim(ClaimTypes.Name, user.Nome),
-                    new Claim(ClaimTypes.NameIdentifier, user.Nome),
+                    new Claim(ClaimTypes.NameIdentifier, user.Id_usuario.ToString()),
                     new Claim(ClaimTypes.Role, user.Perfil.ToString())
                 };
 

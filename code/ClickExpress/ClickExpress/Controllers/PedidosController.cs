@@ -6,8 +6,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ClickExpress.Models;
+using Microsoft.AspNetCore.Identity;
 using System.Data;
+using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;
+
 
 namespace ClickExpress.Controllers
 {
@@ -49,27 +52,31 @@ namespace ClickExpress.Controllers
 
         // GET: Pedidos/Create   
         public IActionResult Create()
+
         {
             ViewData["Id_usuario"] = new SelectList(_context.Usuarios, "Id_usuario", "Nome");
             return View();
         }
 
         // POST: Pedidos/Create
+
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id_contrato,Tipo,Preco,Dt_contrato,Cep_origem,Logradouro_origem,Complemento_origem,Cidade_origem,Bairro_origem,UF_origem,Cep_destino,Logradouro_destino,Complemento_destino,Cidade_destino,Bairro_destino,UF_destino,Dt_agendamento,Serv_descarrega,Serv_montagem,Id_usuario")] Pedido pedido)
+        public IActionResult Create(Pedido pedido)
         {
             if (ModelState.IsValid)
             {
+
+                var userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
+                pedido.Id_usuario = Convert.ToInt32(userId);
                 pedido.Dt_contrato = DateTime.Now;
                 _context.Add(pedido);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                _context.SaveChanges();
+
             }
-            ViewData["Usuario_Id"] = new SelectList(_context.Usuarios, "Id_usuario", "Nome", pedido.Id_usuario);
-            return View(pedido);
+            return Json(new { Resultado = pedido.Id_contrato });
         }
 
         // GET: Pedidos/Edit/5
