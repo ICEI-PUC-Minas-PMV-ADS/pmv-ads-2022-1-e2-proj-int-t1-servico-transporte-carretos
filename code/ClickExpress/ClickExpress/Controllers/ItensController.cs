@@ -5,9 +5,15 @@ using System.Linq;
 
 namespace ClickExpress.Controllers
 {
+
     public class ItensController : Controller
     {
         private readonly ApplicationDbContext _context;
+
+        public ItensController(ApplicationDbContext context)
+        {
+            _context = context;
+        }
 
         public ActionResult ListarItens(int id)
         {
@@ -30,5 +36,6 @@ namespace ClickExpress.Controllers
 
             return Json(new { Resultado = item.Id_item });
         }
+
     }
 }
