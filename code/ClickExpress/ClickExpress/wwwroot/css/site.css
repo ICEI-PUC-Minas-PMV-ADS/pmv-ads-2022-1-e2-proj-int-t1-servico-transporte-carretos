@@ -133,7 +133,7 @@ div.row.text-login {
     height: 18%;
     border-radius: 2%;
     float: right;
-    margin-top: -30%;
+    margin-top: -27%;
     display: inline-block;
  
 }
@@ -160,17 +160,16 @@ margin-left:140%;
    
 }
 
-   
 
-    h1 {
-        font-size: 23px;
-        color: white;
-        margin-left: 7%;
-        margin-top: 8%;
-        position: relative;
-    }
 
-    div h1::before {
+h1 {
+    font-size: 23px;
+    color: white;
+    margin-left: 7%;
+    margin-top: 8%;
+    position: relative;
+}
+    .login::before {
         content: '';
         position: absolute;
         height: 4px;
@@ -181,8 +180,39 @@ margin-left:140%;
         background: #84dcc6;
     }
 
-    
+   .home1{
 
-clear {
+text-align:center;
+margin-top:-30%;
+margin-right:5%;
+font-size:3vw;
+color:white;
+    }
+
+.home2 {
+    text-align: center;
+    margin-top:1%;
+    margin-left:10%;
+    font-size: 3vw;
+    color:white;
+}
+
+.home3{
+    text-align: center;
+    margin-top: 1%;
+ margin-left:25%;
+    font-size: 3vw;
+    color:white;
+}
+
+.home4{
+    text-align: center;
+    margin-top: 3%;
+margin-left: 20%;
+    font-size: 1.5vw;
+    color: white;
+}
+
+    clear {
     clear: both;
 }

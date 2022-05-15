@@ -2699,3 +2699,4 @@ C:\Users\Lucia\Source\Repos\pmv-ads-2022-1-e2-proj-int-t1-servico-transporte-car
 C:\Users\Lucia\Source\Repos\pmv-ads-2022-1-e2-proj-int-t1-servico-transporte-carretos\code\ClickExpress\ClickExpress\obj\Debug\net5.0\ref\ClickExpress.dll
 C:\Users\Lucia\Source\Repos\pmv-ads-2022-1-e2-proj-int-t1-servico-transporte-carretos\code\ClickExpress\ClickExpress\obj\Debug\net5.0\ClickExpress.pdb
 C:\Users\Lucia\Source\Repos\pmv-ads-2022-1-e2-proj-int-t1-servico-transporte-carretos\code\ClickExpress\ClickExpress\obj\Debug\net5.0\ClickExpress.genruntimeconfig.cache
+C:\Users\Lucia\Source\Repos\pmv-ads-2022-1-e2-proj-int-t1-servico-transporte-carretos\code\ClickExpress\ClickExpress\obj\Debug\net5.0\Razor\Views\Itens\ListarItens.cshtml.g.cs
