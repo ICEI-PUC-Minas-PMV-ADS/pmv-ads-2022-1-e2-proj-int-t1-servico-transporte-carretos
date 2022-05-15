@@ -1,5 +1,4 @@
-﻿const { data } = require("jquery");
-
+﻿
 function SolicitarServico() {
 
     var tipoServico = $("#Tipo").val();
@@ -75,7 +74,6 @@ function SolicitarServico() {
             __RequestVerificationToken: token
         }
         , success: function (data) {
-            console.log(data);
              if (data.resultado > 0) {
 
                  ListarItens(data.resultado);
@@ -84,45 +82,43 @@ function SolicitarServico() {
     });
 
 }
-
-function ListarItens(idPedido) {
+ function ListarItens(idPedido) {
     var url = "/Itens/ListarItens";
-    data: { id: idPedido };
-    console.log(data);
-    $.ajax({
-        url: url
-        , type: "GET"
-        , data: { id: idPedido }
-        , datatype: "html"
-        , success: function (data) {
-            var divItens = $("#divItens");
-            divItens.empty(); //apaga 
-            divItens.show(); //fica visivel
-            divItens.html(data); // insere os dados
 
-        }
-    
+    $.ajax({
+    url: url
+    , type: "GET"
+    , data: {id: idPedido }
+    , datatype: "html"
+    , success: function (data) {
+    var divItens = $("#divItens");
+    divItens.empty(); //apaga
+    divItens.show(); //fica visivel
+    divItens.html(data); // insere os dados
+
+    }
+
     });
-    
-}
-function SalvarItens() {
-    var quantidade = $("#Quantidade").val();
-    var descricao = $("#Descricao").val();
+
+  }
+ function SalvarItens() {
+    var quantidade = $("#quantidade").val();
+    var descricao = $("#descricao").val();
     var idPedido = $("#Id_contrato").val();
 
     var url = "/Itens/SalvarItens";
 
     $.ajax({
         url: url
-        , data: { Quantidade: quantidade, Descricao: descricao, Id_contrato: idPedido}
+        , data: {Quantidade: quantidade, Descricao: descricao, Id_contrato: idPedido }
         , type: "GET"
         , datatype: "html"
         , success: function (data) {
-            if (data.Resultado > 0) {
-                ListarItens(idPedido);
-            }
-            
+        if (data.resultado > 0) {
+            ListarItens(idPedido);
         }
 
-    });
-}
+        }
+
+    })
+ }
