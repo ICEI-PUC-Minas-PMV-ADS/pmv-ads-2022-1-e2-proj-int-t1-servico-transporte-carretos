@@ -2,13 +2,13 @@
 <hr />
 <br>
 
-# Tela inicial
+## Tela inicial
 <br>
 <img src="img/tela-inicial.jpg" alt="Figura Tela incial">
 <hr />
 <br>
 
-# CT-01 – Cadastro do usuário
+## CT-01 – Cadastro do usuário
 <img src="img/tela-cadastro-usuario.jpg" alt="Figura Tela incial">
 <br>
 <img src="img/tela-cadastro-usuario-cliente.jpg" alt="Figura Tela de cadastro usuario cliente">
@@ -25,7 +25,7 @@
 <hr />
 <br>
 
-# CT-02 – Login do usuário
+## CT-02 – Login do usuário
 <img src="img/tela-login.jpg" alt="Figura Tela login">
 <br>
 <img src="img/tela-logado.jpg" alt="Figura Tela usuario logado">
@@ -36,7 +36,7 @@
 <hr />
 <br>
 
-# CT-04 – Usuário Cliente fazer um pedido (solicitar um serviço de carreto ou mudança)
+## CT-04 – Usuário Cliente fazer um pedido (solicitar um serviço de carreto ou mudança)
 <img src="img/tela-cadastro-pedido.jpg" alt="Figura Tela cadastro de pedido">
 <br>
 <img src="img/tela-cadastro-pedido-preenchimento-completo1.jpg" alt="Figura Tela cadastro de pedido preenchimento completo 1">
