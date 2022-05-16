@@ -25,7 +25,24 @@
 <hr />
 <br>
 
-
 # CT-02 – Login do usuário
+<img src="img/tela-login.jpg" alt="Figura Tela login">
+<br>
+<img src="img/tela-logado.jpg" alt="Figura Tela usuario logado">
+<br>
+<img src="img/tela-login-invalido1.jpg" alt="Figura Tela login preenchimento ivalido">
+<br>
+<img src="img/tela-login-invalido2.jpg" alt="Figura Tela login ivalido">
+<hr />
+<br>
 
 # CT-04 – Usuário Cliente fazer um pedido (solicitar um serviço de carreto ou mudança)
+<img src="img/tela-cadastro-pedido.jpg" alt="Figura Tela cadastro de pedido">
+<br>
+<img src="img/tela-cadastro-pedido-preenchimento-completo1.jpg" alt="Figura Tela cadastro de pedido preenchimento completo 1">
+<br>
+<img src="img/tela-cadastro-pedido-preenchimento-completo2.jpg" alt="Figura Tela cadastro de pedido preenchimento completo 2">
+<br>
+<img src="img/tela-cadastro-pedido-preenchimento-completo3.jpg" alt="Figura Tela cadastro de pedido preenchimento completo 3">
+<hr />
+<br>
