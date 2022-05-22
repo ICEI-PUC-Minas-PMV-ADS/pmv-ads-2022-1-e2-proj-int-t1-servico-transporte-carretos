@@ -28,9 +28,12 @@
                     <ul class="navbar-nav">
                         @if (User.Identity.IsAuthenticated)
                         {
+                            @if (User.IsInRole("Cliente"))
+                            {
                             <li class="nav-item">
                                 <a class="nav-link text-white" asp-area="" asp-controller="Pedidos" asp-action="Create">Solicitar Serviço</a>
                             </li>
+                            }
                             <li class="nav-item">
                                 <!--Item adicionado-->
                                 <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Histórico</a>
@@ -59,12 +62,12 @@
         </nav>
     </header>
 
-    <main role="main" class="pb-3" style="background-color: #282D42;height: 2000px">
+    <main role="main" class="container m-0 p-0 mw-100" style="background-color: #282D42">
         @RenderBody() 
     </main>
 
 
-    <footer class="footer text-white" style="font-size: 20px; background-color: #8D99AE;">
+    <footer class="footer text-white position-relative" style="font-size: 20px; background-color: #8D99AE;">
         <div class="container">
             <div class="row" style="width: 100%;">
                 <div class="col" style="text-align: left;">

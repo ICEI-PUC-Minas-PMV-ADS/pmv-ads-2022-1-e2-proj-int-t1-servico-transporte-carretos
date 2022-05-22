@@ -1,22 +1,7 @@
 {
   "ExpandedNodes": [
-<<<<<<< HEAD
     ""
   ],
   "SelectedNode": "\\ClickExpress.sln",
-=======
-    "",
-    "\\code",
-    "\\code\\ClickExpress",
-    "\\code\\ClickExpress\\ClickExpress",
-    "\\code\\ClickExpress\\ClickExpress\\Controllers",
-    "\\code\\ClickExpress\\ClickExpress\\Views",
-    "\\code\\ClickExpress\\ClickExpress\\Views\\Pedidos",
-    "\\code\\ClickExpress\\ClickExpress\\Views\\Usuarios",
-    "\\code\\ClickExpress\\ClickExpress\\wwwroot",
-    "\\code\\ClickExpress\\ClickExpress\\wwwroot\\js"
-  ],
-  "SelectedNode": "\\code\\ClickExpress\\ClickExpress\\Controllers\\PedidosController.cs",
->>>>>>> 1c243edd5b4ffdd955d21ec433a13f6b5858fc97
   "PreviewInSolutionExplorer": false
 }

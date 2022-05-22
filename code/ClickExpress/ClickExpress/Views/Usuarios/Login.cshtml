@@ -3,42 +3,46 @@
 @{
     ViewData["Title"] = "Login";
 }
-<img class="responsiveboxman" src="~/Imagens/boxman.png" />
-<div class="text-white">
-    
-</div>
 
-<hr />
-<div class="row text-login">
-<h1 class="login">Login</h1>
-    <div class="col-md-4">
-        <form asp-action="Login">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-login">
-                <label asp-for="Email" class="control-label" style="color:#8d99ae"></label>
-                <input asp-for="Email" class="form-control" placeholder="Insira seu e-mail"/>
-                <span asp-validation-for="Email" class="text-danger"></span>
-            </div>
-            <div class="form-login">
-                <label asp-for="Senha" class="control-label" style="color:#8d99ae"></label>
-                <input asp-for="Senha" class="form-control" placeholder="Insira sua senha"/>
-                <span asp-validation-for="Senha" class="text-danger"></span>
-            </div>
-            <!--Item adicionado-->
-            <div class="form-button-login">
 
-                <input type="submit" value="Entrar" class="btn btn-primary" style="color:white; background-color: #84dcc6; width:100px; height:40px; border:none;"  />
- 
-            </div>
-        </form>
+<div class="container m-0 p-0 mw-100">
+    <div class="row m-0 p-0 mw-100 align-items-center">
+        <div class="col-4">
+            <img class="responsiveboxman" src="~/Imagens/boxman.png" />
+        </div>
 
-        <h3> @ViewBag.Message </h3>
-        <div class="clear"></div>
+        <div class="col-8">
+
+            <div style="background-color: #8D99AE; width: 30vw; height: 40vh; border-radius:5px" class="mx-auto">
+                
+                <h1 class="ml-0 p-1">Login</h1>
+                <form asp-action="Login">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-login p-1 ml-0">
+                        <label asp-for="Email" class="control-label" style="color:#8d99ae"></label>
+                        <input asp-for="Email" class="form-control" placeholder="Insira seu e-mail" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                    <div class="form-login p-1 ml-0">
+                        <label asp-for="Senha" class="control-label" style="color:#8d99ae"></label>
+                        <input asp-for="Senha" class="form-control" placeholder="Insira sua senha" />
+                        <span asp-validation-for="Senha" class="text-danger"></span>
+                    </div>
+                    <!--Item adicionado-->
+                    <div class="form-button-login p-1 ml-0">
+                        <input type="submit" value="Entrar" class="btn btn-primary" style="color:white; background-color: #84dcc6" />
+                        <a class="btn btn-info" asp-controller="Home" asp-action="Index">Voltar</a>
+                    </div>
+                </form>
+
+                <h5> @ViewBag.Message </h5>
+            </div>
+        </div>
     </div>
 </div>
 
 
 
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+            @section Scripts {
+                @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+            }
