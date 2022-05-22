@@ -135,6 +135,15 @@ namespace ClickExpress.Controllers
             return View(usuario);
         }
 
+        // GET: Usuarios/Details/5
+        public IActionResult RelatoriosSpec()
+        {
+            var userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
+            int id = Convert.ToInt32(userId);
+
+            return View(Relatorios(id));
+        }
+
         // GET: Usuarios/Create
         public IActionResult Create()
         {

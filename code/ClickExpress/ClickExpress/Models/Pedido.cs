@@ -88,7 +88,7 @@ namespace ClickExpress.Models
         [ForeignKey("Id_usuario")]
         public Usuario Usuario { get; set; }
 
-        public ICollection<Item> Itens { get; set; }
+        public ICollection<Item> Itens { get; set; }  
 
     }
     public enum TipoServico
