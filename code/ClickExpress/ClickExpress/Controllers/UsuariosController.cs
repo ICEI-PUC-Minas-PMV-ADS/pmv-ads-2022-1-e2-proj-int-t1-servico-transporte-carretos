@@ -27,6 +27,12 @@ namespace ClickExpress.Controllers
         }
 
         // Login: Usuarios - item adicionado
+        public IActionResult MinhaArea()
+        {
+            return View();
+        }
+
+        // Login: Usuarios - item adicionado
         [HttpPost]
         public async Task<IActionResult> Login([Bind("Email,Senha")] Usuario usuario)
         {
@@ -49,7 +55,7 @@ namespace ClickExpress.Controllers
             {
                 var claims = new List<Claim>
                 {
-                    new Claim(ClaimTypes.Name, user.Nome),
+                    new Claim(ClaimTypes.Name, user.Nome),                    
                     new Claim(ClaimTypes.NameIdentifier, user.Id_usuario.ToString()),
                     new Claim(ClaimTypes.Role, user.Perfil.ToString())
                 };
@@ -169,6 +175,7 @@ namespace ClickExpress.Controllers
         }
 
         // GET: Usuarios/Edit/5
+        //public async Task<IActionResult> Edit(int? id)
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -205,7 +212,7 @@ namespace ClickExpress.Controllers
 
                     _context.Update(usuario);
 
-                    ViewBag.Message = "Alterações excutadas com sucesso!";
+                    //ViewBag.Message = "Alterações excutadas com sucesso!";
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
@@ -222,6 +229,69 @@ namespace ClickExpress.Controllers
                 return RedirectToAction(nameof(Index));
             }
             return View(usuario);
+        }
+
+        // GET: Usuarios/Edit/5
+        //public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> EditProfile()
+        {            
+            var userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
+            int id = Convert.ToInt32(userId);
+
+            var usuario = await _context.Usuarios.FindAsync(id);
+            if (usuario == null)
+            {
+                return NotFound();
+            }
+            return View(usuario);
+        }
+
+        // POST: Usuarios/Edit/5
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> EditProfile(int id, [Bind("Id_usuario,Nome,Email,Tel,Senha,Cep,Cidade,Logradouro,Bairro,UF,Num_endereco,Cpf_Cnpj,Perfil")] Usuario usuario)
+        {
+            if (id != usuario.Id_usuario)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    // Item inserido 
+                    usuario.Senha = BCrypt.Net.BCrypt.HashPassword(usuario.Senha);
+
+                    _context.Update(usuario);
+
+                    //ViewBag.Message = "Alterações excutadas com sucesso!";
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!UsuarioExists(usuario.Id_usuario))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+                //return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Index));
+            }
+            return View(usuario);
+        }
+
+        // GET: Usuarios/Create
+        public IActionResult EdicaoConcluida()
+        {
+            ViewBag.Message = "Alteracao efetuada com sucesso! :)";
+            return View();
         }
 
         // GET: Usuarios/Delete/5
