@@ -36,6 +36,11 @@ namespace ClickExpress.Controllers
 
             return Json(new { Resultado = item.Id_item });
         }
-
+        public IActionResult ConcluirPedido()
+        {
+            ViewBag.Message = "Solicitação de serviço enviada com sucesso!";
+            return View();
+        }
+                
     }
 }

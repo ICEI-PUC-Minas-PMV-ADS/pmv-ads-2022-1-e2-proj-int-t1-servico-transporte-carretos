@@ -6,10 +6,10 @@
 
 <div class="row">
     <div class="col-md">
-        <div style="padding: 0px 25px 0px 25px">
-            <h3 style="padding: 10px 0px 10px 0px; color: white"> Vamos começar? </h3>
+        <div style="padding: 0px 25px 0px 25px">            
             <div class="text-white">
-                <form asp-action="Create">
+                <form asp-action="Create" id="form_pedido">
+                    <h3 style="padding: 10px 0px 10px 0px; color: white"> Vamos começar? </h3>
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
                     <div class="form-group">
@@ -116,34 +116,27 @@
                         <span asp-validation-for="Serv_montagem" class="text-danger"></span>
                     </div>
 
-                    <br />
-                    <img src="~/Imagens/open-box-light.png" height="50px" />
-                    <div style=" display: inline-block; width: 95%; background-color: #D90429; color: white; padding: 8px 5px 8px 10px; border-radius: 8px; font-weight:bold;">
-                        Informe os itens que serão transportados:
-                    </div>
-                    <br />
 
-                    <div id="divItens">
-                        @*  *@
-                    </div>
                     <div class="row">
                         <div class="col-sm-auto">
                             <div class="form-group">
                                 <a href="#" onclick="SolicitarServico();" class="btn btn-primary">Salvar pedido</a>
                             </div>
                         </div>
+
                         <div class="col-sm-auto">
                             <div class="form-group">
                                 <a class="btn btn-warning" asp-controller="Home" asp-action="Index">Voltar</a>
                             </div>
                         </div>
                     </div>
-                    
-                    
-
-
+                    <br />
 
                 </form>
+                <div id="divItens">
+                    @*  *@
+                </div>
+                
             </div>
         </div>
     </div>   

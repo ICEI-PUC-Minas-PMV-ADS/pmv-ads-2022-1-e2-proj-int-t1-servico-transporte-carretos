@@ -46,7 +46,6 @@ function SolicitarServico() {
 
     //gravar
 
-
     var url = "/Pedidos/Create";
 
     $.ajax({
@@ -74,11 +73,13 @@ function SolicitarServico() {
             __RequestVerificationToken: token
         }
         , success: function (data) {
-             if (data.resultado > 0) {
+            if (data.resultado > 0) {
+                document.getElementById("form_pedido").style.display = "none";
 
-                 ListarItens(data.resultado);
-             }
-        }
+                ListarItens(data.resultado);
+            }
+
+        },
     });
 
 }
@@ -114,7 +115,7 @@ function SolicitarServico() {
         , type: "GET"
         , datatype: "html"
         , success: function (data) {
-        if (data.resultado > 0) {
+            if (data.resultado > 0) {
             ListarItens(idPedido);
         }
 
@@ -122,3 +123,8 @@ function SolicitarServico() {
 
     })
  }
+
+function Fechar() {
+    window.open("", '_self').window.close();
+    
+}

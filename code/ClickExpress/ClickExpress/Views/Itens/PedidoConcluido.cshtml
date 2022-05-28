@@ -1,0 +1,13 @@
+﻿@model IEnumerable<ClickExpress.Models.Item>
+
+@{
+    ViewData["Title"] = "PedidoConcluido";
+}
+
+<div class="text-white">
+    <h3> @ViewBag.Message </h3>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

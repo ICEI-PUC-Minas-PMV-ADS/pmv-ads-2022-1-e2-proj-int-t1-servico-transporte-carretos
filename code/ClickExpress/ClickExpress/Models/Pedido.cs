@@ -30,7 +30,7 @@ namespace ClickExpress.Models
         [Required(ErrorMessage = "Obrigatório informar o logradouro!")]
         public string Logradouro_origem { get; set; }
 
-        [Display(Name = "Complemento:")]
+        [Display(Name = "Número:")]
         [Required(ErrorMessage = "Obrigatório informar o complemento!")]
         public string Complemento_origem { get; set; }
 
@@ -54,7 +54,7 @@ namespace ClickExpress.Models
         [Required(ErrorMessage = "Obrigatório informar o logradouro!")]
         public string Logradouro_destino { get; set; }
 
-        [Display(Name = "Complemento:")]
+        [Display(Name = "Número:")]
         [Required(ErrorMessage = "Obrigatório informar o complemento!")]
         public string Complemento_destino { get; set; }
 
@@ -78,10 +78,10 @@ namespace ClickExpress.Models
         public double Preco { get; set; }
 
         [Display(Name = "Serviço de descarregamento")]
-        public Boolean Serv_descarrega { get; set; }
+        public bool Serv_descarrega { get; set; }
 
         [Display(Name = "Serviço de montagem")]
-        public Boolean Serv_montagem { get; set; }
+        public bool Serv_montagem { get; set; }
 
         [Display(Name = "Usuario")]
         public int Id_usuario { get; set; }

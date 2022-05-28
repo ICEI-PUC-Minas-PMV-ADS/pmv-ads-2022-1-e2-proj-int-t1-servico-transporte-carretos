@@ -1,7 +1,12 @@
 ﻿@model IEnumerable<ClickExpress.Models.Item>
 
 <div class="text-white">
-
+    <br />
+    <img src="~/Imagens/open-box-light.png" height="50px" />
+    <div style=" display: inline-block; width: 95%; background-color: #D90429; color: white; padding: 8px 5px 8px 10px; border-radius: 8px; font-weight:bold;">
+        Informe os itens que serão transportados:
+    </div>
+    <br />
     <div class="formulario">
         <br />
         <h6><span style="color: white; font-weight: bold;">Item</span></h6>
@@ -30,7 +35,7 @@
 
                 <th>
                     @Html.DisplayNameFor(model => model.Descricao)
-                    
+
                 </th>
                 <th>
                     @Html.DisplayNameFor(model => model.Quantidade)
@@ -41,18 +46,26 @@
         <tbody style="width: 100%">
             @foreach (var item in Model)
             {
-<tr style="width: 100%">
+                <tr style="width: 100%">
 
-    <td>
-        @Html.DisplayFor(modelItem => item.Descricao)
-        
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Quantidade)
-    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Descricao)
 
-</tr>}
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Quantidade)
+                    </td>
+
+                </tr>
+            }
         </tbody>
+
     </table>
+
+    <div class="form-group" style="padding-top: 5px;">
+        <input type="submit" value="Concluir Pedido" class="btn btn-primary" />
+        <br>
+    </div>
+    <h3> @ViewBag.Message </h3>
 </div>
 
