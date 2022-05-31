@@ -136,12 +136,20 @@ namespace ClickExpress.Controllers
         }
 
         // GET: Usuarios/Details/5
-        public IActionResult RelatoriosSpec()
+        public async Task<IActionResult> RelatoriosSpec()
         {
             var userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
             int id = Convert.ToInt32(userId);
 
-            return View(Relatorios(id));
+            var usuario = await _context.Usuarios
+                .Include(t => t.Pedidos)
+                .FirstOrDefaultAsync(m => m.Id_usuario == id);
+            if (usuario == null)
+            {
+                return NotFound();
+            }
+
+            return View(usuario);
         }
 
         // GET: Usuarios/Create
@@ -243,11 +251,15 @@ namespace ClickExpress.Controllers
         // GET: Usuarios/Edit/5
         //public async Task<IActionResult> Edit(int? id)
         public async Task<IActionResult> EditProfile()
-        {            
+        {
             var userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
             int id = Convert.ToInt32(userId);
 
-            var usuario = await _context.Usuarios.FindAsync(id);
+            //var usuario = await _context.Usuarios.FindAsync(id);
+
+            var usuario = await _context.Usuarios
+                .FirstOrDefaultAsync(m => m.Id_usuario == id);
+
             if (usuario == null)
             {
                 return NotFound();
@@ -260,20 +272,16 @@ namespace ClickExpress.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> EditProfile(int id, [Bind("Id_usuario,Nome,Email,Tel,Senha,Cep,Cidade,Logradouro,Bairro,UF,Num_endereco,Cpf_Cnpj,Perfil")] Usuario usuario)
+        public async Task<IActionResult> EditProfile([Bind("Id_usuario,Nome,Email,Tel,Senha,Cep,Cidade,Logradouro,Bairro,UF,Num_endereco,Cpf_Cnpj,Perfil,Veiculo")] Usuario usuario)
         {
-            if (id != usuario.Id_usuario)
-            {
-                return NotFound();
-            }
-
             if (ModelState.IsValid)
             {
                 try
                 {
                     // Item inserido 
                     usuario.Senha = BCrypt.Net.BCrypt.HashPassword(usuario.Senha);
-
+                    var userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
+                    usuario.Id_usuario = Convert.ToInt32(userId);
                     _context.Update(usuario);
 
                     //ViewBag.Message = "Alterações excutadas com sucesso!";
@@ -290,9 +298,10 @@ namespace ClickExpress.Controllers
                         throw;
                     }
                 }
+                return RedirectToAction(nameof(EdicaoConcluida));
                 //return RedirectToAction(nameof(Index));
-                return RedirectToAction(nameof(Index));
             }
+
             return View(usuario);
         }
 

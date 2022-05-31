@@ -53,54 +53,55 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Id_usuario)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nome)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Tel)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Cep)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Cidade)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Logradouro)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Bairro)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.UF)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Num_endereco)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Cpf_Cnpj)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Perfil)
-            </td>
-            <th>
-                @Html.DisplayFor(modelItem => item.Veiculo)
-            </th>
-            <td>
-                <a asp-action="Relatorios" asp-route-id="@item.Id_usuario">Relatório</a>
-                <a asp-action="Edit" asp-route-id="@item.Id_usuario">Editar</a> |
-                <a asp-action="Details" asp-route-id="@item.Id_usuario">Detalhes</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id_usuario">Deletar</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id_usuario)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Tel)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cep)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cidade)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Logradouro)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Bairro)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UF)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Num_endereco)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cpf_Cnpj)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Perfil)
+                </td>
+                <th>
+                    @Html.DisplayFor(modelItem => item.Veiculo)
+                </th>
+                <td>
+                    <a asp-action="RelatoriosSpec">RelatórioSpec</a>
+                    <a asp-action="Edit" asp-route-id="@item.Id_usuario">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id_usuario">Detalhes</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id_usuario">Deletar</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

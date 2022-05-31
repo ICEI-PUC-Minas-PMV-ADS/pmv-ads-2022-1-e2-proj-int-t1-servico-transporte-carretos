@@ -13,13 +13,19 @@
 <hr />
 <div class="row text-white">
     <div class="col-md-4">
-        <form asp-action="Edit">
+        <form asp-action="EditProfile">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Id_usuario" />
+
+            <div class="form-group">
+                <label asp-for="Id_usuario" class="control-label"></label>
+                <input asp-for="Id_usuario" class="form-control" disabled />
+                <span asp-validation-for="Id_usuario" class="text-danger"></span>
+            </div>
+
             <div class="form-group">
                 @foreach (var item in Html.GetEnumSelectList<Perfil>())
                 {
-                    @item.Text<input class="form-control" type="radio" asp-for="Perfil" value="@item.Text" disabled/>
+                    @item.Text<input class="form-control" type="radio" asp-for="Perfil" value="@item.Text" disabled />
 
                 }
                 <span asp-validation-for="Perfil" class="text-danger"></span>
@@ -79,6 +85,11 @@
                 <input asp-for="Cpf_Cnpj" class="form-control" />
                 <span asp-validation-for="Cpf_Cnpj" class="text-danger"></span>
             </div>
+            <div class="form-group" id="formVeiculo">
+                <label asp-for="Veiculo" class="control-label"></label>
+                <input asp-for="Veiculo" class="form-control" id="inputVeiculo" />
+                <span asp-validation-for="Veiculo" class="text-danger"></span>
+            </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>
@@ -87,7 +98,7 @@
 </div>
 
 <div>
-    <a  asp-controller="Home" asp-action="Index">Back to List</a>
+    <a asp-controller="Home" asp-action="Index">Back to List</a>
 </div>
 
 @section Scripts {

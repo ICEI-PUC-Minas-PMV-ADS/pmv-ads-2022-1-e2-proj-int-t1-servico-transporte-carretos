@@ -15,7 +15,7 @@
                     <div class="row">
                         @foreach (var item in Html.GetEnumSelectList<Perfil>())
                         {
-            <div class="col-sm-auto">@item.Text</div>
+                            <div class="col-sm-auto">@item.Text</div>
                             <div class="col-sm-1"><input class="form-control" type="radio" asp-for="Perfil" value="@item.Text" /></div>}
                     </div>
                     <span asp-validation-for="Perfil" class="text-danger"></span>
@@ -79,7 +79,7 @@
                         </div>
                     </div>
                 </div>
-               
+
                 <div class="form-group">
                     <div class="row">
                         <div class="col-sm-2">
@@ -94,7 +94,7 @@
                         </div>
                     </div>
                 </div>
-               
+
                 <div class="form-group" id="formVeiculo">
                     <div class="row">
                         <div class="col-sm-5">
@@ -114,7 +114,7 @@
             <h3> @ViewBag.Message </h3>
         </div>
     </div>
-    </div>
+</div>
 
 <div>
 
