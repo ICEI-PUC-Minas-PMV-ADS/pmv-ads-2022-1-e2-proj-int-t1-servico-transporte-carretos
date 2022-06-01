@@ -67,7 +67,7 @@ namespace ClickExpress.Models
         [Required(ErrorMessage = "Obrigatório informar a cidade!")]
         public string Cidade_destino { get; set; }
 
-        [Display(Name = "UF:")]
+        [Display(Name = "UF: ")]
         [Required(ErrorMessage = "Obrigatório informar o estado!")]
         public string UF_destino { get; set; }
        
@@ -83,10 +83,21 @@ namespace ClickExpress.Models
         [Display(Name = "Serviço de montagem")]
         public bool Serv_montagem { get; set; }
 
+        [Display(Name = "Status: ")]
+        public StatusServico Status { get; set; }
+
         [Display(Name = "Usuario")]
         public int Id_usuario { get; set; }
         [ForeignKey("Id_usuario")]
         public Usuario Usuario { get; set; }
+
+        [Display(Name = "Identificação de cliente:")]
+        public int Id_cliente { get; set; }
+        public Cliente Cliente { get; set; }
+
+        [Display(Name = "Identificação do prestador: ")]
+        public int Id_prestador { get; set; }
+        public Prestador Prestador { get; set; }
 
         public ICollection<Item> Itens { get; set; }  
 
@@ -96,5 +107,13 @@ namespace ClickExpress.Models
         Mudança,
         Carreto
     }
+        public enum StatusServico
+    {
+        Pendente=0,
+        Concluído=1,
+        Finalizado=2,
+        Respondido=3
+    }
+
 
 }

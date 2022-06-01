@@ -38,7 +38,7 @@ namespace ClickExpress.Controllers
         }
         public IActionResult ConcluirPedido()
         {
-            ViewBag.Message = "Solicitação de serviço enviada com sucesso!";
+            ViewBag.Message = "Solicitação enviada com sucesso! Em breve o prestador entrará em contato.";
             return View();
         }
                 

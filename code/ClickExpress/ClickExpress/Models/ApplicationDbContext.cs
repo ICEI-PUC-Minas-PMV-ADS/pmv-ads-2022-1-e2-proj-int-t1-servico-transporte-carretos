@@ -17,6 +17,7 @@ namespace ClickExpress.Models
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Pedido> Pedidos { get; set; }
         public DbSet<Item> Itens { get; set; }
-
+        public DbSet<Cliente> Clientes { get; set; }
+        public DbSet<Prestador> Prestadores { get; set; }
     }
 }
