@@ -11,7 +11,7 @@ namespace ClickExpress.Models
     public class Prestador : Usuario
     {
         
-        [Display(Name = "Identificação do prestador: ")]
+        [Display(Name = "Prestador responsável: ")]
         public int Id_prestador { get; set; }
 
         [Display(Name = "Veículo: ")]

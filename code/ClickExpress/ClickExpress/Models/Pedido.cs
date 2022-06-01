@@ -58,7 +58,6 @@ namespace ClickExpress.Models
         [Required(ErrorMessage = "Obrigatório informar o complemento!")]
         public string Complemento_destino { get; set; }
 
-
         [Display(Name = "Bairro:")]
         [Required(ErrorMessage = "Obrigatório informar o bairro!")]
         public string Bairro_destino { get; set; }
@@ -91,26 +90,23 @@ namespace ClickExpress.Models
         [ForeignKey("Id_usuario")]
         public Usuario Usuario { get; set; }
 
-        [Display(Name = "Identificação de cliente:")]
-        public int Id_cliente { get; set; }
-        public Cliente Cliente { get; set; }
+        [Display(Name = "Cliente: ")]
+        public int Id_cliente { get; set; }        
 
-        [Display(Name = "Identificação do prestador: ")]
+        [Display(Name = "Prestador responsável: ")]
         public int Id_prestador { get; set; }
-        public Prestador Prestador { get; set; }
 
         public ICollection<Item> Itens { get; set; }  
-
     }
     public enum TipoServico
     {
         Mudança,
         Carreto
     }
-        public enum StatusServico
+    public enum StatusServico
     {
         Pendente=0,
-        Concluído=1,
+        Concluido=1,
         Finalizado=2,
         Respondido=3
     }

@@ -9,9 +9,8 @@ namespace ClickExpress.Models
 {
     [Table("Clientes")]
     public class Cliente : Usuario
-    {
-        
-        [Display(Name = "Identificação do cliente: ")]
+    {        
+        [Display(Name = "Cliente: ")]
         public int Id_cliente { get; set; }
     }       
 }
