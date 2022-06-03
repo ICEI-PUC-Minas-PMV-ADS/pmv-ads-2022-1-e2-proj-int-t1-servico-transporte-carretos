@@ -4,10 +4,12 @@
     "\\code",
     "\\code\\ClickExpress",
     "\\code\\ClickExpress\\ClickExpress",
-    "\\code\\ClickExpress\\ClickExpress\\Models",
+    "\\code\\ClickExpress\\ClickExpress\\Controllers",
     "\\code\\ClickExpress\\ClickExpress\\Views",
     "\\code\\ClickExpress\\ClickExpress\\Views\\Itens",
-    "\\code\\ClickExpress\\ClickExpress\\Views\\Pedidos"
+    "\\code\\ClickExpress\\ClickExpress\\Views\\Pedidos",
+    "\\code\\ClickExpress\\ClickExpress\\wwwroot",
+    "\\code\\ClickExpress\\ClickExpress\\wwwroot\\js"
   ],
   "SelectedNode": "\\code\\ClickExpress\\ClickExpress.sln",
   "PreviewInSolutionExplorer": false

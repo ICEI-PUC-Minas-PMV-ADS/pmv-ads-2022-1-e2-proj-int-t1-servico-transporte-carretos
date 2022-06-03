@@ -31,7 +31,7 @@
                         <div class="row">
                             <div class="col-sm-2">
                                 <label style="color: white" asp-for="Cep_origem" class="control-label"></label>
-                                <input style="width: 100%;" asp-for="Cep_origem" class="form-control" id="cep_origem" />
+                                <input style="width: 100%;" asp-for="Cep_origem" placeholder="Digite o CEP de partida" class="form-control" id="cep_origem" />
                             </div>
                             <div class="col-sm-6">
                                 <label style="color: white" asp-for="Logradouro_origem" class="control-label"></label>
@@ -39,7 +39,7 @@
                             </div>
                             <div class="col-sm-4">
                                 <label style="color: white" asp-for="Complemento_origem" class="control-label"></label>
-                                <input style="width: 100%;" asp-for="Complemento_origem" class="form-control" id="complemento_origem" />
+                                <input style="width: 100%;" asp-for="Complemento_origem" placeholder="Digite o número do endereço" class="form-control" id="complemento_origem" />
                             </div>
 
                         </div>
@@ -65,7 +65,7 @@
                         <div class="row">
                             <div class="col-sm-2">
                                 <label style="color: white" asp-for="Cep_destino" class="control-label"></label>
-                                <input style="width: 100%;" asp-for="Cep_destino" class="form-control" id="cep_destino" />
+                                <input style="width: 100%;" asp-for="Cep_destino" placeholder="Digite o CEP de destino" class="form-control" id="cep_destino" />
                             </div>
                             <div class="col-sm-6">
                                 <label style="color: white" asp-for="Logradouro_destino" class="control-label"></label>
@@ -73,7 +73,7 @@
                             </div>
                             <div class="col-sm-4">
                                 <label style="color: white" asp-for="Complemento_destino" class="control-label"></label>
-                                <input style="width: 100%;" asp-for="Complemento_destino" class="form-control" id="complemento_destino" />
+                                <input style="width: 100%;" asp-for="Complemento_destino" placeholder="Digite o número do endereço" class="form-control" id="complemento_destino" />
                             </div>
 
                         </div>
@@ -104,13 +104,13 @@
                         <input style="width: 40%;" asp-for="Dt_agendamento" class="form-control" id="data_agendamento" />
                         <span asp-validation-for="Dt_agendamento" class="text-danger"></span>
                     </div>
-                    <div class="form-group">
+                    <div class="form-check">
                         <div class="row">
-                            <div class="col-sm-auto"> <label style="color: white;" asp-for="Serv_descarrega" class="control-label"></label></div>
-                            <div class="col-sm-1"><input asp-for="Serv_descarrega" class="form-control" id="serv_descarrega" /></div>
+                            <div class="col-sm-auto"> <label style="color: white;" asp-for="Serv_descarrega" class="form-check-label">Serviço descarregamento</label></div>
+                            <div class="col-sm-1"><input asp-for="Serv_descarrega" type="checkbox" class="form-check-input" id="serv_descarrega"/></div>
                             <div class="col-sm-1"></div>
-                            <div class="col-sm-auto"><label style="color: white;" asp-for="Serv_montagem" class="control-label"></label></div>
-                            <div class="col-sm-1"><input asp-for="Serv_montagem" class="form-control" id="serv_montagem" /></div>
+                            <div class="col-sm-auto"> <label style="color: white;" asp-for="Serv_montagem" class="form-check-label">Serviço montagem</label></div>
+                            <div class="col-sm-1"><input asp-for="Serv_montagem" type="checkbox" class="form-check-input" id="serv_montagem"/></div>
                         </div>
                         <span asp-validation-for="Serv_descarrega" class="text-danger"></span>
                         <span asp-validation-for="Serv_montagem" class="text-danger"></span>

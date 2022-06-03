@@ -50,7 +50,7 @@ namespace ClickExpress.Models // classe criada
         [Required(ErrorMessage = "Obrigatório informar o bairro!")]
         public string Bairro { get; set; }
 
-        [Display(Name = "Complemento:")]
+        [Display(Name = "Número:")]
         [Required(ErrorMessage = "Obrigatório informar o número de endereço!")]
         public string Num_endereco { get; set; }
 

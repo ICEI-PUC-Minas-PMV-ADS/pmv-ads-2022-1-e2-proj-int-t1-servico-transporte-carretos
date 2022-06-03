@@ -1,15 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ClickExpress.Models;
-using Microsoft.AspNetCore.Identity;
-using System.Data;
 using System.Security.Claims;
-using Microsoft.AspNetCore.Authorization;
 
 
 namespace ClickExpress.Controllers
@@ -48,7 +44,7 @@ namespace ClickExpress.Controllers
 
             return View(pedido);
         }
-
+        
 
         // GET: Pedidos/Create   
         public IActionResult Create()

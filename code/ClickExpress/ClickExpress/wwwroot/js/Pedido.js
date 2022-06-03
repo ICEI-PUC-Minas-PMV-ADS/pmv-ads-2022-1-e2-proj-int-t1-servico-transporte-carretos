@@ -29,9 +29,9 @@ function SolicitarServico() {
 
     var dataAgendamento = $("#data_agendamento").val();
 
-    var servicoDescarrega = $("#serv_descarrega").val();
+    var servicoDescarrega = $("#serv_descarrega").is(':checked');
 
-    var servicoMontagem = $("#serv_montagem").val();
+    var servicoMontagem = $("#serv_montagem").is(':checked');
 
     var token = $('input[name="__RequestVerificationToken"]').val();
 
@@ -122,9 +122,5 @@ function SolicitarServico() {
         }
 
     })
- }
-
-function Fechar() {
-    window.open("", '_self').window.close();
-    
 }
+
