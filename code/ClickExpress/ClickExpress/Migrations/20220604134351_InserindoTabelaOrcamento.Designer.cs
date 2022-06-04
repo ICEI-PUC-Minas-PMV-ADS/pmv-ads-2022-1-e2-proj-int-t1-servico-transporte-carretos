@@ -4,14 +4,16 @@ using ClickExpress.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ClickExpress.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220604134351_InserindoTabelaOrcamento")]
+    partial class InserindoTabelaOrcamento
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -222,14 +224,19 @@ namespace ClickExpress.Migrations
                     b.ToTable("Usuarios");
                 });
 
-            modelBuilder.Entity("ClickExpress.Models.Prestador", b =>
+            modelBuilder.Entity("ClickExpress.Models.Cliente", b =>
                 {
                     b.HasBaseType("ClickExpress.Models.Usuario");
 
-                    b.Property<int>("Id_prestador")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                    b.Property<int>("Id_cliente")
+                        .HasColumnType("int");
+
+                    b.ToTable("Clientes");
+                });
+
+            modelBuilder.Entity("ClickExpress.Models.Prestador", b =>
+                {
+                    b.HasBaseType("ClickExpress.Models.Usuario");
 
                     b.ToTable("Prestadores");
                 });
@@ -252,6 +259,15 @@ namespace ClickExpress.Migrations
                         .IsRequired();
 
                     b.Navigation("Usuario");
+                });
+
+            modelBuilder.Entity("ClickExpress.Models.Cliente", b =>
+                {
+                    b.HasOne("ClickExpress.Models.Usuario", null)
+                        .WithOne()
+                        .HasForeignKey("ClickExpress.Models.Cliente", "Id_usuario")
+                        .OnDelete(DeleteBehavior.ClientCascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("ClickExpress.Models.Prestador", b =>

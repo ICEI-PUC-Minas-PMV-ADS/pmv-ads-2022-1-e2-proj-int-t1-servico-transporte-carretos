@@ -12,7 +12,7 @@ namespace ClickExpress.Models
     {
         [Key]
         [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
-        [Display(Name = "Número do pedido")]
+        [Display(Name = "Número da solicitação")]
         public int Id_contrato { get; set; }
 
         [Display(Name = "Data do pedido")]
