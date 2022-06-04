@@ -57,7 +57,7 @@ namespace ClickExpress.Controllers
                 {
                     new Claim(ClaimTypes.Name, user.Nome),                    
                     new Claim(ClaimTypes.NameIdentifier, user.Id_usuario.ToString()),
-                    new Claim(ClaimTypes.Role, user.Perfil.ToString())
+                    //new Claim(ClaimTypes.Role, user.Perfil.ToString())
                 };
 
                 var userIdentity = new ClaimsIdentity(claims, "login");

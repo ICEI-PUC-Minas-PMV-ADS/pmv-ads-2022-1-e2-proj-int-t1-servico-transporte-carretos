@@ -58,21 +58,8 @@ namespace ClickExpress.Models // classe criada
         [Required(ErrorMessage = "Obrigatório informar o cpf ou cnpj!")]
         public string Cpf_Cnpj { get; set; }
 
-        [Required(ErrorMessage = "Obrigatório informar perfil!")]
-        public Perfil Perfil { get; set; }
-
-        [Display(Name = "Veículo:")]
-        [Required(ErrorMessage = "Obrigatório informar o veículo!")]
-        public string Veiculo { get; set; }
-
         public ICollection<Pedido> Pedidos { get; set; }
 
-    }
-
-    public enum Perfil
-    {
-        Cliente,
-        Prestador
     }
 
 }

@@ -16,7 +16,7 @@ namespace ClickExpress.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "5.0.16")
+                .HasAnnotation("ProductVersion", "5.0.17")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
             modelBuilder.Entity("ClickExpress.Models.Item", b =>
@@ -198,9 +198,6 @@ namespace ClickExpress.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Perfil")
-                        .HasColumnType("int");
-
                     b.Property<string>("Senha")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -213,13 +210,21 @@ namespace ClickExpress.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Veiculo")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.HasKey("Id_usuario");
 
                     b.ToTable("Usuarios");
+                });
+
+            modelBuilder.Entity("ClickExpress.Models.Cliente", b =>
+                {
+                    b.HasBaseType("ClickExpress.Models.Usuario");
+
+                    b.Property<int>("Id_cliente")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.ToTable("Clientes");
                 });
 
             modelBuilder.Entity("ClickExpress.Models.Prestador", b =>
@@ -230,6 +235,10 @@ namespace ClickExpress.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Veiculo")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.ToTable("Prestadores");
                 });
@@ -252,6 +261,15 @@ namespace ClickExpress.Migrations
                         .IsRequired();
 
                     b.Navigation("Usuario");
+                });
+
+            modelBuilder.Entity("ClickExpress.Models.Cliente", b =>
+                {
+                    b.HasOne("ClickExpress.Models.Usuario", null)
+                        .WithOne()
+                        .HasForeignKey("ClickExpress.Models.Cliente", "Id_usuario")
+                        .OnDelete(DeleteBehavior.ClientCascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("ClickExpress.Models.Prestador", b =>

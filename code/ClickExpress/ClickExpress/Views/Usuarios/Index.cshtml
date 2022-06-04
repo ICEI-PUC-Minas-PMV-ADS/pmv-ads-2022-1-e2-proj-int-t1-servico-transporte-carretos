@@ -7,7 +7,10 @@
 <div class="text-white">
     <h1>Cadastro de usuários</h1>
 </div>
-
+<p>
+    <a asp-action="Create" asp-controller="Clientes">Cliente</a>
+    <a asp-action="Create" asp-controller="Prestadores">Prestador</a>
+</p>
 <table class="table text-white">
     <thead>
         <tr>
@@ -44,12 +47,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.Cpf_Cnpj)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Perfil)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Veiculo)
-            </th>
+
         </tr>
     </thead>
     <tbody>
@@ -89,17 +87,26 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.Cpf_Cnpj)
                 </td>
+
                 <td>
-                    @Html.DisplayFor(modelItem => item.Perfil)
-                </td>
-                <th>
-                    @Html.DisplayFor(modelItem => item.Veiculo)
-                </th>
-                <td>
-                    <a asp-action="RelatoriosSpec">RelatórioSpec</a>
-                    <a asp-action="Edit" asp-route-id="@item.Id_usuario">Editar</a> |
-                    <a asp-action="Details" asp-route-id="@item.Id_usuario">Detalhes</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id_usuario">Deletar</a>
+                    @if (item is Cliente)
+                    {
+                        <div>
+                            <a asp-controller="Clientes" asp-action="RelatoriosSpec">RelatórioSpec</a>
+                            <a asp-controller="Clientes" asp-action="Edit" asp-route-id="@item.Id_usuario">Editar</a> |
+                            <a asp-controller="Clientes" asp-action="Details" asp-route-id="@item.Id_usuario">Detalhes</a> |
+                            <a asp-controller="Clientes" asp-action="Delete" asp-route-id="@item.Id_usuario">Deletar</a>
+                        </div>
+                    }
+                    else if (item is Prestador)
+                    {
+                        <div>
+                            <a asp-controller="Prestadores" asp-action="RelatoriosSpec">RelatórioSpec</a>
+                            <a asp-controller="Prestadores" asp-action="Edit" asp-route-id="@item.Id_usuario">Editar</a> |
+                            <a asp-controller="Prestadores" asp-action="Details" asp-route-id="@item.Id_usuario">Detalhes</a> |
+                            <a asp-controller="Prestadores" asp-action="Delete" asp-route-id="@item.Id_usuario">Deletar</a>
+                        </div>
+                    }
                 </td>
             </tr>
         }
