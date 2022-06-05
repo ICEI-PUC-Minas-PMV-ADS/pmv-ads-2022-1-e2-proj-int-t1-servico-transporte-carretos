@@ -58,6 +58,8 @@ namespace ClickExpress.Models // classe criada
         [Required(ErrorMessage = "Obrigatório informar o cpf ou cnpj!")]
         public string Cpf_Cnpj { get; set; }
 
+        public string Perfil { get; set; }
+
         public ICollection<Pedido> Pedidos { get; set; }
 
     }

@@ -55,12 +55,21 @@ namespace ClickExpress.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id_cliente,Id_usuario,Nome,Email,Tel,Senha,Cep,Cidade,Logradouro,UF,Bairro,Num_endereco,Cpf_Cnpj,Perfil,Veiculo")] Cliente cliente)
         {
+            if (_context.Usuarios.Any(c => c.Email == cliente.Email))
+            {
+                ModelState.AddModelError("Email", $"Esse Email já está registrado.");
+            }
+
             if (ModelState.IsValid)
             {
+                cliente.Perfil = "Cliente";
+                cliente.Senha = BCrypt.Net.BCrypt.HashPassword(cliente.Senha);
                 _context.Add(cliente);
                 await _context.SaveChangesAsync();
                 //return RedirectToAction(nameof(Index));
-                return RedirectToAction("Index", "Usuarios");
+                //return RedirectToAction("Index", "Usuarios");
+                return RedirectToAction("CadastroConcluido", "Usuarios");
+
             }
             return View(cliente);
         }
@@ -97,6 +106,8 @@ namespace ClickExpress.Controllers
             {
                 try
                 {
+                    cliente.Perfil = "Cliente";
+                    cliente.Senha = BCrypt.Net.BCrypt.HashPassword(cliente.Senha);
                     _context.Update(cliente);
                     await _context.SaveChangesAsync();
                 }
@@ -112,7 +123,8 @@ namespace ClickExpress.Controllers
                     }
                 }
                 //return RedirectToAction(nameof(Index));
-                return RedirectToAction("Index", "Usuarios");
+                //return RedirectToAction("Index", "Usuarios");
+                return RedirectToAction("CadastroConcluido", "Usuarios");
             }
             return View(cliente);
         }
@@ -144,7 +156,8 @@ namespace ClickExpress.Controllers
             _context.Clientes.Remove(cliente);
             await _context.SaveChangesAsync();
             //return RedirectToAction(nameof(Index));
-            return RedirectToAction("Index", "Usuarios");
+            //return RedirectToAction("Index", "Usuarios");
+            return RedirectToAction("CadastroConcluido", "Usuarios");
         }
 
         private bool ClienteExists(int id)

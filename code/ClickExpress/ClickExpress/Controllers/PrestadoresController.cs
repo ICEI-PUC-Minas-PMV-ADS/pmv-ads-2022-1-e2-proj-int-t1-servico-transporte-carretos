@@ -55,12 +55,20 @@ namespace ClickExpress.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id_prestador,Veiculo,Id_usuario,Nome,Email,Tel,Senha,Cep,Cidade,Logradouro,UF,Bairro,Num_endereco,Cpf_Cnpj,Perfil")] Prestador prestador)
         {
+            if (_context.Usuarios.Any(c => c.Email == prestador.Email))
+            {
+                ModelState.AddModelError("Email", $"Esse Email já está registrado.");
+            }
+
             if (ModelState.IsValid)
             {
+                prestador.Perfil = "Prestador";
+                prestador.Senha = BCrypt.Net.BCrypt.HashPassword(prestador.Senha);
                 _context.Add(prestador);
                 await _context.SaveChangesAsync();
                 //return RedirectToAction(nameof(Index));
-                return RedirectToAction("Index", "Usuarios");
+                //return RedirectToAction("Index", "Usuarios");
+                return RedirectToAction("CadastroConcluido", "Usuarios");
             }
             return View(prestador);
         }
@@ -97,6 +105,8 @@ namespace ClickExpress.Controllers
             {
                 try
                 {
+                    prestador.Perfil = "Prestador";
+                    prestador.Senha = BCrypt.Net.BCrypt.HashPassword(prestador.Senha);
                     _context.Update(prestador);
                     await _context.SaveChangesAsync();
                 }
@@ -112,7 +122,8 @@ namespace ClickExpress.Controllers
                     }
                 }
                 //return RedirectToAction(nameof(Index));
-                return RedirectToAction("Index", "Usuarios");
+                //return RedirectToAction("Index", "Usuarios");
+                return RedirectToAction("CadastroConcluido", "Usuarios");
             }
             return View(prestador);
         }
@@ -144,7 +155,8 @@ namespace ClickExpress.Controllers
             _context.Prestadores.Remove(prestador);
             await _context.SaveChangesAsync();
             //return RedirectToAction(nameof(Index));
-            return RedirectToAction("Index", "Usuarios");
+            //return RedirectToAction("Index", "Usuarios");
+            return RedirectToAction("CadastroConcluido", "Usuarios");
         }
 
         private bool PrestadorExists(int id)
