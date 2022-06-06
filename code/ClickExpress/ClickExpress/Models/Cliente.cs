@@ -9,5 +9,7 @@ namespace ClickExpress.Models
         [Display(Name = "Cliente: ")]
         [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
         public int Id_cliente { get; set; }
+
+      
     }
 }

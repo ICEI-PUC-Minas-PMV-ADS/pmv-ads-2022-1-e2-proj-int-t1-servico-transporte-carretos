@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ClickExpress.Models;
+using System.Security.Claims;
 
 namespace ClickExpress.Controllers
 {
@@ -43,9 +44,12 @@ namespace ClickExpress.Controllers
         }
 
         // GET: Orcamentos/Create
-        public IActionResult Create()
+        public IActionResult Create(int idContrato)
         {
-            return View();
+
+            var orcamento = new Orcamento { Id_contrato = idContrato };
+            return View(orcamento);
+ 
         }
 
         // POST: Orcamentos/Create
@@ -57,9 +61,17 @@ namespace ClickExpress.Controllers
         {
             if (ModelState.IsValid)
             {
-                _context.Add(orcamento);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+
+                if (ModelState.IsValid)
+                {
+                    var userId = Convert.ToInt32(this.User.FindFirstValue(ClaimTypes.NameIdentifier));
+                    var userPrestador = _context.Prestadores
+                    .FirstOrDefault(m => m.Id_usuario == userId);
+                    orcamento.Id_prestador = userPrestador.Id_prestador;
+                    _context.Add(orcamento);
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction(nameof(Index));
+                }
             }
             return View(orcamento);
         }

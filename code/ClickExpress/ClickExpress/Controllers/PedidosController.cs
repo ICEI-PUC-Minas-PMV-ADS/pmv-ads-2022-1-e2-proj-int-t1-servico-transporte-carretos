@@ -87,6 +87,9 @@ namespace ClickExpress.Controllers
 
                 var userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
                 pedido.Id_usuario = Convert.ToInt32(userId);
+                var userCliente = _context.Clientes
+                    .FirstOrDefault(m => m.Id_usuario == pedido.Id_usuario);
+                pedido.Id_cliente = userCliente.Id_cliente;
                 pedido.Dt_contrato = DateTime.Now;
                 _context.Add(pedido);
                 _context.SaveChanges();

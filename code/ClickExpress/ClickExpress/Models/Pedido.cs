@@ -91,12 +91,13 @@ namespace ClickExpress.Models
         public Usuario Usuario { get; set; }
 
         [Display(Name = "Cliente: ")]
-        public int Id_cliente { get; set; }        
+        public int Id_cliente { get; set; }
 
         [Display(Name = "Prestador responsável: ")]
         public int Id_prestador { get; set; }
-
-        public ICollection<Item> Itens { get; set; }  
+ 
+        public ICollection<Item> Itens { get; set; }
+        public ICollection<Orcamento> Orcamentos { get; set; }
     }
     public enum TipoServico
     {
@@ -105,10 +106,10 @@ namespace ClickExpress.Models
     }
     public enum StatusServico
     {
-        Pendente=0,
-        Concluido=1,
-        Finalizado=2,
-        Respondido=3
+        Pendente,
+        Respondido,
+        Aceito,
+        Finalizado
     }
 
 

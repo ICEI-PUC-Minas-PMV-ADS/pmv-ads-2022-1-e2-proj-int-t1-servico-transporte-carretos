@@ -17,6 +17,8 @@ namespace ClickExpress.Models
 
         [Display(Name = "Número da solicitação")]
         public int Id_contrato { get; set; }
+        [ForeignKey("Id_contrato")]
+        public Pedido Pedido { get; set; }
 
         [Display(Name = "Prestador responsável: ")]
         public int Id_prestador { get; set; }
@@ -24,8 +26,7 @@ namespace ClickExpress.Models
         [Display(Name = "Valor do pedido")]
         public double Preco { get; set; }
 
-        [Display(Name = "Status: ")]
-        public StatusServico Status { get; set; }
+
 
     }
 }

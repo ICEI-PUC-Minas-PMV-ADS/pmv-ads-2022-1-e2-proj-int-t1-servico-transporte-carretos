@@ -3,6 +3,10 @@
     "",
     "\\code",
     "\\code\\ClickExpress",
+    "\\code\\ClickExpress\\ClickExpress",
+    "\\code\\ClickExpress\\ClickExpress\\Migrations",
+    "\\code\\ClickExpress\\ClickExpress\\Views",
+    "\\code\\ClickExpress\\ClickExpress\\Views\\Pedidos",
     "\\docs"
   ],
   "SelectedNode": "\\code\\ClickExpress\\ClickExpress.sln",

@@ -24,12 +24,30 @@ namespace ClickExpress.Migrations
                     Bairro = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Num_endereco = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Cpf_Cnpj = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Perfil = table.Column<int>(type: "int", nullable: false),
-                    Veiculo = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Perfil = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Usuarios", x => x.Id_usuario);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Clientes",
+                columns: table => new
+                {
+                    Id_usuario = table.Column<int>(type: "int", nullable: false),
+                    Id_cliente = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1")
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Clientes", x => x.Id_usuario);
+                    table.ForeignKey(
+                        name: "FK_Clientes_Usuarios_Id_usuario",
+                        column: x => x.Id_usuario,
+                        principalTable: "Usuarios",
+                        principalColumn: "Id_usuario",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -56,7 +74,10 @@ namespace ClickExpress.Migrations
                     Preco = table.Column<double>(type: "float", nullable: false),
                     Serv_descarrega = table.Column<bool>(type: "bit", nullable: false),
                     Serv_montagem = table.Column<bool>(type: "bit", nullable: false),
-                    Id_usuario = table.Column<int>(type: "int", nullable: false)
+                    Status = table.Column<int>(type: "int", nullable: false),
+                    Id_usuario = table.Column<int>(type: "int", nullable: false),
+                    Id_cliente = table.Column<int>(type: "int", nullable: false),
+                    Id_prestador = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -67,6 +88,26 @@ namespace ClickExpress.Migrations
                         principalTable: "Usuarios",
                         principalColumn: "Id_usuario",
                         onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Prestadores",
+                columns: table => new
+                {
+                    Id_usuario = table.Column<int>(type: "int", nullable: false),
+                    Id_prestador = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Veiculo = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Prestadores", x => x.Id_usuario);
+                    table.ForeignKey(
+                        name: "FK_Prestadores_Usuarios_Id_usuario",
+                        column: x => x.Id_usuario,
+                        principalTable: "Usuarios",
+                        principalColumn: "Id_usuario",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -90,10 +131,36 @@ namespace ClickExpress.Migrations
                         onDelete: ReferentialAction.Restrict);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "Orcamentos",
+                columns: table => new
+                {
+                    Id_orcamento = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Id_contrato = table.Column<int>(type: "int", nullable: false),
+                    Id_prestador = table.Column<int>(type: "int", nullable: false),
+                    Preco = table.Column<double>(type: "float", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Orcamentos", x => x.Id_orcamento);
+                    table.ForeignKey(
+                        name: "FK_Orcamentos_Pedidos_Id_contrato",
+                        column: x => x.Id_contrato,
+                        principalTable: "Pedidos",
+                        principalColumn: "Id_contrato",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_Itens_PedidoId_contrato",
                 table: "Itens",
                 column: "PedidoId_contrato");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Orcamentos_Id_contrato",
+                table: "Orcamentos",
+                column: "Id_contrato");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Pedidos_Id_usuario",
@@ -104,7 +171,16 @@ namespace ClickExpress.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
+                name: "Clientes");
+
+            migrationBuilder.DropTable(
                 name: "Itens");
+
+            migrationBuilder.DropTable(
+                name: "Orcamentos");
+
+            migrationBuilder.DropTable(
+                name: "Prestadores");
 
             migrationBuilder.DropTable(
                 name: "Pedidos");

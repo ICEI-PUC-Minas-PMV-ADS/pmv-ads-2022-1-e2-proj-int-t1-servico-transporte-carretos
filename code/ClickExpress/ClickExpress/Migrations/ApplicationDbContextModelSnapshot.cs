@@ -59,10 +59,9 @@ namespace ClickExpress.Migrations
                     b.Property<double>("Preco")
                         .HasColumnType("float");
 
-                    b.Property<int>("Status")
-                        .HasColumnType("int");
-
                     b.HasKey("Id_orcamento");
+
+                    b.HasIndex("Id_contrato");
 
                     b.ToTable("Orcamentos");
                 });
@@ -255,6 +254,17 @@ namespace ClickExpress.Migrations
                     b.Navigation("Pedido");
                 });
 
+            modelBuilder.Entity("ClickExpress.Models.Orcamento", b =>
+                {
+                    b.HasOne("ClickExpress.Models.Pedido", "Pedido")
+                        .WithMany("Orcamentos")
+                        .HasForeignKey("Id_contrato")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Pedido");
+                });
+
             modelBuilder.Entity("ClickExpress.Models.Pedido", b =>
                 {
                     b.HasOne("ClickExpress.Models.Usuario", "Usuario")
@@ -287,6 +297,8 @@ namespace ClickExpress.Migrations
             modelBuilder.Entity("ClickExpress.Models.Pedido", b =>
                 {
                     b.Navigation("Itens");
+
+                    b.Navigation("Orcamentos");
                 });
 
             modelBuilder.Entity("ClickExpress.Models.Usuario", b =>
