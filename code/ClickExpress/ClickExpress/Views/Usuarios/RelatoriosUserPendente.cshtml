@@ -1,0 +1,99 @@
+﻿@model ClickExpress.Models.Usuario
+
+@{
+    ViewData["Title"] = "RelatoriosUserPendente";
+}
+
+
+<div class="container m-0 p-0 mw-100" style="font-size: 0.7vw">
+     <div>
+        <h4 class="table text-white">Pedidos Pendentes</h4>
+        <hr />
+        <table class="table text-white">
+            <thead>
+                <tr>
+                    <th>
+                        Status
+                    </th>
+                    <th>
+                        Id_contrato
+                    </th>
+                    <th>
+                        Tipo
+                    </th>
+                    <th>
+                        Dt_agendamento
+                    </th>
+                    <th>
+                        Cidade_origem
+                    </th>
+                    <th>
+                        UF_origem
+                    </th>
+                    <th>
+                        Cidade_destino
+                    </th>
+                    <th>
+                        UF_destino
+                    </th>
+                    <th>
+                        Serv_descarrega
+                    </th>
+                    <th>
+                        Serv_montagem
+                    </th>
+                    <th>
+                        Preco
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Pedidos)
+                {
+
+                    @if (Convert.ToInt32(item.Status) == 0)
+                    {
+                <tr>
+                    <td>
+                        <div class="text-white bg-danger rounded">Pendente</div>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Id_contrato)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Tipo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Dt_agendamento)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Cidade_origem)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UF_origem)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Cidade_destino)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UF_destino)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Serv_descarrega)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Serv_montagem)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Preco)
+                    </td>
+                </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+<div>    
+    <a class="btn btn-warning" asp-action="RelatoriosUser">Voltar</a>
+</div>

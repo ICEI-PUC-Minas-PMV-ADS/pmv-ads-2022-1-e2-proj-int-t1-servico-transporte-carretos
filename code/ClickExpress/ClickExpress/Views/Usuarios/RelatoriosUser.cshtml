@@ -1,0 +1,240 @@
+﻿@model ClickExpress.Models.Usuario
+
+@{
+    ViewData["Title"] = "RelatoriosUser";
+}
+
+
+
+<div class="container m-0 p-0 mw-100" style="font-size: 0.7vw">
+     <div>
+        <h4 class="table text-white">Pedidos</h4>
+       
+        <a asp-action="RelatoriosUserPendente" class="text-white bg-danger rounded">Pendente</a>
+        <a asp-action="RelatoriosUserRespondido" class="text-dark bg-warning rounded">Respondido</a>
+        <a asp-action="RelatoriosUserConcluido" class="text-white bg-secondary rounded">Concluído</a>
+        <a asp-action="RelatoriosUserFinalizado" class="text-white bg-success rounded">Finalizado</a>
+
+        <hr />
+        <table class="table text-white">
+            <thead>
+                <tr>
+                    <th>
+                        Status
+                    </th>
+                    <th>
+                        Id_contrato
+                    </th>
+                    <th>
+                        Tipo
+                    </th>
+                    <th>
+                        Dt_agendamento
+                    </th>
+                    <th>
+                        Cidade_origem
+                    </th>
+                    <th>
+                        UF_origem
+                    </th>
+                    <th>
+                        Cidade_destino
+                    </th>
+                    <th>
+                        UF_destino
+                    </th>
+                    <th>
+                        Serv_descarrega
+                    </th>
+                    <th>
+                        Serv_montagem
+                    </th>
+                    <th>
+                        Preco
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Pedidos)
+                {
+
+                    @if (Convert.ToInt32(item.Status) == 0)
+                    {
+                <tr>
+                    <td>
+                        <div class="text-white bg-danger">Pendente</div>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Id_contrato)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Tipo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Dt_agendamento)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Cidade_origem)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UF_origem)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Cidade_destino)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UF_destino)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Serv_descarrega)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Serv_montagem)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Preco)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id_usuario">Editar</a> |
+                        <a asp-action="Details" asp-route-id="@item.Id_usuario">Detalhes</a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id_usuario">Deletar</a>
+                    </td>
+                </tr>
+                    }
+                    else if (Convert.ToInt32(item.Status) == 1)
+                    {
+            <tr>
+                <td>
+                    <div class="text-dark bg-warning">Respondido</div>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id_contrato)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Tipo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Dt_agendamento)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cidade_origem)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UF_origem)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cidade_destino)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UF_destino)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Serv_descarrega)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Serv_montagem)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Preco)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id_usuario">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id_usuario">Detalhes</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id_usuario">Deletar</a>
+                </td>
+            </tr>
+                    }
+                    else if (Convert.ToInt32(item.Status) == 2)
+                    {
+            <tr>
+                <td>
+                    <div class="text-white bg-secondary">Concluído</div>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id_contrato)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Tipo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Dt_agendamento)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cidade_origem)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UF_origem)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cidade_destino)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UF_destino)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Serv_descarrega)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Serv_montagem)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Preco)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id_usuario">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id_usuario">Detalhes</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id_usuario">Deletar</a>
+                </td>
+            </tr>
+                    }
+                    else if (Convert.ToInt32(item.Status) == 3)
+                    {
+            <tr>
+                <td>
+                    <div class="text-white bg-success">Finalizado</div>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id_contrato)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Tipo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Dt_agendamento)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cidade_origem)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UF_origem)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cidade_destino)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UF_destino)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Serv_descarrega)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Serv_montagem)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Preco)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id_usuario">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id_usuario">Detalhes</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id_usuario">Deletar</a>
+                </td>
+            </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+<div>    
+    <a class="btn btn-warning" asp-controller="Home" asp-action="Index">Voltar</a>
+</div>

@@ -1,0 +1,97 @@
+﻿@model IEnumerable<ClickExpress.Models.Pedido>
+
+@{
+    ViewData["Title"] = "RelatorioUserStatus";
+}
+
+
+@{var teste = new StatusServico();
+    teste = (StatusServico)0;}
+
+<div class="text-white">
+    <h1>Pendentes</h1>
+
+    <table class="table text-white">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Status)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Id_contrato)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Tipo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Dt_agendamento)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Cidade_origem)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.UF_origem)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Cidade_destino)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.UF_destino)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Serv_descarrega)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Serv_montagem)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Preco)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                @if (item.Status == teste)
+                {
+                    <tr>
+                        <td>
+                            <div class="text-white bg-danger">Pendente</div>
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Id_contrato)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Tipo)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Dt_agendamento)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Cidade_origem)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.UF_origem)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Cidade_destino)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.UF_destino)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Serv_descarrega)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Serv_montagem)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Preco)
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>

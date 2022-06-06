@@ -19,6 +19,39 @@ document.body.addEventListener('change', function (e) {
     }
 });
 
+
+function btnPendenteClick() {    
+    document.getElementById("btnRespondido").disabled = true;
+    document.getElementById("btnConcluido").disabled = true;
+    document.getElementById("btnFinalizado").disabled = true;
+}
+
+function btnRespondidoClick() {
+    document.getElementById("btnPendente").disabled = true;
+    document.getElementById("btnConcluido").disabled = true;
+    document.getElementById("btnFinalizado").disabled = true;
+}
+
+function btnConcluidoClick() {
+    document.getElementById("btnPendente").disabled = true;
+    document.getElementById("btnRespondido").disabled = true;
+    document.getElementById("btnFinalizado").disabled = true;
+}
+
+function btnFinalizadoClick() {
+    document.getElementById("btnPendente").disabled = true;
+    document.getElementById("btnRespondido").disabled = true;
+    document.getElementById("btnConcluido").disabled = true;
+}
+
+function btnTodosClick() {
+    document.getElementById("btnPendente").disabled = false;
+    document.getElementById("btnRespondido").disabled = false;
+    document.getElementById("btnConcluido").disabled = false;
+    document.getElementById("btnFinalizado").disabled = false;
+}
+
+
 const elementoCep = document.querySelector("#cep");
 const elementoRua = document.querySelector("#logradouro");
 const elementoCidade = document.querySelector("#localidade");

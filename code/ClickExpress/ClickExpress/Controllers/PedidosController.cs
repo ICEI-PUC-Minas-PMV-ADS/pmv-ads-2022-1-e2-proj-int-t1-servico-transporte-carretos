@@ -44,7 +44,26 @@ namespace ClickExpress.Controllers
 
             return View(pedido);
         }
-        
+
+        // GET: Pedidos/Details/5
+        public async Task<IActionResult> DetailsResposta(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var pedido = await _context.Pedidos
+                .Include(p => p.Usuario)
+                .FirstOrDefaultAsync(m => m.Id_contrato == id);
+            if (pedido == null)
+            {
+                return NotFound();
+            }
+
+            return View(pedido);
+        }
+
 
         // GET: Pedidos/Create   
         public IActionResult Create()
@@ -162,5 +181,39 @@ namespace ClickExpress.Controllers
         {
             return _context.Pedidos.Any(e => e.Id_contrato == id);
         }
+
+        //GET: Usuarios/Details/5
+        public async Task<IActionResult> RelatorioUserStatus()
+        {
+            var pedido = await _context.Pedidos
+            .ToListAsync();
+
+            if (pedido == null)
+            {
+                return NotFound();
+            }
+
+            return View(pedido);
+        }
+
+        //GET: Usuarios/Details/5
+        public async Task<IActionResult> RelatorioUserStatusPendente()
+        {
+            var teste = new StatusServico();
+            teste = (StatusServico)0;
+
+            var pedido = await _context.Pedidos
+                .Where(x => x.Status == teste)
+                .ToListAsync();
+
+            if (pedido == null)
+            {
+                return NotFound();
+            }
+
+            return View(pedido);
+        }
+
+        
     }
 }

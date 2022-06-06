@@ -7,6 +7,8 @@
 
   <ItemGroup>
     <Content Remove="Views\Pedidos\Relatorio.cshtml" />
+    <Content Remove="Views\Pedidos\RelatoriosStatus.cshtml" />
+    <Content Remove="Views\Usuarios\RelatoriosUserStatus.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
