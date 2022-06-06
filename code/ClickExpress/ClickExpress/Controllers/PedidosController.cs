@@ -55,6 +55,7 @@ namespace ClickExpress.Controllers
 
             var pedido = await _context.Pedidos
                 .Include(p => p.Usuario)
+                .Include(p => p.Itens)
                 .FirstOrDefaultAsync(m => m.Id_contrato == id);
             if (pedido == null)
             {
