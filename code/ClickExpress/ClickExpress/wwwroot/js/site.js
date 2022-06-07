@@ -22,17 +22,17 @@ document.body.addEventListener('change', function (e) {
 
 function btnPendenteClick() {    
     document.getElementById("btnRespondido").disabled = true;
-    document.getElementById("btnConcluido").disabled = true;
+    document.getElementById("btnAceito").disabled = true;
     document.getElementById("btnFinalizado").disabled = true;
 }
 
 function btnRespondidoClick() {
     document.getElementById("btnPendente").disabled = true;
-    document.getElementById("btnConcluido").disabled = true;
+    document.getElementById("btnAceito").disabled = true;
     document.getElementById("btnFinalizado").disabled = true;
 }
 
-function btnConcluidoClick() {
+function btnAceitoClick() {
     document.getElementById("btnPendente").disabled = true;
     document.getElementById("btnRespondido").disabled = true;
     document.getElementById("btnFinalizado").disabled = true;
@@ -41,13 +41,13 @@ function btnConcluidoClick() {
 function btnFinalizadoClick() {
     document.getElementById("btnPendente").disabled = true;
     document.getElementById("btnRespondido").disabled = true;
-    document.getElementById("btnConcluido").disabled = true;
+    document.getElementById("btnAceito").disabled = true;
 }
 
 function btnTodosClick() {
     document.getElementById("btnPendente").disabled = false;
     document.getElementById("btnRespondido").disabled = false;
-    document.getElementById("btnConcluido").disabled = false;
+    document.getElementById("btnAceito").disabled = false;
     document.getElementById("btnFinalizado").disabled = false;
 }
 

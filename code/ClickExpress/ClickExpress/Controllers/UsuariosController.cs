@@ -387,8 +387,8 @@ namespace ClickExpress.Controllers
         }
 
         // GET: Usuarios/Details/5
-        //Relatorio usuario logado status Concluido
-        public async Task<IActionResult> RelatoriosUserConcluido()
+        //Relatorio usuario logado status Aceito
+        public async Task<IActionResult> RelatoriosUserAceito()
         {
             var userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
             int id = Convert.ToInt32(userId);

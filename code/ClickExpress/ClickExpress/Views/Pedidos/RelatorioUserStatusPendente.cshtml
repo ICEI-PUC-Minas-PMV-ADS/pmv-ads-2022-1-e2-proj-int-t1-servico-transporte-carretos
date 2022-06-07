@@ -44,9 +44,6 @@
                 <th>
                     @Html.DisplayNameFor(model => model.Serv_montagem)
                 </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Preco)
-                </th>
                 <th></th>
             </tr>
         </thead>
@@ -85,9 +82,6 @@
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Serv_montagem)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Preco)
                 </td>
                 <td>                    
                     <a asp-action="DetailsResposta" asp-route-id="@item.Id_contrato">Responder</a>
