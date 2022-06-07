@@ -57,7 +57,7 @@ namespace ClickExpress.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id_orcamento,Id_contrato,Id_prestador,Preco,Status")] Orcamento orcamento)
+        public async Task<IActionResult> Create([Bind("Id_orcamento,Id_contrato,Id_prestador,Preco")] Orcamento orcamento)
         {
             if (ModelState.IsValid)
             {
@@ -97,7 +97,7 @@ namespace ClickExpress.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id_orcamento,Id_contrato,Id_prestador,Preco,Status")] Orcamento orcamento)
+        public async Task<IActionResult> Edit(int id, [Bind("Id_orcamento,Id_contrato,Id_prestador,Preco")] Orcamento orcamento)
         {
             if (id != orcamento.Id_orcamento)
             {
