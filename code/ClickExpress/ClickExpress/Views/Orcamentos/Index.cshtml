@@ -6,10 +6,9 @@
 
 <h1>Index</h1>
 <div class="text-white">
-    <p>
-        <a asp-action="Create">Create New</a>
-    </p>
-    <table class="table">
+    <h4>Orçamentos</h4>
+    <hr />
+    <table class="table text-white">
         <thead>
             <tr>
                 <th>
@@ -21,7 +20,7 @@
                 <th>
                     @Html.DisplayNameFor(model => model.Preco)
                 </th>
-               
+
                 <th></th>
             </tr>
         </thead>
@@ -29,20 +28,20 @@
             @foreach (var item in Model)
             {
                 <tr>
-                    <td>
+                    <td readonly>
                         @Html.DisplayFor(modelItem => item.Id_contrato)
                     </td>
-                    <td>
+                    <td readonly>
                         @Html.DisplayFor(modelItem => item.Id_prestador)
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.Preco)
                     </td>
-                   
+
                     <td>
-                        <a asp-action="Edit" asp-route-id="@item.Id_orcamento">Edit</a> |
-                        <a asp-action="Details" asp-route-id="@item.Id_orcamento">Details</a> |
-                        <a asp-action="Delete" asp-route-id="@item.Id_orcamento">Delete</a>
+                        <a asp-action="Edit" asp-route-id="@item.Id_orcamento">Editar</a> |
+                        <a asp-action="Details" asp-route-id="@item.Id_orcamento">Detalhes</a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id_orcamento">Excluir</a>
                     </td>
                 </tr>
             }

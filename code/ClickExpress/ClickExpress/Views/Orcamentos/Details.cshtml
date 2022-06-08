@@ -4,33 +4,32 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
+<h1>Detalhes do orçamento</h1>
+<hr />
+<div >
 
-<div>
-    <h4>Orcamento</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
+    <dl class="row text-white">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Id_contrato)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10" readonly>
             @Html.DisplayFor(model => model.Id_contrato)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Id_prestador)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10" readonly>
             @Html.DisplayFor(model => model.Id_prestador)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Preco)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Preco)
         </dd>
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.Id_orcamento">Edit</a> |
+    <a asp-action="Edit" asp-route-id="@Model.Id_orcamento">Editar</a> |
     <a asp-action="Index">Back to List</a>
 </div>

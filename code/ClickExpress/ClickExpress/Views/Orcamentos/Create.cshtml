@@ -6,7 +6,7 @@
 
 <h1>Create</h1>
 <div class="text-white">
-    <h4>Orçamento</h4>
+    <h4>Orçamentos</h4>
     <hr />
     <div class="row">
         <div class="col-md-4">
@@ -15,13 +15,13 @@
 
                 <div class="form-group">
                     <label asp-for="Id_contrato" class="control-label"></label>
-                    <input asp-for="Id_contrato" type="text" class="form-control"/>
+                    <input asp-for="Id_contrato" class="form-control" readonly/>
                     <span asp-validation-for="Id_contrato" class="text-danger"  ></span>
                 </div>
 
                 <div class="form-group">
                     <label asp-for="Preco" class="control-label"></label>
-                    <input asp-for="Preco" class="form-control" />
+                    <input asp-for="Preco" class="form-control" id="valor_orcamento"/>
                     <span asp-validation-for="Preco" class="text-danger"></span>
                 </div>
                 <div class="form-group">
