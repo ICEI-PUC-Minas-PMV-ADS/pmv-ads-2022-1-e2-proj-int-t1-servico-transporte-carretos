@@ -1,0 +1,199 @@
+﻿@model ClickExpress.Models.Pedido
+
+@{
+    ViewData["Title"] = "DetailsAprovacao";
+}
+
+<div class="text-white">
+    <h1>Details</h1>
+</div>
+
+<div class="text-white">
+    <h4>Pedido</h4>
+    <hr />
+    <div class="row">
+        <dl class="col-sm-4 border-right">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Usuario.Nome)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Usuario.Nome)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Tipo)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Tipo)
+            </dd>
+            <dt class="col-sm-2">
+                ORIGEM
+            </dt>
+            <dd class="col-sm-10">
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Cep_origem)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Cep_origem)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Logradouro_origem)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Logradouro_origem)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Complemento_origem)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Complemento_origem)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Bairro_origem)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Bairro_origem)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Cidade_origem)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Cidade_origem)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.UF_origem)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.UF_origem)
+            </dd>
+            <dt class="col-sm-2">
+                DESTINO
+            </dt>
+            <dd class="col-sm-10">
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Cep_destino)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Cep_destino)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Logradouro_destino)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Logradouro_destino)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Complemento_destino)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Complemento_destino)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Bairro_destino)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Bairro_destino)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Cidade_destino)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Cidade_destino)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.UF_destino)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.UF_destino)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Dt_agendamento)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Dt_agendamento)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Serv_descarrega)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Serv_descarrega)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Serv_montagem)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Serv_montagem)
+            </dd>
+        </dl>
+        <div class="col-sm-4 border-right">
+            <h1>Itens</h1>
+
+            <table class="table text-white">
+                <thead>
+                    <tr>
+                        <th>
+                            Descrição
+                        </th>
+                        <th>
+                            Quantidade
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Itens)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Descricao)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Quantidade)
+                            </td>
+                        </tr>
+
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="col-sm-4">
+            <table class="table text-white">
+                <thead>
+                    <tr>
+                        <th>
+                            Prestador
+                        </th>
+                        <th>
+                            Preço
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Orcamentos)
+                    {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Id_prestador)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Preco)
+                        </td>
+                        <td>
+                            <a class="btn btn-primary" asp-controller="Pedidos" asp-action="Aceitar" asp-route-idOrcamento="@item.Id_orcamento">Aceitar</a>
+
+                        </td>
+                    </tr>
+
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div>
+
+    <a class="btn btn-warning" asp-controller="Usuarios" asp-action="RelatoriosUser">Voltar</a>    
+
+</div>

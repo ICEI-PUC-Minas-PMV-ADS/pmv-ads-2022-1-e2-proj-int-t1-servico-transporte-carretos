@@ -88,6 +88,9 @@
                     <td>
                         @Html.DisplayFor(modelItem => item.Preco)
                     </td>
+                    <td>
+                        <a asp-controller="Pedidos" asp-action="DetailsAprovacao" asp-route-id="@item.Id_contrato">Detalhes</a>
+                    </td>
                 </tr>
                     }
                 }

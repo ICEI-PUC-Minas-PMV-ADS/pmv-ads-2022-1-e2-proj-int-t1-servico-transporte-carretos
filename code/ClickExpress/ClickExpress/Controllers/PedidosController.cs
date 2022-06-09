@@ -65,6 +65,26 @@ namespace ClickExpress.Controllers
             return View(pedido);
         }
 
+        // GET: Pedidos/Details/5
+        public async Task<IActionResult> DetailsAprovacao(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var pedido = await _context.Pedidos
+                .Include(p => p.Usuario)
+                .Include(p => p.Itens)
+                .Include(p => p.Orcamentos)
+                .FirstOrDefaultAsync(m => m.Id_contrato == id);
+            if (pedido == null)
+            {
+                return NotFound();
+            }
+
+            return View(pedido);
+        }
 
         // GET: Pedidos/Create   
         public IActionResult Create()
@@ -203,11 +223,11 @@ namespace ClickExpress.Controllers
         //GET: Usuarios/Details/5
         public async Task<IActionResult> RelatorioUserStatusPendente()
         {
-            var teste = new StatusServico();
-            teste = (StatusServico)0;
+           // var teste = new StatusServico();
+            //teste = (StatusServico)0;
 
             var pedido = await _context.Pedidos
-                .Where(x => x.Status == teste)
+                //.Where(x => x.Status == teste)
                 .ToListAsync();
 
             if (pedido == null)
@@ -218,6 +238,54 @@ namespace ClickExpress.Controllers
             return View(pedido);
         }
 
-        
+        /*[HttpPut("Aceitar/{idOrcamento:int}")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Aceitar(int idOrcamento)
+        {
+                   // var userId = Convert.ToInt32(this.User.FindFirstValue(ClaimTypes.NameIdentifier));
+
+            var orcamento = _context.Orcamentos
+                      .Include(t => t.Pedido)
+                .FirstOrDefault(m => m.Id_orcamento == idOrcamento);
+
+
+            orcamento.Pedido.Status = StatusServico.Aceito;
+            orcamento.Pedido.Id_prestador = orcamento.Id_prestador;
+            orcamento.Pedido.Preco = orcamento.Preco;
+            _context.Update(orcamento.Pedido);
+     
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction("RelatoriosUser", "Usuarios");
+            
+        }*/
+
+    /*[HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Aceitar([Bind("Id_contrato,Id_orcamento,Preco,Id_prestador")] Orcamento orcamento)
+        {        
+            if (ModelState.IsValid)
+            {
+                var orcamento = _context.Orcamentos
+                    .Include(t => t.Pedido)
+                    .FirstOrDefault(m => m.Id_orcamento == idOrcamento);
+
+
+                orcamento.Pedido.Status = StatusServico.Aceito;
+                orcamento.Pedido.Id_prestador = orcamento.Id_prestador;
+                orcamento.Pedido.Preco = orcamento.Preco;
+                _context.Update(orcamento.Pedido);
+
+                await _context.SaveChangesAsync();
+            }
+
+            return RedirectToAction("RelatoriosUser", "Usuarios");
+
+        }*/
+
+        /*[Bind("Id_orcamento,Id_contrato,Id_prestador,Preco")]
+        Orcamento orcamento*/
+
+
     }
 }

@@ -59,8 +59,6 @@ namespace ClickExpress.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id_orcamento,Id_contrato,Id_prestador,Preco")] Orcamento orcamento)
         {
-            if (ModelState.IsValid)
-            {
 
                 if (ModelState.IsValid)
                 {
@@ -70,7 +68,7 @@ namespace ClickExpress.Controllers
                     orcamento.Id_prestador = userPrestador.Id_prestador;
 
                     var pedido = _context.Pedidos
-                        .FirstOrDefault((m => m.Id_contrato == orcamento.Id_contrato));
+                        .FirstOrDefault(m => m.Id_contrato == orcamento.Id_contrato);
                     pedido.Status = StatusServico.Respondido;
                     _context.Update(pedido);
 
@@ -78,7 +76,7 @@ namespace ClickExpress.Controllers
                     await _context.SaveChangesAsync();
                     return RedirectToAction(nameof(Index));
                 }
-            }
+
             return View(orcamento);
         }
 

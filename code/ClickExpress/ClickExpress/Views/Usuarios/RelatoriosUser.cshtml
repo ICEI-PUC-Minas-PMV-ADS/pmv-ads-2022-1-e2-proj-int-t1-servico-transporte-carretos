@@ -95,9 +95,7 @@
                         @Html.DisplayFor(modelItem => item.Preco)
                     </td>
                     <td>
-                        <a asp-action="Edit" asp-route-id="@item.Id_usuario">Editar</a> |
-                        <a asp-action="Details" asp-route-id="@item.Id_usuario">Detalhes</a> |
-                        <a asp-action="Delete" asp-route-id="@item.Id_usuario">Deletar</a>
+                        <a asp-controller="Pedidos" asp-action="DetailsAprovacao" asp-route-id="@item.Id_contrato">Detalhes</a>
                     </td>
                 </tr>
                     }
@@ -138,9 +136,7 @@
                     @Html.DisplayFor(modelItem => item.Preco)
                 </td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id_usuario">Editar</a> |
-                    <a asp-action="Details" asp-route-id="@item.Id_usuario">Detalhes</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id_usuario">Deletar</a>
+                    <a asp-controller="Pedidos" asp-action="DetailsAprovacao" asp-route-id="@item.Id_contrato">Detalhes</a>
                 </td>
             </tr>
                     }
@@ -181,9 +177,7 @@
                     @Html.DisplayFor(modelItem => item.Preco)
                 </td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id_usuario">Editar</a> |
-                    <a asp-action="Details" asp-route-id="@item.Id_usuario">Detalhes</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id_usuario">Deletar</a>
+                    <a asp-controller="Pedidos" asp-action="DetailsAprovacao" asp-route-id="@item.Id_contrato">Detalhes</a>
                 </td>
             </tr>
                     }
@@ -224,9 +218,7 @@
                     @Html.DisplayFor(modelItem => item.Preco)
                 </td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id_usuario">Editar</a> |
-                    <a asp-action="Details" asp-route-id="@item.Id_usuario">Detalhes</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id_usuario">Deletar</a>
+                    <a asp-controller="Pedidos" asp-action="DetailsAprovacao" asp-route-id="@item.Id_contrato">Detalhes</a>
                 </td>
             </tr>
                     }
@@ -235,6 +227,6 @@
         </table>
     </div>
 </div>
-<div>    
+<div>
     <a class="btn btn-warning" asp-controller="Home" asp-action="Index">Voltar</a>
 </div>

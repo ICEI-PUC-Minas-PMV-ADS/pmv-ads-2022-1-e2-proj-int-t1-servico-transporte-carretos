@@ -5,11 +5,8 @@
 }
 
 
-@{var teste = new StatusServico();
-    teste = (StatusServico)0;}
-
 <div class="text-white">
-    <h1>Pedidos Pendentes</h1>
+    <h1>Pedidos</h1>
 
     <table class="table text-white">
         <thead>
@@ -50,45 +47,84 @@
         <tbody>
             @foreach (var item in Model)
             {
-                @if (item.Status == teste)
+                @if (item.Status == (StatusServico)0)
                 {
-            <tr>
-                <td>
-                    <div class="text-white bg-danger rounded">Pendente</div>
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Id_contrato)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Tipo)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Dt_agendamento)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Cidade_origem)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.UF_origem)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Cidade_destino)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.UF_destino)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Serv_descarrega)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Serv_montagem)
-                </td>
-                <td>                    
-                    <a asp-action="DetailsResposta" asp-route-id="@item.Id_contrato">Responder</a>
-                </td>
-            </tr>
-                    }
+                    <tr>
+                        <td>
+                            <div class="text-white bg-danger rounded">Pendente</div>
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Id_contrato)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Tipo)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Dt_agendamento)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Cidade_origem)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.UF_origem)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Cidade_destino)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.UF_destino)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Serv_descarrega)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Serv_montagem)
+                        </td>
+                        <td>
+                            <a asp-action="DetailsResposta" asp-route-id="@item.Id_contrato">Responder</a>
+                        </td>
+                    </tr>
                 }
-            </tbody>
+                else if (item.Status == (StatusServico)1)
+                {
+                    <tr>
+                        <td>
+                            <div class="text-dark bg-warning rounded">Respondido</div>
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Id_contrato)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Tipo)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Dt_agendamento)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Cidade_origem)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.UF_origem)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Cidade_destino)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.UF_destino)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Serv_descarrega)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Serv_montagem)
+                        </td>
+                        <td>
+                            <a asp-action="DetailsResposta" asp-route-id="@item.Id_contrato">Responder</a>
+                        </td>
+                    </tr>
+
+                }
+            }
+        </tbody>
     </table>
 </div>
