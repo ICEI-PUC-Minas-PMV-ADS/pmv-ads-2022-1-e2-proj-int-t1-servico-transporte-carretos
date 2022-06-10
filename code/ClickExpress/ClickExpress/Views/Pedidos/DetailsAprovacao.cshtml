@@ -180,9 +180,8 @@
                         <td>
                             @Html.DisplayFor(modelItem => item.Preco)
                         </td>
-                        <td>
-                            <a class="btn btn-primary" asp-controller="Pedidos" asp-action="Aceitar" asp-route-idOrcamento="@item.Id_orcamento">Aceitar</a>
-
+                        <td>                            
+                            <a class="btn btn-primary" asp-controller="Pedidos" asp-action="Aceitar" asp-route-id_orcam="@item.Id_orcamento">Aceitar</a>
                         </td>
                     </tr>
 

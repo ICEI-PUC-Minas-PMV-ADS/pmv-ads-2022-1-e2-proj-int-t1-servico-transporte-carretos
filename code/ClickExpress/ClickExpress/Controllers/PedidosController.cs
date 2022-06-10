@@ -238,54 +238,40 @@ namespace ClickExpress.Controllers
             return View(pedido);
         }
 
-        /*[HttpPut("Aceitar/{idOrcamento:int}")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Aceitar(int idOrcamento)
+        // GET: Usuarios/Edit/5
+        //public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> Editoooo(int? id)
         {
-                   // var userId = Convert.ToInt32(this.User.FindFirstValue(ClaimTypes.NameIdentifier));
+            if (id == null)
+            {
+                return NotFound();
+            }
 
+            var usuario = await _context.Usuarios.FindAsync(id);
+            if (usuario == null)
+            {
+                return NotFound();
+            }
+            return View(usuario);
+        }
+
+        public async Task<IActionResult> Aceitar(int? id_orcam)
+        {
             var orcamento = _context.Orcamentos
-                      .Include(t => t.Pedido)
-                .FirstOrDefault(m => m.Id_orcamento == idOrcamento);
+                        .Include(t => t.Pedido)
+                      .FirstOrDefault(m => m.Id_orcamento == id_orcam);
 
 
             orcamento.Pedido.Status = StatusServico.Aceito;
             orcamento.Pedido.Id_prestador = orcamento.Id_prestador;
             orcamento.Pedido.Preco = orcamento.Preco;
             _context.Update(orcamento.Pedido);
-     
+
             await _context.SaveChangesAsync();
 
-            return RedirectToAction("RelatoriosUser", "Usuarios");
-            
-        }*/
+            return View();
 
-    /*[HttpPost]
-    [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Aceitar([Bind("Id_contrato,Id_orcamento,Preco,Id_prestador")] Orcamento orcamento)
-        {        
-            if (ModelState.IsValid)
-            {
-                var orcamento = _context.Orcamentos
-                    .Include(t => t.Pedido)
-                    .FirstOrDefault(m => m.Id_orcamento == idOrcamento);
-
-
-                orcamento.Pedido.Status = StatusServico.Aceito;
-                orcamento.Pedido.Id_prestador = orcamento.Id_prestador;
-                orcamento.Pedido.Preco = orcamento.Preco;
-                _context.Update(orcamento.Pedido);
-
-                await _context.SaveChangesAsync();
-            }
-
-            return RedirectToAction("RelatoriosUser", "Usuarios");
-
-        }*/
-
-        /*[Bind("Id_orcamento,Id_contrato,Id_prestador,Preco")]
-        Orcamento orcamento*/
-
+        }
 
     }
 }

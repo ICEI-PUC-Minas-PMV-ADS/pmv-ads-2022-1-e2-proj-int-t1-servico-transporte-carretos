@@ -164,5 +164,23 @@ namespace ClickExpress.Controllers
         {
             return _context.Orcamentos.Any(e => e.Id_orcamento == id);
         }
+
+
+        // GET: Usuarios/Edit/5
+        //public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> Aceitar(int? id_orcam)
+        {
+            if (id_orcam == null)
+            {
+                return NotFound();
+            }
+
+            var orcamento = await _context.Usuarios.FindAsync(id_orcam);
+            if (orcamento == null)
+            {
+                return NotFound();
+            }
+            return View(orcamento);
+        }
     }
 }
