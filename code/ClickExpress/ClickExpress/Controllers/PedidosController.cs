@@ -238,21 +238,22 @@ namespace ClickExpress.Controllers
             return View(pedido);
         }
 
-        // GET: Usuarios/Edit/5
-        //public async Task<IActionResult> Edit(int? id)
-        public async Task<IActionResult> Editoooo(int? id)
+        //GET: Usuarios/Details/5
+        public async Task<IActionResult> RelatorioUserStatusAceito()
         {
-            if (id == null)
+            // var teste = new StatusServico();
+            //teste = (StatusServico)0;
+
+            var pedido = await _context.Pedidos
+                //.Where(x => x.Status == teste)
+                .ToListAsync();
+
+            if (pedido == null)
             {
                 return NotFound();
             }
 
-            var usuario = await _context.Usuarios.FindAsync(id);
-            if (usuario == null)
-            {
-                return NotFound();
-            }
-            return View(usuario);
+            return View(pedido);
         }
 
         public async Task<IActionResult> Aceitar(int? id_orcam)

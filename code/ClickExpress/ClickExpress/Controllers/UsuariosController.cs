@@ -313,6 +313,12 @@ namespace ClickExpress.Controllers
             return View();
         }
 
+        // Login: Usuarios - item adicionado
+        public IActionResult pedidosPrestador()
+        {
+            return View();
+        }
+
         // GET: Usuarios/Details/5
         public async Task<IActionResult> Relatorios(int? id)
         {
