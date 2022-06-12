@@ -6,36 +6,19 @@
 }
 
 
-<div>
-    <h4>Pedido @Html.DisplayFor(model => model.Id_contrato) atualizado!</h4>
-    <hr />
-    <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Usuario.Nome)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Usuario.Nome)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Id_cliente)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Id_cliente)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Id_prestador)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Id_prestador)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Preco)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Preco)
-        </dd>
-    </dl>
+<div class="text-white" style="padding: 10px 30px 10px 30px;">
+    <br /><br />
+    <center><h4>Parabéns, você acaba de confirmar a sua solicitação!</h4></center>
+    <br />
+    <div style="width: 60%; background-color: #D90429; border-radius: 30px; margin-right: auto; margin-left: auto; padding: 10px 30px 20px 30px;">
+        <h5>Sua solicitação @Html.DisplayFor(model => model.Id_contrato) foi atualizada com sucesso.</h5><br />
+        <div class="col-sm"><b>Cliente:</b> @Html.DisplayFor(model => model.Id_cliente)</div>
+        <div class="col-sm"><b>Prestador:</b> @Html.DisplayFor(model => model.Id_prestador)</div>
+        <div class="col-sm"><b>Valor do serviço:</b> R$ @Html.DisplayFor(model => model.Preco),00</div>
+    </div>
+    <br /><br />
 </div>
+
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

@@ -5,87 +5,98 @@
 }
 
 
-<div class="text-white">
-    <h1>Meus Pedidos</h1>
 
-    <table class="table text-white">
-        <thead>
-            <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.Status)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Id_contrato)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Tipo)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Dt_agendamento)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Cidade_origem)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.UF_origem)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Cidade_destino)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.UF_destino)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Serv_descarrega)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Serv_montagem)
-                </th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model)
-            {
-                @if (item.Status == (StatusServico)2)
-                {
-                    <tr>
-                        <td>
-                            <div class="text-white bg-secondary rounded">Aceito</div>
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Id_contrato)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Tipo)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Dt_agendamento)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Cidade_origem)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.UF_origem)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Cidade_destino)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.UF_destino)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Serv_descarrega)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Serv_montagem)
-                        </td>
-                        <td>
-                            <a asp-action="DetailsResposta" asp-route-id="@item.Id_contrato">Finalizar</a>
-                        </td>
-                    </tr>
-                }
-            }
-        </tbody>
-    </table>
+<div style="padding: 0px 25px 0px 25px">
+    <div class="container m-0 p-0 mw-100" style="font-size: 1.0vw; ">
+        <div>
+            <br /><br />
+            <h4 class="table text-white">Meus Pedidos</h4>
+            <br /><br />
+                  <div class="table-responsive">
+                      <table class="table text-white">
+                          <thead>
+                              <tr>
+                                  <th style="vertical-align: middle; text-align: center">
+                                      Status
+                                  </th>
+                                  <th style="vertical-align: middle; text-align: center">
+                                      Nº da Solicitação
+                                  </th>
+                                  <th style="vertical-align: middle; text-align: center">
+                                      Tipo de Serviço
+                                  </th>
+                                  <th style="vertical-align: middle; text-align: center">
+                                      Data Agendada
+                                  </th>
+                                  <th style="vertical-align: middle; text-align: center">
+                                      Cidade de Origem
+                                  </th>
+                                  <th style="vertical-align: middle; text-align: center">
+                                      Estado de Origem
+                                  </th>
+                                  <th style="vertical-align: middle; text-align: center">
+                                      Cidade de Destino
+                                  </th>
+                                  <th style="vertical-align: middle; text-align: center">
+                                      Estado de Destino
+                                  </th>
+                                  <th style="vertical-align: middle; text-align: center">
+                                      Serviço de Descarga
+                                  </th>
+                                  <th style="vertical-align: middle; text-align: center">
+                                      Serviço de Montagem
+                                  </th>
+                                  <th style="vertical-align: middle; text-align: center">
+                                      + Info
+                                  </th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              @foreach (var item in Model)
+                              {
+                  @if (item.Status == (StatusServico)2)
+                  {
+                  <tr>
+                      <td style="vertical-align: middle; text-align: center">
+                          <div class="text-dark" style="background-color: #D3AD82; border-radius: 30px; padding: 1px 5px 1px 5px; vertical-align: middle; text-align: center">Aceito</div>
+                      </td>
+                      <td style="vertical-align: middle; text-align: center">
+                          @Html.DisplayFor(modelItem => item.Id_contrato)
+                      </td>
+                      <td style="vertical-align: middle; text-align: center">
+                          @Html.DisplayFor(modelItem => item.Tipo)
+                      </td>
+                      <td style="vertical-align: middle; text-align: center">
+                          @Html.DisplayFor(modelItem => item.Dt_agendamento)
+                      </td>
+                      <td style="vertical-align: middle; text-align: center">
+                          @Html.DisplayFor(modelItem => item.Cidade_origem)
+                      </td>
+                      <td style="vertical-align: middle; text-align: center">
+                          @Html.DisplayFor(modelItem => item.UF_origem)
+                      </td>
+                      <td style="vertical-align: middle; text-align: center">
+                          @Html.DisplayFor(modelItem => item.Cidade_destino)
+                      </td>
+                      <td style="vertical-align: middle; text-align: center">
+                          @Html.DisplayFor(modelItem => item.UF_destino)
+                      </td>
+                      <td style="vertical-align: middle; text-align: center">
+                          @Html.DisplayFor(modelItem => item.Serv_descarrega)
+                      </td>
+                      <td style="vertical-align: middle; text-align: center">
+                          @Html.DisplayFor(modelItem => item.Serv_montagem)
+                      </td>
+                      <td style="vertical-align: middle; text-align: center">
+                          <a class="btn" style="color: #2B2D42; background-color: white; font-size: 1vw; font-weight: 500;" asp-action="DetailsResposta" asp-route-id="@item.Id_contrato">Detalhes</a>
+                      </td>
+                  </tr>
+           }}
+                          </tbody>
+                      </table>
+
+                  </div>
+            <br /><br />
+        </div>
+    </div>
 </div>

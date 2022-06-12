@@ -8,13 +8,13 @@
         </div>
 
         <div class="col-8">
-
-            <div class="d-flex flex-column">
-                <a asp-controller="Pedidos" asp-action="RelatorioUserStatusPendente">Pedidos</a>
-                <a asp-controller="Pedidos" asp-action="RelatorioUserStatusAceito">Meus Pedidos</a>
-
-            </div>
-
+            <center>
+               
+                <span style="color: white; font-weight: bold; font-size: 30px">Pedidos/Solicitações</span>
+                <br /><br /><br />
+                <a asp-controller="Pedidos" asp-action="RelatorioUserStatusPendente" class="btn" style="background-color: #D90429; color: white; border: none; font-weight: bold; padding: 30px 0px 30px 0px; width: 120px">Solicitações Disponíveis</a>
+                <a asp-controller="Pedidos" asp-action="RelatorioUserStatusAceito" class="btn" style="background-color: #5E931D; color: white; border: none; font-weight: bold; padding: 30px 0px 30px 0px; width: 120px">Solicitações Aceitas</a>
+                </center>
         </div>
     </div>
 </div>
