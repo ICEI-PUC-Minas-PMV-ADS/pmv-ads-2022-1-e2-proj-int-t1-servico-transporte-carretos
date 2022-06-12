@@ -4,37 +4,45 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
-<div class="text-white">
-    <h4>Orçamentos</h4>
-    <hr />
-    <div class="row">
-        <div class="col-md-4">
-            <form asp-action="Create">
-                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-
-                <div class="form-group">
-                    <label asp-for="Id_contrato" class="control-label"></label>
-                    <input asp-for="Id_contrato" class="form-control" readonly/>
-                    <span asp-validation-for="Id_contrato" class="text-danger"  ></span>
+<div style="padding: 0px 25px 0px 25px">
+    <br /><br />
+    <div class="text-white" style="width: 70%; background-color: #D90429; border-radius: 30px; margin-left: auto; margin-right: auto;">
+        <br />
+        <h4 style="padding: 10px 30px 10px 30px;">Enviar Orçamento</h4>
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="row" style="padding: 10px 30px 10px 30px;">
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label asp-for="Id_contrato" class="control-label"></label>
+                        <input asp-for="Id_contrato" class="form-control" readonly />
+                        <span asp-validation-for="Id_contrato" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="padding: 10px 30px 10px 30px;">
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label asp-for="Preco" class="control-label">Valor da Solicitação em Reais</label>
+                        <input type="number" asp-for="Preco" class="form-control" id="valor_orcamento" />
+                        <span asp-validation-for="Preco" class="text-danger"></span>
+                    </div>
                 </div>
 
-                <div class="form-group">
-                    <label asp-for="Preco" class="control-label"></label>
-                    <input asp-for="Preco" class="form-control" id="valor_orcamento"/>
-                    <span asp-validation-for="Preco" class="text-danger"></span>
+            </div>
+            <div class="row" style="padding: 10px 30px 10px 30px;">
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label></label>
+                        <input type="submit" value="Enviar" class="btn btn-primary" style="color: black; font-weight: bold; background-color: #84dcc6; border: none" />
+                    </div>
                 </div>
-                <div class="form-group">
-                    <input type="submit" value="Enviar" class="btn btn-primary" />
-                </div>
-            </form>
-        </div>
+            </div>
+
+        </form>
     </div>
+    <br /><br />
 </div>
-
-    <div>
-        <a asp-action="Index">Back to List</a>
-    </div>
 
     @section Scripts {
         @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

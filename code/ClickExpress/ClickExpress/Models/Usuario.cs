@@ -14,48 +14,48 @@ namespace ClickExpress.Models // classe criada
         public int Id_usuario { get; set; }
 
         [Display(Name = "Nome:")]
-        [Required(ErrorMessage = "Obrigatório informar o nome!") ]
+        [Required(ErrorMessage = "*Campo Obrigatório") ]
         public string Nome { get; set; }
 
         [Display(Name = "Email:")]
-        [Required(ErrorMessage = "Obrigatório informar o email!")]
+        [Required(ErrorMessage = "*Campo Obrigatório")]
         public string Email { get; set; }
 
         [Display(Name = "Contato:")]
-        [Required(ErrorMessage = "Obrigatório informar o telefone!")]
+        [Required(ErrorMessage = "*Campo Obrigatório")]
         public string Tel { get; set; }
 
         [Display(Name = "Cadastre uma senha:")]
-        [Required(ErrorMessage = "Obrigatório informar senha!")]
+        [Required(ErrorMessage = "*Campo Obrigatório")]
         [DataType(DataType.Password)] //inserir criptografia na caixa de senha (****)
         public string Senha { get; set; }
 
         [Display(Name = "CEP:")]
-        [Required(ErrorMessage = "Obrigatório informar o cep!")]
+        [Required(ErrorMessage = "*Campo Obrigatório")]
         public string Cep { get; set; }
 
         [Display(Name = "Cidade:")]
-        [Required(ErrorMessage = "Obrigatório informar a cidade!")]
+        [Required(ErrorMessage = "*Campo Obrigatório")]
         public string Cidade { get; set; }
 
         [Display(Name = "Logradouro:")]
-        [Required(ErrorMessage = "Obrigatório informar o logradouro!")]
+        [Required(ErrorMessage = "*Campo Obrigatório")]
         public string Logradouro { get; set; }
 
         [Display(Name = "UF:")]
-        [Required(ErrorMessage = "Obrigatório informar o estado!")]
+        [Required(ErrorMessage = "*Campo Obrigatório")]
         public string UF{ get; set; }
 
         [Display(Name = "Bairro:")]
-        [Required(ErrorMessage = "Obrigatório informar o bairro!")]
+        [Required(ErrorMessage = "*Campo Obrigatório")]
         public string Bairro { get; set; }
 
         [Display(Name = "Número:")]
-        [Required(ErrorMessage = "Obrigatório informar o número de endereço!")]
+        [Required(ErrorMessage = "*Campo Obrigatório")]
         public string Num_endereco { get; set; }
 
         [Display(Name = "CPF/CNPJ:")]
-        [Required(ErrorMessage = "Obrigatório informar o cpf ou cnpj!")]
+        [Required(ErrorMessage = "*Campo Obrigatório")]
         public string Cpf_Cnpj { get; set; }
 
         public string Perfil { get; set; }

@@ -2,9 +2,8 @@
 
 <div class="text-white">
     <br />
-    <img src="~/Imagens/open-box-light.png" height="50px" />
-    <div style=" display: inline-block; width: 95%; background-color: #D90429; color: white; padding: 8px 5px 8px 10px; border-radius: 8px; font-weight:bold;">
-        Informe os itens que serão transportados:
+    <div style=" display: inline-block; width: 99%; background-color: #D90429; color: white; padding: 8px 5px 8px 10px; border-radius: 8px; font-weight: bold; margin-bottom: 20px">
+        <img src="~/Imagens/box.png" style="height: 30px; margin-right: 10px" /> Informe os itens que serão transportados:
     </div>
     <br />
     <div class="formulario">
@@ -46,18 +45,18 @@
         <tbody style="width: 100%">
             @foreach (var item in Model)
             {
-                <tr style="width: 100%">
+<tr style="width: 100%">
 
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Descricao)
+    <td>
+        @Html.DisplayFor(modelItem => item.Descricao)
 
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Quantidade)
-                    </td>
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Quantidade)
+    </td>
 
-                </tr>
-            }
+</tr>
+       }
         </tbody>
 
     </table>

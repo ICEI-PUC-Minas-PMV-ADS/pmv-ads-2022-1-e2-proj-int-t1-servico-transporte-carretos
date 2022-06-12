@@ -1,13 +1,15 @@
 ﻿@model ClickExpress.Models.Prestador
 
-@{
-    ViewData["Title"] = "Create";
-}
+@{ ViewData["Title"] = "Create"; }
 
 <div class="row text-white">
     <div class="col-md">
         <div style="padding: 0px 25px 0px 25px">
-            <h3 style="color: white; font-weight: bold; padding-top: 8px;">Cadastro de usuário PRESTADOR:</h3><br />
+            <br />
+            <div style=" display: inline-block; width: 99%; background-color: #D90429; color: white; padding: 8px 5px 8px 10px; border-radius: 8px; font-weight: bold; margin-bottom: 20px">
+                <img src="~/Imagens/edit.png" style="height: 30px; margin-right: 10px" /> Preencha as informações abaixo para criar sua conta como prestador
+            </div>
+            <br />
             <form asp-action="Create">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
@@ -83,32 +85,27 @@
                             <input asp-for="UF" class="form-control" id="uf" />
                             <span asp-validation-for="UF" class="text-danger"></span>
                         </div>
-                    </div>
-                </div>
-
-                <div class="form-group" id="formVeiculo">
-                    <div class="row">
                         <div class="col-sm-5">
-                            <label asp-for="Veiculo" class="control-label"></label>
-                            <input asp-for="Veiculo" class="form-control" id="inputVeiculo" />
-                            <span asp-validation-for="Veiculo" class="text-danger"></span>
+                            <div class="form-group" id="formVeiculo">
+                                <label asp-for="Veiculo" class="control-label"></label>
+                                <input asp-for="Veiculo" class="form-control" id="inputVeiculo" />
+                                <span asp-validation-for="Veiculo" class="text-danger"></span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
+
+
                 <div class="form-group" style="padding-top: 5px;">
-                    <input type="submit" value="Cadastrar" class="btn btn-primary" />
-                    <a class="btn btn-warning" asp-controller="Usuarios" asp-action="Index">Voltar</a>
+                    <input type="submit" value="Cadastrar" class="btn btn-primary" style="color: black; font-weight: bold; background-color: #84dcc6; border: none" />
+                    <a class="btn btn-warning" style="background-color: #EDF2F4; color: #EF233C; font-weight: bold; border: none" asp-controller="Home" asp-action="Index">Voltar</a>
                 </div>
 
             </form>
 
         </div>
     </div>
-</div>
-
-<div>
-
 </div>
 
 @section Scripts {

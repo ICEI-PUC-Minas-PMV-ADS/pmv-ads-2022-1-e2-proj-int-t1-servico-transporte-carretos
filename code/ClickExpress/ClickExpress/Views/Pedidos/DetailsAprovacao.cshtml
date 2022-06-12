@@ -4,195 +4,124 @@
     ViewData["Title"] = "DetailsAprovacao";
 }
 
-<div class="text-white">
-    <h1>Details</h1>
-</div>
+<div style="padding: 0px 25px 0px 25px">
+    <div class="text-white">
+        <br /><br />
+        <h4> Detalhes do Pedido</h4>
+        <br /><br />
+        <div class="row" style="background-color: #D90429; border-radius: 10px">
 
-<div class="text-white">
-    <h4>Pedido</h4>
-    <hr />
-    <div class="row">
-        <dl class="col-sm-4 border-right">
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Usuario.Nome)
-            </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.Usuario.Nome)
-            </dd>
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Tipo)
-            </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.Tipo)
-            </dd>
-            <dt class="col-sm-2">
-                ORIGEM
-            </dt>
-            <dd class="col-sm-10">
-            </dd>
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Cep_origem)
-            </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.Cep_origem)
-            </dd>
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Logradouro_origem)
-            </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.Logradouro_origem)
-            </dd>
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Complemento_origem)
-            </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.Complemento_origem)
-            </dd>
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Bairro_origem)
-            </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.Bairro_origem)
-            </dd>
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Cidade_origem)
-            </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.Cidade_origem)
-            </dd>
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.UF_origem)
-            </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.UF_origem)
-            </dd>
-            <dt class="col-sm-2">
-                DESTINO
-            </dt>
-            <dd class="col-sm-10">
-            </dd>
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Cep_destino)
-            </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.Cep_destino)
-            </dd>
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Logradouro_destino)
-            </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.Logradouro_destino)
-            </dd>
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Complemento_destino)
-            </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.Complemento_destino)
-            </dd>
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Bairro_destino)
-            </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.Bairro_destino)
-            </dd>
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Cidade_destino)
-            </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.Cidade_destino)
-            </dd>
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.UF_destino)
-            </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.UF_destino)
-            </dd>
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Dt_agendamento)
-            </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.Dt_agendamento)
-            </dd>
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Serv_descarrega)
-            </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.Serv_descarrega)
-            </dd>
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Serv_montagem)
-            </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.Serv_montagem)
-            </dd>
-        </dl>
-        <div class="col-sm-4 border-right">
-            <h1>Itens</h1>
+            <div class="col-sm-4 border-right" style="padding-bottom: 15px; ">
+                <br /><h5>Detalhes da Solicitação</h5>
+                <br />
+                <div class="row" style="margin:auto auto auto auto">
+                    <div class="col-sm-auto"><b>Nome do Solicitante:</b> @Html.DisplayFor(model => model.Usuario.Nome)</div>
+                </div>
+                <br />
+                <div class="row" style="margin:auto auto auto auto">
+                    <div class="col-sm-auto"><b>Tipo de Serviço:</b> @Html.DisplayFor(model => model.Tipo)</div>
+                </div>
+                <br />
+                <div class="row" style="margin:auto auto auto auto">
+                    <div class="col-sm-auto"><b>Dia e Horário:</b> @Html.DisplayFor(model => model.Dt_agendamento)</div>
+                </div>
+                <br />
+                <div class="row" style="margin:auto auto auto auto">
+                    <div class="col-sm-auto" style="font-weight: bold">Endereço de Origem:</div>
+                </div>
+                <div class="row" style="margin:auto auto auto auto">
+                    <div class="col-sm-auto">@Html.DisplayFor(model => model.Logradouro_origem), @Html.DisplayFor(model => model.Complemento_origem) - @Html.DisplayFor(model => model.Bairro_origem), @Html.DisplayFor(model => model.Cidade_origem) - @Html.DisplayFor(model => model.UF_origem), CEP: @Html.DisplayFor(model => model.Cep_origem)</div>
+                </div>
+                <br />
+                <div class="row" style="margin:auto auto auto auto">
+                    <div class="col-sm-auto" style="font-weight: bold">Endereço de Destino:</div>
+                </div>
+                <div class="row" style="margin:auto auto auto auto">
+                    <div class="col-sm-auto">@Html.DisplayFor(model => model.Logradouro_destino), @Html.DisplayFor(model => model.Complemento_destino) - @Html.DisplayFor(model => model.Bairro_destino), @Html.DisplayFor(model => model.Cidade_destino) - @Html.DisplayFor(model => model.UF_destino), CEP: @Html.DisplayFor(model => model.Cep_destino)</div>
+                </div>
+                <br />
+                <div class="row" style="margin:auto auto auto auto">
+                    <div class="col-sm-auto" style="font-weight: bold">Serviço de Descarga: @Html.DisplayFor(model => model.Serv_descarrega)</div>
+                </div>
+                <br />
+                <div class="row" style="margin:auto auto auto auto">
+                    <div class="col-sm-auto" style="font-weight: bold">Serviço de Montagem: @Html.DisplayFor(model => model.Serv_montagem)</div>
+                </div>
+                <br />
+            </div>
 
-            <table class="table text-white">
-                <thead>
-                    <tr>
-                        <th>
-                            Descrição
-                        </th>
-                        <th>
-                            Quantidade
-                        </th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var item in Model.Itens)
-                    {
+            <div class="col-sm-4 border-right" style="padding-bottom: 3.0vw;">
+                <br /><h5>Itens Transportados</h5>
+                <br />
+                <table class="table text-white">
+                    <thead>
                         <tr>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Descricao)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Quantidade)
-                            </td>
+                            <th style="vertical-align: middle; text-align: center">
+                                Descrição
+                            </th>
+                            <th style="vertical-align: middle; text-align: center">
+                                Quantidade
+                            </th>
                         </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Itens)
+                        {
+            <tr>
+                <td style="vertical-align: middle; text-align: center">
+                    @Html.DisplayFor(modelItem => item.Descricao)
+                </td>
+                <td style="vertical-align: middle; text-align: center">
+                    @Html.DisplayFor(modelItem => item.Quantidade)
+                </td>
+            </tr>}
+                    </tbody>
+                </table>
+                <br />
+            </div>
 
-                    }
-                </tbody>
-            </table>
-        </div>
-        <div class="col-sm-4">
-            <table class="table text-white">
-                <thead>
-                    <tr>
-                        <th>
-                            Prestador
-                        </th>
-                        <th>
-                            Preço
-                        </th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var item in Model.Orcamentos)
-                    {
-                    <tr>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Id_prestador)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Preco)
-                        </td>
-                        <td>                            
-                            <a class="btn btn-primary" asp-controller="Pedidos" asp-action="Aceitar" asp-route-id_orcam="@item.Id_orcamento">Aceitar</a>
-                        </td>
-                    </tr>
+            <div class="col-sm-4" style="padding-bottom: 3.0vw;">
+                <br /><h5>Informões do Prestador</h5>
+                <br />
+                <table class="table text-white">
+                    <thead>
+                        <tr>
+                            <th style="vertical-align: middle; text-align: center">
+                                Prestador
+                            </th>
+                            <th style="vertical-align: middle; text-align: center">
+                                Preço
+                            </th>
+                            <th style="vertical-align: middle; text-align: center">
+                                Ação
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Orcamentos)
+                        {
+            <tr>
+                <td style="vertical-align: middle; text-align: center">
+                    @Html.DisplayFor(modelItem => item.Id_prestador)
+                </td>
+                <td style="vertical-align: middle; text-align: center">
+                    @Html.DisplayFor(modelItem => item.Preco)
+                </td>
+                <td style="vertical-align: middle; text-align: center">
+                    <a style="color: black; font-weight: bold; background-color: #84dcc6; border: none" class="btn btn-primary" asp-controller="Pedidos" asp-action="Aceitar" asp-route-id_orcam="@item.Id_orcamento">Aceitar</a>
 
-                    }
-                </tbody>
-            </table>
+                </td>
+            </tr>}
+                    </tbody>
+                </table>
+                <br />
+            </div>
         </div>
+        <br />
+
     </div>
-</div>
-<div>
-
-    <a class="btn btn-warning" asp-controller="Usuarios" asp-action="RelatoriosUser">Voltar</a>    
-
+    <div>
+        <a class="btn btn-warning" asp-controller="Usuarios" asp-action="RelatoriosUser" style="background-color: #EDF2F4; color: #EF233C; font-weight: bold; border: none">Voltar</a>
+    </div>
+    <br /><br />
 </div>

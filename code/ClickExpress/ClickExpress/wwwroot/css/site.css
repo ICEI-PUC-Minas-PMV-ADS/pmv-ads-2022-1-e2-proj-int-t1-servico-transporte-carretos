@@ -77,6 +77,16 @@ button.accept-policy {
     
 }
 
+.responsive {
+    width: 100%;
+    height: auto;
+}
+
+.responsiveimg {
+    width: 100%;
+    height: auto;
+}
+
 /* Sticky footer styles
 -------------------------------------------------- */
 html {

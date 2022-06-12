@@ -1,12 +1,25 @@
 ﻿@model IEnumerable<ClickExpress.Models.Item>
 
-@{
-    ViewData["Title"] = "ConcluirPedido";
-}
+@{ ViewData["Title"] = "ConcluirPedido"; }
 
-<div class="text-white">
-    <h3> @ViewBag.Message </h3>
+<br />
+<br />
+<div style="width: 40%; margin-left: auto; margin-right: auto;">
+    <center><span style="color: white; font-size: 25px; padding-bottom: 20px;">Solicitação enviada com sucesso!</span></center>
 </div>
+<br />
+<div style="width: 25%; margin-left: auto; margin-right: auto;">
+    <center><img style="color: white; font-size: 25px; padding-bottom: 20px;" class="responsive" src="~/Imagens/smile.png" /></center>
+</div>
+<div style="width: 40%; margin-left: auto; margin-right: auto;">
+    <center><span style="color: white; font-size: 25px; padding-bottom: 20px;">Em Breve um prestador entrará em contato!</span></center>
+</div>
+<br />
+<div style="width: 40%; margin-left: auto; margin-right: auto;">
+    <center><span style="color: white; font-size: 25px; padding-bottom: 20px;">Acesse a área de pedidos para acompanhar a sua solicitação.</span></center>
+</div>
+<br />
+<br />
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
