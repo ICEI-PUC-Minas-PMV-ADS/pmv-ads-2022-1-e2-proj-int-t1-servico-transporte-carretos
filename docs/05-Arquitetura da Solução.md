@@ -26,8 +26,8 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Modelo ER�
 > - [Como fazer um diagrama entidade relacionamento | Lucidchart](https://www.lucidchart.com/pages/pt/como-fazer-um-diagrama-entidade-relacionamento)
 
 Na figura abaixo é mostrado o Modelo Relacional(MR) desenvolvido na plataforma "draw.io" para o projeto.
-![photo_2022-06-13_15-26-55](https://user-images.githubusercontent.com/91202959/173681753-228fe258-6372-46cb-b26e-c3eb19493d20.jpg)
 
+<img src="img/MR_ClickExpress.jpg" alt="Figura Modelo Relacional(MR) ClickExpress">
 ## Esquema Relacional
 
 O Esquema Relacional corresponde à representação dos dados em tabelas juntamente com as restrições de integridade e chave primária.
