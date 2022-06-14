@@ -102,7 +102,7 @@ namespace ClickExpress.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Create(Pedido pedido)
         {
-            if (ModelState.IsValid)
+            if (ModelState.IsValid && pedido.Dt_agendamento >= DateTime.Now)
             {
 
                 var userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
@@ -113,9 +113,9 @@ namespace ClickExpress.Controllers
                 pedido.Dt_contrato = DateTime.Now;
                 _context.Add(pedido);
                 _context.SaveChanges();
-
+                return Json(new { Resultado = pedido.Id_contrato });
             }
-            return Json(new { Resultado = pedido.Id_contrato });
+            return Json(new { Erro = true });
         }
 
         // GET: Pedidos/Edit/5

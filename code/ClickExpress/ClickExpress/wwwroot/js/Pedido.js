@@ -78,6 +78,9 @@ function SolicitarServico() {
 
                 ListarItens(data.resultado);
             }
+            if (data.erro) {
+                alert("Há campos inválidos, revise e tente novamente!");
+            }
 
         },
     });

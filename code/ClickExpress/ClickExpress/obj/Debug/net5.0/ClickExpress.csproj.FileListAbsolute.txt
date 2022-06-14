@@ -3287,3 +3287,10 @@ C:\Users\Thamara\Desktop\ADS\pmv-ads-2022-1-e2-proj-int-t1-servico-transporte-ca
 D:\werlon\pmv-ads-2022-1-e2-proj-int-t1-servico-transporte-carretos\code\ClickExpress\ClickExpress\obj\Debug\net5.0\Razor\Views\Pedidos\RelatoriosUserPrestadorAceito.cshtml.g.cs
 D:\werlon\pmv-ads-2022-1-e2-proj-int-t1-servico-transporte-carretos\code\ClickExpress\ClickExpress\obj\Debug\net5.0\Razor\Views\Orcamentos\OrcamentoRespondido.cshtml.g.cs
 D:\werlon\pmv-ads-2022-1-e2-proj-int-t1-servico-transporte-carretos\code\ClickExpress\ClickExpress\obj\Debug\net5.0\Razor\Views\Pedidos\Finalizar.cshtml.g.cs
+C:\Users\kenia\OneDrive\Documentos\PUC Minas\Eixo 2\pmv-ads-2022-1-e2-proj-int-t1-servico-transporte-carretos\code\ClickExpress\ClickExpress\obj\Debug\net5.0\Razor\Views\Orcamentos\OrcamentoRespondido.cshtml.g.cs
+C:\Users\kenia\OneDrive\Documentos\PUC Minas\Eixo 2\pmv-ads-2022-1-e2-proj-int-t1-servico-transporte-carretos\code\ClickExpress\ClickExpress\obj\Debug\net5.0\Razor\Views\Pedidos\Aceitar.cshtml.g.cs
+C:\Users\kenia\OneDrive\Documentos\PUC Minas\Eixo 2\pmv-ads-2022-1-e2-proj-int-t1-servico-transporte-carretos\code\ClickExpress\ClickExpress\obj\Debug\net5.0\Razor\Views\Pedidos\DetailsAprovacao.cshtml.g.cs
+C:\Users\kenia\OneDrive\Documentos\PUC Minas\Eixo 2\pmv-ads-2022-1-e2-proj-int-t1-servico-transporte-carretos\code\ClickExpress\ClickExpress\obj\Debug\net5.0\Razor\Views\Pedidos\Finalizar.cshtml.g.cs
+C:\Users\kenia\OneDrive\Documentos\PUC Minas\Eixo 2\pmv-ads-2022-1-e2-proj-int-t1-servico-transporte-carretos\code\ClickExpress\ClickExpress\obj\Debug\net5.0\Razor\Views\Pedidos\RelatoriosUserPrestadorAceito.cshtml.g.cs
+C:\Users\kenia\OneDrive\Documentos\PUC Minas\Eixo 2\pmv-ads-2022-1-e2-proj-int-t1-servico-transporte-carretos\code\ClickExpress\ClickExpress\obj\Debug\net5.0\Razor\Views\Usuarios\pedidosPrestador.cshtml.g.cs
+C:\Users\kenia\OneDrive\Documentos\PUC Minas\Eixo 2\pmv-ads-2022-1-e2-proj-int-t1-servico-transporte-carretos\code\ClickExpress\ClickExpress\obj\Debug\net5.0\Razor\Views\Usuarios\View.cshtml.g.cs

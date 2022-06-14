@@ -72,22 +72,11 @@ namespace ClickExpress.Controllers
                     pedido.Status = StatusServico.Respondido;
                     _context.Update(pedido);
 
-                var orcam = _context.Orcamentos;
+                var orcam = _context.Orcamentos
+                    .FirstOrDefault(m => m.Id_prestador == orcamento.Id_prestador&&m.Id_contrato==orcamento.Id_contrato);
 
-                if(orcam !=null)
-                {
-                    foreach (var aux in orcam)
-                    {
-                        if(aux.Id_contrato == orcamento.Id_contrato && aux.Id_prestador == orcamento.Id_prestador)
-                        {
-                            orcam.Preco = orcamento.Preco;
-                            _context.Update(orcam);
-                        }
-                    }
-                }
-                        //.FirstOrDefault(m => m.Id_prestador == orcamento.Id_prestador);
 
-                if(orcam == null)
+                if (orcam == null)
                 {
                     _context.Add(orcamento);
                     //await _context.SaveChangesAsync();
