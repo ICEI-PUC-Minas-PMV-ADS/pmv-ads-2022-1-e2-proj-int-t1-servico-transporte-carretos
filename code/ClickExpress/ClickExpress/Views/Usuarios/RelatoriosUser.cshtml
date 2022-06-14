@@ -222,9 +222,6 @@ else if (Convert.ToInt32(item.Status) == 3)
     <td style="vertical-align: middle; text-align: center">
         @Html.DisplayFor(modelItem => item.Preco)
     </td>
-    <td style="vertical-align: middle; text-align: center">
-        <a class="btn" style="color: #2B2D42; background-color: white; font-size: 1vw; font-weight: 500;" asp-controller="Pedidos" asp-action="DetailsAprovacao" asp-route-id="@item.Id_contrato">Detalhes</a>
-    </td>
 </tr>
 }}
                     </tbody>

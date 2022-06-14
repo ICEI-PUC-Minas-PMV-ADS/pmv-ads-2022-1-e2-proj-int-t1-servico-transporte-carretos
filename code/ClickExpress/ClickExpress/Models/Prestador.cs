@@ -18,5 +18,7 @@ namespace ClickExpress.Models
         [Required(ErrorMessage = "Obrigatório informar o veículo!")]
         public string Veiculo { get; set; }
 
+
+
     }
 }

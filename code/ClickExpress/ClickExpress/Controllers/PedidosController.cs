@@ -256,21 +256,20 @@ namespace ClickExpress.Controllers
 
         }
 
-        public async Task<IActionResult> Finalizar(int? id_orcam)
+        public async Task<IActionResult> Finalizar(int? id)
         {
-            var orcamento = _context.Orcamentos
-                        .Include(t => t.Pedido)
-                      .FirstOrDefault(m => m.Id_orcamento == id_orcam);
+            if (id == null)
+            {
+                return NotFound();
+            }
 
-
-            orcamento.Pedido.Status = StatusServico.Finalizado;
-            //orcamento.Pedido.Id_prestador = orcamento.Id_prestador;
-            //orcamento.Pedido.Preco = orcamento.Preco;
-            _context.Update(orcamento.Pedido);
+            var pedido = await _context.Pedidos.FindAsync(id);
+            pedido.Status = StatusServico.Finalizado;
+            _context.Update(pedido);
 
             await _context.SaveChangesAsync();
 
-            return View();
+            return View(pedido);
 
         }
 
@@ -286,8 +285,8 @@ namespace ClickExpress.Controllers
 
             var idPrestador = prestador.Id_prestador;
 
-            var pedido = await _context.Pedidos
-                .FirstOrDefaultAsync(m => m.Id_prestador == idPrestador);
+            var pedido = _context.Pedidos
+                .Where(x => x.Id_prestador == idPrestador);
 
             if (pedido == null)
             {
