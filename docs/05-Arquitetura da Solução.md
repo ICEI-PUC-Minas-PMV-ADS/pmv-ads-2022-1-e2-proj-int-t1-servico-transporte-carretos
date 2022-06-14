@@ -38,8 +38,7 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Esquema Rel
 
 Na figura abaixo é mostrado o Esquema Relacional(ER) desenvolvido no próprio banco de dados para o projeto.
 
-![image](https://user-images.githubusercontent.com/91202959/173687903-af4a01ba-e9ab-4262-8693-c48c3fe49ead.png)
-
+![photo_2022-06-13_15-26-55](https://user-images.githubusercontent.com/91202959/173688327-6b81d29d-0a62-4695-bb34-204405315b37.jpg)
 
 ## Tecnologias Utilizadas
 
