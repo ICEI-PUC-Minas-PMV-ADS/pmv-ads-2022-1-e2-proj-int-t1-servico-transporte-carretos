@@ -238,24 +238,6 @@ namespace ClickExpress.Controllers
             return View(pedido);
         }
 
-        //GET: Usuarios/Details/5
-        public async Task<IActionResult> RelatorioUserStatusAceito()
-        {
-            // var teste = new StatusServico();
-            //teste = (StatusServico)0;
-
-            var pedido = await _context.Pedidos
-                //.Where(x => x.Status == teste)
-                .ToListAsync();
-
-            if (pedido == null)
-            {
-                return NotFound();
-            }
-
-            return View(pedido);
-        }
-
         public async Task<IActionResult> Aceitar(int? id_orcam)
         {
             var orcamento = _context.Orcamentos
@@ -272,6 +254,47 @@ namespace ClickExpress.Controllers
 
             return View();
 
+        }
+
+        public async Task<IActionResult> Finalizar(int? id_orcam)
+        {
+            var orcamento = _context.Orcamentos
+                        .Include(t => t.Pedido)
+                      .FirstOrDefault(m => m.Id_orcamento == id_orcam);
+
+
+            orcamento.Pedido.Status = StatusServico.Finalizado;
+            //orcamento.Pedido.Id_prestador = orcamento.Id_prestador;
+            //orcamento.Pedido.Preco = orcamento.Preco;
+            _context.Update(orcamento.Pedido);
+
+            await _context.SaveChangesAsync();
+
+            return View();
+
+        }
+
+        // GET: Usuarios/Details/5
+        //Relatorio usuario logado status Aceito
+        public async Task<IActionResult> RelatoriosUserPrestadorAceito()
+        {
+            var userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
+            int id = Convert.ToInt32(userId);
+
+            var prestador = await _context.Prestadores
+                .FirstOrDefaultAsync(m => m.Id_usuario == id);
+
+            var idPrestador = prestador.Id_prestador;
+
+            var pedido = await _context.Pedidos
+                .FirstOrDefaultAsync(m => m.Id_prestador == idPrestador);
+
+            if (pedido == null)
+            {
+                return NotFound();
+            }
+
+            return View(pedido);
         }
 
     }
