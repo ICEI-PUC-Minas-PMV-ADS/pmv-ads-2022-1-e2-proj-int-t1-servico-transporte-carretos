@@ -36,9 +36,10 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Esquema Rel
 
 > - [Criando um modelo relacional - Documentação da IBM](https://www.ibm.com/docs/pt-br/cognos-analytics/10.2.2?topic=designer-creating-relational-model)
 
-Na figura abaixo é mostrado o Esquema Relacional(ER) desenvolvido na plataforma "draw.io" para o projeto.
+Na figura abaixo é mostrado o Esquema Relacional(ER) desenvolvido no próprio banco de dados para o projeto.
 
-<img src="img/ER_ClickExpress.jpg" alt="Figura Modelo Relacional(MR) ClickExpress">
+![image](https://user-images.githubusercontent.com/91202959/173687903-af4a01ba-e9ab-4262-8693-c48c3fe49ead.png)
+
 
 ## Tecnologias Utilizadas
 
