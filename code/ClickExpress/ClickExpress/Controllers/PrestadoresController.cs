@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ClickExpress.Models;
+using System.Security.Claims;
 
 namespace ClickExpress.Controllers
 {
@@ -126,6 +127,66 @@ namespace ClickExpress.Controllers
                 return RedirectToAction("CadastroConcluido", "Usuarios");
             }
             return View(prestador);
+        }
+
+        // GET: Usuarios/Edit/5
+        //public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> EditProfile()
+        {
+            var userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
+            int id = Convert.ToInt32(userId);
+
+            //var usuario = await _context.Usuarios.FindAsync(id);
+
+            var usuario = await _context.Usuarios
+                .FirstOrDefaultAsync(m => m.Id_usuario == id);
+
+            if (usuario == null)
+            {
+                return NotFound();
+            }
+            return View(usuario);
+        }
+
+        // POST: Usuarios/Edit/5
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> EditProfile([Bind("Id_usuario,Nome,Email,Tel,Senha,Cep,Cidade,Logradouro,Bairro,UF,Num_endereco,Cpf_Cnpj,Perfil,Veiculo")] Usuario usuario)
+        {
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    // Item inserido 
+                    usuario.Senha = BCrypt.Net.BCrypt.HashPassword(usuario.Senha);
+                    var userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
+                    usuario.Id_usuario = Convert.ToInt32(userId);
+                    usuario.Perfil = "Prestador";
+
+                    _context.Update(usuario);
+
+                    //ViewBag.Message = "Alterações excutadas com sucesso!";
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!PrestadorExists(usuario.Id_usuario))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+
+                return RedirectToAction("EdicaoConcluida", "Usuarios");
+                //return RedirectToAction(nameof(Index));
+            }
+
+            return View(usuario);
         }
 
         // GET: Prestadores/Delete/5

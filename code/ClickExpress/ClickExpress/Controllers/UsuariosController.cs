@@ -180,7 +180,7 @@ namespace ClickExpress.Controllers
             //var usuario = await _context.Usuarios.FindAsync(id);
 
             var usuario = await _context.Usuarios
-                .FirstOrDefaultAsync(m => m.Id_usuario == id);
+                 .FirstOrDefaultAsync(m => m.Id_usuario == id);
 
             if (usuario == null)
             {
@@ -203,7 +203,8 @@ namespace ClickExpress.Controllers
                     // Item inserido 
                     usuario.Senha = BCrypt.Net.BCrypt.HashPassword(usuario.Senha);
                     var userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
-                    usuario.Id_usuario = Convert.ToInt32(userId);
+                    usuario.Id_usuario = Convert.ToInt32(userId);               
+
                     _context.Update(usuario);
 
                     //ViewBag.Message = "Alterações excutadas com sucesso!";

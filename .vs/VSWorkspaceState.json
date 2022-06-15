@@ -1,11 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\code",
-    "\\code\\ClickExpress",
-    "\\code\\ClickExpress\\ClickExpress",
-    "\\code\\ClickExpress\\ClickExpress\\Controllers"
+    ""
   ],
-  "SelectedNode": "\\code\\ClickExpress\\ClickExpress\\Controllers\\OrcamentosController.cs",
+  "SelectedNode": "\\ClickExpress.sln",
   "PreviewInSolutionExplorer": false
 }

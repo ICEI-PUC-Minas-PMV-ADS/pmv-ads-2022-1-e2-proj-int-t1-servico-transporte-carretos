@@ -1,0 +1,121 @@
+﻿@model ClickExpress.Models.Prestador
+
+@{
+    ViewData["Title"] = "EditProfile";
+}
+
+
+<div style="padding: 0px 25px 0px 25px" class="text-white">
+    <br />
+    <center><div><img src="~/Imagens/user_ma.png" style="width: 150px;" class="responsiveimg" /> <span style="font-size: 40px">&nbsp; Minha Área</span></div></center>
+    <br /><br />
+    <div style="width: 75%; margin-left: auto; margin-right: auto; background-color: #EF233C; border-radius: 10px; padding: 20px 20px 20px 20px">
+        <form asp-action="EditProfile">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="row">
+                <div class="col-md">
+                    <div class="form-group">
+                        <label asp-for="Nome" class="control-label"></label>
+                        <input asp-for="Nome" class="form-control" />
+                        <span asp-validation-for="Nome" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label asp-for="Email" class="control-label"></label>
+                        <input asp-for="Email" class="form-control" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group" id="teste">
+                        <label asp-for="Cpf_Cnpj" class="control-label"></label>
+                        <input asp-for="Cpf_Cnpj" class="form-control" />
+                        <span asp-validation-for="Cpf_Cnpj" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label asp-for="Tel" class="control-label"></label>
+                        <input asp-for="Tel" class="form-control" />
+                        <span asp-validation-for="Tel" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="Logradouro" class="control-label"></label>
+                        <input asp-for="Logradouro" class="form-control" id="logradouro" />
+                        <span asp-validation-for="Logradouro" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label asp-for="Num_endereco" class="control-label"></label>
+                        <input asp-for="Num_endereco" class="form-control" />
+                        <span asp-validation-for="Num_endereco" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="Bairro" class="control-label"></label>
+                        <input asp-for="Bairro" class="form-control" id="bairro" />
+                        <span asp-validation-for="Bairro" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label asp-for="Cidade" class="control-label"></label>
+                        <input asp-for="Cidade" class="form-control" id="cidade" />
+                        <span asp-validation-for="Cidade" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label asp-for="UF" class="control-label"></label>
+                        <input asp-for="UF" class="form-control" id="uf" />
+                        <span asp-validation-for="UF" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="Cep" class="control-label"></label>
+                        <input asp-for="Cep" class="form-control" id="cep" />
+                        <span asp-validation-for="Cep" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="Senha" class="control-label">Alterar Senha:</label>
+                        <input asp-for="Senha" class="form-control" />
+                        <span asp-validation-for="Senha" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="Veiculo" class="control-label"></label>
+                        <input asp-for="Veiculo" class="form-control" />
+                        <span asp-validation-for="Veiculo" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Salvar Alterações" class="btn" style="color: black; font-weight: 500; background-color: #84dcc6; border: none" />
+            </div>
+        </form>
+    </div>
+    <br /><br />
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

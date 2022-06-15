@@ -22,7 +22,7 @@
                     <ul class="navbar-nav flex-grow-1">
 
                         <li class="nav-item">
-                            
+
                         </li>
                     </ul>
                     <ul class="navbar-nav">
@@ -31,41 +31,48 @@
                         </li>
                         @if (User.Identity.IsAuthenticated)
                         {
-                    @if (User.IsInRole("Cliente"))
-                    {
-                    <li class="nav-item">
-                        <a class="nav-link text-white" asp-area="" asp-controller="Pedidos" asp-action="Create">Solicitar Serviço</a>
-                    </li>
-                                        <li class="nav-item">
-                                            <!--Item adicionado-->
-                                            <a class="nav-link text-white" asp-area="" asp-controller="Usuarios" asp-action="RelatoriosUser">Pedidos</a>
-                                        </li> }
-                                                        else
-                                                        {
-                                        <li class="nav-item">
-                                            <!--Item adicionado-->
-                                            <a class="nav-link text-white" asp-area="" asp-controller="Usuarios" asp-action="pedidosPrestador">Pedidos</a>
-                                        </li>}
-                                    <li class="nav-item">
-                                        <!--Item adicionado-->
-                                        <a class="nav-link text-white" asp-area="" asp-controller="Usuarios" asp-action="EditProfile">Minha Área</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link text-white" asp-area="" asp-controller="Usuarios" asp-action="Logout">Sair</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link">Olá, @User.Identity.Name</a>
-                                    </li>
-                                                    }
-                                                                else
-                                                                {
-                                                    <li class="nav-item">
-                                                        <a class="nav-link text-white" asp-area="" asp-controller="Usuarios" asp-action="Login">Login</a>
-                                                    </li>
-                                                                    <li class="nav-item">
-                                                                        <!--Item adicionado-->
-                                                                        <a class="nav-link text-white" asp-area="" asp-controller="Usuarios" asp-action="Index">Cadastrar</a>
-                                                                    </li>}
+                            @if (User.IsInRole("Cliente"))
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link text-white" asp-area="" asp-controller="Pedidos" asp-action="Create">Solicitar Serviço</a>
+                                </li>
+                                <li class="nav-item">
+                                    <!--Item adicionado-->
+                                    <a class="nav-link text-white" asp-area="" asp-controller="Usuarios" asp-action="RelatoriosUser">Pedidos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <!--Item adicionado-->
+                                    <a class="nav-link text-white" asp-area="" asp-controller="Clientes" asp-action="EditProfile">Minha Área</a>
+                                </li>
+                            }
+                            else
+                            {
+                                <li class="nav-item">
+                                    <!--Item adicionado-->
+                                    <a class="nav-link text-white" asp-area="" asp-controller="Usuarios" asp-action="pedidosPrestador">Pedidos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <!--Item adicionado-->
+                                    <a class="nav-link text-white" asp-area="" asp-controller="Prestadores" asp-action="EditProfile">Minha Área</a>
+                                </li>
+                            }
+                            <li class="nav-item">
+                                <a class="nav-link text-white" asp-area="" asp-controller="Usuarios" asp-action="Logout">Sair</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link">Olá, @User.Identity.Name</a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-white" asp-area="" asp-controller="Usuarios" asp-action="Login">Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <!--Item adicionado-->
+                                <a class="nav-link text-white" asp-area="" asp-controller="Usuarios" asp-action="Index">Cadastrar</a>
+                            </li>
+                        }
                     </ul>
                 </div>
             </div>
@@ -73,7 +80,7 @@
     </header>
 
     <main role="main" class="container m-0 p-0 mw-100" style="background-color: #282D42">
-        @RenderBody() 
+        @RenderBody()
     </main>
 
 
