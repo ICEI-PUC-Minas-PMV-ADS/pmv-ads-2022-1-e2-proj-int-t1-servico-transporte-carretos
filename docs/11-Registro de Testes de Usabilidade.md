@@ -3,6 +3,11 @@
 <br>
 
 ## CT-01 – Prevenir erros
+
+RNF-06 - [trocar imagem para o print pedidos]
+<br>
+<hr/>
+
 ![cadastro usuario ou prestador](https://user-images.githubusercontent.com/91202959/174131902-9fa836fc-4c5e-43a1-b859-42a0bebccaa6.png)
 
 
@@ -15,10 +20,16 @@
 <br>
 
 ## CT-02 – Fornecer feedbacks informativos e marcar o final dos diálogos
-![tela cadastro cliente](https://user-images.githubusercontent.com/91202959/174132459-c9bc796a-c403-499c-97ec-26ed58e3b857.png)
+RNF-05 - É executado o retorno de uma mensagem informativa ao usuário ao terminar uma tarefa, sendo assim possível o usuário entender que sua tarefa foi executada com sucesso. O objetivo foi atingido através do critério de êxito, sendo elas a mensagem de sucesso do pedido feito com sucesso, cadasto feto com sucesso, e alterações no perfil feitas com sucesso.
+<br>
+<hr/>
+
+![tela pedido feito com sucesso](https://user-images.githubusercontent.com/91202959/174139624-654e02d1-4f0b-4fa1-a213-138efb3f827e.png)
 
 
 ![tela de cadastro concluido](https://user-images.githubusercontent.com/91202959/174132558-18f5cadf-0d07-4f82-85ef-65fdc20ef141.png)
+
+![tela alterações no perfil feita com sucesso](https://user-images.githubusercontent.com/91202959/174142550-8e70a031-e58d-464d-bcdd-69429b847899.png)
 
 <hr />
 <br>
