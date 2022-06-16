@@ -34,8 +34,8 @@ RNF-05 - Já é executado o retorno de uma mensagem informativa ao usuário ao t
 <hr />
 <br>
 
-## CT-03 – Usuário reconhecer, diagnosticar e recuperar seus erros
-RNF-03 - Os formulários já informam os usuários quais os campos de preenchimento são obrigatórios, mostrando mensagens de avisos.Sendo assim atingindo o objetivo através do critério de êxito,  ajudando o usuário a reparar o erro, e assim preencher os campos corretamente.
+## CT-03 – Usuário reconhecer, diagnosticar e reparar seus erros
+RNF-03 - Os formulários já informam os usuários quais os campos de preenchimento são obrigatórios, mostrando mensagens de avisos.Sendo assim atingindo o objetivo através do critério de êxito,  ajudando o usuário a reconhecer, diagnosticar, e reparar os erros, e assim preencher os campos corretamente.
 <br>
 <hr/>
 
