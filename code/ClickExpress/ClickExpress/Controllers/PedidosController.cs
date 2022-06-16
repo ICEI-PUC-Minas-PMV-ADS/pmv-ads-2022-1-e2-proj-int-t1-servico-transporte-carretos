@@ -252,7 +252,7 @@ namespace ClickExpress.Controllers
 
             await _context.SaveChangesAsync();
 
-            return View();
+            return View(orcamento.Pedido);
 
         }
 

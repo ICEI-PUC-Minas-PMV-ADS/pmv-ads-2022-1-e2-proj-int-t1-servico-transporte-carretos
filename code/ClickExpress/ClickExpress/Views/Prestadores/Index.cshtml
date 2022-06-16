@@ -61,6 +61,9 @@
                 @Html.DisplayFor(modelItem => item.Id_prestador)
             </td>
             <td>
+                @Html.DisplayFor(modelItem => item.Veiculo)
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.Nome)
             </td>
             <td>
@@ -93,6 +96,7 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Cpf_Cnpj)
             </td>
+
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id_usuario">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.Id_usuario">Details</a> |
