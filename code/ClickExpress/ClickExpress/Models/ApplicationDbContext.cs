@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using ClickExpress.Models;
-
+using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace ClickExpress.Models
 {
@@ -20,5 +20,10 @@ namespace ClickExpress.Models
         public DbSet<Prestador> Prestadores { get; set; }
         public DbSet<Orcamento> Orcamentos { get; set; }
         public DbSet<Cliente> Clientes { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Prestador>().Property(u => u.Id_prestador).Metadata.SetAfterSaveBehavior(PropertySaveBehavior.Ignore);
+        }
     }
 }

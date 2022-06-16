@@ -151,26 +151,26 @@ namespace ClickExpress.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> EditProfile([Bind("Id_usuario,Nome,Email,Tel,Senha,Cep,Cidade,Logradouro,Bairro,UF,Num_endereco,Cpf_Cnpj,Perfil,Veiculo")] Usuario usuario)
+        public async Task<IActionResult> EditProfile([Bind("Id_usuario,Nome,Email,Tel,Senha,Cep,Cidade,Logradouro,Bairro,UF,Num_endereco,Cpf_Cnpj,Perfil,Veiculo")] Prestador prestador)
         {
             if (ModelState.IsValid)
             {
                 try
                 {
                     // Item inserido 
-                    usuario.Senha = BCrypt.Net.BCrypt.HashPassword(usuario.Senha);
+                    prestador.Senha = BCrypt.Net.BCrypt.HashPassword(prestador.Senha);
                     var userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
-                    usuario.Id_usuario = Convert.ToInt32(userId);
-                    usuario.Perfil = "Prestador";
+                    prestador.Id_usuario = Convert.ToInt32(userId);
+                    prestador.Perfil = "Prestador";
 
-                    _context.Update(usuario);
+                    _context.Update(prestador);
 
                     //ViewBag.Message = "Alterações excutadas com sucesso!";
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!PrestadorExists(usuario.Id_usuario))
+                    if (!PrestadorExists(prestador.Id_usuario))
                     {
                         return NotFound();
                     }
@@ -184,7 +184,7 @@ namespace ClickExpress.Controllers
                 //return RedirectToAction(nameof(Index));
             }
 
-            return View(usuario);
+            return View(prestador);
         }
 
         // GET: Prestadores/Delete/5
