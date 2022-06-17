@@ -4,16 +4,9 @@
 
 ## CT-01 – Prevenir erros
 
-RNF-06 - [trocar imagem para o print pedidos]
+RNF-06 -
 <br>
 <hr/>
-
-![cadastro usuario ou prestador](https://user-images.githubusercontent.com/91202959/174131902-9fa836fc-4c5e-43a1-b859-42a0bebccaa6.png)
-
-
-![tela cadastro cliente](https://user-images.githubusercontent.com/91202959/174132071-cdb19379-65cc-4054-a823-df03e28eb9a1.png)
-
-![tela cadastro prestador](https://user-images.githubusercontent.com/91202959/174132304-26214631-47b9-4c96-be87-d360543d58ea.png)
 
 
 <hr />
@@ -51,3 +44,18 @@ RNF-03 - O sistema já informa os usuários quais os campos de preenchimento sã
 
 <hr />
 <br>
+
+## CT-04 – Acessibilidade
+RNF-08
+
+<hr />
+<br>
+
+## CT-05 – Reconhecer, em vez de recordar
+RNF-04
+
+<hr />
+<br>
+
+## CT-06 – Consistência e Padronização
+RNF-07
