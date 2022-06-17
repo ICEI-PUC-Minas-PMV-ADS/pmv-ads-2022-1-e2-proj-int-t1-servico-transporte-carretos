@@ -36,6 +36,8 @@ namespace ClickExpress.Controllers
 
             var pedido = await _context.Pedidos
                 .Include(p => p.Usuario)
+                .Include(p => p.Itens)
+                .Include(p => p.Orcamentos)
                 .FirstOrDefaultAsync(m => m.Id_contrato == id);
             if (pedido == null)
             {
@@ -85,6 +87,7 @@ namespace ClickExpress.Controllers
 
             return View(pedido);
         }
+
 
         // GET: Pedidos/Create   
         public IActionResult Create()

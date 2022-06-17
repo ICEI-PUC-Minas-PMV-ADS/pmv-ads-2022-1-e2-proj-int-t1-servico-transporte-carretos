@@ -182,47 +182,50 @@ else if (Convert.ToInt32(item.Status) == 2)
         @Html.DisplayFor(modelItem => item.Preco)
     </td>
     <td style="vertical-align: middle; text-align: center">
-        <a class="btn" style="color: #2B2D42; background-color: white; font-size: 1vw; font-weight: 500;" asp-controller="Pedidos" asp-action="DetailsAprovacao" asp-route-id="@item.Id_contrato">Detalhes</a>
+        <a class="btn" style="color: #2B2D42; background-color: white; font-size: 1vw; font-weight: 500;" asp-controller="Pedidos" asp-action="Details" asp-route-id="@item.Id_contrato">Detalhes</a>
     </td>
 </tr>
  }
 else if (Convert.ToInt32(item.Status) == 3)
 {
-<tr>
-    <td style="vertical-align: middle; text-align: center">
-        <div class="text-white" style="background-color: #5E931D; border-radius: 30px; padding: 1px 5px 1px 5px; vertical-align: middle; text-align: center">Finalizado</div>
-    </td>
-    <td style="vertical-align: middle; text-align: center">
-        @Html.DisplayFor(modelItem => item.Id_contrato)
-    </td>
-    <td style="vertical-align: middle; text-align: center">
-        @Html.DisplayFor(modelItem => item.Tipo)
-    </td>
-    <td style="vertical-align: middle; text-align: center">
-        @Html.DisplayFor(modelItem => item.Dt_agendamento)
-    </td>
-    <td style="vertical-align: middle; text-align: center">
-        @Html.DisplayFor(modelItem => item.Cidade_origem)
-    </td>
-    <td style="vertical-align: middle; text-align: center">
-        @Html.DisplayFor(modelItem => item.UF_origem)
-    </td>
-    <td style="vertical-align: middle; text-align: center">
-        @Html.DisplayFor(modelItem => item.Cidade_destino)
-    </td>
-    <td style="vertical-align: middle; text-align: center">
-        @Html.DisplayFor(modelItem => item.UF_destino)
-    </td>
-    <td style="vertical-align: middle; text-align: center">
-        @Html.DisplayFor(modelItem => item.Serv_descarrega)
-    </td>
-    <td style="vertical-align: middle; text-align: center">
-        @Html.DisplayFor(modelItem => item.Serv_montagem)
-    </td>
-    <td style="vertical-align: middle; text-align: center">
-        @Html.DisplayFor(modelItem => item.Preco)
-    </td>
-</tr>
+                    <tr>
+                        <td style="vertical-align: middle; text-align: center">
+                            <div class="text-white" style="background-color: #5E931D; border-radius: 30px; padding: 1px 5px 1px 5px; vertical-align: middle; text-align: center">Finalizado</div>
+                        </td>
+                        <td style="vertical-align: middle; text-align: center">
+                            @Html.DisplayFor(modelItem => item.Id_contrato)
+                        </td>
+                        <td style="vertical-align: middle; text-align: center">
+                            @Html.DisplayFor(modelItem => item.Tipo)
+                        </td>
+                        <td style="vertical-align: middle; text-align: center">
+                            @Html.DisplayFor(modelItem => item.Dt_agendamento)
+                        </td>
+                        <td style="vertical-align: middle; text-align: center">
+                            @Html.DisplayFor(modelItem => item.Cidade_origem)
+                        </td>
+                        <td style="vertical-align: middle; text-align: center">
+                            @Html.DisplayFor(modelItem => item.UF_origem)
+                        </td>
+                        <td style="vertical-align: middle; text-align: center">
+                            @Html.DisplayFor(modelItem => item.Cidade_destino)
+                        </td>
+                        <td style="vertical-align: middle; text-align: center">
+                            @Html.DisplayFor(modelItem => item.UF_destino)
+                        </td>
+                        <td style="vertical-align: middle; text-align: center">
+                            @Html.DisplayFor(modelItem => item.Serv_descarrega)
+                        </td>
+                        <td style="vertical-align: middle; text-align: center">
+                            @Html.DisplayFor(modelItem => item.Serv_montagem)
+                        </td>
+                        <td style="vertical-align: middle; text-align: center">
+                            @Html.DisplayFor(modelItem => item.Preco)
+                        </td>
+                        <td style="vertical-align: middle; text-align: center">
+                            <a class="btn" style="color: #2B2D42; background-color: white; font-size: 1vw; font-weight: 500;" asp-controller="Pedidos" asp-action="Details" asp-route-id="@item.Id_contrato">Detalhes</a>
+                        </td>
+                    </tr>
 }}
                     </tbody>
                 </table>

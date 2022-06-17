@@ -19,24 +19,6 @@ namespace ClickExpress.Controllers
             _context = context;
         }
 
-        // GET: Clientes/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var cliente = await _context.Clientes
-                .FirstOrDefaultAsync(m => m.Id_usuario == id);
-            if (cliente == null)
-            {
-                return NotFound();
-            }
-
-            return View(cliente);
-        }
-
         // GET: Clientes/Create
         public IActionResult Create()
         {
@@ -67,69 +49,12 @@ namespace ClickExpress.Controllers
             return View(cliente);
         }
 
-        // GET: Clientes/Edit/5
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var cliente = await _context.Clientes.FindAsync(id);
-            if (cliente == null)
-            {
-                return NotFound();
-            }
-            return View(cliente);
-        }
-
-        // POST: Clientes/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id_cliente,Id_usuario,Nome,Email,Tel,Senha,Cep,Cidade,Logradouro,UF,Bairro,Num_endereco,Cpf_Cnpj,Perfil,Veiculo")] Cliente cliente)
-        {
-            if (id != cliente.Id_usuario)
-            {
-                return NotFound();
-            }
-
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    cliente.Perfil = "Cliente";
-                    cliente.Senha = BCrypt.Net.BCrypt.HashPassword(cliente.Senha);
-                    _context.Update(cliente);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!ClienteExists(cliente.Id_usuario))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                //return RedirectToAction(nameof(Index));
-                //return RedirectToAction("Index", "Usuarios");
-                return RedirectToAction("CadastroConcluido", "Usuarios");
-            }
-            return View(cliente);
-        }
-
         // GET: Usuarios/Edit/5
         //public async Task<IActionResult> Edit(int? id)
         public async Task<IActionResult> EditProfile()
         {
             var userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
             int id = Convert.ToInt32(userId);
-
-            //var usuario = await _context.Usuarios.FindAsync(id);
 
             var usuario = await _context.Usuarios
                 .FirstOrDefaultAsync(m => m.Id_usuario == id);
@@ -152,7 +77,6 @@ namespace ClickExpress.Controllers
             {
                 try
                 {
-                    // Item inserido 
                     usuario.Senha = BCrypt.Net.BCrypt.HashPassword(usuario.Senha);
                     var userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
                     usuario.Id_usuario = Convert.ToInt32(userId);
@@ -160,7 +84,6 @@ namespace ClickExpress.Controllers
 
                     _context.Update(usuario);
 
-                    //ViewBag.Message = "Alterações excutadas com sucesso!";
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
@@ -176,41 +99,9 @@ namespace ClickExpress.Controllers
                 }
 
                 return RedirectToAction("EdicaoConcluida", "Usuarios");
-                //return RedirectToAction(nameof(Index));
             }
 
             return View(usuario);
-        }
-
-        // GET: Clientes/Delete/5
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var cliente = await _context.Clientes
-                .FirstOrDefaultAsync(m => m.Id_usuario == id);
-            if (cliente == null)
-            {
-                return NotFound();
-            }
-
-            return View(cliente);
-        }
-
-        // POST: Clientes/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            var cliente = await _context.Clientes.FindAsync(id);
-            _context.Clientes.Remove(cliente);
-            await _context.SaveChangesAsync();
-            //return RedirectToAction(nameof(Index));
-            //return RedirectToAction("Index", "Usuarios");
-            return RedirectToAction("CadastroConcluido", "Usuarios");
         }
 
         private bool ClienteExists(int id)
