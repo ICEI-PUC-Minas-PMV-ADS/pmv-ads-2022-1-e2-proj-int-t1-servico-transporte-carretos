@@ -26,7 +26,30 @@ namespace ClickExpress.Controllers
             return View(await applicationDbContext.ToListAsync());
         }
 
- 
+        // GET: Pedidos/Details/5
+        public async Task<IActionResult> Details(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+
+
+            var pedido = await _context.Pedidos
+                .Include(p => p.Usuario)
+                .Include(p => p.Itens)
+                .Include(p => p.Orcamentos)
+                .FirstOrDefaultAsync(m => m.Id_contrato == id);
+            if (pedido == null)
+            {
+                return NotFound();
+            }
+
+
+
+            return View(pedido);
+        }
 
         // GET: Pedidos/Details/5
         public async Task<IActionResult> DetailsResposta(int? id)

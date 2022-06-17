@@ -1,0 +1,134 @@
+﻿@model ClickExpress.Models.Pedido
+
+
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+
+<div style="padding: 0px 25px 0px 25px">
+    <div class="text-white">
+        <br /><br />
+        <h4> Detalhes do Pedido</h4>
+        <br /><br />
+        <div class="row" style="background-color: #D90429; border-radius: 10px">
+
+
+
+            <div class="col-sm-4 border-right" style="padding-bottom: 15px; ">
+                <br /><h5>Detalhes da Solicitação</h5>
+                <br />
+                <div class="row" style="margin:auto auto auto auto">
+                    <div class="col-sm-auto"><b>Nome do Solicitante:</b> @Html.DisplayFor(model => model.Usuario.Nome)</div>
+                </div>
+                <br />
+                <div class="row" style="margin:auto auto auto auto">
+                    <div class="col-sm-auto"><b>Tipo de Serviço:</b> @Html.DisplayFor(model => model.Tipo)</div>
+                </div>
+                <br />
+                <div class="row" style="margin:auto auto auto auto">
+                    <div class="col-sm-auto"><b>Dia e Horário:</b> @Html.DisplayFor(model => model.Dt_agendamento)</div>
+                </div>
+                <br />
+                <div class="row" style="margin:auto auto auto auto">
+                    <div class="col-sm-auto" style="font-weight: bold">Endereço de Origem:</div>
+                </div>
+                <div class="row" style="margin:auto auto auto auto">
+                    <div class="col-sm-auto">@Html.DisplayFor(model => model.Logradouro_origem), @Html.DisplayFor(model => model.Complemento_origem) - @Html.DisplayFor(model => model.Bairro_origem), @Html.DisplayFor(model => model.Cidade_origem) - @Html.DisplayFor(model => model.UF_origem), CEP: @Html.DisplayFor(model => model.Cep_origem)</div>
+                </div>
+                <br />
+                <div class="row" style="margin:auto auto auto auto">
+                    <div class="col-sm-auto" style="font-weight: bold">Endereço de Destino:</div>
+                </div>
+                <div class="row" style="margin:auto auto auto auto">
+                    <div class="col-sm-auto">@Html.DisplayFor(model => model.Logradouro_destino), @Html.DisplayFor(model => model.Complemento_destino) - @Html.DisplayFor(model => model.Bairro_destino), @Html.DisplayFor(model => model.Cidade_destino) - @Html.DisplayFor(model => model.UF_destino), CEP: @Html.DisplayFor(model => model.Cep_destino)</div>
+                </div>
+                <br />
+                <div class="row" style="margin:auto auto auto auto">
+                    <div class="col-sm-auto" style="font-weight: bold">Serviço de Descarga: @Html.DisplayFor(model => model.Serv_descarrega)</div>
+                </div>
+                <br />
+                <div class="row" style="margin:auto auto auto auto">
+                    <div class="col-sm-auto" style="font-weight: bold">Serviço de Montagem: @Html.DisplayFor(model => model.Serv_montagem)</div>
+                </div>
+                <br />
+            </div>
+
+
+
+            <div class="col-sm-4 border-right" style="padding-bottom: 3.0vw;">
+                <br /><h5>Itens Transportados</h5>
+                <br />
+                <table class="table text-white">
+                    <thead>
+                        <tr>
+                            <th style="vertical-align: middle; text-align: center">
+                                Descrição
+                            </th>
+                            <th style="vertical-align: middle; text-align: center">
+                                Quantidade
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Itens)
+                        {
+                            <tr>
+                                <td style="vertical-align: middle; text-align: center">
+                                    @Html.DisplayFor(modelItem => item.Descricao)
+                                </td>
+                                <td style="vertical-align: middle; text-align: center">
+                                    @Html.DisplayFor(modelItem => item.Quantidade)
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                <br />
+            </div>
+
+
+
+            <div class="col-sm-4" style="padding-bottom: 3.0vw;">
+                <br /><h5>Informões do Prestador</h5>
+                <br />
+                <table class="table text-white">
+                    <thead>
+                        <tr>
+                            <th style="vertical-align: middle; text-align: center">
+                                Prestador
+                            </th>
+                            <th style="vertical-align: middle; text-align: center">
+                                Preço
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Orcamentos)
+                        {
+                            <tr>
+                                <td style="vertical-align: middle; text-align: center">
+                                    @Html.DisplayFor(modelItem => item.Id_prestador)
+                                </td>
+                                <td style="vertical-align: middle; text-align: center">
+                                    @Html.DisplayFor(modelItem => item.Preco)
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                <br />
+            </div>
+        </div>
+        <br />
+
+
+
+    </div>
+    <div>
+        <a class="btn btn-warning" asp-controller="Usuarios" asp-action="RelatoriosUser" style="background-color: #EDF2F4; color: #EF233C; font-weight: bold; border: none">Voltar</a>
+    </div>
+    <br /><br />
+</div>

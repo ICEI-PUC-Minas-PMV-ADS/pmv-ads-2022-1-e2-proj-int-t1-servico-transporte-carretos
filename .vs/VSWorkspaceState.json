@@ -5,10 +5,11 @@
     "\\code\\ClickExpress",
     "\\code\\ClickExpress\\ClickExpress",
     "\\code\\ClickExpress\\ClickExpress\\Controllers",
+    "\\code\\ClickExpress\\ClickExpress\\Models",
     "\\code\\ClickExpress\\ClickExpress\\Views",
     "\\code\\ClickExpress\\ClickExpress\\Views\\Shared",
     "\\code\\ClickExpress\\ClickExpress\\Views\\Usuarios"
   ],
-  "SelectedNode": "\\code\\ClickExpress\\ClickExpress\\Views\\Usuarios\\RelatoriosUserFinalizado.cshtml",
+  "SelectedNode": "\\code\\ClickExpress\\ClickExpress\\Models\\Pedido.cs",
   "PreviewInSolutionExplorer": false
 }
