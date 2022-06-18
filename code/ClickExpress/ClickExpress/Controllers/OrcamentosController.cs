@@ -43,8 +43,9 @@ namespace ClickExpress.Controllers
                     var userPrestador = _context.Prestadores
                     .FirstOrDefault(m => m.Id_usuario == userId);
                     orcamento.Id_prestador = userPrestador.Id_prestador;
+                    orcamento.Status_orcamento = "Reprovado";
 
-                    var pedido = _context.Pedidos
+                var pedido = _context.Pedidos
                         .FirstOrDefault(m => m.Id_contrato == orcamento.Id_contrato);
                     pedido.Status = StatusServico.Respondido;
                     _context.Update(pedido);

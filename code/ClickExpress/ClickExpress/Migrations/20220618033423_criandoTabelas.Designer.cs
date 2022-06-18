@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ClickExpress.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220606231011_InserindoTabelas")]
-    partial class InserindoTabelas
+    [Migration("20220618033423_criandoTabelas")]
+    partial class criandoTabelas
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -60,6 +60,9 @@ namespace ClickExpress.Migrations
 
                     b.Property<double>("Preco")
                         .HasColumnType("float");
+
+                    b.Property<string>("Status_orcamento")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id_orcamento");
 

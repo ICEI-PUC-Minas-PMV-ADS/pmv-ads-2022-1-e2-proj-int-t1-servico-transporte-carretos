@@ -26,6 +26,9 @@ namespace ClickExpress.Models
         [Display(Name = "Valor do pedido")]
         public double Preco { get; set; }
 
+        [Display(Name = "Status orçamento")]
+        public string Status_orcamento { get; set; }
+
 
 
     }

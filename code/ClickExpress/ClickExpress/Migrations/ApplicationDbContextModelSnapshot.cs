@@ -59,6 +59,9 @@ namespace ClickExpress.Migrations
                     b.Property<double>("Preco")
                         .HasColumnType("float");
 
+                    b.Property<string>("Status_orcamento")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id_orcamento");
 
                     b.HasIndex("Id_contrato");

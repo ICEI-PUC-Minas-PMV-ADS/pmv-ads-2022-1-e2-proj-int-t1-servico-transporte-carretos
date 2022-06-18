@@ -108,14 +108,24 @@
                     <tbody>
                         @foreach (var item in Model.Orcamentos)
                         {
-                            <tr>
-                                <td style="vertical-align: middle; text-align: center">
-                                    @Html.DisplayFor(modelItem => item.Id_prestador)
-                                </td>
-                                <td style="vertical-align: middle; text-align: center">
-                                    @Html.DisplayFor(modelItem => item.Preco)
-                                </td>
-                            </tr>
+                        <tr>
+                            <td style="vertical-align: middle; text-align: center">
+                                @Html.DisplayFor(modelItem => item.Id_prestador)
+                            </td>
+                            <td style="vertical-align: middle; text-align: center">
+                                @Html.DisplayFor(modelItem => item.Preco)
+                            </td>
+                            <td style="vertical-align: middle; text-align: center">
+                                @if (item.Status_orcamento == "Aprovado")
+                                {
+                                    <p>Aprovado</p>
+                                }
+                                else
+                                {
+                                    <p>Reprovado</p>
+                                }
+                            </td>
+                        </tr>
                         }
                     </tbody>
                 </table>

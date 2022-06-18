@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace ClickExpress.Migrations
 {
-    public partial class InserindoTabelas : Migration
+    public partial class criandoTabelas : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -139,7 +139,8 @@ namespace ClickExpress.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Id_contrato = table.Column<int>(type: "int", nullable: false),
                     Id_prestador = table.Column<int>(type: "int", nullable: false),
-                    Preco = table.Column<double>(type: "float", nullable: false)
+                    Preco = table.Column<double>(type: "float", nullable: false),
+                    Status_orcamento = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {

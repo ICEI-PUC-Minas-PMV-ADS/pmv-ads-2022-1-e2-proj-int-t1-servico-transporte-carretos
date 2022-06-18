@@ -174,6 +174,7 @@ namespace ClickExpress.Controllers
             orcamento.Pedido.Status = StatusServico.Aceito;
             orcamento.Pedido.Id_prestador = orcamento.Id_prestador;
             orcamento.Pedido.Preco = orcamento.Preco;
+            orcamento.Status_orcamento = "Aprovado";
             _context.Update(orcamento.Pedido);
 
             await _context.SaveChangesAsync();
