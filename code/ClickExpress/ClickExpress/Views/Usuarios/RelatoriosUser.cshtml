@@ -10,10 +10,10 @@
     <div class="container m-0 p-0 mw-100" style="font-size: 1.0vw; ">
         <div>
             <br />
-            <h4 class="table text-white">Meus Pedidos</h4>
+            <h4 class="table text-white">Meus pedidos</h4>
             <br />
             <a asp-action="RelatoriosUserPendente" class="text-white" style="background-color: #D90429; border-radius: 30px; padding: 5px 8px 5px 8px;">Pendentes</a>
-            <a asp-action="RelatoriosUserRespondido" class="text-dark" style="background-color: #A5FFD6; border-radius: 30px; padding: 5px 8px 5px 8px;">Respondidos</a>
+            <a asp-action="RelatoriosUserRespondido" class="text-dark" style="background-color: #FFC107; border-radius: 30px; padding: 5px 8px 5px 8px;">Respondidos</a>
             <a asp-action="RelatoriosUserAceito" class="text-dark" style="background-color: #D3AD82; border-radius: 30px; padding: 5px 8px 5px 8px;">Aceitos</a>
             <a asp-action="RelatoriosUserFinalizado" class="text-white" style="background-color: #5E931D; border-radius: 30px; padding: 5px 8px 5px 8px;">Finalizados</a>
             <br /><br /><br />
@@ -25,34 +25,34 @@
                                 Status
                             </th>
                             <th style="vertical-align: middle; text-align: center">
-                                Nº da Solicitação
+                                Nº da solicitação
                             </th>
                             <th style="vertical-align: middle; text-align: center">
-                                Tipo de Serviço
+                                Tipo de serviço
                             </th>
                             <th style="vertical-align: middle; text-align: center">
-                                Data Agendada
+                                Data agendada
                             </th>
                             <th style="vertical-align: middle; text-align: center">
-                                Cidade de Origem
+                                Cidade de origem
                             </th>
                             <th style="vertical-align: middle; text-align: center">
-                                Estado de Origem
+                                Estado de origem
                             </th>
                             <th style="vertical-align: middle; text-align: center">
-                                Cidade de Destino
+                                Cidade de destino
                             </th>
                             <th style="vertical-align: middle; text-align: center">
-                                Estado de Destino
+                                Estado de destino
                             </th>
                             <th style="vertical-align: middle; text-align: center">
-                                Serviço de Descarga
+                                Serviço de descarga
                             </th>
                             <th style="vertical-align: middle; text-align: center">
-                                Serviço de Montagem
+                                Serviço de montagem
                             </th>
                             <th style="vertical-align: middle; text-align: center">
-                                Valor do Serviço
+                                Valor do serviço
                             </th>
                             <th style="vertical-align: middle; text-align: center">
                                 + Info
@@ -91,10 +91,15 @@
         @Html.DisplayFor(modelItem => item.UF_destino)
     </td>
     <td style="vertical-align: middle; text-align: center">
-        @Html.DisplayFor(modelItem => item.Serv_descarrega)
+        @if (Convert.ToInt32(item.Serv_descarrega) == 0)
+        { <span>Não</span> }
+        else { <span>Sim</span> }
     </td>
     <td style="vertical-align: middle; text-align: center">
-        @Html.DisplayFor(modelItem => item.Serv_montagem)
+        @if (Convert.ToInt32(item.Serv_montagem) == 0)
+        {<span>Não</span> }
+        else
+        { <span>Sim</span>}
     </td>
     <td style="vertical-align: middle; text-align: center">
         @Html.DisplayFor(modelItem => item.Preco)
@@ -108,7 +113,7 @@ else if (Convert.ToInt32(item.Status) == 1)
 {
 <tr>
     <td style="vertical-align: middle; text-align: center">
-        <div class="text-dark" style="background-color: #A5FFD6; border-radius: 30px; padding: 1px 5px 1px 5px; vertical-align: middle; text-align: center">Respondido</div>
+        <div class="text-dark" style="background-color: #FFC107; border-radius: 30px; padding: 1px 5px 1px 5px; vertical-align: middle; text-align: center">Respondido</div>
     </td>
     <td style="vertical-align: middle; text-align: center">
         @Html.DisplayFor(modelItem => item.Id_contrato)
@@ -132,10 +137,16 @@ else if (Convert.ToInt32(item.Status) == 1)
         @Html.DisplayFor(modelItem => item.UF_destino)
     </td>
     <td style="vertical-align: middle; text-align: center">
-        @Html.DisplayFor(modelItem => item.Serv_descarrega)
+        @if (Convert.ToInt32(item.Serv_descarrega) == 0)
+        {<span>Não</span> }
+        else
+        { <span>Sim</span>}
     </td>
     <td style="vertical-align: middle; text-align: center">
-        @Html.DisplayFor(modelItem => item.Serv_montagem)
+        @if (Convert.ToInt32(item.Serv_montagem) == 0)
+        {<span>Não</span> }
+        else
+        { <span>Sim</span>}
     </td>
     <td style="vertical-align: middle; text-align: center">
         @Html.DisplayFor(modelItem => item.Preco)
@@ -173,10 +184,16 @@ else if (Convert.ToInt32(item.Status) == 2)
         @Html.DisplayFor(modelItem => item.UF_destino)
     </td>
     <td style="vertical-align: middle; text-align: center">
-        @Html.DisplayFor(modelItem => item.Serv_descarrega)
+        @if (Convert.ToInt32(item.Serv_descarrega) == 0)
+        {<span>Não</span> }
+        else
+        { <span>Sim</span>}
     </td>
     <td style="vertical-align: middle; text-align: center">
-        @Html.DisplayFor(modelItem => item.Serv_montagem)
+        @if (Convert.ToInt32(item.Serv_montagem) == 0)
+        {<span>Não</span> }
+        else
+        { <span>Sim</span>}
     </td>
     <td style="vertical-align: middle; text-align: center">
         @Html.DisplayFor(modelItem => item.Preco)
@@ -214,10 +231,16 @@ else if (Convert.ToInt32(item.Status) == 3)
                             @Html.DisplayFor(modelItem => item.UF_destino)
                         </td>
                         <td style="vertical-align: middle; text-align: center">
-                            @Html.DisplayFor(modelItem => item.Serv_descarrega)
+                            @if (Convert.ToInt32(item.Serv_descarrega) == 0)
+                            {<span>Não</span> }
+                            else
+                            { <span>Sim</span>}
                         </td>
                         <td style="vertical-align: middle; text-align: center">
-                            @Html.DisplayFor(modelItem => item.Serv_montagem)
+                            @if (Convert.ToInt32(item.Serv_montagem) == 0)
+                            {<span>Não</span> }
+                            else
+                            { <span>Sim</span>}
                         </td>
                         <td style="vertical-align: middle; text-align: center">
                             @Html.DisplayFor(modelItem => item.Preco)

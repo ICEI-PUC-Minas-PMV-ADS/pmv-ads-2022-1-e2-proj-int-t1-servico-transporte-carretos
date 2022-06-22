@@ -206,3 +206,15 @@ margin-left: 20%;
 .cntn {
     padding: 2px 16px;
 }
+
+.darkheader {
+    background-color: #282D42;
+}
+
+main {
+    background-color: #282D42;
+}
+
+footer {
+    background-color: #8D99AE;
+}

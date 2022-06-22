@@ -11,134 +11,153 @@
 <div style="padding: 0px 25px 0px 25px">
     <div class="text-white">
         <br /><br />
-        <h4> Detalhes do Pedido</h4>
+        <h4> Detalhes do pedido</h4>
         <br /><br />
-        <div class="row" style="background-color: #D90429; border-radius: 10px">
+              <div style="background-color: #D90429; border-radius: 10px; padding: 25px 15px 25px 15px;">
+                  <div class="row" style="background-color: #D90429; border-radius: 30px">
 
 
 
-            <div class="col-sm-4 border-right" style="padding-bottom: 15px; ">
-                <br /><h5>Detalhes da Solicitação</h5>
-                <br />
-                <div class="row" style="margin:auto auto auto auto">
-                    <div class="col-sm-auto"><b>Nome do Solicitante:</b> @Html.DisplayFor(model => model.Usuario.Nome)</div>
-                </div>
-                <br />
-                <div class="row" style="margin:auto auto auto auto">
-                    <div class="col-sm-auto"><b>Tipo de Serviço:</b> @Html.DisplayFor(model => model.Tipo)</div>
-                </div>
-                <br />
-                <div class="row" style="margin:auto auto auto auto">
-                    <div class="col-sm-auto"><b>Dia e Horário:</b> @Html.DisplayFor(model => model.Dt_agendamento)</div>
-                </div>
-                <br />
-                <div class="row" style="margin:auto auto auto auto">
-                    <div class="col-sm-auto" style="font-weight: bold">Endereço de Origem:</div>
-                </div>
-                <div class="row" style="margin:auto auto auto auto">
-                    <div class="col-sm-auto">@Html.DisplayFor(model => model.Logradouro_origem), @Html.DisplayFor(model => model.Complemento_origem) - @Html.DisplayFor(model => model.Bairro_origem), @Html.DisplayFor(model => model.Cidade_origem) - @Html.DisplayFor(model => model.UF_origem), CEP: @Html.DisplayFor(model => model.Cep_origem)</div>
-                </div>
-                <br />
-                <div class="row" style="margin:auto auto auto auto">
-                    <div class="col-sm-auto" style="font-weight: bold">Endereço de Destino:</div>
-                </div>
-                <div class="row" style="margin:auto auto auto auto">
-                    <div class="col-sm-auto">@Html.DisplayFor(model => model.Logradouro_destino), @Html.DisplayFor(model => model.Complemento_destino) - @Html.DisplayFor(model => model.Bairro_destino), @Html.DisplayFor(model => model.Cidade_destino) - @Html.DisplayFor(model => model.UF_destino), CEP: @Html.DisplayFor(model => model.Cep_destino)</div>
-                </div>
-                <br />
-                <div class="row" style="margin:auto auto auto auto">
-                    <div class="col-sm-auto" style="font-weight: bold">Serviço de Descarga: @Html.DisplayFor(model => model.Serv_descarrega)</div>
-                </div>
-                <br />
-                <div class="row" style="margin:auto auto auto auto">
-                    <div class="col-sm-auto" style="font-weight: bold">Serviço de Montagem: @Html.DisplayFor(model => model.Serv_montagem)</div>
-                </div>
-                <br />
-            </div>
+                      <div class="col-sm-4 border-right" style="padding-bottom: 15px; ">
+                          <br /><h5>Detalhes da solicitação</h5>
+                          <br />
+                          <div class="row" style="margin:auto auto auto auto">
+                              <div class="col-sm-auto"><b>Nome do solicitante:</b> @Html.DisplayFor(model => model.Usuario.Nome)</div>
+                          </div>
+                          <br />
+                          <div class="row" style="margin:auto auto auto auto">
+                              <div class="col-sm-auto"><b>Tipo de serviço:</b> @Html.DisplayFor(model => model.Tipo)</div>
+                          </div>
+                          <br />
+                          <div class="row" style="margin:auto auto auto auto">
+                              <div class="col-sm-auto"><b>Dia e horário:</b> @Html.DisplayFor(model => model.Dt_agendamento)</div>
+                          </div>
+                          <br />
+                          <div class="row" style="margin:auto auto auto auto">
+                              <div class="col-sm-auto" style="font-weight: bold">Endereço de origem:</div>
+                          </div>
+                          <div class="row" style="margin:auto auto auto auto">
+                              <div class="col-sm-auto">@Html.DisplayFor(model => model.Logradouro_origem), @Html.DisplayFor(model => model.Complemento_origem) - @Html.DisplayFor(model => model.Bairro_origem), @Html.DisplayFor(model => model.Cidade_origem) - @Html.DisplayFor(model => model.UF_origem), CEP: @Html.DisplayFor(model => model.Cep_origem)</div>
+                          </div>
+                          <br />
+                          <div class="row" style="margin:auto auto auto auto">
+                              <div class="col-sm-auto" style="font-weight: bold">Endereço de destino:</div>
+                          </div>
+                          <div class="row" style="margin:auto auto auto auto">
+                              <div class="col-sm-auto">@Html.DisplayFor(model => model.Logradouro_destino), @Html.DisplayFor(model => model.Complemento_destino) - @Html.DisplayFor(model => model.Bairro_destino), @Html.DisplayFor(model => model.Cidade_destino) - @Html.DisplayFor(model => model.UF_destino), CEP: @Html.DisplayFor(model => model.Cep_destino)</div>
+                          </div>
+                          <br />
+                          <div class="row" style="margin:auto auto auto auto">
+                              <div class="col-sm-auto" style="font-weight: bold">
+                                  Serviço de descarga: <span style="font-weight: normal" id="Serv_descarrega">@Html.DisplayTextFor(model => model.Serv_descarrega)</span>
+                                  <script>let descf = document.getElementById("Serv_descarrega").innerHTML;
+                                      document.getElementById("Serv_descarrega").innerHTML = descf.replace("False", "Não");</script>
+                                  <script>let descs = document.getElementById("Serv_descarrega").innerHTML;
+                                      document.getElementById("Serv_descarrega").innerHTML = descs.replace("True", "Sim");</script>
+                              </div>
+                          </div>
+                          <br />
+                          <div class="row" style="margin:auto auto auto auto">
+                              <div class="col-sm-auto" style="font-weight: bold">
+                                  Serviço de montagem: <span style="font-weight: normal" id="Serv_montagem">@Html.DisplayTextFor(model => model.Serv_montagem)</span>
+                                  <script>
+                                      let montf = document.getElementById("Serv_montagem").innerHTML;
+                                      document.getElementById("Serv_montagem").innerHTML = montf.replace("False", "Não");
+                                  </script>
+                                  <script>
+                                      let monts = document.getElementById("Serv_montagem").innerHTML;
+                                      document.getElementById("Serv_montagem").innerHTML = monts.replace("True", "Sim");
+                                  </script>
+                              </div>
+                          </div>
+                          <br />
+                      </div>
 
 
 
-            <div class="col-sm-4 border-right" style="padding-bottom: 3.0vw;">
-                <br /><h5>Itens Transportados</h5>
-                <br />
-                <table class="table text-white">
-                    <thead>
-                        <tr>
-                            <th style="vertical-align: middle; text-align: center">
-                                Descrição
-                            </th>
-                            <th style="vertical-align: middle; text-align: center">
-                                Quantidade
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach (var item in Model.Itens)
-                        {
-                            <tr>
-                                <td style="vertical-align: middle; text-align: center">
-                                    @Html.DisplayFor(modelItem => item.Descricao)
-                                </td>
-                                <td style="vertical-align: middle; text-align: center">
-                                    @Html.DisplayFor(modelItem => item.Quantidade)
-                                </td>
-                            </tr>
-                        }
-                    </tbody>
-                </table>
-                <br />
-            </div>
+                      <div class="col-sm-4 border-right" style="padding-bottom: 3.0vw;">
+                          <br /><h5>Itens transportados</h5>
+                          <br />
+                          <table class="table text-white">
+                              <thead>
+                                  <tr>
+                                      <th style="vertical-align: middle; text-align: center">
+                                          Descrição
+                                      </th>
+                                      <th style="vertical-align: middle; text-align: center">
+                                          Quantidade
+                                      </th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                  @foreach (var item in Model.Itens)
+                                  {
+                      <tr>
+                          <td style="vertical-align: middle; text-align: center">
+                              @Html.DisplayFor(modelItem => item.Descricao)
+                          </td>
+                          <td style="vertical-align: middle; text-align: center">
+                              @Html.DisplayFor(modelItem => item.Quantidade)
+                          </td>
+                      </tr>
+}
+                              </tbody>
+                          </table>
+                          <br />
+                      </div>
 
 
 
-            <div class="col-sm-4" style="padding-bottom: 3.0vw;">
-                <br /><h5>Informões do Prestador</h5>
-                <br />
-                <table class="table text-white">
-                    <thead>
-                        <tr>
-                            <th style="vertical-align: middle; text-align: center">
-                                Prestador
-                            </th>
-                            <th style="vertical-align: middle; text-align: center">
-                                Preço
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach (var item in Model.Orcamentos)
-                        {
-                        <tr>
-                            <td style="vertical-align: middle; text-align: center">
-                                @Html.DisplayFor(modelItem => item.Id_prestador)
-                            </td>
-                            <td style="vertical-align: middle; text-align: center">
-                                @Html.DisplayFor(modelItem => item.Preco)
-                            </td>
-                            <td style="vertical-align: middle; text-align: center">
-                                @if (item.Status_orcamento == "Aprovado")
-                                {
-                                    <p>Aprovado</p>
-                                }
-                                else
-                                {
-                                    <p>Reprovado</p>
-                                }
-                            </td>
-                        </tr>
-                        }
-                    </tbody>
-                </table>
-                <br />
-            </div>
+                      <div class="col-sm-4" style="padding-bottom: 3.0vw;">
+                          <br /><h5>Informões do prestador</h5>
+                          <br />
+                          <table class="table text-white">
+                              <thead>
+                                  <tr>
+                                      <th style="vertical-align: middle; text-align: center">
+                                          Prestador
+                                      </th>
+                                      <th style="vertical-align: middle; text-align: center">
+                                          Preço
+                                      </th>
+                                      <th style="vertical-align: middle; text-align: center">
+                                          Status
+                                      </th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                  @foreach (var item in Model.Orcamentos)
+                                  {
+                      <tr>
+                          <td style="vertical-align: middle; text-align: center">
+                              @Html.DisplayFor(modelItem => item.Id_prestador)
+                          </td>
+                          <td style="vertical-align: middle; text-align: center">
+                              @Html.DisplayFor(modelItem => item.Preco)
+                          </td>
+                          <td style="vertical-align: middle; text-align: center">
+                              @if (item.Status_orcamento == "Aprovado")
+                              {
+              <p>Aprovado</p> }
+          else
+          {
+              <p>Reprovado</p>}
+                          </td>
+                      </tr>
+}
+                              </tbody>
+                          </table>
+                          <br />
+                      </div>
+                  </div>
+              </div>
+            <br />
+
+
+
         </div>
-        <br />
-
-
-
+        <div>
+            <a class="btn btn-warning" asp-controller="Usuarios" asp-action="RelatoriosUser" style="background-color: #EDF2F4; color: #EF233C; font-weight: bold; border: none">Voltar</a>
+        </div>
+        <br /><br />
     </div>
-    <div>
-        <a class="btn btn-warning" asp-controller="Usuarios" asp-action="RelatoriosUser" style="background-color: #EDF2F4; color: #EF233C; font-weight: bold; border: none">Voltar</a>
-    </div>
-    <br /><br />
-</div>

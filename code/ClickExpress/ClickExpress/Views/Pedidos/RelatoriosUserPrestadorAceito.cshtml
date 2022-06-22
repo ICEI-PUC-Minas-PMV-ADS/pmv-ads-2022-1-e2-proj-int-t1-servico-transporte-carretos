@@ -9,7 +9,10 @@
     <div class="container m-0 p-0 mw-100" style="font-size: 1.0vw; ">
         <div>
             <br /><br />
-            <h4 class="table text-white">Pedidos Aceitos</h4>
+            <a asp-action="RelatorioUserStatusPendente" class="text-white" style="background-color: #D90429; border-radius: 30px; padding: 5px 8px 5px 8px;">Pedidos disponíveis</a>
+            <a asp-action="RelatoriosUserPrestadorAceito" class="text-white" style="background-color: #5E931D; border-radius: 30px; padding: 5px 8px 5px 8px;">Pedidos aceitos</a>
+            <br /><br /><br />
+            <h4 class="table text-white">Pedidos aceitos</h4>
             <br /><br />
             <div class="table-responsive">
                 <table class="table text-white">
@@ -19,31 +22,31 @@
                                 Status
                             </th>
                             <th style="vertical-align: middle; text-align: center">
-                                Nº da Solicitação
+                                Nº da solicitação
                             </th>
                             <th style="vertical-align: middle; text-align: center">
-                                Tipo de Serviço
+                                Tipo de serviço
                             </th>
                             <th style="vertical-align: middle; text-align: center">
-                                Data Agendada
+                                Data agendada
                             </th>
                             <th style="vertical-align: middle; text-align: center">
-                                Cidade de Origem
+                                Cidade de origem
                             </th>
                             <th style="vertical-align: middle; text-align: center">
-                                Estado de Origem
+                                Estado de origem
                             </th>
                             <th style="vertical-align: middle; text-align: center">
-                                Cidade de Destino
+                                Cidade de destino
                             </th>
                             <th style="vertical-align: middle; text-align: center">
-                                Estado de Destino
+                                Estado de destino
                             </th>
                             <th style="vertical-align: middle; text-align: center">
-                                Serviço de Descarga
+                                Serviço de descarga
                             </th>
                             <th style="vertical-align: middle; text-align: center">
-                                Serviço de Montagem
+                                Serviço de montagem
                             </th>
                             <th style="vertical-align: middle; text-align: center">
                                 Valor do serviço
@@ -51,92 +54,112 @@
                             <th style="vertical-align: middle; text-align: center">
                                 + Info
                             </th>
+                            <th style="vertical-align: middle; text-align: center">
+                                Ação
+                            </th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach (var item in Model)
                         {
-                            @if (item.Status == (StatusServico)2)
-                            {
-                        <tr>
-                            <td style="vertical-align: middle; text-align: center">
-                                <div class="text-dark" style="background-color: #D3AD82; border-radius: 30px; padding: 5px 8px 5px 8px;" vertical-align: middle; text-align: center">Aceito</div>
-                            </td>
-                            <td style="vertical-align: middle; text-align: center">
-                                @Html.DisplayFor(modelItem => item.Id_contrato)
-                            </td>
-                            <td style="vertical-align: middle; text-align: center">
-                                @Html.DisplayFor(modelItem => item.Tipo)
-                            </td>
-                            <td style="vertical-align: middle; text-align: center">
-                                @Html.DisplayFor(modelItem => item.Dt_agendamento)
-                            </td>
-                            <td style="vertical-align: middle; text-align: center">
-                                @Html.DisplayFor(modelItem => item.Cidade_origem)
-                            </td>
-                            <td style="vertical-align: middle; text-align: center">
-                                @Html.DisplayFor(modelItem => item.UF_origem)
-                            </td>
-                            <td style="vertical-align: middle; text-align: center">
-                                @Html.DisplayFor(modelItem => item.Cidade_destino)
-                            </td>
-                            <td style="vertical-align: middle; text-align: center">
-                                @Html.DisplayFor(modelItem => item.UF_destino)
-                            </td>
-                            <td style="vertical-align: middle; text-align: center">
-                                @Html.DisplayFor(modelItem => item.Serv_descarrega)
-                            </td>
-                            <td style="vertical-align: middle; text-align: center">
-                                @Html.DisplayFor(modelItem => item.Serv_montagem)
-                            </td>
-                            <td style="vertical-align: middle; text-align: center">
-                                @Html.DisplayFor(modelItem => item.Preco)
-                            </td>
-                            <td style="vertical-align: middle; text-align: center">
-                                <a class="btn" style="color: #2B2D42; background-color: white; font-size: 1vw; font-weight: 500;" asp-action="Finalizar" asp-route-id="@item.Id_contrato">Finalizar</a>
-                            </td>
-                        </tr>
-                            }
-                            else @if (item.Status == (StatusServico)3)
-                            {
-                    <tr>
-                        <td style="vertical-align: middle; text-align: center">
-                            <div class="text-white" style="background-color: #5E931D; border-radius: 30px; padding: 5px 8px 5px 8px;" vertical-align: middle; text-align: center">Finalizado</div>
-                        </td>
-                        <td style="vertical-align: middle; text-align: center">
-                            @Html.DisplayFor(modelItem => item.Id_contrato)
-                        </td>
-                        <td style="vertical-align: middle; text-align: center">
-                            @Html.DisplayFor(modelItem => item.Tipo)
-                        </td>
-                        <td style="vertical-align: middle; text-align: center">
-                            @Html.DisplayFor(modelItem => item.Dt_agendamento)
-                        </td>
-                        <td style="vertical-align: middle; text-align: center">
-                            @Html.DisplayFor(modelItem => item.Cidade_origem)
-                        </td>
-                        <td style="vertical-align: middle; text-align: center">
-                            @Html.DisplayFor(modelItem => item.UF_origem)
-                        </td>
-                        <td style="vertical-align: middle; text-align: center">
-                            @Html.DisplayFor(modelItem => item.Cidade_destino)
-                        </td>
-                        <td style="vertical-align: middle; text-align: center">
-                            @Html.DisplayFor(modelItem => item.UF_destino)
-                        </td>
-                        <td style="vertical-align: middle; text-align: center">
-                            @Html.DisplayFor(modelItem => item.Serv_descarrega)
-                        </td>
-                        <td style="vertical-align: middle; text-align: center">
-                            @Html.DisplayFor(modelItem => item.Serv_montagem)
-                        </td>
-                        <td style="vertical-align: middle; text-align: center">
-                            @Html.DisplayFor(modelItem => item.Preco)
-                        </td>
-                    </tr>
-                            }
-
-                        }
+            @if (item.Status == (StatusServico)2)
+            {
+        <tr>
+            <td style="vertical-align: middle; text-align: center">
+                <div class="text-dark" style="background-color: #D3AD82; border-radius: 30px; padding: 5px 8px 5px 8px;" vertical-align: middle; text-align: center">Aceito</div>
+            </td>
+            <td style="vertical-align: middle; text-align: center">
+                @Html.DisplayFor(modelItem => item.Id_contrato)
+            </td>
+            <td style="vertical-align: middle; text-align: center">
+                @Html.DisplayFor(modelItem => item.Tipo)
+            </td>
+            <td style="vertical-align: middle; text-align: center">
+                @Html.DisplayFor(modelItem => item.Dt_agendamento)
+            </td>
+            <td style="vertical-align: middle; text-align: center">
+                @Html.DisplayFor(modelItem => item.Cidade_origem)
+            </td>
+            <td style="vertical-align: middle; text-align: center">
+                @Html.DisplayFor(modelItem => item.UF_origem)
+            </td>
+            <td style="vertical-align: middle; text-align: center">
+                @Html.DisplayFor(modelItem => item.Cidade_destino)
+            </td>
+            <td style="vertical-align: middle; text-align: center">
+                @Html.DisplayFor(modelItem => item.UF_destino)
+            </td>
+            <td style="vertical-align: middle; text-align: center">
+                @if (Convert.ToInt32(item.Serv_descarrega) == 0)
+                {<span>Não</span> }
+                else
+                {<span>Sim</span>}
+            </td>
+            <td style="vertical-align: middle; text-align: center">
+                @if (Convert.ToInt32(item.Serv_montagem) == 0)
+                {<span>Não</span> }
+                else
+                {<span>Sim</span>}
+            </td>
+            <td style="vertical-align: middle; text-align: center">
+                @Html.DisplayFor(modelItem => item.Preco)
+            </td>
+            <td style="vertical-align: middle; text-align: center">
+                <a class="btn" style="color: #2B2D42; background-color: white; font-size: 1vw; font-weight: 500;" asp-action="DetailsResposta" asp-route-id="@item.Id_contrato">Detalhes</a>
+            </td>
+            <td style="vertical-align: middle; text-align: center">
+                <a class="btn" style="color: #2B2D42; background-color: white; font-size: 1vw; font-weight: 500;" asp-action="Finalizar" asp-route-id="@item.Id_contrato">Finalizar</a>
+            </td>
+        </tr> }
+                        else @if (item.Status == (StatusServico)3)
+                   {
+        <tr>
+            <td style="vertical-align: middle; text-align: center">
+                <div class="text-white" style="background-color: #5E931D; border-radius: 30px; padding: 5px 8px 5px 8px;" vertical-align: middle; text-align: center">Finalizado</div>
+            </td>
+            <td style="vertical-align: middle; text-align: center">
+                @Html.DisplayFor(modelItem => item.Id_contrato)
+            </td>
+            <td style="vertical-align: middle; text-align: center">
+                @Html.DisplayFor(modelItem => item.Tipo)
+            </td>
+            <td style="vertical-align: middle; text-align: center">
+                @Html.DisplayFor(modelItem => item.Dt_agendamento)
+            </td>
+            <td style="vertical-align: middle; text-align: center">
+                @Html.DisplayFor(modelItem => item.Cidade_origem)
+            </td>
+            <td style="vertical-align: middle; text-align: center">
+                @Html.DisplayFor(modelItem => item.UF_origem)
+            </td>
+            <td style="vertical-align: middle; text-align: center">
+                @Html.DisplayFor(modelItem => item.Cidade_destino)
+            </td>
+            <td style="vertical-align: middle; text-align: center">
+                @Html.DisplayFor(modelItem => item.UF_destino)
+            </td>
+            <td style="vertical-align: middle; text-align: center">
+                @if (Convert.ToInt32(item.Serv_descarrega) == 0)
+                {<span>Não</span> }
+                else
+                {<span>Sim</span>}
+            </td>
+            <td style="vertical-align: middle; text-align: center">
+                @if (Convert.ToInt32(item.Serv_montagem) == 0)
+                {<span>Não</span> }
+                else
+                {<span>Sim</span>}
+            </td>
+            <td style="vertical-align: middle; text-align: center">
+                @Html.DisplayFor(modelItem => item.Preco)
+            </td>
+            <td style="vertical-align: middle; text-align: center">
+               -
+            </td>
+            <td style="vertical-align: middle; text-align: center">
+               -
+            </td>
+        </tr>}}
                     </tbody>
                 </table>
             </div>

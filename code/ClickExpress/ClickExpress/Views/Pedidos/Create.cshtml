@@ -16,7 +16,7 @@
                         <div style=" display: inline-block; width: 99%; background-color: #D90429; color: white; padding: 8px 5px 8px 10px; border-radius: 8px; font-weight: bold; margin-bottom: 20px">
                             <img src="~/Imagens/charge-box.png" style="height: 30px; margin-right: 10px" /> Escolha o tipo de serviço:
                         </div>
-                        <label asp-for="Tipo" class="control-label" style="padding: 15px 0px 0px 0px; color: white; font-weight: bold;"></label>
+                        <label asp-for="Tipo" class="control-label" style="padding: 15px 0px 0px 0px; color: white; font-weight: bold;">* Tipo de serviço desejado:</label>
                         <select asp-for="Tipo" class="form-control" style="width: 40%;" asp-items="Html.GetEnumSelectList<TipoServico>()"></select>
                         <span asp-validation-for="Tipo" class="text-danger"></span>
                     </div>
@@ -25,19 +25,19 @@
                         <img src="~/Imagens/location.png" style="height: 30px; margin-right: 10px" /> Informe os endereços:
                     </div>
                     <div class="form-group" style="padding-top: 15px;">
-                        <h6><span style="color: white; font-weight: bold;">Partida:</span></h6>
+                        <h6><span style="color: white; font-weight: bold;">Partida</span></h6>
                         <div class="row">
                             <div class="col-sm-2">
-                                <label style="color: white" asp-for="Cep_origem" class="control-label"></label>
-                                <input style="width: 100%;" asp-for="Cep_origem" placeholder="Digite o CEP de partida" class="form-control" id="cep_origem" />
+                                <label style="color: white" asp-for="Cep_origem" class="control-label">*CEP:</label>
+                                <input style="width: 100%;" asp-for="Cep_origem" placeholder="Digite o CEP de partida" class="form-control" id="cep_origem" required/>
                             </div>
                             <div class="col-sm-6">
                                 <label style="color: white" asp-for="Logradouro_origem" class="control-label"></label>
                                 <input style="width: 100%;" asp-for="Logradouro_origem" class="form-control" id="logradouro_origem" />
                             </div>
                             <div class="col-sm-4">
-                                <label style="color: white" asp-for="Complemento_origem" class="control-label"></label>
-                                <input style="width: 100%;" asp-for="Complemento_origem" placeholder="Digite o número do endereço" class="form-control" id="complemento_origem" />
+                                <label style="color: white" asp-for="Complemento_origem" class="control-label">*Número:</label>
+                                <input style="width: 100%;" asp-for="Complemento_origem" placeholder="Digite o número do endereço" class="form-control" id="complemento_origem" required/>
                             </div>
 
                         </div>
@@ -59,19 +59,19 @@
                         <span asp-validation-for="Cep_origem" class="text-danger"></span>
                     </div>
                     <div class="form-group">
-                        <h6><span style="color: white; font-weight: bold;">Destino:</span></h6>
+                        <h6><span style="color: white; font-weight: bold;">Destino</span></h6>
                         <div class="row">
                             <div class="col-sm-2">
-                                <label style="color: white" asp-for="Cep_destino" class="control-label"></label>
-                                <input style="width: 100%;" asp-for="Cep_destino" placeholder="Digite o CEP de destino" class="form-control" id="cep_destino" />
+                                <label style="color: white" asp-for="Cep_destino" class="control-label">*CEP:</label>
+                                <input style="width: 100%;" asp-for="Cep_destino" placeholder="Digite o CEP de destino" class="form-control" id="cep_destino" required/>
                             </div>
                             <div class="col-sm-6">
                                 <label style="color: white" asp-for="Logradouro_destino" class="control-label"></label>
                                 <input style="width: 100%;" asp-for="Logradouro_destino" class="form-control" id="logradouro_destino" />
                             </div>
                             <div class="col-sm-4">
-                                <label style="color: white" asp-for="Complemento_destino" class="control-label"></label>
-                                <input style="width: 100%;" asp-for="Complemento_destino" placeholder="Digite o número do endereço" class="form-control" id="complemento_destino" />
+                                <label style="color: white" asp-for="Complemento_destino" class="control-label">*Número:</label>
+                                <input style="width: 100%;" asp-for="Complemento_destino" placeholder="Digite o número do endereço" class="form-control" id="complemento_destino" required/>
                             </div>
 
                         </div>
@@ -97,7 +97,7 @@
                         <div style=" display: inline-block; width: 99%; background-color: #D90429; color: white; padding: 8px 5px 8px 10px; border-radius: 8px; font-weight: bold; margin-bottom: 20px">
                             <img src="~/Imagens/clock.png" style="height: 30px; margin-right: 10px" /> Defina dia e horário:
                         </div>
-                        <label style="color: white; padding-top: 15px; font-weight: bold" asp-for="Dt_agendamento" class="control-label"></label>
+                        <label style="color: white; padding-top: 15px; font-weight: bold" asp-for="Dt_agendamento" class="control-label">*Data e horário do agendamento:</label>
                         <input style="width: 40%;" asp-for="Dt_agendamento" class="form-control" id="data_agendamento" />
                         <span asp-validation-for="Dt_agendamento" class="text-danger"></span>
                     </div>

@@ -8,11 +8,11 @@
 <div style="padding: 0px 25px 0px 25px">
     <div class="container m-0 p-0 mw-100" style="font-size: 1.0vw">
         <div>
-            <br /><br />
-            <h4 class="table text-white">Pedidos Pendentes</h4>
-            <br /><br />
+            <br />
+            <h4 class="table text-white">Pedidos pendentes</h4>
+            <br />
             <a asp-action="RelatoriosUserPendente" class="text-white" style="background-color: #D90429; border-radius: 30px; padding: 5px 8px 5px 8px;">Pendentes</a>
-            <br /><br /><br /><br />
+            <br /><br /><br />
             <div class="table-responsive">
                 <table class="table text-white">
                     <thead>
@@ -21,34 +21,34 @@
                                 Status
                             </th>
                             <th style="vertical-align: middle; text-align: center">
-                                Nº da Solicitação
+                                Nº da solicitação
                             </th>
                             <th style="vertical-align: middle; text-align: center">
-                                Tipo de Serviço
+                                Tipo de serviço
                             </th>
                             <th style="vertical-align: middle; text-align: center">
-                                Data Agendada
+                                Data agendada
                             </th>
                             <th style="vertical-align: middle; text-align: center">
-                                Cidade de Origem
+                                Cidade de origem
                             </th>
                             <th style="vertical-align: middle; text-align: center">
-                                Estado de Origem
+                                Estado de origem
                             </th>
                             <th style="vertical-align: middle; text-align: center">
-                                Cidade de Destino
+                                Cidade de destino
                             </th>
                             <th style="vertical-align: middle; text-align: center">
-                                Estado de Destino
+                                Estado de destino
                             </th>
                             <th style="vertical-align: middle; text-align: center">
-                                Serviço de Descarga
+                                Serviço de descarga
                             </th>
                             <th style="vertical-align: middle; text-align: center">
-                                Serviço de Montagem
+                                Serviço de montagem
                             </th>
                             <th style="vertical-align: middle; text-align: center">
-                                Valor do Serviço
+                                Valor do serviço
                             </th>
                             <th style="vertical-align: middle; text-align: center">
                                 + Info
@@ -87,10 +87,16 @@
         @Html.DisplayFor(modelItem => item.UF_destino)
     </td>
     <td style="vertical-align: middle; text-align: center">
-        @Html.DisplayFor(modelItem => item.Serv_descarrega)
+        @if (Convert.ToInt32(item.Serv_descarrega) == 0)
+        {<span>Não</span> }
+        else
+        {<span>Sim</span>}
     </td>
     <td style="vertical-align: middle; text-align: center">
-        @Html.DisplayFor(modelItem => item.Serv_montagem)
+        @if (Convert.ToInt32(item.Serv_montagem) == 0)
+        {<span>Não</span> }
+        else
+        {<span>Sim</span>}
     </td>
     <td style="vertical-align: middle; text-align: center">
         @Html.DisplayFor(modelItem => item.Preco)
