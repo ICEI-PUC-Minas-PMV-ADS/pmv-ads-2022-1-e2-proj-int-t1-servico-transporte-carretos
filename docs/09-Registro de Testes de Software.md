@@ -82,7 +82,7 @@
 *RF-007 - RF-010 - O site já permite o usuário prestador visualizar a solicitação de pedido, e enviar o orçamento de serviço para  usuário cliente,cumprindo todos os requisitos estabelecidos, o objetivo já que o prestador consegue enviar o orçamento, e o critério de êxito enviando o orçamento com sucesso.*
 <hr />
 
-#### A imagem representa a tela  dos pedidos solicitados e em andamento.
+#### A imagem representa a tela  dos pedidos solicitados e em andamento do prestador.
 ![tela solicitações de pedido](https://user-images.githubusercontent.com/91202959/174652048-b2459d11-aa20-4bcb-8413-7890a3fd24a9.png)
 <br>
 
@@ -97,7 +97,7 @@
 <br>
 
 ## CT-06 – Usuário Prestador enviar orçamento de serviço para usuário Cliente
-*RF-009 - RF-010 - RF-011 - RF-012 - Já é possível os usuários visualizarem os pedidos em andamento,os pedidos finalizados e um resumo dos pedidos, o prestador também é capaz de visualizar as solicitações dos usuários clientes, cumprindo todos os requisitos, atingindo  o objetivo de testes permitindo os usuários tanto clientes como pretadores acessarem o menu de pedidos e visualizarem os status criados, pendentes, aceitos e finalizados, e cumprindo assim também  o critério de êxito.*
+*RF-009 - RF-010 - RF-011 - RF-012 - Já é possível os usuários visualizarem os pedidos em andamento, e um resumo dos pedidos, o prestador também é capaz de visualizar as solicitações dos usuários clientes, cumprindo todos os requisitos, atingindo  o objetivo de testes permitindo os usuários tanto clientes como pretadores acessarem o menu de pedidos e visualizarem os status criados, pendentes, aceitos e finalizados, e cumprindo assim também  o critério de êxito.*
 <hr />
 
 
@@ -105,15 +105,11 @@
 ![tela meus pedidos e pedidos pendenntes](https://user-images.githubusercontent.com/91202959/174655188-c384d0fa-1b32-4ac2-ad83-5d97a4dabdca.png)
 <br>
 
-#### A imagem representa a tela de pedidos solicitados e em andamento.
-![tela solicitações de pedido](https://user-images.githubusercontent.com/91202959/174652455-dc028a46-d77a-4c4e-a9b7-123b9681c99d.png)
+#### A imagem representa a tela de pedidos em andamento do cliente.
+![tela cliente pedido pendente](https://user-images.githubusercontent.com/91202959/175398399-3525bd34-dd78-468d-94f9-ff383da630ad.png)
 <br>
 
-#### A imagem representa a tela de pedidos finalizados.
-![tela prestador pedido aceitos e finalizados](https://user-images.githubusercontent.com/91202959/174652568-a87b86c6-da9c-47e1-b83e-1b8d1aa0f2c6.png)
-<br>
-
-#### A imagem representa a tela de detalhes do pedido.
-![tela detalhes do pedido](https://user-images.githubusercontent.com/91202959/174653581-dd6151e1-755c-4ff3-9d76-49d8868f232f.png)
+#### A imagem representa a tela de detalhes do pedido do cliente.
+![detalhes pedido tela cliente](https://user-images.githubusercontent.com/91202959/175398614-23c10c8d-3113-482b-8562-29eec38b2463.png)
 
 
