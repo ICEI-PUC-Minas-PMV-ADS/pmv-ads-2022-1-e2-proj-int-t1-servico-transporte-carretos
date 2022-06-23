@@ -5,7 +5,7 @@
 ## Tela inicial
 #### A primeira visualização do site é a tela inicial mostrada na imagem abaixo, a  tela é mostrada para os usuários ainda não logados e cadastrados, com as opções de conhecer mais sobre o desenvolvimento site, se cadastrar e logar, no topo do site. 
 
-![tela inicial sem estar logado](https://user-images.githubusercontent.com/91202959/174346807-5880d611-84c6-431f-b8bd-a2be40246086.jpg)
+![tela inicial sem estar logado](https://user-images.githubusercontent.com/91202959/175394063-2d86139b-77c1-4197-bdc6-13af2ba37137.png)
 
 <hr />
 <br>
@@ -19,45 +19,29 @@
 ![cadastro usuario ou prestador](https://user-images.githubusercontent.com/91202959/174340239-c3500fa4-ff8d-4258-b438-30e84ee2beee.png)
 <br>
 
-####  A imagem representa os avisos de campos obrigatórios a serem preenchidos ao se cadastrar.
-![tela-cadastro-usuario-preenchimento-incompleto](https://user-images.githubusercontent.com/91202959/174344230-95bbb701-dee5-49df-8b46-8265e91f6450.png)
+####  A imagem representa o formulário de cadastro cliente.
+![tela cadastro campos obrigatorios](https://user-images.githubusercontent.com/91202959/175394425-757b9fc5-e1ae-4f2c-b5ca-4eaa015ca05d.png)
 <br>
 
-#### A imagem representa um exemplo de como  deve ser preenchido o cadastro do usuário cliente.
-![tela cadastro cliente preenchimento completo](https://user-images.githubusercontent.com/91202959/174340336-afb3326f-09cb-49e3-90b5-e666bac8c120.png)
-<br>
-
-#### A imagem representa um exemplo de como  deve ser preenchido o cadastro do usuário prestador.
-![tela cadastro prestador preenchimento completo](https://user-images.githubusercontent.com/91202959/174343737-497778a7-36ae-4d6f-bf10-b0a80fb20297.png)
-<br>
 
 #### A imagem representa um feedback de que o cadastro do usuário foi concluído com sucesso.
 ![tela de cadastro concluido](https://user-images.githubusercontent.com/91202959/174343926-30654391-2f18-4012-a505-1c9eb2f2b341.png)
 <br>
 
-#### A imagem representa um aviso de erro ao tentar cadastrar um email já cadastrado. 
-![tela-cadastro-usuario-ja-cadastrado](https://user-images.githubusercontent.com/91202959/174344352-7aa08b60-4bc0-4433-bef1-58da99a303c4.png)
-<hr />
-<br>
+
 
 ## CT-02 – Login do usuário
 *RF-001 - O login já funciona, permitindo o acesso do usuário a platarforma, atingindo assim o objetivo e critério de êxito ao permitir que o usuário  acesse a plataforma através do login e acessar a homepage tendo acesso ao seu menu.*
 <hr />
 
-#### A imagem representa a tela de login e como ele deve ser preenchido.
-![tela login](https://user-images.githubusercontent.com/91202959/174345745-e44833d6-6e35-4d8b-8bbf-1c1d7c5a87e2.png)
+#### A imagem representa a tela de login.
+![login](https://user-images.githubusercontent.com/91202959/175394828-bebd84a2-2785-48bb-a75d-54b0d4c03d30.png)
 <br>
 
 #### A imagem representa a tela inicial com o usuário logado, com acesso as funcionalidades da plataforma.
-![tela inicial,usuário já logado](https://user-images.githubusercontent.com/91202959/174339580-4c0fbb92-43e5-46be-ae69-abf639f88dab.png)
+![tela inicial com icones](https://user-images.githubusercontent.com/91202959/175395000-d81e8b2a-1a9e-4d43-898b-1cc4dcd6a191.png)
 <br>
 
-#### A imagem representa um aviso de email ou senha incorretos.
-![login usuário ou senha incorretos](https://user-images.githubusercontent.com/91202959/174347138-2a8ef2ad-13c1-4e99-afef-0fb8096f3d29.png)
-<br>
-
-#### A imagem representa avisos de campos obrigatórios a serem preenchidos para logar.
-![login campo obrigatório](https://user-images.githubusercontent.com/91202959/174347251-77e0ebd0-6046-4fce-a287-187cfbfccfa1.png)
 
 <hr />
 <br>
@@ -79,12 +63,8 @@
 *RF-004 - Já é possível o usuário cliente fazer um pedido preenchendo todos os campos obrigatórios, e alternando o tipo(carreto ou mudança), cumprindo assim os requisitos propostos, e também o critério de êxito, enviando a solicitação com sucesso.*
 <hr />
 
-#### A imagem representa a tela de pedidos não preenchida.
-![tela pedido sem preenchimento](https://user-images.githubusercontent.com/91202959/174349590-7155654d-a683-4736-91dd-650621db5da7.png)
-<br>
-
-#### A imagem representa um exemplo de como preencher a primeira tela  dos campos de pedidos.
-![tela pedido preenchida](https://user-images.githubusercontent.com/91202959/174349702-ababc0c3-9f77-444f-8ec2-90603df3756c.png)
+#### A imagem representa a tela de fazer pedidos.
+![pedido campo obrigatório](https://user-images.githubusercontent.com/91202959/175395427-11b53ca5-693d-4197-87ab-9cc77bf524c2.png)
 <br>
 
 #### A imagem representa a segunda e última tela de pedidos para preenchimento e conclusão do pedido.
