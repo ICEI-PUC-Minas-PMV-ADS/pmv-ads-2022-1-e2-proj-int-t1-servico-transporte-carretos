@@ -7,9 +7,10 @@
     "\\code\\ClickExpress\\ClickExpress\\Controllers",
     "\\code\\ClickExpress\\ClickExpress\\Models",
     "\\code\\ClickExpress\\ClickExpress\\Views",
+    "\\code\\ClickExpress\\ClickExpress\\Views\\Pedidos",
     "\\code\\ClickExpress\\ClickExpress\\Views\\Shared",
     "\\code\\ClickExpress\\ClickExpress\\Views\\Usuarios"
   ],
-  "SelectedNode": "\\code\\ClickExpress\\ClickExpress\\Models\\Pedido.cs",
+  "SelectedNode": "\\code\\ClickExpress\\ClickExpress\\Views\\Pedidos\\Create.cshtml",
   "PreviewInSolutionExplorer": false
 }
