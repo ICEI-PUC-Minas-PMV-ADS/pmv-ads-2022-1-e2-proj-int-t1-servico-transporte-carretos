@@ -46,16 +46,25 @@ RNF-03 - O sistema já informa os usuários quais os campos de preenchimento sã
 <br>
 
 ## CT-04 – Acessibilidade
-RNF-08
+*RNF-08- O site já é acessível ao ponto de todas as imagens apresentarem informações de descrição para quando de algum modo elas não carregarem, ter um texto informando do que elas se tratam ou o usuário esteja utilizando leitor de tela e ele consiga entender do que se trata, atingindo o objetivo e critério de êxito.*
+<hr />
+<br>
+
+#### A imagem representa um exemplo de descrição de imagem no site.
 
 <hr />
 <br>
 
 ## CT-05 – Reconhecer, em vez de recordar
-RNF-04
-
+*RNF-04- No site já é possível identificar os símbolos e ícones para ajudar no entendimento  e conseguir uma associação imediata sobre aplicações de reconhecimento, atingindo assim o objetivo e critério de êxito.*
 <hr />
 <br>
 
+#### As imagens representam o símbolos e ícones da aplicação.
+
+
 ## CT-06 – Consistência e Padronização
-RNF-07
+*RNF-07 - O site já possui uma interface impa de fácil entendimento e totalmente padronizado *
+
+#### As imagens representam um exemplo da padronização do site.
+
