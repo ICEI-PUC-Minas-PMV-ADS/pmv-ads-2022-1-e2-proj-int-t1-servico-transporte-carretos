@@ -24,21 +24,25 @@ namespace ClickExpress.Controllers
 
         public ActionResult SalvarItens(int quantidade, string descricao, int Id_contrato)
         {
-            var item = new Item()
+            if (ModelState.IsValid && quantidade>0)
             {
-                Quantidade = quantidade,
-                Descricao = descricao,
-                Pedido = _context.Pedidos.Find(Id_contrato)
-            };
+                var item = new Item()
+                {
+                    Quantidade = quantidade,
+                    Descricao = descricao,
+                    Pedido = _context.Pedidos.Find(Id_contrato)
+                };
 
-            _context.Itens.Add(item);
-            _context.SaveChanges();
+                _context.Itens.Add(item);
+                _context.SaveChanges();
 
-            return Json(new { Resultado = item.Id_item });
+                return Json(new { Resultado = item.Id_item });
+
+            }
+            return Json(new { Erro = true });
         }
         public IActionResult ConcluirPedido()
         {
-            ViewBag.Message = "Solicitação enviada com sucesso! Em breve o prestador entrará em contato.";
             return View();
         }
                 

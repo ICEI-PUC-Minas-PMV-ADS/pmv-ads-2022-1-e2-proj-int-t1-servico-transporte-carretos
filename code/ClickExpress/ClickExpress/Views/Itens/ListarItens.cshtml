@@ -45,26 +45,34 @@
         <tbody style="width: 100%">
             @foreach (var item in Model)
             {
-<tr style="width: 100%">
+                <tr style="width: 100%">
 
-    <td>
-        @Html.DisplayFor(modelItem => item.Descricao)
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Descricao)
 
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Quantidade)
-    </td>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Quantidade)
+                    </td>
 
-</tr>
-       }
+                </tr>
+            }
         </tbody>
 
     </table>
-
-    <div class="form-group" style="padding-top: 5px;">
-        <a class="btn btn-primary" asp-controller="Itens" asp-action="ConcluirPedido" role="button" style="color: black; font-weight: bold; background-color: #84dcc6; border: none">Concluir Pedido</a>
-        <br>
-    </div>
-    <h3> @ViewBag.Message </h3>
+    @if (Model.Count() == 0)
+    {
+        <div class="form-group" style="padding-top: 5px;">
+            <input type="button" class="btn btn-primary" asp-controller="Itens" value="Concluir Pedido" disabled id="btnConcluirPedido" style="color: black; font-weight: bold; background-color: #84dcc6; border: none" />
+            <br>
+        </div>
+    }
+    else
+    {
+        <div class="form-group" style="padding-top: 5px;">
+            <a class="btn btn-primary" asp-controller="Itens" asp-action="ConcluirPedido" style="color: black; font-weight: bold; background-color: #84dcc6; border: none">Concluir Pedido</a>
+            <br>
+        </div>
+    }
 </div>
 

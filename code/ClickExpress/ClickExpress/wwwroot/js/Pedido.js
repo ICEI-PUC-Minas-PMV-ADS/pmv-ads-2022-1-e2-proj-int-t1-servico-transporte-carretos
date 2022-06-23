@@ -86,41 +86,44 @@ function SolicitarServico() {
     });
 
 }
- function ListarItens(idPedido) {
+function ListarItens(idPedido) {
     var url = "/Itens/ListarItens";
 
     $.ajax({
-    url: url
-    , type: "GET"
-    , data: {id: idPedido }
-    , datatype: "html"
-    , success: function (data) {
-    var divItens = $("#divItens");
-    divItens.empty(); //apaga
-    divItens.show(); //fica visivel
-    divItens.html(data); // insere os dados
-
-    }
+        url: url
+        , type: "GET"
+        , data: { id: idPedido }
+        , datatype: "html"
+        , success: function (data) {
+            var divItens = $("#divItens");
+            divItens.empty(); //apaga
+            divItens.show(); //fica visivel
+            divItens.html(data); // insere os dados      
+        }
 
     });
 
-  }
- function SalvarItens() {
+}
+function SalvarItens() {
     var quantidade = $("#quantidade").val();
     var descricao = $("#descricao").val();
     var idPedido = $("#Id_contrato").val();
+
 
     var url = "/Itens/SalvarItens";
 
     $.ajax({
         url: url
-        , data: {Quantidade: quantidade, Descricao: descricao, Id_contrato: idPedido }
+        , data: { Quantidade: quantidade, Descricao: descricao, Id_contrato: idPedido }
         , type: "GET"
         , datatype: "html"
         , success: function (data) {
             if (data.resultado > 0) {
-            ListarItens(idPedido);
-        }
+                ListarItens(idPedido);
+            }
+            if (data.erro) {
+                alert("Há campos inválidos, revise e tente novamente!");
+            }
 
         }
 
