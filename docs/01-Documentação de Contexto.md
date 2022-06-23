@@ -20,15 +20,7 @@ Dentre os objetivos específicos, tem-se:
 
 - Permitir que o cliente determine a data e hora que deseja o serviço. 
 
-- Permitir que as informações escolhidas pelo cliente sejam usadas como filtro 
-
-- Disponibilizar que o prestador de serviço atenda ao filtro, já informando o valor do frete. 
-
-- Disponibilizar os dados do prestador de serviço escolhido na tela de finalização do pedido. 
-
 - Disponibilizar um resumo do pedido. 
-
-- Disponibilizar para que o cliente envie mensagens para o prestador através de um caixa de mensagem e para a finalização da contratação. 
 
 - Disponibilizar a visualização do pedido em andamento. 
 
