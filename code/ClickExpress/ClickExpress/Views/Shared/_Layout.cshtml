@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 </head>
-<body style="height: 100vh;">
+<body style="height: 100vh;" class="total">
 
-    <header style="background-color: #EDF2F4">
+    <header style="background-color: #EDF2F4; flex-grow: 0; flex-basis: auto;">
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light" style="">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img width="200px" src="~/Imagens/Logo.png" /></a>
@@ -79,7 +79,7 @@
         </nav>
     </header>
 
-    <main role="main" class="container m-0 p-0 mw-100" style="min-height: 65vh; background-color: #282D42">
+    <main role="main" class="container m-0 p-0 mw-100" style="background-color: #282D42; flex-grow: 1; flex-basis: auto;">
         @RenderBody()
     </main>
 
