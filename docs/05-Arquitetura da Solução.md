@@ -13,17 +13,13 @@ O compartimento superior contém o nome da classe. É impresso em negrito e cent
 O compartimento do meio contém os atributos da classe. Eles são alinhados à esquerda e a primeira letra é minúscula. 
 O compartimento inferior contém as operações que a classe pode executar. Eles também são alinhados à esquerda e a primeira letra é minúscula. 
 Uma classe com três compartimentos.No projeto de um sistema, várias classes são identificadas e agrupadas em um diagrama de classes que ajuda a determinar as relações estáticas entre elas. Na modelagem detalhada, as classes do projeto conceitual são frequentemente divididas em subclasses. 
-![Untitled Diagram drawio (5)](https://user-images.githubusercontent.com/91202959/162323739-1c407100-01fb-48ff-9a05-061448b45421.png)
-
+![Untitled Diagram drawio (5) drawio](https://user-images.githubusercontent.com/91202959/175823875-10f1b420-7549-48c9-9726-1b3dbbccd6ab.png)
 
 
 ## Modelo ER
 
 O Modelo ER representa através de um diagrama como as entidades (coisas, objetos) se relacionam entre si na aplicação interativa.]
 
-As referências abaixo irão auxiliá-lo na geração do artefato “Modelo ER”.
-
-> - [Como fazer um diagrama entidade relacionamento | Lucidchart](https://www.lucidchart.com/pages/pt/como-fazer-um-diagrama-entidade-relacionamento)
 
 Na figura abaixo é mostrado o Modelo Relacional(MR) desenvolvido na plataforma "draw.io" para o projeto.
 
