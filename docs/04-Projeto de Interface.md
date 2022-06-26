@@ -20,7 +20,9 @@ Conforme pode ser visto, a figura  mostra o diagrama de fluxo de interação do 
 | Histórico do Prestador de Serviços                    | Permitir ao usuário cliente visualizar os pedidos em andamento, pedidos finalizados e em aprovação. Permitir  aceitar um pedido.     |  RF09, RF010, RF011 e RF014                                       |
 
 
-![diagrama atualizado drawio](https://user-images.githubusercontent.com/91202959/175404793-d80b3977-f4aa-42d5-9241-1cba7fa0655b.png)
+
+
+![diagrama atualizado drawio (1)](https://user-images.githubusercontent.com/91202959/175836973-ae1f6ebf-8928-4a92-874e-cf8a375c6d5d.png)
 
 
 ## Wireframes
