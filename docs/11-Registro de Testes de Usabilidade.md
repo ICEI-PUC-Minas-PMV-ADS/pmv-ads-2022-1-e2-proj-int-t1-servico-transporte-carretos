@@ -40,7 +40,7 @@
 *RNF-04- No site já é possível identificar os símbolos e ícones para ajudar no entendimento  e conseguir uma associação imediata sobre aplicações de reconhecimento, atingindo assim o objetivo e critério de êxito.*
 
 
-#### As imagens representa um exemplo de símbolos e ícones da aplicação.
+#### A imagem representa um exemplo de símbolos e ícones na aplicação.
 ![tela inicial com icones](https://user-images.githubusercontent.com/91202959/175377309-fbe60402-389a-424f-885a-a55785d59e42.png)
 
 
