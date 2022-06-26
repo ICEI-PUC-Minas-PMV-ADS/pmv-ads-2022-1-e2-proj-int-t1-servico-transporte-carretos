@@ -25,49 +25,7 @@ Conforme pode ser visto, a figura  mostra o diagrama de fluxo de interação do 
 
 ## Wireframes
 
-##### Estrutura base de todas as páginas do projeto.
-![Estrutura Básica](img/wire_estrutura.png)
 
-Abaixo mostraremos os principais fluxos dos usuários do projeto.
+#### No link abaixo mostraremos os principais fluxos dos usuários do projeto.
 
-##### Página Inicial -> Cadastro Cliente
-![Página Inicial](img/wire_index.png)
-![Botão Cadastro](img/wire_cadastro.png)
-![Cadastro Cliente](img/wire_cadcliente.png)
-![Cadastro Realizado com sucesso](img/wire_cadsucesso.png)
-
-##### Página Inicial -> Cadastro Prestador de Serviço
-![Página Inicial](img/wire_index.png)
-![Botão Cadastro](img/wire_cadastro.png)
-![Cadastro Prestador Tela 1](img/wire_cadprestador1.png)
-![Cadastro Prestador Tela 2](img/wire_cadprestador2.png)
-![Cadastro Realizado com sucesso](img/wire_cadsucesso.png)
-
-##### Página Inicial -> Login
-![Página Inicial](img/wire_index.png)
-![Botão Login](img/wire_login.png)
-
-##### Cliente Logado -> Solicitar Serviço
-![Tela Cliente Logado](img/wire_cliente.png)
-![Tela Solicitar Serviço 1](img/wire_solicitar1.png)
-![Tela Solicitar Serviço 2](img/wire_solicitar2.png)
-![Tela Solicitar Serviço 3](img/wire_solicitar3.png)
-
-##### Cliente Logado -> Histórico
-![Tela Cliente Logado](img/wire_cliente.png)
-![Tela Hisótico 1](img/wire_historico1.png)
-![Tela Histórico 2](img/wire_historico2.png)
-
-##### Cliente Logado -> Minha Área
-![Tela Cliente Logado](img/wire_cliente.png)
-![Tela Minha área Cliente](img/wire_minha_cliente.png)
-
-##### Prestador de Serviço -> Solicitações
-![Tela Prestador de Serviço Logado](img/wire_prestador.png)
-![Tela Solicitações 1](img/wire_solicitado1.png)
-![Tela Solicitações 2](img/wire_solicitado2.png)
-![Tela Solicitações 3](img/wire_solicitado3.png)
-
-##### Prestador de Serviço -> Minha Área
-![Tela Prestador de Serviço Logado](img/wire_prestador.png)
-![Tela Minha área Prestador de Serviço](img/wire_minha_prestador.png)
+>https://www.figma.com/file/HNa2TQzEQ7PHBc9ooSy7dP/Untitled?node-id=0%3A1
