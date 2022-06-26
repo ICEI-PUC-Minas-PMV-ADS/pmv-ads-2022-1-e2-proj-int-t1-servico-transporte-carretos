@@ -35,6 +35,9 @@
 
 
 #### A imagem representa um exemplo de descrição de imagem no site.
+![exemplo de alt na imagem](https://user-images.githubusercontent.com/91202959/175837038-33553124-3bb7-4a41-aaaa-9cde22c9f0a2.png)
+
+
 
 ## CT-05 – Reconhecer, em vez de recordar
 *RNF-04- No site já é possível identificar os símbolos e ícones para ajudar no entendimento  e conseguir uma associação imediata sobre aplicações de reconhecimento, atingindo assim o objetivo e critério de êxito.*
