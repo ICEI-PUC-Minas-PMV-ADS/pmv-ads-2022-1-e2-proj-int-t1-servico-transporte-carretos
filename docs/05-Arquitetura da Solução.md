@@ -1,7 +1,5 @@
 # Arquitetura da Solução
 
-<span style="color:red">Pré-requisitos: <a href="3-Projeto de Interface.md"> Projeto de Interface</a></span>
-
 Definição de como o software é estruturado em termos dos componentes que fazem parte da solução e do ambiente de hospedagem da aplicação.
 
 ## Diagrama de Classes
@@ -13,8 +11,7 @@ O compartimento superior contém o nome da classe. É impresso em negrito e cent
 O compartimento do meio contém os atributos da classe. Eles são alinhados à esquerda e a primeira letra é minúscula. 
 O compartimento inferior contém as operações que a classe pode executar. Eles também são alinhados à esquerda e a primeira letra é minúscula. 
 Uma classe com três compartimentos.No projeto de um sistema, várias classes são identificadas e agrupadas em um diagrama de classes que ajuda a determinar as relações estáticas entre elas. Na modelagem detalhada, as classes do projeto conceitual são frequentemente divididas em subclasses. 
-![Untitled Diagram drawio (5) drawio](https://user-images.githubusercontent.com/91202959/175823875-10f1b420-7549-48c9-9726-1b3dbbccd6ab.png)
-
+![Untitled Diagram drawio de classes atualizado)](https://user-images.githubusercontent.com/91202959/175824725-e19ab7cf-2363-4048-9fdc-3bc28eb699e8.png)
 
 ## Modelo ER
 
