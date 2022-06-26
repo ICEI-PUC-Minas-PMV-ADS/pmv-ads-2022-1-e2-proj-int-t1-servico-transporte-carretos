@@ -142,7 +142,7 @@ A tabela a seguir apresenta os requisitos do projeto, identificando a prioridade
 |RNF-02  | A aplicação deve ser publicado em um ambiente acessível publicamente na Internet (Repl.it, GitHub Pages, Heroku).  |  ALTA | 
 |RNF-03  | Os formulários devem informar ao usuário quais são os campos de preenchimento obrigatório.   |  ALTA |
 |RNF-04  | Utilizar símbolo e ícone para ajudar no entendimento e conseguir uma associação imediata sobre aplicações de reconhecimento.     |  MÉDIA |
-|RNF-05  | A aplicação deverá retornar ao usuário mensagem com informação de ajuda e ao término de uma tarefa (criação de pedidos, cancelamento, etc).   |  MÉDIA |
+|RNF-05  | A aplicação deverá retornar ao usuário mensagem com informação de ajuda e ao término de uma tarefa (criação de pedidos, etc).   |  MÉDIA |
 |RNF-06  | A aplicação deve ser intuitiva, de fácil utilização, entendimento e deve ser organizado de tal maneira que os erros dos usuários sejam minimizados.   |  MÉDIA |
 |RNF-07  | A aplicação deve possuir uma interface limpa, com visualização voltada apenas para as necessidades do usuário no momento, também como forma de melhorar a performance e o desempenho. |  MÉDIA |
 |RNF-08  | A aplicação ou parte dela deve ser acessível por pessoas com certo tipo de deficiência ou outra necessidade específica.   |  MÉDIA |
@@ -155,7 +155,7 @@ A tabela a seguir apresenta os requisitos do projeto, identificando a prioridade
 |ID| Restrição                                             |
 |--|-------------------------------------------------------|
 |RE-01| O projeto deverá ser entregue no final do semestre letivo, não podendo extrapolar a data de 26/06/2022.|
-|RE-02| O aplicativo deve se restringir às tecnologias #C no Backend e as básicas da Web no Frontend.       |
+|RE-02| O aplicativo deve se restringir às tecnologias C# no Backend e as básicas da Web no Frontend.       |
 |RE-03| A equipe não pode subcontratar o desenvolvimento do trabalho.      |
 
 
