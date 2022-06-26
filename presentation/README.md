@@ -1,7 +1,6 @@
 # Apresentação da Solução
 
-Faça uma apresentação de um resumo de todos o processo de desenvolvimento e no final apresente a solução desenvolvida, usando um pequeno vídeo.
+## Video de desmonstração
 
-## Video de desmonstração da aplicação
+https://user-images.githubusercontent.com/82004450/175797798-d3f6c7f8-0b98-4e5f-b1b9-d8c89a8f2c30.mp4
 
-[![Video de apresentação](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2022-1-e2-proj-int-t1-servico-transporte-carretos/blob/main/presentation/Captura%20de%20tela%202022-06-25%20235022.jpg)](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2022-1-e2-proj-int-t1-servico-transporte-carretos/blob/main/presentation/ClickExpress.mp4)
