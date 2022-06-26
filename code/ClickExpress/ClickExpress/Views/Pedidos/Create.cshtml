@@ -14,7 +14,7 @@
 
                     <div class="form-group">
                         <div style=" display: inline-block; width: 99%; background-color: #D90429; color: white; padding: 8px 5px 8px 10px; border-radius: 8px; font-weight: bold; margin-bottom: 20px">
-                            <img src="~/Imagens/charge-box.png" style="height: 30px; margin-right: 10px" /> Escolha o tipo de serviço:
+                            <img alt="Carrinho transportador de caixa e caixa" src="~/Imagens/charge-box.png" style="height: 30px; margin-right: 10px" /> Escolha o tipo de serviço:
                         </div>
                         <label asp-for="Tipo" class="control-label" style="padding: 15px 0px 0px 0px; color: white; font-weight: bold;">* Tipo de serviço desejado:</label>
                         <select asp-for="Tipo" class="form-control" style="width: 40%;" asp-items="Html.GetEnumSelectList<TipoServico>()"></select>
@@ -22,7 +22,7 @@
                     </div>
                     <br />
                     <div style=" display: inline-block; width: 99%; background-color: #D90429; color: white; padding: 8px 5px 8px 10px; border-radius: 8px; font-weight: bold; margin-bottom: 20px">
-                        <img src="~/Imagens/location.png" style="height: 30px; margin-right: 10px" /> Informe os endereços:
+                        <img alt="Marcadores de localização e caminho" src="~/Imagens/location.png" style="height: 30px; margin-right: 10px" /> Informe os endereços:
                     </div>
                     <div class="form-group" style="padding-top: 15px;">
                         <h6><span style="color: white; font-weight: bold;">Partida</span></h6>
@@ -95,7 +95,7 @@
                     <br />
                     <div class="form-group">
                         <div style=" display: inline-block; width: 99%; background-color: #D90429; color: white; padding: 8px 5px 8px 10px; border-radius: 8px; font-weight: bold; margin-bottom: 20px">
-                            <img src="~/Imagens/clock.png" style="height: 30px; margin-right: 10px" /> Defina dia e horário:
+                            <img alt="Relógio" src="~/Imagens/clock.png" style="height: 30px; margin-right: 10px" /> Defina dia e horário:
                         </div>
                         <label style="color: white; padding-top: 15px; font-weight: bold" asp-for="Dt_agendamento" class="control-label">*Data e horário do agendamento:</label>
                         <input style="width: 40%;" asp-for="Dt_agendamento" class="form-control" id="data_agendamento" />
@@ -103,7 +103,7 @@
                     </div>
                     <br />
                     <div style=" display: inline-block; width: 99%; background-color: #D90429; color: white; padding: 8px 5px 8px 10px; border-radius: 8px; font-weight: bold; margin-bottom: 20px">
-                        <img src="~/Imagens/open-box-light.png" style="height: 30px; margin-right: 10px" /> Precisa de serviços adicionais?
+                        <img alt="Caixa aberta" src="~/Imagens/open-box-light.png" style="height: 30px; margin-right: 10px" /> Precisa de serviços adicionais?
                     </div>
                     <br />
                     <div class="form-check">
